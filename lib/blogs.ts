@@ -26,6 +26,7 @@ export async function getSortedBlogsData(): Promise<Blog[]> {
   const allBlogsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const slug = fileName.replace(/\.md$/, "");
+    // console.log("Found slug:", slug);
 
     // Read markdown file as string
     const fullPath = path.join(blogsDirectory, fileName);
