@@ -1,0 +1,232 @@
+'use client';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import {
+  ArrowUpRight,
+  Phone,
+  Mail,
+  MapPin,
+  Calendar,
+  Copy,
+  CheckCircle,
+  XCircle
+} from "lucide-react";
+import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
+
+// 🔹 Contact Item Type
+interface ContactItem {
+  icon: React.ReactNode;
+  label: string;
+  value: React.ReactNode;
+}
+
+const ContactMe: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // 🔹 Success Toast
+  const showSuccessToast = (message: string) => {
+    toast.custom((t) => (
+      <motion.div
+        initial={{ opacity: 0, y: -20, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: -20, scale: 0.95 }}
+        transition={{ duration: 0.3, type: "spring", stiffness: 500 }}
+        className="border border-primary/30 max-w-xs sm:max-w-sm w-full bg-base-200 text-primary px-4 py-2 rounded-lg shadow-lg flex items-center gap-3 whitespace-nowrap"
+      >
+        <CheckCircle size={20} className="text-green-500 flex-shrink-0" />
+        <span className="text-sm sm:text-base font-medium">{message}</span>
+      </motion.div>
+    ));
+  };
+
+  // 🔹 Error Toast
+  const showErrorToast = (message: string) => {
+    toast.custom((t) => (
+      <motion.div
+        initial={{ opacity: 0, y: -20, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: -20, scale: 0.95 }}
+        transition={{ duration: 0.3, type: "spring", stiffness: 500 }}
+        className="border border-primary/30 max-w-xs sm:max-w-sm w-full bg-base-200 text-red-500 px-4 py-2 rounded-lg shadow-lg flex items-center gap-3 whitespace-nowrap"
+      >
+        <XCircle size={20} className="text-red-500 flex-shrink-0" />
+        <span className="text-sm sm:text-base font-medium">{message}</span>
+      </motion.div>
+    ));
+  };
+
+  // 🔹 Send Email
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        "service_o3qo36f",
+        "template_z368suy",
+        formRef.current,
+        "UFLgRUB3KBnkwrw5_"
+      )
+      .then(
+        () => {
+          showSuccessToast("Message sent successfully!");
+          formRef.current?.reset();
+        },
+        () => {
+          showErrorToast("Failed to send. Please try again.");
+        }
+      );
+  };
+
+  // 🔹 Copy to Clipboard
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => showSuccessToast("Email copied to clipboard!"))
+      .catch(() => showErrorToast("Failed to copy!"));
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  // 🔹 Contact Info Items
+  const contactItems: ContactItem[] = [
+    {
+      icon: <Phone size={20} />,
+      label: "Phone Number",
+      value: "+8801747874773",
+    },
+    {
+      icon: <Mail size={20} />,
+      label: "Email",
+      value: (
+        <motion.div
+          onClick={() => copyToClipboard("mehedi.hasan11023@gmail.com")}
+          whileHover={{ x: 3 }}
+          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+        >
+          mehedi.hasan11023@gmail.com
+          <Copy size={16} className="group-hover:translate-x-1 transition-transform duration-300 " />
+        </motion.div>
+      ),
+    },
+    {
+      icon: <MapPin size={20} />,
+      label: "Address",
+      value: "Dhaka, Bangladesh",
+    },
+    {
+      icon: <Calendar size={20} />,
+      label: "Book a Meeting",
+      value: (
+        <motion.a
+          whileHover={{ x: 3 }}
+          href="https://calendly.com/mehedi-hasan1102/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+        >
+          Schedule on Calendly <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
+        </motion.a>
+      ),
+    },
+  ];
+
+  return (
+    <motion.section
+      
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className=" text-base-content font-mono max-w-3xl mx-auto py-2 px-0 sm:px-6 md:px-8"
+    >
+      <Toaster position="top-right" reverseOrder={false} />
+
+      <div className="rounded-lg p-6 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300">
+        {/* Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeIn}
+          viewport={{ once: true }}
+          className="mb-4 text-center"
+        >
+          <p className="text-sm text-primary mb-0">• Get in Touch</p>
+          <h2 className="text-2xl font-mono text-base-content">
+            Let’s create <span className="text-base-content/60">together!</span>
+          </h2>
+        </motion.div>
+
+        <div className="flex flex-col lg:flex-row gap-4">
+          {/* Contact Form */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeIn}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full lg:w-1/2"
+          >
+            <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="name" placeholder="Your name" required className="w-full p-2  input input-bordered focus:border-primary rounded-lg focus:outline-none" />
+                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="phone" placeholder="Phone" className="w-full p-2  input input-bordered focus:border-primary rounded-lg focus:outline-none" />
+                <motion.input whileFocus={{ scale: 1.02 }} type="email" name="email" placeholder="Email" required className="w-full p-2  input input-bordered focus:border-primary rounded-lg focus:outline-none" />
+                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="subject" placeholder="Subject" className="w-full p-2  input input-bordered focus:border-primary rounded-lg focus:outline-none" />
+              </div>
+              <motion.textarea whileFocus={{ scale: 1.02 }} name="message" rows={5} placeholder="Message" required className="textarea textarea-bordered w-full rounded-lg p-2  focus:border-primary focus:outline-none"></motion.textarea>
+              <input type="hidden" name="time" value={new Date().toLocaleString()} />
+              
+<motion.button 
+  type="submit"
+  whileTap={{ scale: 0.98 }}
+  className="max-w-40 mt-0 rounded-lg flex items-center gap-0 text-primary font-mono text-sm px-0 py-0 transition-all"
+>
+  <motion.span
+  whileHover={{ scale: 1.05 }}
+  className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+>
+  Send Message <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
+</motion.span>
+
+</motion.button>
+
+
+
+            </form>
+          </motion.div>
+
+          {/* Contact Info */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeIn}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full lg:w-1/2 flex flex-col gap-6"
+          >
+            {contactItems.map((item, idx) => (
+              <motion.div
+                whileHover={{ x: 5 }}
+                key={idx}
+                className="flex items-start gap-0 pl-0 border-l-2 border-primary/50 hover:border-primary transition-colors duration-300"
+              >
+                <div className="p-3 rounded-md text-primary">{item.icon}</div>
+                <div className="min-w-0">
+                  <p className="text-sm opacity-70">{item.label}</p>
+                  <div className="font-mono break-words">{item.value}</div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </motion.section>
+  );
+};
+
+export default ContactMe;

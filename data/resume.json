@@ -1,0 +1,111 @@
+{
+  "education": [
+    {
+      "institution": "National University, Bangladesh",
+      "degree": "Bachelor of Science (B.Sc.) Pass Course",
+      "details": "2025",
+      "credentialLink": null
+    },
+    {
+      "institution": "Mymensingh College, Mymensingh",
+      "degree": "HSC in Science",
+      "details": "2015",
+      "credentialLink": "https://drive.google.com/file/d/1odWyEcE87wHxXiaP-xjRpYCFKhOsqHub/view?usp=sharing"
+    },
+    {
+      "institution": "Gujirkuna High School, Durgapur",
+      "degree": "SSC in Science",
+      "details": "2005–2011",
+      "credentialLink": "https://drive.google.com/file/d/17KWpzQK3xVyv7fYceiIGjMwrjttFtdaD/view?usp=sharing"
+    },
+    {
+      "institution": "Programming Hero",
+      "degree": "Complete Web Development Course",
+      "details": "2025",
+      "credentialLink": "https://drive.google.com/file/d/1p4eYIgQRCzf8a77dwQ1ws53fPNkE0FW1/view?usp=sharing"
+    },
+    {
+      "institution": "Programming Hero",
+      "degree": "The Web Developer's Kickstart",
+      "details": "2024",
+      "credentialLink": "https://drive.google.com/file/d/1foa5JvZzFY1BksRLs0hkynrTZ9v-0jC9/view"
+    },
+    {
+      "institution": "Programming Hero",
+      "degree": "Mustering Resume Building Session",
+      "details": "2024",
+      "credentialLink": "https://drive.google.com/file/d/1KbC3JnBC-y-wpKKUb7cRfIQQ0wOi3jYV/view?usp=sharing"
+    },
+    {
+      "institution": "Bangladesh Hi-Tech Park Authority",
+      "degree": "Web Development (Laravel)",
+      "details": "2019",
+      "credentialLink": "https://drive.google.com/file/d/1vcrNNMHaPVVAZrtCuGeTN2YzdSMHeIzF/view?usp=sharing"
+    },
+    {
+      "institution": "Bangladesh Hi-Tech Park Authority",
+      "degree": "Video Editing and 2D/3D Animation",
+      "details": "2019",
+      "credentialLink": "https://drive.google.com/file/d/1QsiMKXKNZjGqo2itL5seaCA5AGBWjQfp/view?usp=sharing"
+    },
+    {
+      "institution": "British Council",
+      "degree": "APTIS – Forward Thinking English Testing",
+      "details": "2019",
+      "credentialLink": "https://drive.google.com/file/d/1TJoHDXsm-6OxWE1DOFsxyM-QJuIZh938/view?usp=sharing"
+    },
+    {
+      "institution": "10 Minute School",
+      "degree": "CV Writing & Interview",
+      "details": "2024",
+      "credentialLink": "https://drive.google.com/file/d/14CKGM1CbzcYJhaOTmDovZ331W9UE5gTN/view?usp=sharing"
+    },
+    {
+      "institution": "10 Minute School",
+      "degree": "Communication Hacks",
+      "details": "2025",
+      "credentialLink": "https://drive.google.com/file/d/1cf5tLmK_vTQ1z6KHBcotEB4-GWz-fbhc/view?usp=sharing"
+    },
+    {
+      "institution": "10 Minute School",
+      "degree": "Corporate Etiquette",
+      "details": "2025",
+      "credentialLink": "https://drive.google.com/file/d/1uzk4VoqCF0-l0jXTlojGOnVfvSvMA84r/view?usp=sharing"
+    },
+    {
+      "institution": "Quantum Foundation",
+      "degree": "Voluntary Blood Donation Program",
+      "details": "2022",
+      "credentialLink": "https://drive.google.com/file/d/1di6ooU-LHbkljqtJL-ZqioI2q07Mw4hq/view?usp=sharing"
+    },
+    {
+      "institution": "Yoga Foundation",
+      "degree": "Quantum Method Course",
+      "details": "2018",
+      "credentialLink": "https://drive.google.com/file/d/1hUAAXA4n8V-8e9WQ3DtZ0uAfrgbHg8zd/view"
+    }
+  ],
+  "experience": [
+  {
+    "title": "Self-taught Developer",
+    "organization": "Independent Learning",
+    "time": "2024 - Present",
+    "description": "Learning through self-study and building projects with React and Node.js."
+  },
+  {
+    "title": "Volunteer",
+    "organization": "Quantum Foundation",
+    "time": "2018 - Present",
+    "description": "Motivating and supporting people through community programs.",
+    "profileLink": "https://profilev6.quantummethod.org.bd/member/1800609/8ad48dd917a14eca416544"
+  },
+  {
+    "title": "Blood Donor",
+    "organization": "Voluntary Service",
+    "time": "2015 - Present",
+    "description": "Regular blood donor contributing to community health.",
+    "profileLink": "https://blood.quantummethod.org.bd/en/donor-profile/OPML68437"
+  }
+]
+
+}

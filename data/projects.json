@@ -1,0 +1,314 @@
+
+[
+  {
+    "title": "Active Arena",
+    "description": "A production-ready play ground management app featuring real-time synchronization, JWT authentication, and optimized performance.",
+    "features": [
+      "Payment integration with Stripe",
+      "JWT Authentication flow",
+      "Full CRUD operations"
+    ],
+    "techStack": ["React 19", "Stripe", "Firebase", "Tailwind CSS"],
+    "liveLink": "https://buildbox-a12.web.app",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Client",
+    "backendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Server",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/aarena.png"
+    ],
+    "challenges": "Implementing secure payment integration and real-time synchronization.",
+    "futurePlans": "Add multi-player support and analytics dashboard.",
+    "type": "Full Stack"
+  },
+  
+
+  {
+    "title": "Food Garden",
+    "description": "A production-ready food management app featuring real-time synchronization, JWT authentication, and optimized performance.",
+    "features": [
+      "Real-time synchronization with Firebase",
+      "JWT Authentication flow",
+      "Full CRUD operations"
+    ],
+    "techStack": ["React 19", "Tailwind CSS", "Firebase"],
+    "liveLink": "https://food-garden-bd.web.app",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Food-Garden-Client",
+    "backendRepo": "https://github.com/mehedi-hasan1102/Food-Garden-Server",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/food.png"
+    ],
+    "challenges": "Handling real-time data sync and optimizing performance under heavy load.",
+    "type": "Full Stack",
+    "futurePlans": "Integrate AI-based food recommendations and expand recipe database."
+  },
+  {
+    "title": "Plant Care Tracker",
+    "description": "Helps users manage and track plant care routines with reminders and notes.",
+    "features": ["Add/Edit Plants", "Reminders", "Light/Dark Theme"],
+    "techStack": ["MongoDB", "Express", "React", "Node.js"],
+    "liveLink": "https://plant-care-tracker-bd.web.app",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Client",
+    "backendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Server",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/plantsc.png"
+    ],
+    "challenges": "Implementing reliable reminders and syncing data between client and server.",
+    "futurePlans": "Add AI-powered plant disease detection and personalized care tips.",
+    "type": "Full Stack"
+  },
+  {
+    "title": "Event Explorer",
+    "description": "A full-stack event booking platform where users can browse and reserve seats for local events.",
+    "features": ["Authentication", "Booking System", "Firebase Integration"],
+    "techStack": ["React", "Firebase", "Node.js"],
+    "liveLink": "https://event-explorer-bd.netlify.app",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Event-Explorer",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/events.png"
+    ],
+    "challenges": "Managing real-time booking availability and user authentication.",
+    "futurePlans": "Add event rating system and push notifications.",
+    "type": "Frontend"
+  },
+  {
+    "title": "Phudu-Medical-Apoinment-App",
+    "description": "Phudu Medical is a modern and responsive medical appointment booking web app.",
+    "features": ["Animated counters", "Booking System", " Recharts"],
+    "techStack": ["React", "Tailwind CSS"],
+    "liveLink": "https://phudu-medical.netlify.app/",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Phudu-Medical-Apoinment-App",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/phudu.png"
+    ],
+    "challenges": "Creating smooth animated UI and handling booking concurrency.",
+    "futurePlans": "Integrate doctor availability calendar and SMS reminders.",
+    "type": "Frontend"
+  },
+  {
+    "title": "Auction-Gallery",
+    "description": "A modern React-based application scaffolded with Vite and styled using Tailwind CSS and DaisyUI.",
+    "features": ["Bid System"],
+    "techStack": ["React", "Tailwind CSS", "DaisyUI"],
+    "liveLink": "https://auctiongallerybd.netlify.app",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Auction-Gallery",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/action.png"
+    ],
+    "challenges": "Implementing real-time bid updates and secure user authentication.",
+    "futurePlans": "Add push notifications and advanced bidding strategies.",
+    "type": "Frontend"
+  },
+  {
+    "title": "Active Arena Server",
+    "description": "Sports Club Management System (Server) This is the backend server for the Active Arena — a single-club sports management system built with Node.js, Express, and MongoDB. It provides RESTful APIs for managing players, coaches, matches, and training sessions.",
+    "features": [
+      "User Authentication with JWT",
+      "CRUD operations for players, coaches, matches, and training sessions",
+      "Data validation and error handling"
+    ],
+    "techStack": ["Node.js", "Express", "MongoDB"],
+    "backendRepo": " https://github.com/mehedi-hasan1102/Active-Arena-Server", 
+    "liveLink": "https://active-arena.vercel.app/",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/arena.png"
+    ],
+    "challenges": "Implementing secure payment integration and real-time synchronization.",
+    "futurePlans": "Add multi-player support and analytics dashboard.",
+    "type": "Backend"
+  },
+  {
+    "title": "Food Garden Server",
+    "description": "Food Management System (Server) This is the backend server for the Food Garden — a food management system built with Node.js, Express, and MongoDB. It provides RESTful APIs for managing food items, categories, and user orders.",
+    "features": [
+      "User Authentication with JWT",
+      "CRUD operations for food items, categories, and orders",
+      "Data validation and error handling"
+    ],
+    "techStack": ["Node.js", "Express", "MongoDB"],
+    "backendRepo": "https://github.com/mehedi-hasan1102/Food-Garden-Server",
+    "liveLink": "https://food-garden-server-bd.vercel.app",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Food-Garden-Server/refs/heads/main/server.png"
+    ],
+    "challenges": "Handling real-time data sync and optimizing performance under heavy load.",
+    "futurePlans": "Integrate AI-based food recommendations and expand recipe database.",
+    "type": "Backend"
+  },
+  {
+    "title": "Plant Care Server" ,
+    "description": "A robust Node.js backend service for the Plant Care Tracker application, providing RESTful CRUD operations with MongoDB Atlas integration.",
+    "features": [
+      "MongoDB Atlas cloud database integration",
+      "Environment variables for secure configuration",
+      "CORS enabled for cross-origin requests"
+    ],
+    "techStack": ["Node.js", "Express", "MongoDB"],
+    "backendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Server",
+    "liveLink": "https://project-web-b11-a10-plant-care-serv.vercel.app/",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/plants.png"
+    ],
+    "challenges": " Implementing reliable reminders and syncing data between client and server.",
+    "futurePlans": "Add AI-powered plant disease detection and personalized care tips.  ",
+    "type": "Backend"
+  },
+  {
+  "title": "Payooo Mobile",
+  "description": "A modern and responsive mobile payment web application built with Vanilla JavaScript and Tailwind CSS. It offers a clean UI and smooth user experience for managing digital transactions and payments.",
+  "features": [
+    "Responsive mobile-first design",
+    "Interactive UI built with pure JavaScript",
+    "Real-time payment and balance updates (mock data)",
+    "Reusable and modular component structure",
+    "Tailwind CSS for fast and consistent styling"
+  ],
+  "techStack": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+  "frontendRepo": "https://github.com/mehedi-hasan1102/Payoo-Mobile-app-function",
+  "liveLink": "https://mehedi-hasan1102.github.io/Payoo-Mobile-app-function/",
+  "images": [
+    "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/main/projects-sowcase/payoo.png"
+  ],
+  "challenges": "Building dynamic UI interactions using only Vanilla JavaScript without external frameworks.",
+  "futurePlans": "Integrate a backend API for real payment processing and add user authentication features.",
+  "type": "Frontend"
+}
+,{
+  "title": "Dev Board",
+  "description": "A static developer dashboard built with raw JavaScript and CSS. It serves as a simple tool hub for quick access to development resources and project links.",
+  "features": [
+    "Built entirely with Vanilla JavaScript and CSS",
+    "Clean and minimal dashboard interface",
+    "Static layout optimized for desktop view",
+    "Fast performance with zero external dependencies",
+    "Easy to customize with basic HTML structure"
+  ],
+  "techStack": ["HTML", "CSS", "JavaScript"],
+  "frontendRepo": "https://github.com/mehedi-hasan1102/Dev-Board",
+  "liveLink": "https://mehedi-hasan1102.github.io/Dev-Board/",
+  "images": [
+    "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/main/projects-sowcase/devboard.png"
+  ],
+  "challenges": "Designing a visually appealing and organized layout without using responsive design or frameworks.",
+  "futurePlans": "Add responsive design support and light/dark theme toggle for better usability.",
+  "type": "Frontend"
+}
+,{
+  "title": "Browse4Pets",
+  "description": "A responsive pet adoption website built entirely with HTML and Tailwind CSS. It showcases various pet profiles in a visually appealing layout with smooth styling and animations.",
+  "features": [
+    "Built purely with HTML and Tailwind CSS",
+    "Fully responsive design for all screen sizes",
+    "Clean and minimal pet showcase layout",
+    "Smooth hover effects and transitions",
+    "Optimized for fast loading and accessibility"
+  ],
+  "techStack": ["HTML", "Tailwind CSS"],
+  "frontendRepo": "https://github.com/mehedi-hasan1102/Browse4Pets",
+  "liveLink": "https://mehedi-hasan1102.github.io/Browse4Pets/",
+  "images": [
+    "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/Browse4Pets.png"
+  ],
+  "challenges": "Achieving responsive and visually appealing design without using JavaScript or any frameworks.",
+  "futurePlans": "Add interactive filters and dynamic content loading using JavaScript in future updates.",
+  "type": "Frontend"
+},
+
+
+
+{
+    "title": "English Janala",
+    "description": "A fully responsive and interactive educational web application to enhance English vocabulary learning through levels, quizzes, pronunciation, and rich word details — built with HTML, JavaScript, Tailwind CSS, and DaisyUI.",
+    "features": [
+      "Level-based vocabulary learning and quizzes",
+      "Word details with definitions, examples and pronunciation (Web Speech API)",
+      "Progress tracking per level",
+      "Responsive UI built with Tailwind CSS and DaisyUI",
+      "SweetAlert2 for friendly alerts and feedback"
+    ],
+    "techStack": [
+      "HTML5",
+      "Vanilla JavaScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "SweetAlert2",
+      "Web Speech API"
+    ],
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Project---web-b11-A6-english-janala",
+    "liveLink": "https://english-bd.netlify.app/",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Project---web-b11-A6-english-janala/refs/heads/main/assets/English-Janala-10-30-2025_01_53_AM.png"
+    ],
+    "challenges": "Designing an accessible, responsive learning UI while integrating browser APIs (Web Speech) and keeping performance optimal for low-end devices.",
+    "futurePlans": "Add interactive filters, persistent progress using localStorage or a backend, and dynamic content loading with JavaScript.",
+    "type": "Frontend"
+  },
+  {
+    "title": "Kid School",
+    "description": "A responsive informational site for children’s activities and resources, built with HTML and Tailwind CSS. Focus is on a playful, accessible layout that highlights programs and resources.",
+    "features": [
+      "Clean, kid-friendly layout and illustrations",
+      "Responsive design for phones, tablets, and desktops",
+      "Smooth hover effects and lightweight animations",
+      "Accessible markup and fast loading"
+    ],
+    "techStack": [
+      "HTML5",
+      "Tailwind CSS"
+    ],
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Project---web-b11-A2-Kids-School",
+    "liveLink": "https://mehedi-hasan1102.github.io/Project---web-b11-A2-Kids-School/",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Project---web-b11-A2-Kids-School/refs/heads/main/images/Kid-School-10-30-2025_01_57_AM.png"
+    ],
+    "challenges": "Achieving a playful, accessible design that scales across devices without using JavaScript frameworks.",
+    "futurePlans": "Add interactive elements (sliders, collapsible FAQ) and minor JS improvements for richer UX.",
+    "type": "Frontend"
+  },
+  {
+    "title": "Bangladesh 2.0",
+    "description": "A static landing page built with semantic HTML and basic CSS, designed to highlight Bangladesh’s culture, innovation, and development vision. It focuses on layout structure and clean visual presentation.",
+    "features": [
+      "Static single-page layout using HTML and CSS",
+      "Structured and semantic content sections",
+      "Simple grid-based layout for clarity",
+      "Clean typography and color balance"
+    ],
+    "techStack": [
+      "HTML5",
+      "CSS3"
+    ],
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Project---web-b11-A1-Bangladesh-2.0",
+    "liveLink": "https://mehedi-hasan1102.github.io/Project---web-b11-A1-Bangladesh-2.0/",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Project---web-b11-A1-Bangladesh-2.0/refs/heads/main/img/Bangladesh-2-0-10-30-2025_01_59_AM.png"
+    ],
+    "challenges": "Maintaining visual consistency and layout balance without using any responsive techniques or frameworks.",
+    "futurePlans": "Refactor the layout to be fully responsive using Tailwind CSS or CSS Grid for better mobile compatibility.",
+    "type": "Frontend"
+  },
+  {
+    "title": "Shiritori-Game-Player",
+    "description": "A multiplayer Shiritori word game built with React and Vite. Players take turns entering words that must start with the last letter of the previous word; the app validates inputs and tracks scores.",
+    "features": [
+      "Turn-based multiplayer gameplay",
+      "Real-time word validation and scoring",
+      "Responsive UI built with React + Tailwind",
+      "Game history and round summaries"
+    ],
+    "techStack": [
+      "React",
+      "Vite",
+      "Tailwind CSS"
+    ],
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Shiritori-Game-Player",
+    "liveLink": "https://shiritori-game-player.vercel.app/",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Shiritori-Game-Player/refs/heads/main/src/assets/Shiritori-Game-10-30-2025_02_04_AM.png"
+    ],
+    "challenges": "Handling real-time state and validation for multiplayer turns, ensuring fair scoring, and designing a simple yet responsive UI.",
+    "futurePlans": "Introduce a backend (Socket.IO) for robust multiplayer support, persistent user accounts, and match-making.",
+    "type": "Frontend"
+  }
+
+ 
+]
+

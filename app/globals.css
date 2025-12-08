@@ -1,0 +1,25 @@
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: lemonade,abyss;  /* Change to only lemonade and abyss */
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-blink {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+
