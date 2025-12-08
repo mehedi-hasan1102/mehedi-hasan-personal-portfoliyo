@@ -12,7 +12,7 @@ interface Props {
 export default function BlogPost({ blog }: Props) {
   return (
     <div
-    className="mt-2 max-w-3xl mx-auto px-8">
+    className="mt-2 max-w-3xl mx-auto md:px-8">
          <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
