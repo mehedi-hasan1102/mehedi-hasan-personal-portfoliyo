@@ -4,6 +4,7 @@
 import React from "react";
 import { Blog } from "../../lib/blogs";
 import { motion } from "framer-motion";
+import { ScrollProgress } from "../ui/scroll-progress";
 
 interface Props {
   blog: Blog;
@@ -13,6 +14,7 @@ export default function BlogPost({ blog }: Props) {
   return (
     <div
     className="mt-2 max-w-3xl mx-auto md:px-8">
+        <ScrollProgress />
          <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
