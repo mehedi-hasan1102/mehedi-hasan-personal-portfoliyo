@@ -6,6 +6,8 @@ title: How to Write an Effective Cover Letter (Step-by-Step Guide)
 category: Career
 description: A step-by-step guide to writing a compelling cover letter that gets noticed.
 ---
+
+
 A cover letter plays a crucial role when applying for a job. It gives recruiters a primary-level understanding of your experience and skills.While your resume lists your skills and experiences in bullet points, a cover letter allows you to : Summarize key points from your resume !
 
 *Share your personal interests and motivation*
