@@ -7,62 +7,62 @@ category: Books
 description: A personal collection of books I’ve read over the years, including novels, non-fiction, and self-help classics. Explore my reading journey!
 ---
 
-# 📚 My Book Blog
+# 📚 My Reading Journey
 
-Welcome to my personal book blog! Here’s a list of books I’ve read over the years, categorized by year.
+Welcome to my personal book blog! Here’s a curated list of books I’ve read over the years, organized by year.
 
 ---
 
 ## 2020 📖 Books I Read in 2020
 
-### Novels & Fiction
-- **In Search of Happiness** - Bertrand Russell
-- **The Spy** - Paulo Coelho
-- **A God of Small Things** - Arundhati Roy
-- **War in the Forest** - Tarashankar Bandyopadhyay
-- **The Vagabond's Scripture** - Rahul Sankrityayan
-- **Gora** - Rabindranath Tagore
-- **Although My Guru** - Ahmad Shafa
-- **Kafka's Short Stories** - Franz Kafka
-- **Paradoxical Sajid** - Arif Azad
-- **Seven Tales** - Samaresh Majumdar
-- **From Volga to Ganga** - Rahul Sankrityayan
+### 📝 Novels & Fiction
+- **In Search of Happiness** — Bertrand Russell  
+- **The Spy** — Paulo Coelho  
+- **A God of Small Things** — Arundhati Roy  
+- **War in the Forest** — Tarashankar Bandyopadhyay  
+- **The Vagabond's Scripture** — Rahul Sankrityayan  
+- **Gora** — Rabindranath Tagore  
+- **Although My Guru** — Ahmad Shafa  
+- **Kafka's Short Stories** — Franz Kafka  
+- **Paradoxical Sajid** — Arif Azad  
+- **Seven Tales** — Samaresh Majumdar  
+- **From Volga to Ganga** — Rahul Sankrityayan  
 
-### Self-Help & Non-Fiction
-- **The Power of Your Subconscious Mind** - Dr. Joseph Murphy
-- **The Old Man and the Sea** - Ernest Hemingway
-- **Rich Dad Poor Dad** - Robert Kiyosaki
-- **The Miracle Morning** - Hal Elrod
+### 📚 Self-Help & Non-Fiction
+- **The Power of Your Subconscious Mind** — Dr. Joseph Murphy  
+- **The Old Man and the Sea** — Ernest Hemingway  
+- **Rich Dad Poor Dad** — Robert Kiyosaki  
+- **The Miracle Morning** — Hal Elrod  
 
 ---
 
 ## 2019 📖 Books I Read in 2019
 
-### Novels
-- **Metamorphosis** - An unusual story about a man
-- **The Outsider** - A philosophical novel exploring themes of existentialism and alienation
-- **The Alchemist** - A spiritual story of a shepherd boy
-- **The Da Vinci Code** - A thriller revealing a conspiracy related to the Holy Grail
+### 📝 Novels
+- **Metamorphosis** — An unusual story about a man  
+- **The Outsider** — A philosophical novel exploring existentialism and alienation  
+- **The Alchemist** — A spiritual story of a shepherd boy  
+- **The Da Vinci Code** — A thriller revealing a conspiracy related to the Holy Grail  
 
-### Non-Fiction
-- **Chanakya's Strategy** - The achievements of the ancient Indian statesman Chanakya
-- **Swami Vivekananda** - Biography of the Indian monk and philosopher
-- **Biography of Maxim Gorky** - Life of the Russian writer and revolutionary
-- **Mother** - An autobiographical novel
-- **Dreams from My Father** - Memoir of Barack Obama's early life
-- **Biographies of the World's Top 100 Thinkers** - Collection of influential historical figures
-- **Biographies of the World's Top 101 Scientists** - Life stories of 101 scientists
-- **Indira Gandhi** - Biography of the former Prime Minister of India
+### 📚 Non-Fiction
+- **Chanakya's Strategy** — Achievements of the ancient Indian statesman Chanakya  
+- **Swami Vivekananda** — Biography of the Indian monk and philosopher  
+- **Biography of Maxim Gorky** — Life of the Russian writer and revolutionary  
+- **Mother** — An autobiographical novel  
+- **Dreams from My Father** — Memoir of Barack Obama's early life  
+- **Biographies of the World's Top 100 Thinkers** — Collection of influential historical figures  
+- **Biographies of the World's Top 101 Scientists** — Life stories of 101 scientists  
+- **Indira Gandhi** — Biography of the former Prime Minister of India  
 
 ---
 
 ## 2018 📖 Books I Read in 2018
 
-### Novels
-- **Homer's Odyssey** - A classic Greek epic
-- **Main Camp** - Dark history of Hitler
-- **Paradise Lost** - The story of Adam and Eve’s fall
+### 📝 Novels
+- **Homer's Odyssey** — A classic Greek epic  
+- **Main Camp** — Dark history of Hitler  
+- **Paradise Lost** — The story of Adam and Eve’s fall  
 
 ---
 
-*✨ I love reading and hope to continue sharing my journey through books!*
+*✨ Reading has shaped who I am, and I hope to keep sharing my journey through books!*
