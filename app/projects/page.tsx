@@ -40,7 +40,7 @@ const AllProjectsPage: React.FC = () => {
   // Show first 6 projects for each filter
   const filteredProjects = projects
     .filter((project) => filter === "All" || project.type === filter)
-    .slice(0, 6);
+    
 
   return (
     <>
@@ -92,15 +92,9 @@ const AllProjectsPage: React.FC = () => {
                 key={index}
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="relative overflow-hidden bg-base-100  rounded-md p-4 transition"
+                className=" overflow-hidden bg-base-100  rounded-md p-4 transition"
               >
-                <BorderBeam
-                  size={100}
-                  duration={8}
-                  borderWidth={1}
-                  colorFrom="#22c55e"
-                  colorTo="#16a34a"
-                />
+               
                 <div className="grid gap-2 sm:gap-4 md:grid-cols-2 items-start">
                   {/* Image */}
                   <motion.div whileHover={{ scale: 1.02 }} className="overflow-hidden rounded-lg">
@@ -122,7 +116,7 @@ const AllProjectsPage: React.FC = () => {
                       </p>
 
                       <div className="mb-4">
-                        <hr className="my-3 h-px border-0 bg-primary/30" />
+                        <hr className="my-2 h-px border-0 bg-primary/30" />
                         <div className="flex flex-wrap items-center gap-x-2">
                           <span className="text-sm text-base-content/60">Technologies:</span>
                           {project.techStack.map((tech, i) => (
@@ -137,7 +131,7 @@ const AllProjectsPage: React.FC = () => {
                             </motion.span>
                           ))}
                         </div>
-                        <hr className="my-3 h-px border-0 bg-primary/30" />
+                        <hr className="my-2 h-px border-0 bg-primary/30" />
                       </div>
                     </div>
 
