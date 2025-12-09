@@ -1,26 +1,20 @@
 
 [
   {
-    "title": "Active Arena",
-    "description": "A production-ready play ground management app featuring real-time synchronization, JWT authentication, and optimized performance.",
-    "features": [
-      "Payment integration with Stripe",
-      "JWT Authentication flow",
-      "Full CRUD operations"
-    ],
-    "techStack": ["React 19", "Stripe", "Firebase", "Tailwind CSS"],
-    "liveLink": "https://buildbox-a12.web.app",
-    "frontendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Client",
-    "backendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Server",
+    "title": "Plant Care Tracker",
+    "description": "Helps users manage and track plant care routines with reminders and notes.",
+    "features": ["Add/Edit Plants", "Reminders", "Light/Dark Theme"],
+    "techStack": ["MongoDB", "Express", "React", "Node.js"],
+    "liveLink": "https://plant-care-tracker-bd.web.app",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Client",
+    "backendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Server",
     "images": [
-      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/aarena.png"
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/plantsc.png"
     ],
-    "challenges": "Implementing secure payment integration and real-time synchronization.",
-    "futurePlans": "Add multi-player support and analytics dashboard.",
+    "challenges": "Implementing reliable reminders and syncing data between client and server.",
+    "futurePlans": "Add AI-powered plant disease detection and personalized care tips.",
     "type": "Full Stack"
   },
-  
-
   {
     "title": "Food Garden",
     "description": "A production-ready food management app featuring real-time synchronization, JWT authentication, and optimized performance.",
@@ -41,18 +35,22 @@
     "futurePlans": "Integrate AI-based food recommendations and expand recipe database."
   },
   {
-    "title": "Plant Care Tracker",
-    "description": "Helps users manage and track plant care routines with reminders and notes.",
-    "features": ["Add/Edit Plants", "Reminders", "Light/Dark Theme"],
-    "techStack": ["MongoDB", "Express", "React", "Node.js"],
-    "liveLink": "https://plant-care-tracker-bd.web.app",
-    "frontendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Client",
-    "backendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Server",
-    "images": [
-      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/plantsc.png"
+    "title": "Active Arena",
+    "description": "A production-ready play ground management app featuring real-time synchronization, JWT authentication, and optimized performance.",
+    "features": [
+      "Payment integration with Stripe",
+      "JWT Authentication flow",
+      "Full CRUD operations"
     ],
-    "challenges": "Implementing reliable reminders and syncing data between client and server.",
-    "futurePlans": "Add AI-powered plant disease detection and personalized care tips.",
+    "techStack": ["React 19", "Stripe", "Firebase", "Tailwind CSS"],
+    "liveLink": "https://buildbox-a12.web.app",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Client",
+    "backendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Server",
+    "images": [
+      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/aarena.png"
+    ],
+    "challenges": "Implementing secure payment integration and real-time synchronization.",
+    "futurePlans": "Add multi-player support and analytics dashboard.",
     "type": "Full Stack"
   },
   {
