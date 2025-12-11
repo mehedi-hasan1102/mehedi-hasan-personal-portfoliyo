@@ -1,9 +1,4 @@
-
-# m-hasan.vercel.app
-
-A brief description of what this project does and who it's for !
-
-***Mehedi Hasan — Personal Website***
+# Mehedi Hasan — Personal Website
 
 A modern, responsive personal website built with Next.js (App Router) and TypeScript, designed to showcase my professional work, technical capabilities, and writing. This portfolio includes interactive sections, project highlights, blog content, GitHub activity visualization, and a lightweight demo authentication flow for experimenting with protected routes.
 
