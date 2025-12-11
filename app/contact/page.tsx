@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
@@ -13,6 +14,14 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
+
+// ENV VARIABLES
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID!;
+const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL!;
+const CONTACT_PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE!;
+const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL!;
 
 // 🔹 Contact Item Type
 interface ContactItem {
@@ -62,12 +71,7 @@ const ContactMe: React.FC = () => {
     if (!formRef.current) return;
 
     emailjs
-      .sendForm(
-        "service_o3qo36f",
-        "template_z368suy",
-        formRef.current,
-        "UFLgRUB3KBnkwrw5_"
-      )
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, USER_ID)
       .then(
         () => {
           showSuccessToast("Message sent successfully!");
@@ -97,19 +101,19 @@ const ContactMe: React.FC = () => {
     {
       icon: <Phone size={20} />,
       label: "Phone Number",
-      value: "+8801747874773",
+      value: CONTACT_PHONE,
     },
     {
       icon: <Mail size={20} />,
       label: "Email",
       value: (
         <motion.div
-          onClick={() => copyToClipboard("mehedi.hasan11023@gmail.com")}
+          onClick={() => copyToClipboard(CONTACT_EMAIL)}
           whileHover={{ x: 3 }}
           className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
         >
-          mehedi.hasan11023@gmail.com
-          <Copy size={16} className="group-hover:translate-x-1 transition-transform duration-300 " />
+          {CONTACT_EMAIL}
+          <Copy size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
         </motion.div>
       ),
     },
@@ -124,12 +128,13 @@ const ContactMe: React.FC = () => {
       value: (
         <motion.a
           whileHover={{ x: 3 }}
-          href="https://calendly.com/mehedi-hasan1102/30min"
+          href={CALENDLY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
         >
-          Schedule on Calendly <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
+          Schedule on Calendly
+          <ArrowUpRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
         </motion.a>
       ),
     },
@@ -137,7 +142,6 @@ const ContactMe: React.FC = () => {
 
   return (
     <motion.section
-      
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -173,30 +177,28 @@ const ContactMe: React.FC = () => {
           >
             <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-2">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="name" placeholder="Your name" required className="w-full p-2  input input-bordered focus:border-primary rounded-lg focus:outline-none" />
-                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="phone" placeholder="Phone" className="w-full p-2  input input-bordered focus:border-primary rounded-lg focus:outline-none" />
-                <motion.input whileFocus={{ scale: 1.02 }} type="email" name="email" placeholder="Email" required className="w-full p-2  input input-bordered focus:border-primary rounded-lg focus:outline-none" />
-                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="subject" placeholder="Subject" className="w-full p-2  input input-bordered focus:border-primary rounded-lg focus:outline-none" />
+                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="name" placeholder="Your name" required className="w-full p-2 input input-bordered focus:border-primary rounded-lg focus:outline-none" />
+                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="phone" placeholder="Phone" className="w-full p-2 input input-bordered focus:border-primary rounded-lg focus:outline-none" />
+                <motion.input whileFocus={{ scale: 1.02 }} type="email" name="email" placeholder="Email" required className="w-full p-2 input input-bordered focus:border-primary rounded-lg focus:outline-none" />
+                <motion.input whileFocus={{ scale: 1.02 }} type="text" name="subject" placeholder="Subject" className="w-full p-2 input input-bordered focus:border-primary rounded-lg focus:outline-none" />
               </div>
-              <motion.textarea whileFocus={{ scale: 1.02 }} name="message" rows={5} placeholder="Message" required className="textarea textarea-bordered w-full rounded-lg p-2  focus:border-primary focus:outline-none"></motion.textarea>
+
+              <motion.textarea whileFocus={{ scale: 1.02 }} name="message" rows={5} placeholder="Message" required className="textarea textarea-bordered w-full rounded-lg p-2 focus:border-primary focus:outline-none"></motion.textarea>
+
               <input type="hidden" name="time" value={new Date().toLocaleString()} />
-              
-<motion.button 
-  type="submit"
-  whileTap={{ scale: 0.98 }}
-  className="max-w-40 mt-0 rounded-lg flex items-center gap-0 text-primary font-mono text-sm px-0 py-0 transition-all"
->
-  <motion.span
-  whileHover={{ scale: 1.05 }}
-  className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
->
-  Send Message <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
-</motion.span>
 
-</motion.button>
-
-
-
+              <motion.button 
+                type="submit"
+                whileTap={{ scale: 0.98 }}
+                className="max-w-40 mt-0 rounded-lg flex items-center gap-0 text-primary font-mono text-sm px-0 py-0 transition-all"
+              >
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+                >
+                  Send Message <ArrowUpRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                </motion.span>
+              </motion.button>
             </form>
           </motion.div>
 
