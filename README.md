@@ -73,6 +73,8 @@ Hosted on Vercel
 Live Link: https://m-hasan.vercel.app
 
 
+
+
 **📬 Contact**
 
 Mehedi Hasan
@@ -86,3 +88,8 @@ LinkedIn: https://www.linkedin.com/in/mehedi-hasan1102
 Portfolio: https://m-hasan.vercel.app
 
 GitHub: https://github.com/mehedi-hasan1102
+
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
