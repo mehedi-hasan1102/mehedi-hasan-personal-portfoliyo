@@ -3,9 +3,11 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Facebook } from "lucide-react";
-import { FaDev, FaDiscord, FaHackerrank , FaMedium , FaBehance } from "react-icons/fa";
+import { FaDev, FaDiscord, FaHackerrank, FaMedium, FaBehance,  } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
+import { SiBluesky } from "react-icons/si";
+
 
 interface SocialLink {
   icon: React.ComponentType<{ size?: number }>;
@@ -15,7 +17,7 @@ interface SocialLink {
 
 interface NavLink {
   label: string;
-  href: string; 
+  href: string;
 }
 
 const Footer = () => {
@@ -26,6 +28,8 @@ const Footer = () => {
     { icon: FaBehance, href: "https://www.behance.net/mehedihasan1102", label: "Behance" },
     { icon: FaMedium, href: "https://medium.com/@mehedihasan1102", label: "Medium" },
     { icon: FaXTwitter, href: "https://x.com/mehedihasan1102", label: "Twitter/X" },
+    { icon: SiBluesky, href: "https://bsky.app/profile/mehedihasan1102.bsky.social", label: "Bluesky",},
+
     { icon: FaDiscord, href: "https://discord.gg/QMmdb8nusc", label: "Discord" },
     { icon: FaHackerrank, href: "https://www.hackerrank.com/profile/mehedi_hasan1102", label: "HackerRank" },
     { icon: Facebook, href: "https://facebook.com/mehedi.hasan1102", label: "Facebook" },
@@ -33,8 +37,8 @@ const Footer = () => {
 
   const navLinks: NavLink[] = [
     { label: "About", href: "/" },
-   
-    
+
+
     { label: "Projects", href: "/projects" },
     { label: "Blogs", href: "/blogs" },
     { label: "Contact", href: "/contact" },
@@ -70,8 +74,9 @@ const Footer = () => {
             <span className="text-base-content/60">Hasan</span>
           </div>
 
+         
           {/* Social Icons */}
-          <div className="flex gap-4 mt-2 text-base-content/80">
+          <div className="mt-2 grid grid-cols-5 sm:grid-cols-5 md:grid-cols-10 gap-4 justify-items-center text-base-content/80">
             {socialLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -90,6 +95,7 @@ const Footer = () => {
               );
             })}
           </div>
+
         </motion.div>
 
         {/* Navigation Links */}
@@ -97,7 +103,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
-          className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs sm:text-sm tracking-wide text-base-content/70"
+          className="flex flex-wrap justify-center gap-x-4 gap-y-3 text-xs sm:text-sm tracking-wide text-base-content/70"
         >
           {navLinks.map((link) => (
             <Link
