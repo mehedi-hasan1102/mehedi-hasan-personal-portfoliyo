@@ -55,52 +55,44 @@ const HeroSection: React.FC = () => {
         <div className="border border-primary/30 bg-base-200 backdrop-blur-sm relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-10 w-full   rounded-lg p-6 sm:px-6 sm:py-4  transition-shadow duration-300">
           <BorderBeam size={100} duration={8}  colorFrom="#22c55e" colorTo="#16a34a" />
           {/* Left Image */}
+           {/* LEFT IMAGE */}
+        <motion.div  className="flex justify-center">
           <motion.div
-  initial={{ opacity: 0, x: -50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.6 }}
-  className="flex justify-center"
->
-  <motion.div
-    whileHover={{ scale: 1.02 }}
-    className="w-36 h-44 sm:w-44 sm:h-52 md:w-48 md:h-56 relative "
-  >
-    {/* Profile Image */}
-    <div className="w-full h-full overflow-hidden rounded-lg mb-4">
-      
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 220 }}
+            className="w-36 h-44 sm:w-44 sm:h-52 md:w-48 md:h-56 relative"
+          >
+            <div className="w-full h-full overflow-hidden rounded-lg mb-4">
+              <Image
+                src="/assets/images/profile.png"
+                alt="Mehedi Hasan"
+                width={500}
+                height={500}
+                priority
+                className="w-full h-full object-cover bg-base-100"
+              />
+            </div>
 
-<Image
-  src="/assets/images/profile.png" 
-  alt="Mehedi Hasan"
-  width={500}
-  height={500}
-  priority
-  loading="eager"
-  className="w-full h-full object-cover bg-base-100 transition-all duration-300"
-/>
-
-    </div>
-
-    {/* Signature stays original */}
-    <div className=" flex justify-center">
-      <div
-        className=" bg-primary w-4/5 max-w-xs aspect-[3/1]"
-        style={{
-          maskImage:
-            "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png')",
-          WebkitMaskImage:
-            "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png')",
-          maskRepeat: "no-repeat",
-          WebkitMaskRepeat: "no-repeat",
-          maskPosition: "center",
-          WebkitMaskPosition: "center",
-          maskSize: "contain",
-          WebkitMaskSize: "contain",
-        }}
-      />
-    </div>
-  </motion.div>
-</motion.div>
+            <div className="flex justify-center">
+              <div
+                className="bg-primary w-4/5 max-w-xs aspect-[3/1]"
+                style={{
+                  maskImage:
+                    "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png')",
+                  WebkitMaskImage:
+                    "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png')",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskPosition: "center",
+                  WebkitMaskPosition: "center",
+                  maskSize: "contain",
+                  WebkitMaskSize: "contain",
+                }}
+              />
+            </div>
+          </motion.div>
+        </motion.div>
 
 
           {/* Right Content */}
