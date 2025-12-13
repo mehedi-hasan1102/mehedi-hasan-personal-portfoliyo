@@ -3,7 +3,7 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Facebook } from "lucide-react";
-import { FaDev, FaDiscord, FaHackerrank , FaMedium } from "react-icons/fa";
+import { FaDev, FaDiscord, FaHackerrank , FaMedium , FaBehance } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 
@@ -23,6 +23,7 @@ const Footer = () => {
     { icon: Github, href: "https://github.com/mehedi-hasan1102", label: "GitHub" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/mehedi-hasan1102/", label: "LinkedIn" },
     { icon: FaDev, href: "https://dev.to/mehedihasan1102", label: "Dev.to" },
+    { icon: FaBehance, href: "https://www.behance.net/mehedihasan1102", label: "Behance" },
     { icon: FaMedium, href: "https://medium.com/@mehedihasan1102", label: "Medium" },
     { icon: FaXTwitter, href: "https://x.com/mehedihasan1102", label: "Twitter/X" },
     { icon: FaDiscord, href: "https://discord.gg/QMmdb8nusc", label: "Discord" },
