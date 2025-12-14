@@ -3,10 +3,12 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Facebook } from "lucide-react";
-import { FaDev, FaDiscord, FaHackerrank, FaMedium, FaBehance,  } from "react-icons/fa";
+import { FaDev, FaDiscord, FaHackerrank, FaMedium, FaBehance,FaTelegramPlane , } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
-import { SiBluesky } from "react-icons/si";
+// import { SiBluesky } from "react-icons/si";
+
+
 
 
 interface SocialLink {
@@ -28,8 +30,8 @@ const Footer = () => {
     { icon: FaBehance, href: "https://www.behance.net/mehedihasan1102", label: "Behance" },
     { icon: FaMedium, href: "https://medium.com/@mehedihasan1102", label: "Medium" },
     { icon: FaXTwitter, href: "https://x.com/mehedihasan1102", label: "Twitter/X" },
-    { icon: SiBluesky, href: "https://bsky.app/profile/mehedihasan1102.bsky.social", label: "Bluesky",},
-
+    // { icon: SiBluesky, href: "https://bsky.app/profile/mehedihasan1102.bsky.social", label: "Bluesky", },
+    { icon: FaTelegramPlane, href: "https://t.me/+8801747874773", label: "Telegram" },
     { icon: FaDiscord, href: "https://discord.gg/QMmdb8nusc", label: "Discord" },
     { icon: FaHackerrank, href: "https://www.hackerrank.com/profile/mehedi_hasan1102", label: "HackerRank" },
     { icon: Facebook, href: "https://facebook.com/mehedi.hasan1102", label: "Facebook" },
@@ -74,7 +76,7 @@ const Footer = () => {
             <span className="text-base-content/60">Hasan</span>
           </div>
 
-         
+
           {/* Social Icons */}
           <div className="mt-2 grid grid-cols-5 sm:grid-cols-5 md:grid-cols-10 gap-4 justify-items-center text-base-content/80">
             {socialLinks.map((link) => {
