@@ -1,5 +1,4 @@
-
-import React from "react";
+import { notFound } from "next/navigation";
 import { getBlogData, Blog } from "../../../lib/blogs";
 import BlogPost from "@/components/blogs/BlogPost"; // client component
 
@@ -7,7 +6,12 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
 
-  if (!slug) return <div> Slug not found </div>;
+
+
+    if (!slug) {
+  notFound();
+}
+
 
   let blog: Blog | null = null;
   try {
@@ -15,7 +19,11 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
   } catch (err) {
     console.error(err);
   }
-  if (!blog) return <div> Blog not found </div>;
+ 
+  if (!blog) {
+  notFound();
+}
 
   return <BlogPost blog={blog}  />;
 }
+

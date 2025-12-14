@@ -29,6 +29,7 @@ In this post, I’ll share:
 
 Here’s a clean and effective format you can copy-paste (and personalize to your style):
 
+
 ```
 To: [Company Email Address]  
 Subject: Application for [Position Name]  

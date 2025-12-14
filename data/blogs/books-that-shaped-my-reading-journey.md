@@ -23,7 +23,7 @@ Welcome to my personal book blog! Here’s a curated list of books I’ve read o
 5. *Siddhartha*  —  Hermann Hesse
 
 
----
+
 
 ## 2020
 
@@ -46,7 +46,7 @@ Welcome to my personal book blog! Here’s a curated list of books I’ve read o
 3. *Rich Dad Poor Dad* — Robert Kiyosaki  
 4. *The Miracle Morning* — Hal Elrod  
 
----
+
 
 ## 2019
 
@@ -66,7 +66,7 @@ Welcome to my personal book blog! Here’s a curated list of books I’ve read o
 7. *Biographies of the World's Top 101 Scientists* — Life stories of 101 scientists  
 8. *Indira Gandhi* — Biography of the former Prime Minister of India  
 
----
+
 
 ## 2018
 
@@ -75,6 +75,6 @@ Welcome to my personal book blog! Here’s a curated list of books I’ve read o
 2. *Main Camp* — Dark history of Hitler  
 3. *Paradise Lost* — Story of Adam and Eve’s fall  
 
----
+
 
 *✨ Reading has shaped who I am, and I hope to keep sharing my journey through books!*

@@ -20,57 +20,70 @@ export interface Blog extends BlogMetaData {
   fullContent: string;
 }
 
+/* ===============================
+   সব Blog লিস্ট আনার জন্য
+================================ */
 export async function getSortedBlogsData(): Promise<Blog[]> {
-  // Get file names under /blogs
-  const fileNames = fs.readdirSync(blogsDirectory);
-  const allBlogsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const slug = fileName.replace(/\.md$/, "");
-    // console.log("Found slug:", slug);
+  // শুধু .md ফাইল নেবে
+  const fileNames = fs
+    .readdirSync(blogsDirectory)
+    .filter((file) => file.endsWith(".md"));
 
-    // Read markdown file as string
+  const allBlogsData = fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.md$/, "");
     const fullPath = path.join(blogsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+    const { slug: dataSlug, ...rest } =
+      matterResult.data as BlogMetaData;
 
-    // Combine the data with the id
-    const { slug: dataSlug, ...rest } = matterResult.data as BlogMetaData;
     return {
       slug,
       ...rest,
-      fullContent: matterResult.content, // raw markdown content
+      fullContent: matterResult.content,
     };
   });
 
-        
-    // Sort blogs by date in descending order (latest first)
-    return allBlogsData.sort((a, b) => {    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateB.getTime() - dateA.getTime();
-  }) as Blog[];
+  // নতুন blog আগে দেখাবে
+  return allBlogsData.sort(
+    (a, b) =>
+      new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
-export async function getBlogData(slug: string): Promise<Blog> {
+/* ===============================
+   Single Blog আনার জন্য
+================================ */
+export async function getBlogData(
+  slug: string
+): Promise<Blog | null> {
+  // ❌ favicon.ico বা ভুল slug আটকাবে
+  if (!slug || slug.includes(".")) {
+    return null;
+  }
 
   const fullPath = path.join(blogsDirectory, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
 
-  // Use gray-matter to parse the post metadata section
+  // ❌ ফাইল না থাকলে crash না করে null
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
+
+  const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
 
-  // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
 
-  // Combine the data with the id and contentHtml
-  const { slug: dataSlug, ...rest } = matterResult.data as BlogMetaData;
+  const contentHtml = processedContent.toString();
+  const { slug: dataSlug, ...rest } =
+    matterResult.data as BlogMetaData;
+
   return {
     slug,
     ...rest,
     fullContent: contentHtml,
-  } as Blog;
+  };
 }
