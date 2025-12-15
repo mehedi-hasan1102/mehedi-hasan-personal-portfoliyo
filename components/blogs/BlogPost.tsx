@@ -47,17 +47,34 @@ export default function BlogPost({ blog }: Props) {
 
 <div
   className="
-    prose prose-sm sm:prose-base md:prose-lg max-w-full text-base-content
-    leading-relaxed text-justify
-    [&_a]:text-primary [&_a]:no-underline [&_a]:underline-offset-4 [&_a]:decoration-dashed
-    [&_a]:transition [&_a]:duration-300 [&_a]:ease-in-out
-    [&_a:hover]:underline [&_a:hover]:text-primary/80
-    [&_ol]:list-decimal [&_ol]:ml-8 [&_ol]:space-y-2
-    [&_ul]:list-disc [&_ul]:ml-8 [&_ul]:space-y-2
-    [&_p]:mt-6 [&_p]:mb-6
-    [&_h1]:mt-12 [&_h1]:mb-6
-    [&_h2]:mt-10 [&_h2]:mb-4
-    [&_h3]:mt-8 [&_h3]:mb-3
+     prose prose-sm sm:prose-base lg:prose-lg
+    max-w-none
+    text-base-content
+    leading-relaxed
+
+    [&_p]:my-6
+
+    [&_h1]:mt-14 [&_h1]:mb-6
+    [&_h2]:mt-12 [&_h2]:mb-5
+    [&_h3]:mt-10 [&_h3]:mb-4
+    [&_h4]:mt-8  [&_h4]:mb-3
+
+    [&_a]:text-primary
+    [&_a]:font-medium
+    [&_a]:underline-offset-4
+    [&_a]:transition-colors
+    [&_a]:duration-200
+    [&_a:hover]:underline
+    [&_a:hover]:text-primary/80
+
+    [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:my-6 [&_ul]:space-y-2
+    [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:my-6 [&_ol]:space-y-2
+
+    [&_blockquote]:border-l-4
+    [&_blockquote]:border-primary/40
+    [&_blockquote]:pl-4
+    [&_blockquote]:italic
+    [&_blockquote]:text-base-content/80
    
   "
   dangerouslySetInnerHTML={{ __html: blog.fullContent }}

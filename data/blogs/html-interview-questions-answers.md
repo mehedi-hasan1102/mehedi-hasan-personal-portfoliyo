@@ -7,38 +7,40 @@ description: A complete, beginner-friendly guide to HTML interview questions wit
 image: https://www.cantech.in/blog/wp-content/uploads/2024/03/What-is-HTML-958x575.webp
 ---
 
-# 🌐 HTML Interview Questions & Answers
+
+# HTML Interview Questions & Answers
 
 ### *(English + বাংলা)*
 
-A complete and beginner-friendly collection of **HTML interview questions and answers**, written in **both English and Bengali**.
-This repository is ideal for **freshers, interns, and junior frontend or MERN stack developers** preparing for technical interviews.
+A **complete and beginner-friendly guide** to the most frequently asked **HTML interview questions and answers**, explained in **both English and Bengali**.
 
- 
+This guide is designed for **freshers, interns, and junior frontend or MERN stack developers** who want to build strong fundamentals and perform confidently in technical interviews.
 
-## 📌 About This blog
+---
 
-This project focuses on **HTML fundamentals** that are frequently asked in:
+## About This Guide
+
+This blog focuses on **core HTML concepts** that are commonly asked in:
 
 * Internship interviews
-* Junior frontend developer interviews
-* MERN stack interviews
-* Viva exams and quick revision
+* Junior Frontend Developer interviews
+* MERN Stack interviews
+* University viva exams & quick revision
 
-Each question is explained **clearly and simply**, making it easy to understand even for absolute beginners.
+Each topic is explained in **simple and clear language**, making it suitable for beginners.
 
- 
+---
 
-## 👨‍🎓 Who Should Use This?
+## Who Should Read This?
 
-* Students learning **web development**
-* **Frontend** & **MERN stack** beginners
+* Students learning **Web Development**
+* **Frontend** & **MERN Stack** beginners
 * Internship & junior-level job seekers
-* Anyone revising **HTML basics**
+* Anyone revising **HTML fundamentals**
 
- 
+---
 
-## 📖 Topics Covered
+## Topics Covered
 
 * What is HTML?
 * HTML4 vs HTML5
@@ -52,26 +54,26 @@ Each question is explained **clearly and simply**, making it easy to understand 
 * Audio & Video tags
 * Charset & encoding
 * HTML tags vs elements
-* HTML5 features
+* Features of HTML5
 
- 
+---
 
-## ❓ Interview Questions & Answers
+## Interview Questions & Answers
 
-### 1️⃣  What is HTML?
+### 1. What is HTML?
 
 **English:**
-HTML stands for **HyperText Markup Language**. It is used to structure content on the web.
+HTML stands for **HyperText Markup Language**. It is used to structure and display content on the web.
 
 **বাংলা:**
 HTML এর পূর্ণরূপ **HyperText Markup Language**। এটি ওয়েবপেজের কাঠামো তৈরি করতে ব্যবহৃত হয়।
 
- 
+---
 
-### 2️⃣ Difference between HTML4 and HTML5
+### 2. Difference between HTML4 and HTML5
 
 **English:**
-HTML5 is the latest version of HTML and supports modern web features without external plugins.
+HTML5 is the latest version of HTML that supports modern web features without external plugins.
 
 **Key Differences:**
 
@@ -83,12 +85,12 @@ HTML5 is the latest version of HTML and supports modern web features without ext
 **বাংলা:**
 HTML5 হলো HTML-এর আধুনিক সংস্করণ যেখানে multimedia এবং semantic tag রয়েছে।
 
- 
+---
 
-### 3️⃣ What are Semantic Tags?
+### 3. What are Semantic Tags?
 
 **English:**
-Semantic tags describe the meaning of content clearly to browsers and developers.
+Semantic tags clearly describe the meaning of content to browsers and developers.
 
 **Examples:**
 `<header>`, `<footer>`, `<article>`, `<section>`, `<nav>`, `<aside>`
@@ -96,13 +98,13 @@ Semantic tags describe the meaning of content clearly to browsers and developers
 **বাংলা:**
 Semantic tag কনটেন্টের অর্থ স্পষ্টভাবে বোঝায়।
 
- 
+---
 
-### 4️⃣ Purpose of article, section, div, nav, aside
+### 4. Purpose of article, section, div, nav, aside
 
 **English:**
 
-* **article** – Independent content (blog, post)
+* **article** – Independent content (blog post, news article)
 * **section** – Group of related content
 * **div** – Generic container
 * **nav** – Navigation links
@@ -116,24 +118,24 @@ Semantic tag কনটেন্টের অর্থ স্পষ্টভা�
 * nav – মেনু বা লিংক
 * aside – সাইড কনটেন্ট
 
- 
+---
 
-### 5️⃣ Why use Meta tags?
+### 5. Why Use Meta Tags?
 
 **English:**
-Meta tags provide metadata like charset, description, viewport, and SEO information.
+Meta tags provide metadata such as charset, description, viewport, and SEO-related information.
 
 **বাংলা:**
 Meta tag charset, viewport এবং SEO সংক্রান্ত তথ্য দেয়।
 
- 
+---
 
-### 6️⃣ Inline vs Inline-block vs Block Elements
+### 6. Inline vs Inline-block vs Block Elements
 
 **English:**
 
-* **Inline** – No width or height
-* **Inline-block** – Supports width & height
+* **Inline** – Does not accept width or height
+* **Inline-block** – Accepts width & height
 * **Block** – Takes full width
 
 **বাংলা:**
@@ -142,57 +144,57 @@ Meta tag charset, viewport এবং SEO সংক্রান্ত তথ্�
 * Inline-block – width ও height দেওয়া যায়
 * Block – পুরো লাইন নেয়
 
- 
+---
 
-### 7️⃣ Attributes vs Properties
+### 7. Attributes vs Properties
 
 **English:**
 
-* Attributes are written in HTML
-* Properties are controlled by JavaScript (DOM)
+* Attributes are defined in HTML
+* Properties are controlled by JavaScript through the DOM
 
 **বাংলা:**
 
 * Attribute – HTML এ লেখা থাকে
 * Property – JavaScript দ্বারা নিয়ন্ত্রিত
 
- 
+---
 
-### 8️⃣ What is Viewport?
+### 8. What is Viewport?
 
 **English:**
-Viewport defines the visible area of a webpage on a device screen.
+Viewport defines the visible area of a webpage across different device screens.
 
 **বাংলা:**
 Viewport হলো ডিভাইস স্ক্রিনের দৃশ্যমান অংশ।
 
- 
+---
 
-### 9️⃣ What is a Hyperlink?
+### 9. What is a Hyperlink?
 
 **English:**
-A hyperlink connects one webpage to another using `<a>` tag and `href`.
+A hyperlink connects one webpage to another using the `<a>` tag and the `href` attribute.
 
 **বাংলা:**
 Hyperlink একটি পেজ থেকে অন্য পেজে নিয়ে যায়।
 
- 
+---
 
-### 🔟 HTML Tag vs Element
+### 10. HTML Tag vs Element
 
 **English:**
 
-* Tag: `<p>`
-* Element: `<p>Hello</p>`
+* **Tag:** `<p>`
+* **Element:** `<p>Hello</p>`
 
 **বাংলা:**
 
 * Tag – শুরু ও শেষ চিহ্ন
 * Element – Tag + content
 
- 
+---
 
-### 1️⃣1️⃣ How to Center a Div?
+### 11. How to Center a Div?
 
 **English:**
 
@@ -205,19 +207,19 @@ div {
 **বাংলা:**
 `margin: auto` ব্যবহার করে div center করা যায়।
 
- 
+---
 
-### 1️⃣2️⃣ iframe Tag
+### 12. iframe Tag
 
 **English:**
-Used to embed another webpage inside the current webpage.
+The iframe tag is used to embed another webpage inside the current webpage.
 
 **বাংলা:**
-iframe ট্যাগ অন্য ওয়েবপেজ দেখানোর জন্য ব্যবহৃত হয়।
+iframe ট্যাগ অন্য ওয়েবপেজ প্রদর্শনের জন্য ব্যবহৃত হয়।
 
- 
+---
 
-### 1️⃣3️⃣ Audio & Video Tags
+### 13. Audio & Video Tags
 
 **English:**
 
@@ -229,57 +231,60 @@ iframe ট্যাগ অন্য ওয়েবপেজ দেখানো�
 **বাংলা:**
 Audio ও Video ট্যাগ plugin ছাড়া media চালাতে ব্যবহৃত হয়।
 
- 
+---
 
-### 1️⃣4️⃣ strong, b, em, i Tags
+### 14. strong, b, em, i Tags
 
 **English:**
 
-* strong & em → semantic meaning
-* b & i → styling only
+* **strong & em** convey semantic meaning
+* **b & i** are used mainly for styling
 
 **বাংলা:**
 
 * strong ও em অর্থ বোঝায়
 * b ও i style এর জন্য
 
- 
+---
 
-### 1️⃣5️⃣ Charset in HTML
+### 15. Charset in HTML
 
 **English:**
-Charset defines character encoding like UTF-8.
+Charset defines character encoding, such as UTF-8.
 
 **বাংলা:**
-Charset ভাষা ও চিহ্ন সঠিকভাবে দেখাতে সাহায্য করে।
+Charset ভাষা ও বিশেষ চিহ্ন সঠিকভাবে দেখাতে সাহায্য করে।
 
- 
+---
 
-### 1️⃣6️⃣ Features of HTML5
+### Key Features of HTML5
 
 **English:**
 
-* Semantic tags
-* Audio & Video
+* Semantic elements
+* Native Audio & Video support
 * Canvas & SVG
-* Local Storage
+* Local & Session Storage
 * Geolocation API
+* Improved form controls
 
 **বাংলা:**
 
 * আধুনিক semantic tag
-* Multimedia support
-* Offline storage
-* আধুনিক API
+* Plugin ছাড়া Audio ও Video
+* Graphics এর জন্য Canvas ও SVG
+* Offline data সংরক্ষণ
+* Geolocation API
+* উন্নত form input ও validation
 
- 
+---
 
-## 📜 License
+## License
 
-This project is **free to use** for learning, practice, and interview preparation.
+This guide is **free to use** for learning, practice, and interview preparation.
 
- 
+---
 
-### ⭐ If this repository helps you, please give it a star
+### ⭐ If this guide helps you, consider giving it a star
 
 **Best of luck for your interviews! 🚀**
