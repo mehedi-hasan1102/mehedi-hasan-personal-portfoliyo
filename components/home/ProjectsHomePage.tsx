@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Eye, ArrowUpRight, Github, X } from "lucide-react";
+import { Eye, ArrowUpRight, } from "lucide-react";
 import projectsData from "@/data/projects.json";
 import { BorderBeam } from "@/components/ui/border-beam";
 import ProjectModal from "@/components/projects/ProjectModal";
@@ -23,13 +23,13 @@ interface Project {
   futurePlans?: string;
 }
 
-type FilterType = "All" | "Frontend" | "Backend" | "Full Stack";
+// type FilterType = "All" | "Frontend" | "Backend" | "Full Stack";
 
 const ProjectsHomePage: React.FC = () => {
   const [projects] = useState<Project[]>(projectsData as Project[]);
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [filter, setFilter] = useState<FilterType>("All");
+  // const [filter, setFilter] = useState<FilterType>("All");
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
@@ -41,15 +41,14 @@ const ProjectsHomePage: React.FC = () => {
     setSelectedProject(null);
   };
 
-  // Always show only first 6 projects
+  // Always show only first 4 projects
   const filteredProjects = projects
-    .filter((project) => filter === "All" || project.type === filter)
-    .slice(0, 6);
+    // .filter((project) => filter === "All" || project.type === filter)
+    .slice(0, 4);
 
   return (
     <>
       <motion.section
-        id="projects"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="text-base-content font-mono mx-auto py-2 px-0 sm:px-6 md:px-8 max-w-3xl"
@@ -63,15 +62,15 @@ const ProjectsHomePage: React.FC = () => {
             viewport={{ once: true }}
             className="mb-0 text-center mx-auto"
           >
-            <p className="text-sm text-primary mb-0">• My All Works</p>
+            <p className="text-sm text-primary mb-0">• My Latest Works</p>
             <h2 className="text-2xl mb-4">
-  Projects built for <span className="text-base-content/60 ">real-world needs</span>
-</h2>
+              Projects built for <span className="text-base-content/60 ">real-world needs</span>
+            </h2>
 
           </motion.div>
 
           {/* Filter Buttons */}
-          <div className="flex justify-center  gap-2 mb-4 flex-wrap">
+          {/* <div className="flex justify-center  gap-2 mb-4 flex-wrap">
             {["All", "Frontend", "Backend", "Full Stack"].map((type) => (
               <button
                 key={type}
@@ -85,7 +84,7 @@ const ProjectsHomePage: React.FC = () => {
                 {type}
               </button>
             ))}
-          </div>
+          </div> */}
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2">
@@ -114,27 +113,27 @@ const ProjectsHomePage: React.FC = () => {
                 </motion.div> */}
 
                 <motion.div
-  whileHover={{ scale: 1.02 }}
-  className="overflow-hidden rounded-lg mb-2 relative"
->
-  {project.videos && project.videos.length > 0 ? (
-    <video
-      src={project.videos[0]}
-      className="w-full h-44 object-cover rounded-lg"
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-    />
-  ) : (
-    <img
-      src={project.images[0]}
-      alt={project.title}
-      className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-    />
-  )}
-</motion.div>
+                  whileHover={{ scale: 1.02 }}
+                  className="overflow-hidden rounded-lg mb-2 relative"
+                >
+                  {project.videos && project.videos.length > 0 ? (
+                    <video
+                      src={project.videos[0]}
+                      className="w-full h-44 object-cover rounded-lg"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    />
+                  ) : (
+                    <img
+                      src={project.images[0]}
+                      alt={project.title}
+                      className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                  )}
+                </motion.div>
 
 
 
@@ -167,7 +166,7 @@ const ProjectsHomePage: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1"  /> Live Demo
+                    <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live Demo
                   </motion.a>
 
                   <motion.button
@@ -175,14 +174,14 @@ const ProjectsHomePage: React.FC = () => {
                     onClick={() => openModal(project)}
                     className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
                   >
-                    <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1"  /> View Details
+                    <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> View Details
                   </motion.button>
                 </div>
               </motion.div>
             ))}
           </div>
 
-<div className="mt-4 text-center">
+          {/* <div className="mt-4 text-center">
   <p className="text-sm mb-0">
     Other projects can be explored on{" "}
     <a
@@ -193,24 +192,34 @@ const ProjectsHomePage: React.FC = () => {
     >GitHub <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
     </a>
   </p>
-</div>
+</div> */}
+
+          <div className="mt-4 text-center">
+            <a
+              href="/projects"
+              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+            >
+              See all projects <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300" size={16} />
+            </a>
+          </div>
+
 
 
         </div>
 
 
-        
+
       </motion.section>
 
       {/* Project Modal */}
-     <ProjectModal
-  showModal={showModal}
-  selectedProject={selectedProject}
-  closeModal={closeModal}
-/>
+      <ProjectModal
+        showModal={showModal}
+        selectedProject={selectedProject}
+        closeModal={closeModal}
+      />
 
 
-      
+
     </>
   );
 };
