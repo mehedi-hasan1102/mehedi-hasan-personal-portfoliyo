@@ -19,18 +19,18 @@ export default function BlogPost({ blog }: Props) {
         className="bg-base-100 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300"
       >
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl mb-6  text-primary leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl mb-2  text-primary leading-tight">
           {blog.title}
         </h1>
 
         {/* Meta */}
-        <p className="text-sm sm:text-base text-base-content/60 mb-8 flex flex-wrap gap-2">
+        <p className="text-sm sm:text-base text-base-content/60 mb-4 flex flex-wrap gap-2">
           {blog.date} • {blog.readTime} • {blog.category}
         </p>
 
         {/* Image */}
         {blog.image && (
-          <div className="mb-8 overflow-hidden rounded-xl border border-primary/30 p-2 shadow-sm">
+          <div className="mb-4 overflow-hidden rounded-xl border border-primary/30 p-0 shadow-sm">
             <img
               src={blog.image}
               alt={blog.title}
