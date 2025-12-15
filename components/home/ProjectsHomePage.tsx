@@ -13,6 +13,7 @@ interface Project {
   title: string;
   description: string;
   images: string[];
+  videos?: string[];
   techStack: string[];
   type: "Frontend" | "Backend" | "Full Stack" | "All";
   liveLink: string;
@@ -98,15 +99,11 @@ const ProjectsHomePage: React.FC = () => {
                 <BorderBeam size={100} duration={8} colorFrom="#22c55e" colorTo="#16a34a" />
 
                 {/* Project Image */}
-                <motion.div
+                {/* <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="overflow-hidden rounded-lg mb-2 relative group"
                 >
-                  {/* <img
-                    src={project.images[0]}
-                    alt={project.title}
-                    className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                  /> */}
+                  
 
                   <img
   src={project.images[0]}
@@ -114,7 +111,32 @@ const ProjectsHomePage: React.FC = () => {
   className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105 hidden md:block"
 />
 
-                </motion.div>
+                </motion.div> */}
+
+                <motion.div
+  whileHover={{ scale: 1.02 }}
+  className="overflow-hidden rounded-lg mb-2 relative"
+>
+  {project.videos && project.videos.length > 0 ? (
+    <video
+      src={project.videos[0]}
+      className="w-full h-44 object-cover rounded-lg"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    />
+  ) : (
+    <img
+      src={project.images[0]}
+      alt={project.title}
+      className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+    />
+  )}
+</motion.div>
+
+
 
                 {/* Project Info */}
                 <h3 className="text-lg text-primary mb-2">{project.title}</h3>

@@ -12,6 +12,7 @@ interface Project {
   title: string;
   description: string;
   images: string[];
+  videos?: string[];
   techStack: string[];
   type: "Frontend" | "Backend" | "Full Stack" | "All";
   liveLink: string;
@@ -99,13 +100,37 @@ const AllProjectsPage: React.FC = () => {
                
                 <div className="grid gap-2 sm:gap-4 md:grid-cols-2 items-start">
                   {/* Image */}
-                  <motion.div whileHover={{ scale: 1.02 }} className="overflow-hidden rounded-lg">
+                  {/* <motion.div whileHover={{ scale: 1.02 }} className="overflow-hidden rounded-lg">
                     <img
                       src={project.images[0]}
                       alt={project.title}
                       className="w-full h-48 sm:h-56 object-cover object-center rounded-lg shadow "
                     />
-                  </motion.div>
+                  </motion.div> */}
+
+                  <motion.div
+  whileHover={{ scale: 1.02 }}
+  className="overflow-hidden rounded-lg mb-2 relative"
+>
+  {project.videos && project.videos.length > 0 ? (
+    <video
+      src={project.videos[0]}
+      className="w-full h-44 object-cover rounded-lg"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    />
+  ) : (
+    <img
+      src={project.images[0]}
+      alt={project.title}
+      className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+    />
+  )}
+</motion.div>
+
 
                   {/* Content */}
                   <div className="flex flex-col justify-between">

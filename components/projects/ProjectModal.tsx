@@ -8,6 +8,7 @@ interface Project {
   title: string;
   description: string;
   images: string[];
+  videos?: string[];
   techStack: string[];
   liveLink: string;
   frontendRepo?: string;
@@ -42,7 +43,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             exit={{ scale: 0.95, opacity: 0 }}
             className="bg-base-200 border border-primary/30 rounded-2xl shadow-2xl w-full max-w-2xl relative overflow-hidden flex flex-col md:flex-row max-h-[95vh]"
           >
-            {selectedProject.images?.length > 0 && (
+            {/* {selectedProject.images?.length > 0 && (
               <div className="md:w-1/2 w-full h-48 sm:h-64 md:h-auto overflow-hidden rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none flex-shrink-0">
                 <img
                   src={selectedProject.images[0]}
@@ -50,7 +51,30 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
-            )}
+            )} */}
+
+            <div className="md:w-1/2 w-full h-48 sm:h-64 md:h-auto overflow-hidden rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none flex-shrink-0">
+  {selectedProject.videos && selectedProject.videos.length > 0 ? (
+    <video
+      src={selectedProject.videos[0]}
+      className="w-full h-full object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    />
+  ) : (
+    selectedProject.images?.length > 0 && (
+      <img
+        src={selectedProject.images[0]}
+        alt={selectedProject.title}
+        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+      />
+    )
+  )}
+</div>
+
 
             <div className="md:w-1/2 w-full p-6 sm:p-8 flex flex-col relative overflow-hidden">
               <button

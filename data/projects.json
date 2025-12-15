@@ -1,20 +1,33 @@
 
 [
   {
-    "title": "Plant Care Tracker",
-    "description": "Helps users manage and track plant care routines with reminders and notes.",
-    "features": ["Add/Edit Plants", "Reminders", "Light/Dark Theme"],
-    "techStack": ["MongoDB", "Express", "React", "Node.js"],
-    "liveLink": "https://plant-care-tracker-bd.web.app",
-    "frontendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Client",
-    "backendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Server",
-    "images": [
-      "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/plantsc.png"
-    ],
-    "challenges": "Implementing reliable reminders and syncing data between client and server.",
-    "futurePlans": "Add AI-powered plant disease detection and personalized care tips.",
-    "type": "Full Stack"
-  },
+  "title": "Plant Care Tracker",
+  "description": "Helps users manage and track plant care routines with reminders and notes.",
+  "features": [
+    "Add/Edit Plants",
+    "Reminders",
+    "Light/Dark Theme"
+  ],
+  "techStack": [
+    "MongoDB",
+    "Express",
+    "React",
+    "Node.js"
+  ],
+  "liveLink": "https://plant-care-tracker-bd.web.app",
+  "frontendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Client",
+  "backendRepo": "https://github.com/mehedi-hasan1102/Plant-Care-Server",
+  "images": [
+    "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/plantsc.png"
+  ],
+  "videos": [
+    "/assets/video/plant-video.mp4"
+  ],
+  "challenges": "Implementing reliable reminders and syncing data between client and server.",
+  "futurePlans": "Add AI-powered plant disease detection and personalized care tips.",
+  "type": "Full Stack"
+}
+,
   {
     "title": "Food Garden",
     "description": "A production-ready food management app featuring real-time synchronization, JWT authentication, and optimized performance.",
