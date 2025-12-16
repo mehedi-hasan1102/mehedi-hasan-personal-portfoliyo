@@ -1,7 +1,7 @@
 
 [
   {
-  "title": "Plant Care Tracker",
+  "title": "Plant Care ",
   "description": "Helps users manage and track plant care routines with reminders and notes.",
   "features": [
     "Add/Edit Plants",
@@ -29,7 +29,7 @@
 }
 ,
   {
-    "title": "Food Garden",
+    "title": "Food Tracker",
     "description": "A production-ready food management app featuring real-time synchronization, JWT authentication, and optimized performance.",
     "features": [
       "Real-time synchronization with Firebase",
@@ -43,10 +43,35 @@
     "images": [
       "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/food.png"
     ],
+    "videos": [
+    "/assets/video/FoodGuardian.mp4"
+  ],
     "challenges": "Handling real-time data sync and optimizing performance under heavy load.",
     "type": "Full Stack",
     "futurePlans": "Integrate AI-based food recommendations and expand recipe database."
   },
+{
+    "title": "Duranta Online",
+    "description": "Duranta Online Limited is a modern web application built with Next.js (App Router), React, and Tailwind CSS. It provides high-speed internet and cable services with a responsive UI, a support center, and an admin dashboard for managing plans, teams, and user notifications.",
+    "features": [
+      "Support center with ticket system",
+      "Responsive landing page with animated gradient banner",
+      "mooth scroll and WhatsApp contact button"
+    ],
+    "techStack": ["Next.js ", "Framer Motion", "React Icons", "Tailwind CSS"],
+    "liveLink": "https://duranta-online.vercel.app/",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/Duranta-Online-Client",
+  "videos": [
+    "/assets/video/duranta-online.mp4"
+  ],
+    
+    "challenges": "Implementing secure payment integration and real-time synchronization.",
+    "futurePlans": "Add multi-player support and analytics dashboard.",
+    "type": "Full Stack"
+  },
+
+
+
   {
     "title": "Active Arena",
     "description": "A production-ready play ground management app featuring real-time synchronization, JWT authentication, and optimized performance.",
