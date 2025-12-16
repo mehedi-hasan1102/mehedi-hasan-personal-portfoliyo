@@ -84,9 +84,13 @@
     "liveLink": "https://buildbox-a12.web.app",
     "frontendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Client",
     "backendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Server",
-    "images": [
+    "images": [ 
       "https://raw.githubusercontent.com/mehedi-hasan1102/Image-Hosting-Server/refs/heads/main/projects-sowcase/aarena.png"
     ],
+
+    "videos": [
+    "/assets/video/ActiveArena.mp4"
+  ],
     "challenges": "Implementing secure payment integration and real-time synchronization.",
     "futurePlans": "Add multi-player support and analytics dashboard.",
     "type": "Full Stack"

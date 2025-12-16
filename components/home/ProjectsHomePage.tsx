@@ -95,7 +95,7 @@ const ProjectsHomePage: React.FC = () => {
                 transition={{ type: "spring", stiffness: 200 }}
                 className="relative bg-base-100 rounded-lg p-2  transition shadow hover:shadow-lg overflow-hidden"
               >
-                <BorderBeam size={100} duration={8} colorFrom="#22c55e" colorTo="#16a34a" />
+                <BorderBeam size={30} duration={8} colorFrom="#22c55e" colorTo="#16a34a" />
 
                 {/* Project Image */}
                 {/* <motion.div
