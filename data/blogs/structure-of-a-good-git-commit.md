@@ -7,28 +7,44 @@ category: GitHub
 description: Learn how to write clear, professional Git commits that improve collaboration and code readability.
 ---
 
+## Why Good Git Commits Matter
 
-Writing clear and professional Git commits is more than a habit—it’s a skill that makes collaboration smoother, code history readable, and debugging easier. Here’s a concise guide to crafting quality commits.
+Writing clear and professional Git commits is more than a good habit—it is a practical skill that improves team collaboration, keeps project history readable, and makes debugging significantly easier.
 
-**🔹 Structure of a Good Commit**
+A well-written commit tells **what changed**, **why it changed**, and sometimes **how it impacts the system**.
 
-A professional commit usually consists of:
+---
 
-**Type** – what kind of change it is (feature, fix, docs, etc.)
-**Short message** – 50 characters max, written in imperative tone (e.g., “Add login validation”)
-**Optional detailed description** – wrap text at 72 characters for readability, explaining why the change was made
+## 🧩 Anatomy of a Good Commit
 
-**🔹 Common Commit Types**
+A professional Git commit usually includes the following parts:
+
+* **Type** — Describes the nature of the change (feature, fix, docs, etc.)
+* **Short message** — Maximum 50 characters, written in the imperative mood
+
+  * Example: `Add login validation`
+* **Optional description** — Wrapped at 72 characters, explaining the reason or context for the change
+
+---
+
+## 🏷️ Common Commit Types
+
+Use consistent prefixes to make commit history easy to scan.
+
 ```
-feat:	Adding a new feature
-fix:	Bug fix
-docs:	Documentation-only changes
-style:	Formatting, missing semicolons, whitespace
-refactor:	Code change that neither fixes a bug nor adds a feature
-test:	Adding or updating tests
-chore:	Maintenance tasks (configs, dependencies) 
+feat:      Adding a new feature
+fix:       Bug fix
+docs:      Documentation-only changes
+style:     Formatting, whitespace, missing semicolons
+refactor:  Code change that neither fixes a bug nor adds a feature
+test:      Adding or updating tests
+chore:     Maintenance tasks (configs, dependencies)
 ```
-**🔹 Good commits** 
+##
+---
+
+## ✅ Examples of Good Commits
+
 ```
 feat: add user authentication
 fix: resolve crash on profile update
@@ -38,9 +54,13 @@ refactor: simplify dashboard component logic
 test: add unit tests for login reducer
 chore: update project dependencies
 ```
+##
+---
 
-## 🔹 Pro Tips
+## 💡 Pro Tips for Better Commits
 
-- Always use imperative mood: e.g., `Add feature` instead of `Added feature`  
-- Keep your commits focused: one commit = one purpose  
-- Include context in the description when necessary
+* Use the **imperative mood**: `Add feature`, not `Added feature`
+* Keep commits **small and focused** — one commit equals one purpose
+* Add a detailed description when the change is not self-explanatory
+
+Clean commits today save hours of confusion tomorrow—for you and your team.

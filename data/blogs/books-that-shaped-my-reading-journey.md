@@ -7,74 +7,82 @@ category: Books
 description: A personal collection of books I’ve read over the years, including novels, non-fiction, and self-help classics. Explore my reading journey!
 ---
 
-# 📚 My Reading Journey
 
-Welcome to my personal book blog! Here’s a curated list of books I’ve read over the years, organized by year.
+## 📚 My Reading Journey
+
+Books have played a quiet but powerful role in shaping my thinking, values, and imagination. Below is a curated list of books I’ve read over the years, organized by timeline and genre.
 
 ---
 
-## 2025
+## 📖 2025 — Top Reads
 
-**Top Reads:**
-1. *Ikigai* — Hector Garcia  
-2. *The Alchemist* — Paulo Coelho  
-3. *Atomic Habits* — James Clear 
-4. *The Forty Rules of Love* —  Elif Shafak 
-5. *Siddhartha*  —  Hermann Hesse
+A year of reflection, philosophy, and personal growth.
 
+* *Ikigai* — Hector Garcia
+* *The Alchemist* — Paulo Coelho
+* *Atomic Habits* — James Clear
+* *The Forty Rules of Love* — Elif Shafak
+* *Siddhartha* — Hermann Hesse
 
+---
 
-
-## 2020
+## 📖 2020
 
 ### 📝 Novels & Fiction
-1. *In Search of Happiness* — Bertrand Russell  
-2. *The Spy* — Paulo Coelho  
-3. *A God of Small Things* — Arundhati Roy  
-4. *War in the Forest* — Tarashankar Bandyopadhyay  
-5. *The Vagabond's Scripture* — Rahul Sankrityayan  
-6. *Gora* — Rabindranath Tagore  
-7. *Although My Guru* — Ahmad Shafa  
-8. *Kafka's Short Stories* — Franz Kafka  
-9. *Paradoxical Sajid* — Arif Azad  
-10. *Seven Tales* — Samaresh Majumdar  
-11. *From Volga to Ganga* — Rahul Sankrityayan  
+
+* *In Search of Happiness* — Bertrand Russell
+* *The Spy* — Paulo Coelho
+* *The God of Small Things* — Arundhati Roy
+* *War in the Forest* — Tarashankar Bandyopadhyay
+* *The Vagabond’s Scripture* — Rahul Sankrityayan
+* *Gora* — Rabindranath Tagore
+* *Although My Guru* — Ahmad Shafa
+* *Kafka’s Short Stories* — Franz Kafka
+* *Paradoxical Sajid* — Arif Azad
+* *Seven Tales* — Samaresh Majumdar
+* *From Volga to Ganga* — Rahul Sankrityayan
 
 ### 📚 Self-Help & Non-Fiction
-1. *The Power of Your Subconscious Mind* — Dr. Joseph Murphy  
-2. *The Old Man and the Sea* — Ernest Hemingway  
-3. *Rich Dad Poor Dad* — Robert Kiyosaki  
-4. *The Miracle Morning* — Hal Elrod  
 
+* *The Power of Your Subconscious Mind* — Dr. Joseph Murphy
+* *The Old Man and the Sea* — Ernest Hemingway
+* *Rich Dad Poor Dad* — Robert Kiyosaki
+* *The Miracle Morning* — Hal Elrod
 
+---
 
-## 2019
-
-### 📝 Novels
-1. *Metamorphosis* — An unusual story about a man  
-2. *The Outsider* — Philosophical novel exploring existentialism and alienation  
-3. *The Alchemist* — Spiritual story of a shepherd boy  
-4. *The Da Vinci Code* — Thriller revealing a conspiracy related to the Holy Grail  
-
-### 📚 Non-Fiction
-1. *Chanakya's Strategy* — Achievements of the ancient Indian statesman  
-2. *Swami Vivekananda* — Biography of the Indian monk and philosopher  
-3. *Biography of Maxim Gorky* — Life of the Russian writer and revolutionary  
-4. *Mother* — An autobiographical novel  
-5. *Dreams from My Father* — Memoir of Barack Obama's early life  
-6. *Biographies of the World's Top 100 Thinkers* — Collection of influential historical figures  
-7. *Biographies of the World's Top 101 Scientists* — Life stories of 101 scientists  
-8. *Indira Gandhi* — Biography of the former Prime Minister of India  
-
-
-
-## 2018
+## 📖 2019
 
 ### 📝 Novels
-1. *Homer's Odyssey* — A classic Greek epic  
-2. *Main Camp* — Dark history of Hitler  
-3. *Paradise Lost* — Story of Adam and Eve’s fall  
 
+* *Metamorphosis* — Franz Kafka
+* *The Outsider* — Albert Camus
+* *The Alchemist* — Paulo Coelho
+* *The Da Vinci Code* — Dan Brown
 
+### 📚 Non-Fiction & Biographies
 
-*✨ Reading has shaped who I am, and I hope to keep sharing my journey through books!*
+* *Chanakya’s Strategy*
+* *Swami Vivekananda*
+* *Biography of Maxim Gorky*
+* *Mother*
+* *Dreams from My Father* — Barack Obama
+* *Biographies of the World’s Top 100 Thinkers*
+* *Biographies of the World’s Top 101 Scientists*
+* *Indira Gandhi*
+
+---
+
+## 📖 2018
+
+### 📝 Classics & Literature
+
+* *Homer’s Odyssey*
+* *Mein Kampf*
+* *Paradise Lost* — John Milton
+
+---
+
+## ✨ Final Note
+
+Reading has shaped how I think, question, and understand the world. This list is not just a collection of books—it’s a timeline of growth. I look forward to continuing this journey and sharing more along the way.

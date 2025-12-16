@@ -8,6 +8,7 @@ image: https://www.cantech.in/blog/wp-content/uploads/2024/03/What-is-HTML-958x5
 ---
 
 
+
 # HTML Interview Questions & Answers
 
 ### *(English + বাংলা)*
@@ -40,57 +41,29 @@ Each topic is explained in **simple and clear language**, making it suitable for
 
 ---
 
-## Topics Covered
-
-* What is HTML?
-* HTML4 vs HTML5
-* Semantic HTML tags
-* Purpose of `article`, `section`, `div`, `nav`, `aside`
-* Meta tags & viewport
-* Inline, inline-block & block elements
-* Attributes vs properties
-* Hyperlinks
-* iframe
-* Audio & Video tags
-* Charset & encoding
-* HTML tags vs elements
-* Features of HTML5
-
----
-
 ## Interview Questions & Answers
 
-### 1. What is HTML?
+### 1. What are the differences between HTML4 and HTML5?
 
 **English:**
-HTML stands for **HyperText Markup Language**. It is used to structure and display content on the web.
-
-**বাংলা:**
-HTML এর পূর্ণরূপ **HyperText Markup Language**। এটি ওয়েবপেজের কাঠামো তৈরি করতে ব্যবহৃত হয়।
-
----
-
-### 2. Difference between HTML4 and HTML5
-
-**English:**
-HTML5 is the latest version of HTML that supports modern web features without external plugins.
+HTML5 is the modern version of HTML that introduces semantic elements and native multimedia support without plugins.
 
 **Key Differences:**
 
 * Native audio & video support
-* Semantic elements
+* Semantic elements like header, footer, article
 * Local Storage & Geolocation
 * No need for Flash
 
 **বাংলা:**
-HTML5 হলো HTML-এর আধুনিক সংস্করণ যেখানে multimedia এবং semantic tag রয়েছে।
+HTML5 হলো HTML-এর আধুনিক সংস্করণ যেখানে multimedia ও semantic tag সাপোর্ট করে এবং plugin দরকার হয় না।
 
 ---
 
-### 3. What are Semantic Tags?
+### 2. What are semantic tags in HTML? Give some examples.
 
 **English:**
-Semantic tags clearly describe the meaning of content to browsers and developers.
+Semantic tags clearly describe the meaning of the content to browsers, developers, and search engines.
 
 **Examples:**
 `<header>`, `<footer>`, `<article>`, `<section>`, `<nav>`, `<aside>`
@@ -100,11 +73,11 @@ Semantic tag কনটেন্টের অর্থ স্পষ্টভা�
 
 ---
 
-### 4. Purpose of article, section, div, nav, aside
+### 3. What is the purpose of article, div, section, nav, and aside?
 
 **English:**
 
-* **article** – Independent content (blog post, news article)
+* **article** – Independent content (blog post, news)
 * **section** – Group of related content
 * **div** – Generic container
 * **nav** – Navigation links
@@ -120,7 +93,7 @@ Semantic tag কনটেন্টের অর্থ স্পষ্টভা�
 
 ---
 
-### 5. Why Use Meta Tags?
+### 4. Why will you use Meta tag?
 
 **English:**
 Meta tags provide metadata such as charset, description, viewport, and SEO-related information.
@@ -130,13 +103,13 @@ Meta tag charset, viewport এবং SEO সংক্রান্ত তথ্�
 
 ---
 
-### 6. Inline vs Inline-block vs Block Elements
+### 5. What are the differences between inline, inline-block, and block elements?
 
 **English:**
 
 * **Inline** – Does not accept width or height
 * **Inline-block** – Accepts width & height
-* **Block** – Takes full width
+* **Block** – Takes full width and starts on a new line
 
 **বাংলা:**
 
@@ -146,7 +119,7 @@ Meta tag charset, viewport এবং SEO সংক্রান্ত তথ্�
 
 ---
 
-### 7. Attributes vs Properties
+### 6. What are properties and attributes in HTML?
 
 **English:**
 
@@ -160,7 +133,7 @@ Meta tag charset, viewport এবং SEO সংক্রান্ত তথ্�
 
 ---
 
-### 8. What is Viewport?
+### 7. What is a viewport?
 
 **English:**
 Viewport defines the visible area of a webpage across different device screens.
@@ -170,7 +143,7 @@ Viewport হলো ডিভাইস স্ক্রিনের দৃশ্�
 
 ---
 
-### 9. What is a Hyperlink?
+### 8. What is a hyperlink in HTML? What tag and attribute are used?
 
 **English:**
 A hyperlink connects one webpage to another using the `<a>` tag and the `href` attribute.
@@ -180,7 +153,7 @@ Hyperlink একটি পেজ থেকে অন্য পেজে নি�
 
 ---
 
-### 10. HTML Tag vs Element
+### 9. What is the difference between HTML elements and tags?
 
 **English:**
 
@@ -194,7 +167,62 @@ Hyperlink একটি পেজ থেকে অন্য পেজে নি�
 
 ---
 
-### 11. How to Center a Div?
+### 10. How to align text in HTML?
+
+**English:**
+Text alignment is done using CSS.
+
+```css
+p {
+  text-align: center;
+}
+```
+
+**বাংলা:**
+CSS এর `text-align` ব্যবহার করে text align করা হয়।
+
+---
+
+### 11. Explain the use of an iframe tag.
+
+**English:**
+The iframe tag is used to embed another webpage inside the current webpage.
+
+**বাংলা:**
+iframe ট্যাগ অন্য ওয়েবপেজ প্রদর্শনের জন্য ব্যবহৃত হয়।
+
+---
+
+### 12. Have you used Audio and Video tags? How do they work?
+
+**English:**
+Audio and Video tags allow media playback without plugins.
+
+```html
+<audio controls src="audio.mp3"></audio>
+<video controls src="video.mp4"></video>
+```
+
+**বাংলা:**
+Audio ও Video ট্যাগ plugin ছাড়া media চালাতে ব্যবহৃত হয়।
+
+---
+
+### 13. What is the difference between strong, b, em, and i tags?
+
+**English:**
+
+* **strong & em** convey semantic meaning
+* **b & i** are mainly for styling
+
+**বাংলা:**
+
+* strong ও em অর্থ বোঝায়
+* b ও i style এর জন্য
+
+---
+
+### 14. How will you center a div?
 
 **English:**
 
@@ -209,60 +237,32 @@ div {
 
 ---
 
-### 12. iframe Tag
+### 15. What is HTML?
 
 **English:**
-The iframe tag is used to embed another webpage inside the current webpage.
+HTML stands for **HyperText Markup Language**. It is used to structure web content.
 
 **বাংলা:**
-iframe ট্যাগ অন্য ওয়েবপেজ প্রদর্শনের জন্য ব্যবহৃত হয়।
+HTML এর পূর্ণরূপ **HyperText Markup Language**। এটি ওয়েবপেজের কাঠামো তৈরি করে।
 
 ---
 
-### 13. Audio & Video Tags
+### 16. What is charset in HTML? Why will you use it?
 
 **English:**
-
-```html
-<audio controls src="audio.mp3"></audio>
-<video controls src="video.mp4"></video>
-```
-
-**বাংলা:**
-Audio ও Video ট্যাগ plugin ছাড়া media চালাতে ব্যবহৃত হয়।
-
----
-
-### 14. strong, b, em, i Tags
-
-**English:**
-
-* **strong & em** convey semantic meaning
-* **b & i** are used mainly for styling
-
-**বাংলা:**
-
-* strong ও em অর্থ বোঝায়
-* b ও i style এর জন্য
-
----
-
-### 15. Charset in HTML
-
-**English:**
-Charset defines character encoding, such as UTF-8.
+Charset defines character encoding, such as UTF-8, to display text correctly.
 
 **বাংলা:**
 Charset ভাষা ও বিশেষ চিহ্ন সঠিকভাবে দেখাতে সাহায্য করে।
 
 ---
 
-### Key Features of HTML5
+### 17. Tell some feature names of HTML5.
 
 **English:**
 
 * Semantic elements
-* Native Audio & Video support
+* Native Audio & Video
 * Canvas & SVG
 * Local & Session Storage
 * Geolocation API

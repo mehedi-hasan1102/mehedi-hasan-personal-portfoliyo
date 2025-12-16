@@ -8,27 +8,35 @@ description: Learn the correct way to email your resume professionally with a te
 ---
 
 
-We’ve all seen job descriptions that say: “Send your CV/Resume via email.”
-And most people? They just attach the PDF and hit Send.
 
-But here’s the catch 👇
-If you don’t write anything in the email body, you’re missing a big opportunity.
+## Why the Email Body Matters
 
-👉 A short, professional email body shows HR that you’re serious, polished, and respectful of their time.
+Many job posts simply say **“Send your CV/Resume via email.”**
+Most candidates attach a PDF and hit **Send**.
 
-So, let’s fix that.
+That’s a missed opportunity.
 
-In this post, I’ll share:
- 
+A short, professional email body signals that you are:
 
-(1) The right way to send your CV.
-(2) A simple email template you can use right away.
-(3) A few must-follow tips to make a great impression.
+* Serious about the role
+* Clear in communication
+* Respectful of the recruiter’s time
 
-📩 Professional Email Template
+This small step can set you apart.
 
-Here’s a clean and effective format you can copy-paste (and personalize to your style):
+---
 
+## What You’ll Learn
+
+* The correct way to send your CV via email
+* A clean, professional email template
+* Practical tips to avoid common mistakes
+
+---
+
+## 📩 Professional Email Template
+
+Use the following format. Copy, paste, and personalize it as needed.
 
 ```
 To: [Company Email Address]  
@@ -51,17 +59,22 @@ Mehedi Hasan
 💻 GitHub: https://github.com/mehedi-hasan1102  
 ```
 
-✅ Quick Tips Before You Hit “Send”
+##
+---
 
- Always use PDF format → Avoid .doc, screenshots, or scanned files.
-(1) Polish it up → Double-check grammar & spelling (tiny mistakes leave a big mark).
-(2) Use a professional email address → firstname.lastname@gmail.com looks clean.
-(3) Skip the funky ones → funkyboy99@gmail.com won’t help your chances 😅.
-(4) Check your attachment → Don’t be that person who forgets to attach their CV.
+## ✅ Before You Hit “Send” — Quick Checklist
 
-💡 Final Thoughts
+* **Use PDF format** — Avoid .doc files, screenshots, or scanned images
+* **Proofread carefully** — Small mistakes leave a big impression
+* **Use a professional email address** — `firstname.lastname@gmail.com`
+* **Avoid casual emails** — e.g., `funkyboy99@gmail.com`
+* **Double-check attachments** — Make sure the CV is actually attached
 
-(1) Your CV matters, but often your first impression starts with the email you send.
-(2) A short, respectful message + a well-formatted PDF CV = a much better shot at catching HR’s attention.
+---
 
-If this helped you, pass it on to a friend who’s job hunting. They’ll thank you later. 🙌
+## 💡 Final Thoughts
+
+* Your CV is important, but your **first impression often starts with the email**
+* A concise, respectful message + a clean PDF CV significantly improves your chances
+
+If this guide helped you, share it with someone who’s job hunting—it might make a real difference.

@@ -16,7 +16,10 @@ A cover letter plays a crucial role when applying for a job. It gives recruiters
 
 In short, a cover letter tells your career story and highlights both your technical and interpersonal skills in a more personal and compelling way.
 
+---
+
 📝 What to Include in a Cover Letter
+
 
 
 ```
@@ -52,6 +55,10 @@ Respectfully
 Best regards
 Regards
 ```
+
+#
+---
+
 💡 Important Tips
 
 *Write a unique cover letter for each job. Don’t reuse the same one for multiple applications.*
