@@ -61,9 +61,9 @@ const SkillsSection: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="text-base-content font-mono max-w-3xl mx-auto py-2 px-0 sm:px-6 md:px-8"
+      className="text-base-content font-mono max-w-3xl mx-auto pt-1 "
     >
-      <div className="relative overflow-hidden  rounded-lg p-6 bg-base-200 border border-primary/30 backdrop-blur-sm  transition-shadow duration-300">
+      <div className="relative overflow-hidden  rounded-lg p-4 bg-base-200 border border-primary/30 backdrop-blur-sm  transition-shadow duration-300">
 
         {/* Orbital Animation */}
         <div className="absolute -top-8 -right-8 hidden md:block overflow-visible">

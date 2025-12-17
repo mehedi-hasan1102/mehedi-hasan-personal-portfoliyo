@@ -51,7 +51,7 @@ const AllProjectsPage: React.FC = () => {
         id="projects"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-base-content font-mono mx-auto py-2 px-0 sm:px-6 md:px-8 max-w-3xl"
+        className="text-base-content font-mono mx-auto pt-1   max-w-3xl"
       >
 
 

@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
 
   return (
     <header className="top-4 left-0 right-0 pt-2 z-50 py-0">
-      <div className="w-full max-w-3xl px-0 sm:px-6 md:px-8 mx-auto font-mono">
+      <div className="w-full max-w-3xl   mx-auto font-mono">
 
         {/* Desktop Navbar */}
         <motion.div
@@ -75,6 +75,21 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 About
               </Link>
             </li>
+
+
+{/* <li>
+              <Link
+                href="/about"
+                className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
+                  ${isActive("/about")
+                    ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
+                    : ""}
+                `}
+              >
+                About
+              </Link>
+            </li> */}
+
 
             <li>
               <Link
@@ -194,6 +209,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 <ul className="flex-1 flex flex-col gap-2 mt-4">
                   {[
                     { name: "About", route: "/" },
+                    // { name: "About", route: "/about" },
                     { name: "Projects", route: "/projects" },
                     { name: "Blogs", route: "/blogs" },
                     { name: "Contact", route: "/contact" },

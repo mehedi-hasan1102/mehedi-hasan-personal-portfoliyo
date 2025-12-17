@@ -58,9 +58,9 @@ const GitHubActivitySection: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="text-base-content font-mono max-w-3xl mx-auto py-0 px-0 sm:px-6 md:px-8"
+      className="text-base-content font-mono max-w-3xl mx-auto pt-1 "
     >
-      <div className=" rounded-lg p-6 border border-primary/30  bg-base-200 backdrop-blur-sm  transition-shadow duration-300">
+      <div className=" rounded-lg p-4 border border-primary/30  bg-base-200 backdrop-blur-sm  transition-shadow duration-300">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -78,7 +78,7 @@ const GitHubActivitySection: React.FC = () => {
         {/* GitHub Calendar */}
         <motion.div
           ref={containerRef}
-          className="overflow-x-auto flex justify-center"
+          className="overflow-x-auto flex justify-center "
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2 }}

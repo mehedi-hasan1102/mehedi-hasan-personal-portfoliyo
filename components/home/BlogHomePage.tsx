@@ -17,7 +17,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="text-base-content font-mono max-w-3xl mx-auto py-0  rounded-lg px-0 sm:px-6 md:px-8"
+      className="text-base-content font-mono max-w-3xl mx-auto pt-1  rounded-lg px-0 "
     >
       <div className="rounded-lg p-2 backdrop-blur-sm shadow-lg">
         {/* Section Header */}
@@ -34,7 +34,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
             <Link
               key={blog.slug} // Use slug as key
               href={`/blogs/${encodeURIComponent(blog.slug)}`}
-              className="relative group bg-base-100 rounded-2xl p-4 transition shadow-sm overflow-hidden block"
+              className="relative group bg-base-100 rounded-2xl p-2 transition shadow-sm overflow-hidden block"
             >
               <div className="relative rounded-lg mb-3 overflow-hidden">
                 {/* <img
@@ -48,7 +48,11 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
   alt={blog.title}
   className="w-full aspect-[16/9] object-cover rounded-lg group-hover:scale-105 transition-transform duration-300 hidden md:block"
 />
-                <span className="absolute bottom-3 left-3 px-2 sm:px-3 py-0 text-xs sm:text-sm   rounded-lg bg-base-100 ">
+
+
+
+
+                <span className="absolute bottom-3 m-1 left-3 px-2 sm:px-3 py-0 text-xs sm:text-sm   rounded-lg bg-base-100 ">
                   {blog.category}
                 </span>
 

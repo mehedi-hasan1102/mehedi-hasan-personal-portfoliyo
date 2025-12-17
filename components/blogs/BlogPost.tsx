@@ -10,13 +10,13 @@ interface Props {
 
 export default function BlogPost({ blog }: Props) {
   return (
-    <div className="mt-2 max-w-3xl mx-auto md:px-8">
+    <div className="pt-1 max-w-3xl mx-auto ">
       <ScrollProgress />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-base-100 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        className="bg-base-100 backdrop-blur-sm rounded-lg p-4 sm:p-4 shadow-lg hover:shadow-2xl transition-shadow duration-300"
       >
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl mb-2  text-primary leading-tight">

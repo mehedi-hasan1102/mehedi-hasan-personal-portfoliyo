@@ -88,16 +88,16 @@ const ResumeSections: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="text-base-content font-mono max-w-3xl mx-auto px-0 sm:px-6 md:px-8 space-y-4 pt-2"
+      className="text-base-content font-mono max-w-3xl mx-auto  space-y-0 pt-1"
     >
-      <div className="grid md:grid-cols-2 gap-2">
+      <div className="grid md:grid-cols-2 gap-1">
         {/* Experience Section */}
         <motion.div
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="relative w-full overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-6 backdrop-blur-sm  transition-shadow duration-300"
+          className="relative w-full overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4 backdrop-blur-sm  transition-shadow duration-300"
         >
           <p className="text-sm text-primary mb-0">• Career Path</p>
           <h3 className="flex items-center gap-3 text-xl mb-4 text-base-content">
@@ -164,7 +164,7 @@ const ResumeSections: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="relative w-full overflow-hidden  border border-primary/30 bg-base-200 rounded-lg p-6 backdrop-blur-sm  transition-shadow duration-300"
+          className="relative w-full overflow-hidden  border border-primary/30 bg-base-200 rounded-lg p-4 backdrop-blur-sm  transition-shadow duration-300"
         >
           <p className="text-sm text-primary mb-0">• Education Path</p>
           <h3 className="flex items-center gap-3 text-xl mb-4 text-base-content">

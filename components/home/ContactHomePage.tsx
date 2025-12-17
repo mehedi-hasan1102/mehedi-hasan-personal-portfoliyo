@@ -146,7 +146,7 @@ const ContactHomePage: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className=" text-base-content font-mono max-w-3xl mx-auto py-2 px-0 sm:px-6 md:px-8 "
+      className=" text-base-content font-mono max-w-3xl mx-auto pt-1 "
     >
       <Toaster position="top-right" reverseOrder={false} />
 

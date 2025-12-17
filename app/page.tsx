@@ -1,7 +1,6 @@
 
 import HeroSection from '@/components/home/Hero';
 import ResumeSections from '@/components/home/Resume';
-import SplashScreen from '@/components/ui/SplashScreen';
 import { ScrollProgress } from "@/components/ui/scroll-progress"
 import ProjectsHomePage from '@/components/home/ProjectsHomePage';
 import BlogHomePage from '@/components/home/BlogHomePage';
@@ -22,7 +21,6 @@ export default async function Home() {
     .slice(0, 3);
   return (
     <div className="min-h-screen font-mono relative ">
-      <SplashScreen />
       <ScrollProgress />
       <HeroSection />
       <ResumeSections />
@@ -30,8 +28,7 @@ export default async function Home() {
       <GitHubActivitySection />
       <SkillsSection />
       <BlogHomePage latestBlogs={latestBlogs} />
-      <ContactHomePage />
-     
+      <ContactHomePage />    
       <WhatsAppButton />
       <ScrollToTopButton />
       

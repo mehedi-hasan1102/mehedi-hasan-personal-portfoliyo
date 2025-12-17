@@ -51,9 +51,9 @@ const ProjectsHomePage: React.FC = () => {
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-base-content font-mono mx-auto py-2 px-0 sm:px-6 md:px-8 max-w-3xl"
+        className="text-base-content font-mono mx-auto pt-1  max-w-3xl"
       >
-        <div className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-6 backdrop-blur-sm  transition-shadow duration-300">
+        <div className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-2 backdrop-blur-sm  transition-shadow duration-300">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
