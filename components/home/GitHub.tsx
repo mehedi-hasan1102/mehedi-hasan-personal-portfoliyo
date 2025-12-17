@@ -60,7 +60,7 @@ const GitHubActivitySection: React.FC = () => {
       viewport={{ once: true }}
       className="text-base-content font-mono max-w-3xl mx-auto pt-1 "
     >
-      <div className=" rounded-lg p-4 border border-primary/30  bg-base-200 backdrop-blur-sm  transition-shadow duration-300">
+      <div className=" rounded-lg p-2 border border-primary/30  bg-base-200 backdrop-blur-sm  transition-shadow duration-300">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
