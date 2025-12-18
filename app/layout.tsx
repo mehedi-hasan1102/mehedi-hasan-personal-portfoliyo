@@ -15,7 +15,29 @@ export const metadata = {
   title: "Mehedi Hasan | Full-Stack Developer & Web Engineer",
   description:
     "Portfolio of Mehedi Hasan – Full-Stack Developer specializing in Next.js, React, TypeScript, and modern web applications.",
-  keywords: ["Mehedi Hasan", "Full-Stack Developer", "Next.js", "React", "Portfolio", "Web Engineer"],
+ keywords: [
+  "Mehedi Hasan",
+  "Full-Stack Developer",
+  "Frontend Developer",
+  "Backend Developer",
+  "MERN Developer",
+  "Web Developer",
+  "Next.js Developer",
+  "React Developer",
+  "JavaScript Developer",
+  "TypeScript Developer",
+  "Node.js Developer",
+  "Express.js Developer",
+  "MongoDB Developer",
+  "Portfolio",
+  "Web Engineer",
+  "Software Engineer",
+  "ReactJS Portfolio",
+  "Next.js Portfolio",
+  "Full-Stack Web Developer",
+  "Web Application Developer"
+],
+
   authors: [{ name: "Mehedi Hasan" }],
   openGraph: {
     title: "Mehedi Hasan | Full-Stack Developer",
@@ -31,6 +53,7 @@ export const metadata = {
       },
     ],
     locale: "en_US",
+    alternateLocales: ["en_BD"],
     type: "website",
   },
   twitter: {
