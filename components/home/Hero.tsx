@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import { Download, ArrowRight } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import {
@@ -177,18 +177,20 @@ const HeroSection: React.FC = () => {
           {/* Buttons */}
           <div className="flex flex-wrap gap-0 mt-4">
             <motion.a
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
-              whileHover={{ scale: 1.05, rotate: -0.5 }}
-              whileTap={{ scale: 0.97, rotate: 0.5 }}
-              href="https://drive.google.com/uc?export=download&id=1gZMIsl3xbE6bdXfz82WAgOrwMJygx7KB"
-              download
-              className="group inline-flex items-center gap-2 text-primary underline-offset-4 decoration-dashed hover:underline rounded-lg p-2 font-geist text-sm transition-all duration-300"
-            >
-              <Download size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />
-              [ Download CV ]
-            </motion.a>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
+  whileHover={{ scale: 1.05, rotate: -0.5 }}
+  whileTap={{ scale: 0.97, rotate: 0.5 }}
+  href="/Resume_of_Mehedi_Hasan.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group inline-flex items-center gap-2 text-primary underline-offset-4 decoration-dashed hover:underline rounded-lg p-2 font-geist text-sm transition-all duration-300"
+>
+  <Download size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />
+  [View Resume]
+</motion.a>
+
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -203,8 +205,8 @@ const HeroSection: React.FC = () => {
                 duration={500}
                 className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
               >
-                [ Hire Me ]
-                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                [Hire Me]
+                <Mail size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
               </ScrollLink>
             </motion.div>
           </div>
