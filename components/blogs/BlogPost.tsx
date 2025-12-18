@@ -79,6 +79,10 @@ export default function BlogPost({ blog }: Props) {
     [&_blockquote]:pl-4
     [&_blockquote]:italic
     [&_blockquote]:text-base-content/80
+
+    [&_pre]:bg-base-200 [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:shadow-sm
+[&_code]:font-mono [&_code]:text-sm [&_code]:text-base-content
+
    
   "
   dangerouslySetInnerHTML={{ __html: blog.fullContent }}
