@@ -1,8 +1,20 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap');
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: lemonade,abyss;  /* Change to only lemonade and abyss */
 }
+
+
+
+
+
+body {
+  font-family: 'Geist Mono', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }

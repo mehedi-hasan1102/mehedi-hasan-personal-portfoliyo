@@ -61,7 +61,7 @@ const SkillsSection: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="text-base-content font-mono max-w-3xl mx-auto pt-1 "
+      className="text-base-content font-geist max-w-3xl mx-auto pt-1 "
     >
       <div className="relative overflow-hidden  rounded-lg p-4 bg-base-200 border border-primary/30 backdrop-blur-sm  transition-shadow duration-300">
 

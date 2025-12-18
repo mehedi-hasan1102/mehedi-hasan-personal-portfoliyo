@@ -58,7 +58,7 @@ const GitHubActivitySection: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="text-base-content font-mono max-w-3xl mx-auto pt-1 "
+      className="text-base-content font-geist max-w-3xl mx-auto pt-1 "
     >
       <div className=" rounded-lg p-2 border border-primary/30  bg-base-200 backdrop-blur-sm  transition-shadow duration-300">
         {/* Header */}

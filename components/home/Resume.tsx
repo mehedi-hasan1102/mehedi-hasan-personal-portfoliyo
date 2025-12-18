@@ -90,7 +90,7 @@ const ResumeSections: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="text-base-content font-mono max-w-3xl mx-auto  space-y-0 pt-1"
+      className="text-base-content font-geist max-w-3xl mx-auto  space-y-0 pt-1"
     >
       <div className="grid md:grid-cols-2 gap-1">
         {/* Experience Section */}
@@ -138,7 +138,7 @@ const ResumeSections: React.FC = () => {
                     rel="noopener noreferrer"
                     className="inline-flex "
                   >
-                    <span className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300">
+                    <span className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300">
                       View Profile
                       <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
                     </span>
@@ -195,7 +195,7 @@ const ResumeSections: React.FC = () => {
                     rel="noopener noreferrer"
                     className="inline-flex"
                   >
-                    <span className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300">
+                    <span className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300">
                       View Credential
                       <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
                     </span>

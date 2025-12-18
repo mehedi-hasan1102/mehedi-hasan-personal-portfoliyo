@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="font-mono w-full max-w-3xl mx-auto flex items-center justify-center pt-1"
+      className="font-geist w-full max-w-3xl mx-auto flex items-center justify-center pt-1"
     >
 
 
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
           className="text-balance "
         >
           {/* Greeting */}
-          <motion.span className="mt-4 text-sm sm:text-sm text-base-content font-mono flex flex-wrap items-center ">
+          <motion.span className="mt-4 text-sm sm:text-sm text-base-content font-geist flex flex-wrap items-center ">
             <Typewriter words={["Hi, I'm Mehedi Hasan"]} loop={1} cursor typeSpeed={100} deleteSpeed={0} />
           </motion.span>
 
@@ -126,7 +126,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="mt-4 text-sm sm:text-base font-mono text-base-content/60 break-words"
+            className="mt-4 text-sm sm:text-base font-geist text-base-content/60 break-words"
           >
             I build full-stack web apps using{" "}
             <span className="bg-primary/20 text-primary font-medium px-1 rounded">
@@ -171,7 +171,7 @@ const HeroSection: React.FC = () => {
                 </div>
               </Marquee>
             </div>
-            <span className="text-xs sm:text-sm font-mono text-base-content/60 inline">...and more !</span>
+            <span className="text-xs sm:text-sm font-geist text-base-content/60 inline">...and more !</span>
           </motion.div>
 
           {/* Buttons */}
@@ -184,7 +184,7 @@ const HeroSection: React.FC = () => {
               whileTap={{ scale: 0.97, rotate: 0.5 }}
               href="https://drive.google.com/uc?export=download&id=1gZMIsl3xbE6bdXfz82WAgOrwMJygx7KB"
               download
-              className="group inline-flex items-center gap-2 text-primary underline-offset-4 decoration-dashed hover:underline rounded-lg p-2 font-mono text-sm transition-all duration-300"
+              className="group inline-flex items-center gap-2 text-primary underline-offset-4 decoration-dashed hover:underline rounded-lg p-2 font-geist text-sm transition-all duration-300"
             >
               <Download size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />
               [ Download CV ]
@@ -201,7 +201,7 @@ const HeroSection: React.FC = () => {
                 to="hire me"
                 smooth
                 duration={500}
-                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
               >
                 [ Hire Me ]
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />

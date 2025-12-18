@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
 
   return (
     <header className="top-4 left-0 right-0 pt-2 z-50 py-0">
-      <div className="w-full max-w-3xl   mx-auto font-mono">
+      <div className="w-full max-w-3xl   mx-auto font-geist">
 
         {/* Desktop Navbar */}
         <motion.div

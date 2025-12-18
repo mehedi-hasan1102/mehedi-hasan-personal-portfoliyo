@@ -20,7 +20,7 @@ export default async function Home() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
   return (
-    <div className="min-h-screen font-mono relative ">
+    <div className="min-h-screen font-geist relative ">
       <ScrollProgress />
       <HeroSection />
       <ResumeSections />

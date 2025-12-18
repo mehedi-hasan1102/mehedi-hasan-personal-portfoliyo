@@ -53,7 +53,7 @@ const NotFound = () => {
   }, []);
 
   return (
-    <section className="font-mono mx-auto px-0 sm:px-6 md:px-8 max-w-4xl relative  overflow-hidden flex justify-center pt-0">
+    <section className="font-geist mx-auto px-0 sm:px-6 md:px-8 max-w-4xl relative  overflow-hidden flex justify-center pt-0">
 
       {/* Particles */}
       <div className="absolute inset-0 pointer-events-none">
@@ -98,7 +98,7 @@ const NotFound = () => {
             href="/"
             
           >
-            <span className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300">
+            <span className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300">
               <Home size={16} className="group-hover:-translate-x-1 transition-transform duration-300 " />
               [ Go Home ]
             </span>

@@ -24,7 +24,7 @@ const ScrollToTopButton: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.3 }}
-      className="hover:text-primary font-mono fixed bottom-20 right-6 z-50 p-3 rounded-lg
+      className="hover:text-primary font-geist fixed bottom-20 right-6 z-50 p-3 rounded-lg
                  bg-base-200 text-base-content 
                  shadow-lg border border-primary/30 
                  hover:border-primary transition-all"

@@ -17,7 +17,7 @@ export default function BlogPost({ blog }: Props) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-base-100 backdrop-blur-sm rounded-lg p-4 sm:p-4 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        className="bg-base-100 backdrop-blur-sm rounded-lg p-4 sm:p-4 shadow-lg hover:shadow-2xl transition-shadow duration-300 font-geist"
       >
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl mb-2  text-primary leading-tight">

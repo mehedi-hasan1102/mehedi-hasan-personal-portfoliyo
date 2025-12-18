@@ -54,7 +54,7 @@ const Footer = () => {
       transition={{ duration: 0.6 }}
       className="max-w-3xl mx-auto  pt-1"
     >
-      <div className="rounded-t-xl pb-4 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300 font-mono text-sm text-base-content">
+      <div className="rounded-t-xl pb-4 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300 font-geist text-sm text-base-content">
         {/* Divider */}
         <motion.div
           initial={{ width: 0 }}

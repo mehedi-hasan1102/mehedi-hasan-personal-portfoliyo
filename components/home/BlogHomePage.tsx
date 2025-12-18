@@ -19,13 +19,13 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="text-base-content font-mono max-w-3xl mx-auto pt-1  rounded-lg px-0 "
+      className="text-base-content font-geist max-w-3xl mx-auto pt-1  rounded-lg px-0 "
     >
       <div className="rounded-lg p-2 backdrop-blur-sm shadow-lg">
         {/* Section Header */}
         <div className="mb-4 text-center">
-          <p className="text-sm text-primary mb-0 font-mono">• Insights & Tutorials</p>
-          <h2 className="text-2xl font-mono">
+          <p className="text-sm text-primary mb-0 font-geist">• Insights & Tutorials</p>
+          <h2 className="text-2xl font-geist">
             Latest tips, stories, <span className="text-base-content/60">and guides</span>
           </h2>
         </div>
@@ -66,7 +66,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
               <p className="text-xs text-base-content/50 mb-1">
                 {blog.date} • {blog.readTime}
               </p>
-              <h3 className="text-lg mb-2 ">{blog.title}</h3>
+              <h3 className="text-lg mb-2 text-primary/90">{blog.title}</h3>
             </Link>
           ))}
         </div>
@@ -76,7 +76,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
             Read{" "}
             <Link
               href="/blogs"
-              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
             >
               All Blogs <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1"  size={16} />
             </Link>

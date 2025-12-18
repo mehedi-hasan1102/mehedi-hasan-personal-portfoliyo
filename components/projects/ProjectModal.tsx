@@ -38,7 +38,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="font-mono fixed inset-0 backdrop-blur-sm z-[9999]
+          className="font-geist fixed inset-0 backdrop-blur-sm z-[9999]
                      p-4 flex items-center justify-center"
         >
           <motion.div
@@ -118,7 +118,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     href={selectedProject.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                   >
                     <ArrowUpRight size={16} />
                     Live Demo
@@ -130,7 +130,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={selectedProject.frontendRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                     >
                       <Github size={16} />
                       Frontend
@@ -143,7 +143,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={selectedProject.backendRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                     >
                       <Github size={16} />
                       Backend

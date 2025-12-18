@@ -24,7 +24,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full   mx-auto font-mono  rounded-lg  backdrop-blur-sm  transition-shadow  py-2"
+      className="w-full   mx-auto font-geist  rounded-lg  backdrop-blur-sm  transition-shadow  py-2"
     >
       <motion.div
         initial={{ opacity: 0, y: 10 }}

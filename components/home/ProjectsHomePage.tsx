@@ -53,7 +53,7 @@ const ProjectsHomePage: React.FC = () => {
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-base-content font-mono mx-auto pt-1  max-w-3xl"
+        className="text-base-content font-geist mx-auto pt-1  max-w-3xl"
       >
         <div className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-2 backdrop-blur-sm  transition-shadow duration-300">
           {/* Header */}
@@ -78,7 +78,7 @@ const ProjectsHomePage: React.FC = () => {
                 key={type}
                 onClick={() => setFilter(type as FilterType)}
                 className={` p-2 
-                  group inline-flex items-center gap-2 hover:text-primary rounded-lg font-mono text-sm sm:text-base transition-all duration-300
+                  group inline-flex items-center gap-2 hover:text-primary rounded-lg font-geist text-sm sm:text-base transition-all duration-300
                   ${filter === type ? " scale-105 underline underline-offset-4 decoration-wavy decoration-2 decoration-primary" : "text-base-content"}
                   hover:scale-105
                 `}
@@ -208,7 +208,7 @@ const ProjectsHomePage: React.FC = () => {
                   <motion.a
                     whileHover={{ x: 3 }}
                     href={project.liveLink}
-                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -218,7 +218,7 @@ const ProjectsHomePage: React.FC = () => {
                   <motion.button
                     whileHover={{ x: 3 }}
                     onClick={() => openModal(project)}
-                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                   >
                     <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> View Details
                   </motion.button>
@@ -234,7 +234,7 @@ const ProjectsHomePage: React.FC = () => {
       href="https://github.com/mehedi-hasan1102" // <-- your GitHub link
       target="_blank"
       rel="noopener noreferrer"
-      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
     >GitHub <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
     </a>
   </p>
@@ -243,7 +243,7 @@ const ProjectsHomePage: React.FC = () => {
           <div className="mt-4 text-center">
             <a
               href="/projects"
-              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
             >
               See all projects <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300" size={16} />
             </a>
