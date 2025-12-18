@@ -179,7 +179,7 @@ const HeroSection: React.FC = () => {
             <motion.a
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
+  // transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
   whileHover={{ scale: 1.05, rotate: -0.5 }}
   whileTap={{ scale: 0.97, rotate: 0.5 }}
   href="/Resume_of_Mehedi_Hasan.pdf"
@@ -195,7 +195,7 @@ const HeroSection: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.7, ease: "easeOut" }}
+              // transition={{ delay: 0.7, duration: 0.7, ease: "easeOut" }}
               whileHover={{ scale: 1.05, rotate: -0.5 }}
               whileTap={{ scale: 0.97, rotate: 0.5 }}
             >
