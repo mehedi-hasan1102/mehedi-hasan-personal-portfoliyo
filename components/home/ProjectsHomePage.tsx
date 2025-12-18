@@ -6,6 +6,8 @@ import { Eye, ArrowUpRight, } from "lucide-react";
 import projectsData from "@/data/projects.json";
 import { BorderBeam } from "@/components/ui/border-beam";
 import ProjectModal from "@/components/projects/ProjectModal";
+import Image from 'next/image';
+
 
 
 
@@ -112,7 +114,7 @@ const ProjectsHomePage: React.FC = () => {
 
                 </motion.div> */}
 
-                <motion.div
+                {/* <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="overflow-hidden rounded-lg mb-2 relative"
                 >
@@ -129,7 +131,7 @@ const ProjectsHomePage: React.FC = () => {
                   ) 
                   
                   : (
-                    <img
+                    <Image
                       src={project.images[0]}
                       alt={project.title}
                       className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
@@ -137,7 +139,32 @@ const ProjectsHomePage: React.FC = () => {
                   )
                   
                   }
-                </motion.div>
+                </motion.div> */}
+<motion.div
+  whileHover={{ scale: 1.02 }}
+  className="overflow-hidden rounded-lg mb-2 relative h-44 w-full"
+>
+  {project.videos && project.videos.length > 0 ? (
+    <video
+      src={project.videos[0]}
+      className="w-full h-full object-cover rounded-lg"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    />
+  ) : (
+    <Image
+      src={project.images[0]}
+      alt={project.title}
+      fill // allows the image to cover the parent
+      style={{ objectFit: "cover" }} // same as object-cover
+      className="rounded-lg transition-transform duration-300 group-hover:scale-105"
+      priority
+    />
+  )}
+</motion.div>
 
 
 

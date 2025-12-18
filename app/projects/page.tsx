@@ -5,6 +5,8 @@ import { motion, } from "framer-motion";
 import { Eye, ArrowUpRight, Github, X } from "lucide-react";
 import projectsData from "../../data/projects.json";
 import ProjectModal from "@/components/projects/ProjectModal";
+import Image from 'next/image';
+
 
 
 
@@ -43,7 +45,7 @@ const AllProjectsPage: React.FC = () => {
   // Show  projects for each filter
   const filteredProjects = projects
     .filter((project) => filter === "All" || project.type === filter)
-    
+
 
   return (
     <>
@@ -97,25 +99,18 @@ const AllProjectsPage: React.FC = () => {
                 transition={{ type: "spring", stiffness: 200 }}
                 className=" overflow-hidden bg-base-100  rounded-md p-4 transition"
               >
-               
+
                 <div className="grid gap-2 sm:gap-4 md:grid-cols-2 items-start">
                   {/* Image */}
-                  {/* <motion.div whileHover={{ scale: 1.02 }} className="overflow-hidden rounded-lg">
-                    <img
-                      src={project.images[0]}
-                      alt={project.title}
-                      className="w-full h-48 sm:h-56 object-cover object-center rounded-lg shadow "
-                    />
-                  </motion.div> */}
-
-                  <motion.div
+                  
+<motion.div
   whileHover={{ scale: 1.02 }}
-  className="overflow-hidden rounded-lg mb-2 relative"
+  className="overflow-hidden rounded-lg mb-2 relative w-full h-44 sm:h-56"
 >
   {project.videos && project.videos.length > 0 ? (
     <video
       src={project.videos[0]}
-      className="w-full h-44 object-cover rounded-lg"
+      className="w-full h-full object-cover rounded-lg"
       autoPlay
       muted
       loop
@@ -123,10 +118,13 @@ const AllProjectsPage: React.FC = () => {
       preload="metadata"
     />
   ) : (
-    <img
+    <Image
       src={project.images[0]}
       alt={project.title}
-      className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+      fill
+      sizes="(max-width: 768px) 100vw, 50vw"
+      className="rounded-lg object-cover transition-transform duration-300"
+      priority={index < 2}
     />
   )}
 </motion.div>
@@ -171,7 +169,7 @@ const AllProjectsPage: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1"  /> Live Demo
+                        <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live Demo
                       </motion.a>
 
                       {project.frontendRepo && (
@@ -182,7 +180,7 @@ const AllProjectsPage: React.FC = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1"  /> Frontend
+                          <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Frontend
                         </motion.a>
                       )}
 
@@ -194,7 +192,7 @@ const AllProjectsPage: React.FC = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1"  /> Backend
+                          <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Backend
                         </motion.a>
                       )}
 
@@ -203,7 +201,7 @@ const AllProjectsPage: React.FC = () => {
                         onClick={() => openModal(project)}
                         className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
                       >
-                        <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1"  /> View Details
+                        <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> View Details
                       </motion.button>
                     </div>
                   </div>
@@ -229,10 +227,10 @@ const AllProjectsPage: React.FC = () => {
 
       {/* Project Modal */}
       <ProjectModal
-  showModal={showModal}
-  selectedProject={selectedProject}
-  closeModal={closeModal}
-/>
+        showModal={showModal}
+        selectedProject={selectedProject}
+        closeModal={closeModal}
+      />
     </>
   );
 };
