@@ -4,7 +4,7 @@ date: Dec 12, 2025
 readTime: 5 min read
 category: Web Development
 description: A clear and structured beginner-friendly explanation of JavaScript and ReactJS, why they're important, and who should learn them.
-image: https://www.infoworld.com/wp-content/uploads/2025/09/2263137-0-59682900-1757000713-shutterstock_1361674454-100939444-orig.jpg?resize=1024%2C684&quality=50&strip=all
+image: /assets/images/blogs/js.jpg
 ---
 
 # Basic JavaScript Interview Questions & Answers

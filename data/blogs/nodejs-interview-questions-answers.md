@@ -4,7 +4,7 @@ date: Dec 16, 2025
 readTime: 5 min read
 category: Web Development
 description: A complete, beginner-friendly guide to Node.js interview questions with detailed answers in Bengali and English. Ideal for freshers, interns, and junior web developers.
-image: https://colorlib.com/wp/wp-content/uploads/sites/2/nodejs-frameworks.png
+image: /assets/images/blogs/node.jpg
 ---
 
 # Node JS Interview Questions & Answers

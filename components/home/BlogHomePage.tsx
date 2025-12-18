@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { Blog, BlogMetaData } from "@/lib/blogs";
+import Image from "next/image";
+
 
 interface BlogHomePageProps {
   latestBlogs: BlogMetaData[];
@@ -36,18 +38,16 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
               href={`/blogs/${encodeURIComponent(blog.slug)}`}
               className="relative group bg-base-100 rounded-2xl p-2 transition shadow-sm overflow-hidden block"
             >
-              <div className="relative rounded-lg mb-3 overflow-hidden">
-                {/* <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="w-full aspect-[16/9] object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                /> */}
+              <div className="relative rounded-lg mb-3 overflow-hidden  w-full aspect-video hidden md:block  group">
+              
+  <Image
+    src={blog.image}
+    alt={blog.title}
+    fill
+    className="object-cover transition-transform duration-300 group-hover:scale-105"
+    quality={100}
+  />
 
-                <img
-  src={blog.image}
-  alt={blog.title}
-  className="w-full aspect-[16/9] object-cover rounded-lg group-hover:scale-105 transition-transform duration-300 hidden md:block"
-/>
 
 
 

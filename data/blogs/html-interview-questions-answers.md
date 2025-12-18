@@ -4,7 +4,7 @@ date: Dec 15, 2025
 readTime: 5 min read
 category: Web Development
 description: A complete, beginner-friendly guide to HTML interview questions with detailed answers in Bengali and English. Ideal for freshers, interns, and junior web developers.
-image: https://www.cantech.in/blog/wp-content/uploads/2024/03/What-is-HTML-958x575.webp
+image: /assets/images/blogs/html5.jpg
 ---
 
 

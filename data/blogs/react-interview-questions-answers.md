@@ -4,7 +4,7 @@ date: Dec 16, 2025
 readTime: 5 min read
 category: Web Development
 description: A complete, beginner-friendly guide to React JS interview questions with detailed answers in Bengali and English. Ideal for freshers, interns, and junior web developers.
-image: https://d5gp1bgprhhde.cloudfront.net/wp-content/uploads/2023/01/react.png
+image: /assets/images/blogs/react.jpeg
 ---
 
 # React JS Interview Questions & Answers

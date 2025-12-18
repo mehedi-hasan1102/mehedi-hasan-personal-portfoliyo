@@ -4,7 +4,7 @@ date: Dec 16, 2025
 readTime: 5 min read
 category: Web Development
 description: A complete, beginner-friendly guide to CSS interview questions with detailed answers in Bengali and English. Ideal for freshers, interns, and junior web developers.
-image: https://www.milesweb.ae/blog/wp-content/uploads/2025/06/what-is-css.png
+image: /assets/images/blogs/css.webp
 ---
 
 # CSS Interview Questions & Answers

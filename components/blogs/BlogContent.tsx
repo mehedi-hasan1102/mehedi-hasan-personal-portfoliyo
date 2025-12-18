@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Blog } from "../../lib/blogs"; // Assuming Blog type is exported here
+import Image from "next/image";
 
 // Re-defining monthOrder or passing it as a prop
 const monthOrder: Record<string, number> = {
@@ -64,11 +65,19 @@ export function BlogContent({ years, structured }: BlogContentProps) {
                           whileHover={{ y: -3 }}
                           className="flex gap-2 sm:gap-4 bg-base-100 p-2  rounded-lg shadow hover:shadow-lg transition-all"
                         >
-                          <img
-                            src={blog.image}
-                            alt={blog.title}
-                            className="w-28 h-20 sm:w-32 sm:h-24 rounded-lg object-cover"
-                          />
+                         
+
+<div className="w-28 h-20 sm:w-32 sm:h-32 relative">
+  <Image
+    src={blog.image}
+    alt={blog.title}
+    fill
+    className="rounded-lg object-cover"
+  />
+</div>
+
+ 
+
                           <div className="flex-1">
                             <Link href={`/blogs/${blog.slug}`}>
                               <h3 className="text-primary text-lg underline-offset-4 decoration-dashed hover:underline">

@@ -3,6 +3,7 @@
 import { Blog } from "../../lib/blogs";
 import { motion } from "framer-motion";
 import { ScrollProgress } from "../ui/scroll-progress";
+import Image from "next/image";
 
 interface Props {
   blog: Blog;
@@ -30,13 +31,16 @@ export default function BlogPost({ blog }: Props) {
 
         {/* Image */}
         {blog.image && (
-          <div className="mb-4 overflow-hidden rounded-xl border border-primary/30 p-0 shadow-sm">
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full object-cover rounded-xl transition-transform duration-500 hover:scale-105"
-            />
-          </div>
+          <div className="mb-4 overflow-hidden rounded-xl border border-primary/30 shadow-sm relative h-120">
+  <Image
+    src={blog.image}
+    alt={blog.title}
+    fill
+    className="object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+    quality={100}
+  />
+</div>
+
         )}
 
         {/* Full Content */}
