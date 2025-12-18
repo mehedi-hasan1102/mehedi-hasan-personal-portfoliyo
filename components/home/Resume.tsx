@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { GraduationCap, Briefcase, ArrowUpRight } from "lucide-react";
 import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 // Import JSON data

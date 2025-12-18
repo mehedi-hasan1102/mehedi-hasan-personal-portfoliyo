@@ -1,5 +1,5 @@
-
 import "./globals.css";
+import 'simplebar/dist/simplebar.min.css';
 import { ReactNode } from "react";
 import Background from "@/components/ui/Background";
 import { ClientThemeProvider } from "@/components/common/ClientThemeProvider";
@@ -9,6 +9,7 @@ import ScrollToTopButton from "@/components/common/ScrollButton";
 import Navbar from "@/components/common/NavBar";
 import SplashScreen from '@/components/ui/SplashScreen';
 import { getSortedBlogsData } from "@/lib/blogs";
+
 
 export const metadata = {
   title: "Mehedi Hasan | Full-Stack Developer & Web Engineer",
