@@ -7,7 +7,7 @@ import Footer from "@/components/common/Footer";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
 import ScrollToTopButton from "@/components/common/ScrollButton";
 import Navbar from "@/components/common/NavBar";
-import SplashScreen from '@/components/ui/SplashScreen';
+// import SplashScreen from '@/components/ui/SplashScreen';
 import { getSortedBlogsData } from "@/lib/blogs";
 
 
@@ -103,7 +103,7 @@ export default async function RootLayout({
       <body suppressHydrationWarning>
         <ClientThemeProvider>
           {/* Splash mounted once */}
-          <SplashScreen />
+          {/* <SplashScreen /> */}
 
           <Background />
 
