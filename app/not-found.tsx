@@ -64,7 +64,7 @@ const NotFound = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 min-h-screen rounded-lg p-6 sm:p-2  sm:mx-0 shadow-xl backdrop-blur-sm w-full mt-2 "
+        className="relative z-10 min-h-screen rounded-lg  sm:p-2   shadow-xl backdrop-blur-sm w-full mt-1"
       >
 
 <motion.div
