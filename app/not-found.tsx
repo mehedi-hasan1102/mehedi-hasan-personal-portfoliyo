@@ -53,7 +53,7 @@ const NotFound = () => {
   }, []);
 
   return (
-    <section className="font-geist mx-auto px-0 sm:px-6 md:px-8 max-w-4xl relative  overflow-hidden flex justify-center pt-0">
+    <section className="font-geist mx-auto px-0   max-w-3xl relative  overflow-hidden flex justify-center pt-0">
 
       {/* Particles */}
       <div className="absolute inset-0 pointer-events-none">
@@ -64,20 +64,31 @@ const NotFound = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 border border-primary/30 rounded-3xl p-6 sm:p-10   sm:mx-0 md:mx-16 shadow-xl backdrop-blur-sm w-full mt-2"
+        className="relative z-10 min-h-screen rounded-lg p-6 sm:p-2  sm:mx-0 shadow-xl backdrop-blur-sm w-full mt-2 "
       >
-        {/* Name Header */}
-        <div className="mb-4 text-center text-primary text-2xl">
-          &lt; Mehedi Hasan /&gt;
-        </div>
 
+<motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          viewport={{ once: true }}
+          className="mb-4 text-center "
+        >
+          <p className="text-sm text-primary mb-0"> • Oops</p>
+          <h2 className="text-2xl">
+            Content  <span className="text-base-content/60"> Unavailable !</span>
+          </h2>
+        </motion.div>
+
+        
+      
         {/* Icon */}
         <motion.div className="flex justify-center mb-6" variants={iconVariants} animate="animate">
           <Zap size={80} className="text-primary drop-shadow-lg" />
         </motion.div>
 
         {/* 404 text */}
-        <h1 className="text-7xl sm:text-8xl font-extrabold 
+        <h1 className="text-7xl sm:text-8xl 
           bg-clip-text text-transparent 
           bg-gradient-to-r from-primary to-secondary 
           text-center mb-2">
@@ -85,12 +96,11 @@ const NotFound = () => {
         </h1>
 
         <h2 className="text-xl sm:text-2xl text-base-content text-center mb-2">
-  This content isn&apos;t available right now
+          The page you’re looking for doesn’t exist or has been moved.
+Let’s get you back to something useful.
 </h2>
 
-        {/* <p className="text-base-content/60 text-center mb-6">
-          The page you are looking for is not available.
-        </p> */}
+    
 
         {/* Button */}
         <div className="flex justify-center">
@@ -106,7 +116,7 @@ const NotFound = () => {
         </div>
 
         <p className="text-center text-xs text-base-content/50 mt-4">
-          Check the URL or try another section of the website.
+          You can explore my projects, skills, or contact section from the homepage.
         </p>
       </motion.div>
     </section>
