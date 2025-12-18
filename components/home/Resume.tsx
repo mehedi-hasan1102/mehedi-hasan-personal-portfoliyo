@@ -4,10 +4,13 @@ import React, { useState } from "react";
 // FIX 1: Import the 'Variants' type from framer-motion
 import { motion, Variants } from "framer-motion";
 import { GraduationCap, Briefcase, ArrowUpRight } from "lucide-react";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 // Import JSON data
 import aboutDataJson from "@/data/resume.json";
-import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+
 
 // --- Type Definitions ---
 // ... (Interfaces remain unchanged)
@@ -104,7 +107,7 @@ const ResumeSections: React.FC = () => {
             <Briefcase className="text-primary w-5 h-5" /> Work Experience
           </h3>
 
-          <ul className="space-y-6 max-h-[300px] overflow-y-auto pr-2">
+          <SimpleBar className="space-y-6 max-h-[300px] overflow-y-auto pr-2">
             {aboutData.experience.map((item: ExperienceItem, idx: number) => (
               <motion.li
                 key={idx}
@@ -154,7 +157,7 @@ const ResumeSections: React.FC = () => {
 
             ))}
 
-          </ul>
+          </SimpleBar>
           <ProgressiveBlur height="12%" position="bottom" />
         </motion.div>
 
@@ -171,7 +174,7 @@ const ResumeSections: React.FC = () => {
             <GraduationCap className="text-primary w-5 h-5" /> Learning Journey
           </h3>
 
-          <ul className="space-y-6 max-h-[300px] overflow-y-auto pr-2">
+          <SimpleBar className="space-y-6 max-h-[300px] overflow-y-auto pr-2">
             {aboutData.education.map((edu: EducationItem, idx: number) => (
               <motion.li
                 key={idx}
@@ -202,7 +205,7 @@ const ResumeSections: React.FC = () => {
                 )}
               </motion.li>
             ))}
-          </ul>
+          </SimpleBar>
           <ProgressiveBlur height="12%" position="bottom" />
         </motion.div>
       </div>

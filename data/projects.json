@@ -61,6 +61,7 @@
     "techStack": ["Next.js ", "Framer Motion", "React Icons", "Tailwind CSS"],
     "liveLink": "https://duranta-online.vercel.app/",
     "frontendRepo": "https://github.com/mehedi-hasan1102/Duranta-Online-Client",
+    "backendRepo": "https://github.com/mehedi-hasan1102/Duranta-Online-Server",
   "videos": [
     "/assets/video/duranta-online.mp4"
   ],

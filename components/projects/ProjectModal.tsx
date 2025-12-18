@@ -1,8 +1,207 @@
+
+// 'use client';
+
+// import { motion, AnimatePresence } from "framer-motion";
+// import { ArrowUpRight, Github, X } from "lucide-react";
+
+
+
+// interface Project {
+//   title: string;
+//   description: string;
+//   images: string[];
+//   videos?: string[];
+//   techStack: string[];
+//   liveLink: string;
+//   frontendRepo?: string;
+//   backendRepo?: string;
+//   challenges?: string;
+//   futurePlans?: string;
+// }
+
+// interface ProjectModalProps {
+//   showModal: boolean;
+//   selectedProject: Project | null;
+//   closeModal: () => void;
+// }
+
+// const ProjectModal: React.FC<ProjectModalProps> = ({
+//   showModal,
+//   selectedProject,
+//   closeModal,
+// }) => {
+//   return (
+//     <AnimatePresence>
+//       {showModal && selectedProject && (
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           className="font-mono fixed inset-0  backdrop-blur-sm z-[9999]
+//                      p-4 flex items-center justify-center "
+//         >
+          
+//           <motion.div
+//             initial={{ scale: 0.95, opacity: 0 }}
+//             animate={{ scale: 1, opacity: 1 }}
+//             exit={{ scale: 0.95, opacity: 0 }}
+//             className=" bg-base-200 border border-primary/30 rounded-br-none rounded-tr-none rounded-2xl shadow-2xl
+//                        w-full  max-h-[95vh]
+//                        overflow-hidden flex flex-col relative max-w-2xl mx-auto "
+//           >
+            
+
+            
+//             <button
+//               onClick={closeModal}
+//               className="absolute top-2 right-4 z-30  rounded-lg p-2 sm:p-1 text-red-500 hover:bg-primary/20 transition-all"
+//               aria-label="Close modal"
+//             >
+//               <X size={16} />
+//             </button>
+
+          
+
+//             {/* Scrollable Content (RIGHT SCROLLBAR) */}
+           
+//               <div className="flex-1 overflow-y-scroll modal-scrollbar p-6 md:p-8 space-y-6">
+
+              
+//   {/* Media Banner */}
+//             <div className="w-full h-56 md:h-72 overflow-hidden flex-shrink-0">
+//               {selectedProject.videos?.length ? (
+//                 <video
+//                   src={selectedProject.videos[0]}
+//                   className="w-full h-full object-cover"
+//                   autoPlay
+//                   muted
+//                   loop
+//                   playsInline
+//                   preload="metadata"
+//                 />
+//               ) : (
+//                 selectedProject.images?.length > 0 && (
+//                   <img
+//                     src={selectedProject.images[0]}
+//                     alt={selectedProject.title}
+//                     className="w-full h-full object-cover"
+//                   />
+//                 )
+//               )}
+//             </div>
+
+//               {/* Title + Actions */}
+//               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+//                 <h2 className="text-2xl md:text-3xl text-primary">
+//                   {selectedProject.title}
+//                 </h2>
+
+//                 <div className="flex flex-wrap gap-3">
+//                   <motion.a
+//                     whileHover={{ x: 3 }}
+//                     href={selectedProject.liveLink}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+//                   >
+//                     <ArrowUpRight size={16} />
+//                     Live Demo
+//                   </motion.a>
+
+//                   {selectedProject.frontendRepo && (
+//                     <motion.a
+//                       whileHover={{ x: 3 }}
+//                       href={selectedProject.frontendRepo}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                       className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+//                     >
+//                       <Github size={16} />
+//                       Frontend
+//                     </motion.a>
+//                   )}
+
+//                   {selectedProject.backendRepo && (
+//                     <motion.a
+//                       whileHover={{ x: 3 }}
+//                       href={selectedProject.backendRepo}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                       className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+//                     >
+//                       <Github size={16} />
+//                       Backend
+//                     </motion.a>
+//                   )}
+//                 </div>
+//               </div>
+
+//               {/* Description */}
+//               <p className="text-sm md:text-base text-base-content/80 leading-relaxed">
+//                 {selectedProject.description}
+//               </p>
+
+//               {/* Two Column Info */}
+//               <div className="grid md:grid-cols-2 gap-6">
+//                 {/* Key Features */}
+//                 <div className="bg-base-300/40 border border-primary/20 rounded-xl p-5 space-y-3">
+//                   <h3 className="text-sm text-primary">Key Features</h3>
+//                   <ul className="space-y-2 text-sm text-base-content/80 list-disc list-inside">
+//                     <li>Scalable, production-ready architecture</li>
+//                     <li>Role-based access and dashboards</li>
+//                     <li>Modern responsive UI</li>
+//                     <li>Optimized performance</li>
+//                   </ul>
+//                 </div>
+
+//                 {/* Technologies */}
+//                 <div className="bg-base-300/40 border border-primary/20 rounded-xl p-5 space-y-3">
+//                   <h3 className="text-sm text-primary">Technologies Used</h3>
+//                   <div className="flex flex-wrap gap-2">
+//                     {selectedProject.techStack.map((tech, i) => (
+//                       <span
+//                         key={i}
+//                         className="px-3 py-1 text-xs
+//                                    border border-primary/30 rounded-lg"
+//                       >
+//                         {tech}
+//                       </span>
+//                     ))}
+//                   </div>
+//                 </div>
+//               </div>
+
+//               {/* Optional Sections */}
+//               {selectedProject.challenges && (
+//                 <div>
+//                   <span className="text-sm text-primary">Challenges</span>
+//                   <p className="text-sm text-base-content/80 mt-1">
+//                     {selectedProject.challenges}
+//                   </p>
+//                 </div>
+//               )}
+
+//               {selectedProject.futurePlans && (
+//                 <div>
+//                   <span className="text-sm text-primary">Future Plans</span>
+//                   <p className="text-sm text-base-content/80 mt-1">
+//                     {selectedProject.futurePlans}
+//                   </p>
+//                 </div>
+//               )}
+//             </div>
+//           </motion.div>
+//         </motion.div>
+//       )}
+//     </AnimatePresence>
+//   );
+// };
+
+// export default ProjectModal;
 'use client';
 
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Github, X } from "lucide-react";
-
 
 interface Project {
   title: string;
@@ -15,6 +214,7 @@ interface Project {
   backendRepo?: string;
   challenges?: string;
   futurePlans?: string;
+  features?: string[]; // <-- dynamic key features
 }
 
 interface ProjectModalProps {
@@ -35,96 +235,78 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="font-mono fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999] p-4"
+          className="font-mono fixed inset-0 backdrop-blur-sm z-[9999]
+                     p-4 flex items-center justify-center"
         >
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
-            className="bg-base-200 border border-primary/30 rounded-2xl shadow-2xl w-full max-w-2xl relative overflow-hidden flex flex-col md:flex-row max-h-[95vh]"
+            className="bg-base-200 border border-primary/30 rounded-br-none rounded-tr-none rounded-2xl shadow-2xl
+                       w-full max-h-[95vh] overflow-hidden flex flex-col relative max-w-2xl mx-auto"
           >
-            {/* {selectedProject.images?.length > 0 && (
-              <div className="md:w-1/2 w-full h-48 sm:h-64 md:h-auto overflow-hidden rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none flex-shrink-0">
-                <img
-                  src={selectedProject.images[0]}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-4 z-30 rounded-lg p-2 sm:p-1 text-red-500 hover:bg-primary/20 transition-all"
+              aria-label="Close modal"
+            >
+              <X size={16} />
+            </button>
+
+            {/* Scrollable Content */}
+            <div className="flex-1 overflow-y-scroll modal-scrollbar p-6 md:p-8 space-y-6">
+
+              {/* Media Banner */}
+              <div className="w-full h-56 md:h-72 overflow-hidden flex-shrink-0">
+                {selectedProject.videos?.length ? (
+                  <video
+                    src={selectedProject.videos[0]}
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                ) : (
+                  selectedProject.images?.length > 0 && (
+                    <img
+                      src={selectedProject.images[0]}
+                      alt={selectedProject.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )
+                )}
               </div>
-            )} */}
 
-            <div className="md:w-1/2 w-full h-48 sm:h-64 md:h-auto overflow-hidden rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none flex-shrink-0">
-  {selectedProject.videos && selectedProject.videos.length > 0 ? (
-    <video
-      src={selectedProject.videos[0]}
-      className="w-full h-full object-cover"
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-    />
-  ) : (
-    selectedProject.images?.length > 0 && (
-      <img
-        src={selectedProject.images[0]}
-        alt={selectedProject.title}
-        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-      />
-    )
-  )}
-</div>
-
-
-            <div className="md:w-1/2 w-full p-6 sm:p-8 flex flex-col relative overflow-hidden">
-              <button
-                onClick={closeModal}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 rounded-lg p-2 sm:p-1 text-red-500 hover:bg-primary/20 transition-all"
-                aria-label="Close modal"
-              >
-                <X size={16} />
-              </button>
-
-              <div className="overflow-y-auto pr-2 max-h-[85vh] space-y-4 sm:space-y-6">
-                <h2 className="text-xl sm:text-2xl md:text-3xl text-primary">
+              {/* Title + Actions */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <h2 className="text-2xl md:text-3xl text-primary">
                   {selectedProject.title}
                 </h2>
 
-                <div className="flex flex-wrap gap-2 mt-1">
-                  {selectedProject.techStack.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="px-2 sm:px-3 py-0 text-xs sm:text-sm border-primary/30 border rounded-lg"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <p className="text-sm sm:text-base text-base-content/80 leading-relaxed mt-2">
-                  {selectedProject.description}
-                </p>
-
-                <div className="flex flex-wrap gap-4 mt-4">
+                <div className="flex flex-wrap gap-3">
                   <motion.a
                     whileHover={{ x: 3 }}
                     href={selectedProject.liveLink}
-                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
                   >
-                    <ArrowUpRight size={16} /> Live Demo
+                    <ArrowUpRight size={16} />
+                    Live Demo
                   </motion.a>
 
                   {selectedProject.frontendRepo && (
                     <motion.a
                       whileHover={{ x: 3 }}
                       href={selectedProject.frontendRepo}
-                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
                     >
-                      <Github size={16} /> Frontend
+                      <Github size={16} />
+                      Frontend
                     </motion.a>
                   )}
 
@@ -132,33 +314,73 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     <motion.a
                       whileHover={{ x: 3 }}
                       href={selectedProject.backendRepo}
-                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
                     >
-                      <Github size={16} /> Backend
+                      <Github size={16} />
+                      Backend
                     </motion.a>
                   )}
                 </div>
-
-                {selectedProject.challenges && (
-                  <div>
-                    <span className="text-sm">Challenges:</span>
-                    <p className="text-sm text-base-content/80 mt-1">
-                      {selectedProject.challenges}
-                    </p>
-                  </div>
-                )}
-
-                {selectedProject.futurePlans && (
-                  <div>
-                    <span className="text-sm">Future Plans:</span>
-                    <p className="text-sm text-base-content/80 mt-1">
-                      {selectedProject.futurePlans}
-                    </p>
-                  </div>
-                )}
               </div>
+
+              {/* Description */}
+              <p className="text-sm md:text-base text-base-content/80 leading-relaxed">
+                {selectedProject.description}
+              </p>
+
+              {/* Two Column Info */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Key Features */}
+                <div className="bg-base-300/40 border border-primary/20 rounded-xl p-5 space-y-3">
+                  <h3 className="text-sm text-primary">Key Features</h3>
+                  <ul className="space-y-2 text-sm text-base-content/80 list-disc list-inside">
+                    {selectedProject.features?.length ? (
+                      selectedProject.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))
+                    ) : (
+                      <li>No key features available</li>
+                    )}
+                  </ul>
+                </div>
+
+                {/* Technologies */}
+                <div className="bg-base-300/40 border border-primary/20 rounded-xl p-5 space-y-3">
+                  <h3 className="text-sm text-primary">Technologies Used</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.techStack.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 text-xs border border-primary/30 rounded-lg"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Optional Sections */}
+              {selectedProject.challenges && (
+                <div>
+                  <span className="text-sm text-primary">Challenges</span>
+                  <p className="text-sm text-base-content/80 mt-1">
+                    {selectedProject.challenges}
+                  </p>
+                </div>
+              )}
+
+              {selectedProject.futurePlans && (
+                <div>
+                  <span className="text-sm text-primary">Future Plans</span>
+                  <p className="text-sm text-base-content/80 mt-1">
+                    {selectedProject.futurePlans}
+                  </p>
+                </div>
+              )}
+
             </div>
           </motion.div>
         </motion.div>
