@@ -58,7 +58,7 @@
     "features": [
       "Support center with ticket system",
       "Responsive landing page with animated gradient banner",
-      "mooth scroll and WhatsApp contact button"
+      "Smooth scroll and WhatsApp contact button"
     ],
     "techStack": [
       "Next.js ",
