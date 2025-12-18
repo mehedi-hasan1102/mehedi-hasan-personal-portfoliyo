@@ -126,13 +126,17 @@ const ProjectsHomePage: React.FC = () => {
                       playsInline
                       preload="metadata"
                     />
-                  ) : (
+                  ) 
+                  
+                  : (
                     <img
                       src={project.images[0]}
                       alt={project.title}
                       className="w-full h-44 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
                     />
-                  )}
+                  )
+                  
+                  }
                 </motion.div>
 
 
@@ -146,7 +150,7 @@ const ProjectsHomePage: React.FC = () => {
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-2 text-xs">
+                {/* <div className="flex flex-wrap gap-2 mb-2 text-xs ">
                   {project.techStack.map((tech, i) => (
                     <span
                       key={i}
@@ -155,7 +159,22 @@ const ProjectsHomePage: React.FC = () => {
                       {tech}
                     </span>
                   ))}
-                </div>
+                </div> */}
+
+
+         {/* Tech Stack */}
+       <div className="absolute top-38 left-4 flex gap-2 ">
+  {project.techStack.slice(0, 1).map((tech, i) => (
+    <span
+      key={i}
+      className="px-3 py-0 text-xs sm:text-sm rounded-full bg-base-100 shadow whitespace-nowrap border border-primary/30"
+    >
+      {tech}
+    </span>
+  ))}
+</div>
+
+
 
                 {/* Action Buttons */}
                 <div className="flex flex-row items-center justify-between gap-4 text-sm whitespace-nowrap">

@@ -52,7 +52,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
 
 
 
-                <span className="absolute bottom-3 m-1 left-3 px-2 sm:px-3 py-0 text-xs sm:text-sm   rounded-lg bg-base-100 ">
+                <span className="absolute bottom-2 m-1 left-2 px-2 sm:px-3 py-0 text-xs sm:text-sm   rounded-lg bg-base-100 ">
                   {blog.category}
                 </span>
 

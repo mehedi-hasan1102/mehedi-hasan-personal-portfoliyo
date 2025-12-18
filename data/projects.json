@@ -9,9 +9,11 @@
     "Light/Dark Theme"
   ],
   "techStack": [
-    "MongoDB",
-    "Express",
     "React",
+    "MongoDB",
+
+    "Express",
+    
     "Node.js"
   ],
   "liveLink": "https://plant-care-tracker-bd.web.app",
@@ -36,7 +38,7 @@
       "JWT Authentication flow",
       "Full CRUD operations"
     ],
-    "techStack": ["React 19", "Tailwind CSS", "Firebase"],
+    "techStack": ["React ", "Tailwind CSS", "Firebase"],
     "liveLink": "https://food-garden-bd.web.app",
     "frontendRepo": "https://github.com/mehedi-hasan1102/Food-Garden-Client",
     "backendRepo": "https://github.com/mehedi-hasan1102/Food-Garden-Server",
@@ -81,7 +83,7 @@
       "JWT Authentication flow",
       "Full CRUD operations"
     ],
-    "techStack": ["React 19", "Stripe", "Firebase", "Tailwind CSS"],
+    "techStack": ["React ", "Stripe", "Firebase", "Tailwind CSS"],
     "liveLink": "https://buildbox-a12.web.app",
     "frontendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Client",
     "backendRepo": "https://github.com/mehedi-hasan1102/Active-Arena-Server",
