@@ -87,7 +87,7 @@ const GitHubActivitySection: React.FC = () => {
         >
           <GitHubCalendar
             username={username}
-            colorScheme="light"
+            colorScheme="dark"
             blockSize={blockSize}
             blockMargin={blockMargin}
             fontSize={fontSize}
