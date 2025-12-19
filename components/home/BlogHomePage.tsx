@@ -75,10 +75,10 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
           <p className="text-sm" >
             Read{" "}
             <Link
-              href="/blogs"
+              href="/blog"
               className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
             >
-              All Blogs <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1"  size={16} />
+              All Posts <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1"  size={16} />
             </Link>
           </p>
         </div>
