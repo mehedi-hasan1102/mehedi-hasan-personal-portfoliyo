@@ -79,7 +79,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
  
 
                           <div className="flex-1">
-                            <Link href={`/blogs/${blog.slug}`}>
+                            <Link href={`/blog/${blog.slug}`}>
                               <h3 className="text-primary text-lg underline-offset-4 decoration-dashed hover:underline">
                                 {blog.title}
                               </h3>

@@ -5,6 +5,8 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X, Search } from "lucide-react";
 import { BlogMetaData } from "@/lib/blogs";
+import SimpleBar from "simplebar-react";
+import 'simplebar-react/dist/simplebar.min.css';
 
 interface SearchBarProps {
   onClose: () => void;
@@ -76,28 +78,33 @@ const SearchBar: React.FC<SearchBarProps> = ({ onClose, blogs }) => {
         </div>
 
         {/* Results */}
-        <div className="max-h-80 overflow-y-auto space-y-3">
+        <div className="max-h-80 overflow-y-auto space-y-3  ">
           {results.length === 0 && query && (
             <p className="text-base-content/60 text-sm">No results found.</p>
           )}
 
-          {results.map((blog: BlogMetaData) => (
-            <a
-              key={blog.slug}
-              href={`/blogs/${blog.slug}`}
-              onClick={onClose}
-              className="block p-3 rounded-lg hover:bg-base-100 shadow-sm transition border border-base-300/30"
-            >
-              <h3 className="text-primary font-medium">{blog.title}</h3>
-              <p className="text-sm text-base-content/60 mt-1">
-                {blog.date} • {blog.readTime}
-              </p>
-              <p className="text-sm text-base-content/80 mt-1">
-                {blog.description.slice(0, 100)}...
-              </p>
-            </a>
-          ))}
+         
         </div>
+
+<SimpleBar className="space-y-6 max-h-[300px] overflow-y-auto pr-2 ">
+  {results.map((blog: BlogMetaData) => (
+    <a
+      key={blog.slug}
+      href={`/blog/${blog.slug}`}
+      onClick={onClose}
+      className="block p-2 rounded-lg hover:bg-base-100 shadow-sm transition "
+    >
+      <h3 className="text-primary font-medium">{blog.title}</h3>
+      <p className="text-sm text-base-content/60 mt-1">
+        {blog.date} • {blog.readTime}
+      </p>
+      <p className="text-sm text-base-content/80 mt-1">
+        {blog.description.slice(0, 100)}...
+      </p>
+    </a>
+  ))}
+</SimpleBar>
+
       </div>
     </div>,
     document.body

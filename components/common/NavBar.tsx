@@ -106,14 +106,14 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
 
             <li>
               <Link
-                href="/blogs"
+                href="/blog"
                 className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
-                  ${isActive("/blogs")
+                  ${isActive("/blog")
                     ? " underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
                     : ""}
                 `}
               >
-                Blogs
+                Blog
               </Link>
             </li>
 
@@ -211,7 +211,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                     { name: "About", route: "/" },
                     // { name: "About", route: "/about" },
                     { name: "Projects", route: "/projects" },
-                    { name: "Blogs", route: "/blogs" },
+                    { name: "Blog", route: "/blog" },
                     { name: "Contact", route: "/contact" },
                   ].map((item) => (
                     <li key={item.route}>
