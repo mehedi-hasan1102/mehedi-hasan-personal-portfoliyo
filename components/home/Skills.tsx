@@ -47,8 +47,8 @@ const techIconsRow2: TechIcon[] = [
 
 const SkillsSection: React.FC = () => {
  const skillItems: string[] = [
-   "Frontend Development: HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Tailwind CSS",
-    "Backend Development: Node.js, Express.js, MongoDB, JWT Authentication, Firebase Authentication",
+   "Frontend : HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Tailwind CSS",
+    "Backend : Node.js, Express.js, MongoDB, JWT Authentication, Firebase Authentication",
     "Tools: Git, GitHub, Vercel, Figma, Linux",
     "Soft Skills: Team Collaboration, Adaptability, Fast Learner"
 ];
