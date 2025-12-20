@@ -24,9 +24,9 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
       <div className="rounded-lg p-2 backdrop-blur-sm shadow-lg">
         {/* Section Header */}
         <div className="mb-4 text-center">
-          <p className="text-sm text-primary mb-0 font-geist">• Insights & Tutorials</p>
+          <p className="text-sm text-primary mb-0 font-geist">• Articles</p>
           <h2 className="text-2xl font-geist">
-            Latest tips, stories, <span className="text-base-content/60">and guides</span>
+            Recent <span className="text-base-content/60">Updates</span>
           </h2>
         </div>
 
@@ -39,14 +39,14 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
               className="relative group bg-base-100 rounded-2xl p-2 transition shadow-sm overflow-hidden block"
             >
               <div className="relative rounded-lg mb-3 overflow-hidden  w-full aspect-video hidden md:block  group">
-              
-  <Image
-    src={blog.image}
-    alt={blog.title}
-    fill
-    className="object-cover transition-transform duration-300 group-hover:scale-105"
-    quality={100}
-  />
+
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  quality={100}
+                />
 
 
 
@@ -78,7 +78,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
               href="/blog"
               className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
             >
-              All Posts <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1"  size={16} />
+              All Posts <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
             </Link>
           </p>
         </div>

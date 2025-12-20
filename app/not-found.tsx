@@ -74,9 +74,11 @@ const NotFound = () => {
           viewport={{ once: true }}
           className="mb-4 text-center "
         >
-          <p className="text-sm text-primary mb-0"> • Oops</p>
+          {/* <p className="text-sm text-primary mb-0"> • Oops</p> */}
           <h2 className="text-2xl">
-            Content  <span className="text-base-content/60"> Unavailable !</span>
+            Oops 
+            
+             <span className="text-base-content/60"> Error !</span>
           </h2>
         </motion.div>
 

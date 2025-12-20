@@ -159,9 +159,9 @@ const ContactHomePage: React.FC = () => {
           viewport={{ once: true }}
           className="mb-4"
         >
-          <p className="text-sm text-primary mb-0">• Get in Touch</p>
+          <p className="text-sm text-primary mb-0">• Contact</p>
           <h2 className="text-2xl font-geist text-base-content">
-            Let’s create <span className="text-base-content/60">together!</span>
+            Let’s <span className="text-base-content/60">Connect</span>
           </h2>
         </motion.div>
 

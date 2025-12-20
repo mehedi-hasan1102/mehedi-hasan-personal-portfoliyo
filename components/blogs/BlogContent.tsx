@@ -33,10 +33,10 @@ export function BlogContent({ years, structured }: BlogContentProps) {
         viewport={{ once: true }}
         className="mb-0 text-center mx-auto  "
       >
-        <p className="text-sm text-primary mb-0">• All Blog Posts</p>
-        <h2 className="text-2xl mb-4">
-          Insights & stories for{" "}
-          <span className="text-base-content/60">modern developers</span>
+        {/* <p className="text-sm text-primary mb-0">• All Blog Posts</p> */}
+        <h2 className="text-2xl m-4">
+          Tips &{" "}
+          <span className="text-base-content/60"> Stories</span>
         </h2>
       </motion.div>
 

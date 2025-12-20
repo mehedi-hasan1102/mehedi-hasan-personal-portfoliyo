@@ -69,9 +69,9 @@ const GitHubActivitySection: React.FC = () => {
           viewport={{ once: true }}
           className="mb-4 text-center"
         >
-          <p className="text-sm text-primary mb-0">• Code Life</p>
+          <p className="text-sm text-primary mb-0">• Contributions</p>
           <h2 className="text-2xl">
-            Contributions, commits, <span className="text-base-content/60">and growth</span>
+            Github <span className="text-base-content/60">Activity</span>
           </h2>
         </motion.div>
 

@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
           className="text-balance "
         >
           {/* Greeting */}
-          <motion.span className="mt-4 text-sm sm:text-sm text-base-content font-geist flex flex-wrap items-center ">
+          <motion.span className="mt-4 text-xl text-base-content font-geist flex flex-wrap items-center ">
             <Typewriter words={["Hi, I'm Mehedi Hasan"]} loop={1} cursor typeSpeed={100} deleteSpeed={0} />
           </motion.span>
 

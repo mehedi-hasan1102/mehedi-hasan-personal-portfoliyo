@@ -78,9 +78,9 @@ const SkillsSection: React.FC = () => {
           viewport={{ once: true }}
           className="mb-4 text-center"
         >
-          <p className="text-sm text-primary mb-0">• My Skills</p>
+          <p className="text-sm text-primary mb-0">• Skills</p>
           <h2 className="text-2xl">
-            Tools, tech, <span className="text-base-content/60">and soft skills</span>
+            Expertise <span className="text-base-content/60"> Area</span>
           </h2>
         </motion.div>
 

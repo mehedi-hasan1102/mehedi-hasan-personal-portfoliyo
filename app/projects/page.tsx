@@ -67,9 +67,9 @@ const AllProjectsPage: React.FC = () => {
             viewport={{ once: true }}
             className="mb-0 text-center mx-auto "
           >
-            <p className="text-sm text-primary mb-0">• My All Works</p>
-            <h2 className="text-2xl mb-4">
-              Projects built for <span className="text-base-content/60">real-world needs</span>
+            {/* <p className="text-sm text-primary mb-0">• Portfolio</p> */}
+            <h2 className="text-2xl m-4">
+              Projects <span className="text-base-content/60">Collection</span>
             </h2>
           </motion.div>
 

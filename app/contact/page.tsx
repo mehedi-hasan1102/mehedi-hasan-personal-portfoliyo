@@ -159,13 +159,13 @@ const ContactMe: React.FC = () => {
           viewport={{ once: true }}
           className="mb-4 text-center"
         >
-          <p className="text-sm text-primary mb-0">• Get in Touch</p>
-          <h2 className="text-2xl font-mono text-base-content">
-            Let’s create <span className="text-base-content/60">together!</span>
+          {/* <p className="text-sm text-primary mb-0">• Get in Touch</p> */}
+          <h2 className="text-2xl m-4  font-mono text-base-content">
+            Let’s <span className="text-base-content/60">Connect </span>
           </h2>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-4 ">
           {/* Contact Form */}
           <motion.div
             initial="hidden"

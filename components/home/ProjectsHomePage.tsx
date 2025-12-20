@@ -64,9 +64,9 @@ const ProjectsHomePage: React.FC = () => {
             viewport={{ once: true }}
             className="mb-0 text-center mx-auto"
           >
-            <p className="text-sm text-primary mb-0">• My Latest Works</p>
+            <p className="text-sm text-primary mb-0">• Projects</p>
             <h2 className="text-2xl mb-4">
-              Projects built for <span className="text-base-content/60 ">real-world needs</span>
+             Recent <span className="text-base-content/60 ">Works </span>
             </h2>
 
           </motion.div>

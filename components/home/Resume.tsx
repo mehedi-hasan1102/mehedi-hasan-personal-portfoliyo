@@ -101,9 +101,9 @@ const ResumeSections: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative w-full overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4 backdrop-blur-sm  transition-shadow duration-300"
         >
-          <p className="text-sm text-primary mb-0">• Career Path</p>
+          {/* <p className="text-sm text-primary mb-0">• Career Path</p> */}
           <h3 className="flex items-center gap-3 text-xl mb-4 text-base-content">
-            <Briefcase className="text-primary w-5 h-5" /> Work Experience
+            <Briefcase className="text-primary w-5 h-5" />Experience
           </h3>
 
           <SimpleBar className="space-y-6 max-h-[300px] overflow-y-auto pr-2">
@@ -168,9 +168,9 @@ const ResumeSections: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative w-full overflow-hidden  border border-primary/30 bg-base-200 rounded-lg p-4 backdrop-blur-sm  transition-shadow duration-300"
         >
-          <p className="text-sm text-primary mb-0">• Education Path</p>
+          {/* <p className="text-sm text-primary mb-0">• Education Path</p> */}
           <h3 className="flex items-center gap-3 text-xl mb-4 text-base-content">
-            <GraduationCap className="text-primary w-5 h-5" /> Learning Journey
+            <GraduationCap className="text-primary w-5 h-5" /> Education
           </h3>
 
           <SimpleBar className="space-y-6 max-h-[300px] overflow-y-auto pr-2">
