@@ -50,7 +50,7 @@ export default async function BlogsHome() {
   const years = Object.keys(structured).sort((a, b) => Number(b) - Number(a));
 
   return (
-    <div className="text-base-content font-mono mx-auto pt-1 max-w-3xl ">
+    <div className="text-base-content font-geist mx-auto pt-1 max-w-3xl ">
       <BlogContent years={years} structured={structured} />
     </div>
   );

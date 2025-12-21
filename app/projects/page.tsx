@@ -50,10 +50,9 @@ const AllProjectsPage: React.FC = () => {
   return (
     <>
       <motion.section
-        id="projects"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-base-content font-mono mx-auto pt-1   max-w-3xl"
+        className="text-base-content font-geist mx-auto pt-1   max-w-3xl"
       >
 
 
@@ -68,19 +67,20 @@ const AllProjectsPage: React.FC = () => {
             className="mb-0 text-center mx-auto "
           >
             {/* <p className="text-sm text-primary mb-0">• Portfolio</p> */}
-            <h2 className="text-2xl m-4">
+            <h2 className="text-xl m-2">
               Projects <span className="text-base-content/60">Collection</span>
             </h2>
           </motion.div>
 
           {/* Filter Buttons */}
-          <div className="flex justify-center  gap-2 mb-4 flex-wrap">
+          <div className="flex justify-center  gap-2 mb-2 flex-wrap">
             {["All", "Frontend", "Backend", "Full Stack"].map((type) => (
               <button
                 key={type}
                 onClick={() => setFilter(type as FilterType)}
-                className={` p-2 
-                  group inline-flex items-center gap-2 hover:text-primary rounded-lg font-mono text-sm sm:text-base transition-all duration-300
+                className={` p-2 cursor-pointer px-2 py-2 rounded-lg transition text-sm
+                  hover:text-primary 
+                  group inline-flex items-center gap-2 font-geist   duration-300
                   ${filter === type ? " scale-105 underline underline-offset-4 decoration-wavy decoration-2 decoration-primary" : "text-base-content"}
                   hover:scale-105
                 `}
@@ -133,14 +133,14 @@ const AllProjectsPage: React.FC = () => {
                   {/* Content */}
                   <div className="flex flex-col justify-between">
                     <div>
-                      <h3 className="text-base sm:text-lg  text-primary mb-2 sm:mb-3">
+                      <h3 className="text-base font-medium text-primary mb-2 sm:mb-0">
                         {project.title}
                       </h3>
-                      <p className="text-xs sm:text-sm md:text-base leading-relaxed text-base-content/80 mb-4 line-clamp-2">
+                      <p className="text-xs sm:text-sm md:text-base leading-relaxed text-base-content/80 mb-0 line-clamp-2">
                         {project.description}
                       </p>
 
-                      <div className="mb-4">
+                      <div className="mb-0">
                         <hr className="my-2 h-px border-0 bg-primary/30" />
                         <div className="flex flex-wrap items-center gap-x-2">
                           <span className="text-sm text-base-content/60">Technologies:</span>
@@ -161,11 +161,11 @@ const AllProjectsPage: React.FC = () => {
                     </div>
 
                     {/* Links */}
-                    <div className="flex flex-wrap gap-2 text-sm">
+                    <div className="flex flex-wrap gap-0 text-sm">
                       <motion.a
                         whileHover={{ x: 3 }}
                         href={project.liveLink}
-                        className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+                        className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -176,7 +176,7 @@ const AllProjectsPage: React.FC = () => {
                         <motion.a
                           whileHover={{ x: 3 }}
                           href={project.frontendRepo}
-                          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+                          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -188,7 +188,7 @@ const AllProjectsPage: React.FC = () => {
                         <motion.a
                           whileHover={{ x: 3 }}
                           href={project.backendRepo}
-                          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+                          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -199,7 +199,7 @@ const AllProjectsPage: React.FC = () => {
                       <motion.button
                         whileHover={{ x: 3 }}
                         onClick={() => openModal(project)}
-                        className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+                        className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                       >
                         <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> View Details
                       </motion.button>
@@ -217,7 +217,7 @@ const AllProjectsPage: React.FC = () => {
                 href="https://github.com/mehedi-hasan1102" // <-- your GitHub link
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
               >GitHub <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
               </a>
             </p>

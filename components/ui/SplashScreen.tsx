@@ -55,9 +55,9 @@ export default function Splash() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
-          className="font-mono mt-2 sm:mt-3 md:mt-4 text-2xl sm:text-3xl md:text-4xl tracking-wide"
+          className="font-geist mt-2 sm:mt-3 md:mt-4 text-2xl sm:text-3xl md:text-4xl tracking-wide"
         >
-          Mehedi <span className="text-base-content/60 font-mono">Hasan</span>
+          Mehedi <span className="text-base-content/60 font-geist">Hasan</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -65,7 +65,7 @@ export default function Splash() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-          className="mt-1 sm:mt-2 md:mt-3 text-sm sm:text-base md:text-lg font-mono text-base-content/60 tracking-wide"
+          className="mt-1 sm:mt-2 md:mt-3 text-sm sm:text-base md:text-lg font-geist text-base-content/60 tracking-wide"
         >
            Full-Stack Developer & Tech Enthusiast
         </motion.p>

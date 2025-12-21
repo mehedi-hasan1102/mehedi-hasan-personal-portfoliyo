@@ -110,7 +110,7 @@ const ContactMe: React.FC = () => {
         <motion.div
           onClick={() => copyToClipboard(CONTACT_EMAIL)}
           whileHover={{ x: 3 }}
-          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-mono text-sm cursor-pointer transition-all duration-300"
+          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
         >
           {CONTACT_EMAIL}
           <Copy size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -131,7 +131,7 @@ const ContactMe: React.FC = () => {
           href={CALENDLY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
         >
           Schedule on Calendly
           <ArrowUpRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -146,7 +146,7 @@ const ContactMe: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className=" text-base-content font-mono max-w-3xl mx-auto pt-1   "
+      className=" text-base-content font-geist max-w-3xl mx-auto pt-1   "
     >
       <Toaster position="top-right" reverseOrder={false} />
 
@@ -160,7 +160,7 @@ const ContactMe: React.FC = () => {
           className="mb-4 text-center"
         >
           {/* <p className="text-sm text-primary mb-0">• Get in Touch</p> */}
-          <h2 className="text-2xl m-4  font-mono text-base-content">
+          <h2 className="text-xl m-2  font-geist text-base-content">
             Let’s <span className="text-base-content/60">Connect </span>
           </h2>
         </motion.div>
@@ -190,11 +190,11 @@ const ContactMe: React.FC = () => {
               <motion.button 
                 type="submit"
                 whileTap={{ scale: 0.98 }}
-                className="max-w-40 mt-0 rounded-lg flex items-center gap-0 text-primary font-mono text-sm px-0 py-0 transition-all"
+                className="max-w-40 mt-0 rounded-lg flex items-center gap-0 text-primary font-geist text-sm px-0 py-0 transition-all"
               >
                 <motion.span
                   whileHover={{ scale: 1.05 }}
-                  className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-mono text-sm cursor-pointer transition-all duration-300"
+                  className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                 >
                   Send Message <ArrowUpRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </motion.span>
@@ -220,7 +220,7 @@ const ContactMe: React.FC = () => {
                 <div className="p-3 rounded-md text-primary">{item.icon}</div>
                 <div className="min-w-0">
                   <p className="text-sm opacity-70">{item.label}</p>
-                  <div className="font-mono break-words">{item.value}</div>
+                  <div className="font-geist break-words">{item.value}</div>
                 </div>
               </motion.div>
             ))}

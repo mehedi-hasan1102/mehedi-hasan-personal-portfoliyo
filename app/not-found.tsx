@@ -72,10 +72,10 @@ const NotFound = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="mb-4 text-center "
+          className="mb-2 text-center "
         >
           {/* <p className="text-sm text-primary mb-0"> • Oops</p> */}
-          <h2 className="text-2xl">
+          <h2 className="text-xl">
             Oops 
             
              <span className="text-base-content/60"> Error !</span>

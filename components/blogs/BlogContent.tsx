@@ -34,7 +34,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
         className="mb-0 text-center mx-auto  "
       >
         {/* <p className="text-sm text-primary mb-0">• All Blog Posts</p> */}
-        <h2 className="text-2xl m-4">
+        <h2 className="text-xl m-2">
           Tips &{" "}
           <span className="text-base-content/60"> Stories</span>
         </h2>
@@ -80,7 +80,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
 
                           <div className="flex-1">
                             <Link href={`/blog/${blog.slug}`}>
-                              <h3 className="text-primary text-lg underline-offset-4 decoration-dashed hover:underline">
+                              <h3 className="text-primary font-medium underline-offset-4 decoration-dashed hover:underline">
                                 {blog.title}
                               </h3>
                             </Link>

@@ -20,7 +20,7 @@ export default function BlogPost({ blog }: Props) {
         className="bg-base-100 backdrop-blur-sm rounded-lg p-4 sm:p-4 shadow-lg hover:shadow-2xl transition-shadow duration-300 font-geist"
       >
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl mb-2  text-primary leading-tight">
+        <h1 className="text-3xl   mb-2  text-primary leading-tight">
           {blog.title}
         </h1>
 
@@ -81,7 +81,7 @@ export default function BlogPost({ blog }: Props) {
     [&_blockquote]:text-base-content/80
 
     [&_pre]:bg-base-200 [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:shadow-sm
-[&_code]:font-mono [&_code]:text-sm [&_code]:text-base-content
+[&_code]:font-geist [&_code]:text-sm [&_code]:text-base-content
 
    
   "
