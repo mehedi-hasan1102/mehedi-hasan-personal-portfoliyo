@@ -97,10 +97,12 @@ const NotFound = () => {
           404
         </h1>
 
-        <h2 className="text-xl sm:text-2xl text-base-content text-center mb-2">
+        <h2 className="font-medium  text-base-content text-center mb-2">
           The page you’re looking for doesn’t exist or has been moved.
 Let’s get you back to something useful.
 </h2>
+ 
+
 
     
 
@@ -117,7 +119,7 @@ Let’s get you back to something useful.
           </Link>
         </div>
 
-        <p className="text-center text-xs text-base-content/50 mt-4">
+        <p className="text-center text-sm text-base-content/50 mt-4">
           You can explore my projects, skills, or contact section from the homepage.
         </p>
       </motion.div>
