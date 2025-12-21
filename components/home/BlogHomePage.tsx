@@ -25,7 +25,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
         {/* Section Header */}
         <div className="mb-4 text-center">
           <p className="text-sm text-primary mb-0 font-geist">• Articles</p>
-          <h2 className="text-2xl font-geist">
+          <h2 className="text-xl font-geist">
             Recent <span className="text-base-content/60">Updates</span>
           </h2>
         </div>
@@ -35,7 +35,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
           {latestBlogs.map((blog) => (
             <Link
               key={blog.slug} // Use slug as key
-              href={`/blogs/${encodeURIComponent(blog.slug)}`}
+              href={`/blog/${encodeURIComponent(blog.slug)}`}
               className="relative group bg-base-100 rounded-2xl p-2 transition shadow-sm overflow-hidden block"
             >
               <div className="relative rounded-lg mb-3 overflow-hidden  w-full aspect-video hidden md:block  group">
@@ -66,7 +66,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
               <p className="text-xs text-base-content/50 mb-1">
                 {blog.date} • {blog.readTime}
               </p>
-              <h3 className="text-lg mb-2 text-primary/90">{blog.title}</h3>
+              <h3 className=" font-medium mb-2 text-primary/90">{blog.title}</h3>
             </Link>
           ))}
         </div>

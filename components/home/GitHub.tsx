@@ -70,7 +70,7 @@ const GitHubActivitySection: React.FC = () => {
           className="mb-4 text-center"
         >
           <p className="text-sm text-primary mb-0">• Contributions</p>
-          <h2 className="text-2xl">
+          <h2 className="text-xl">
             Github <span className="text-base-content/60">Activity</span>
           </h2>
         </motion.div>

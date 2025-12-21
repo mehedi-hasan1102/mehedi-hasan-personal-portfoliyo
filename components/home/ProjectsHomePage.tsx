@@ -65,7 +65,7 @@ const ProjectsHomePage: React.FC = () => {
             className="mb-0 text-center mx-auto"
           >
             <p className="text-sm text-primary mb-0">• Projects</p>
-            <h2 className="text-2xl mb-4">
+            <h2 className="text-xl mb-4">
              Recent <span className="text-base-content/60 ">Works </span>
             </h2>
 
@@ -169,7 +169,7 @@ const ProjectsHomePage: React.FC = () => {
 
 
                 {/* Project Info */}
-                <h3 className="text-lg text-primary mb-2">{project.title}</h3>
+                <h3 className="font-medium text-primary mb-2">{project.title}</h3>
                 <p className="text-sm text-base-content/80 leading-relaxed mb-2">
                   {project.description.length > 50
                     ? `${project.description.slice(0, 50)}...`

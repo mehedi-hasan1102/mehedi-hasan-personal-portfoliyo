@@ -56,7 +56,6 @@ const SkillsSection: React.FC = () => {
 
   return (
     <motion.section
-      id="skills"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -79,7 +78,7 @@ const SkillsSection: React.FC = () => {
           className="mb-4 text-center"
         >
           <p className="text-sm text-primary mb-0">• Skills</p>
-          <h2 className="text-2xl">
+          <h2 className="text-xl">
             Expertise <span className="text-base-content/60"> Area</span>
           </h2>
         </motion.div>

@@ -160,7 +160,7 @@ const ContactHomePage: React.FC = () => {
           className="mb-4"
         >
           <p className="text-sm text-primary mb-0">• Contact</p>
-          <h2 className="text-2xl font-geist text-base-content">
+          <h2 className="text-xl font-geist text-base-content">
             Let’s <span className="text-base-content/60">Connect</span>
           </h2>
         </motion.div>
