@@ -17,7 +17,7 @@ export default function BlogPost({ blog }: Props) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-base-100 backdrop-blur-sm rounded-lg p-4 sm:p-4 shadow-lg hover:shadow-2xl transition-shadow duration-300 font-geist"
+        className="bg-base-100 backdrop-blur-sm rounded-lg p-4  shadow-lg hover:shadow-2xl transition-shadow duration-300 font-geist"
       >
         {/* Title */}
         <h1 className="text-3xl   mb-2  text-primary leading-tight">
@@ -31,62 +31,61 @@ export default function BlogPost({ blog }: Props) {
 
         {/* Image */}
         {blog.image && (
-          <div className="mb-4 overflow-hidden rounded-xl border border-primary/30 shadow-sm relative h-120">
-  <Image
-    src={blog.image}
-    alt={blog.title}
-    fill
-    className="object-cover rounded-xl transition-transform duration-500 hover:scale-105"
-    quality={100}
-  />
-</div>
-
+          <div className="mb-4 overflow-hidden rounded-xl border border-primary/30 shadow-sm relative w-full aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[16/9]">
+            <Image
+              src={blog.image}
+              alt={blog.title}
+              fill
+              className="object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+              quality={100}
+            />
+          </div>
         )}
 
+
         {/* Full Content */}
-       
-
-       
 
 
-<div
-  className="
-     prose prose-sm sm:prose-base lg:prose-lg
+
+
+
+        <div
+          className="
+    prose prose-sm sm:prose-base lg:prose-lg
     max-w-none
     text-base-content
-    leading-relaxed
 
-    [&_p]:my-6
+    /* Paragraphs */
+    [&_p]:my-6 [&_p]:leading-relaxed sm:[&_p]:leading-relaxed lg:[&_p]:leading-loose
 
-    [&_h1]:mt-14 [&_h1]:mb-6
-    [&_h2]:mt-12 [&_h2]:mb-5
-    [&_h3]:mt-10 [&_h3]:mb-4
-    [&_h4]:mt-8  [&_h4]:mb-3
+    /* Headings */
+    [&_h1]:mt-16 [&_h1]:mb-8 [&_h1]:leading-snug sm:[&_h1]:leading-snug lg:[&_h1]:leading-tight
+    [&_h2]:mt-14 [&_h2]:mb-6 [&_h2]:leading-snug sm:[&_h2]:leading-snug lg:[&_h2]:leading-tight
+    [&_h3]:mt-12 [&_h3]:mb-5 [&_h3]:leading-snug sm:[&_h3]:leading-snug lg:[&_h3]:leading-tight
+    [&_h4]:mt-10 [&_h4]:mb-4 [&_h4]:leading-snug sm:[&_h4]:leading-snug lg:[&_h4]:leading-tight
 
-    [&_a]:text-primary
-    [&_a]:font-medium
-    [&_a]:underline-offset-4
-    [&_a]:transition-colors
-    [&_a]:duration-200
-    [&_a:hover]:underline
-    [&_a:hover]:text-primary/80
+ 
+/* Links */
+[&_a]:text-primary [&_a]:font-medium
+[&_a]:no-underline
+[&_a]:transition-colors [&_a]:duration-200
+[&_a:hover]:underline [&_a:hover]:decoration-dotted [&_a:hover]:underline-offset-4 [&_a:hover]:text-primary
 
-    [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:my-6 [&_ul]:space-y-2
-    [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:my-6 [&_ol]:space-y-2
+    /* Lists */
+    [&_ul]:list-disc [&_ul]:ml-8 [&_ul]:my-6 [&_ul]:space-y-3 [&_ul]:leading-relaxed sm:[&_ul]:leading-relaxed lg:[&_ul]:leading-loose
+    [&_ol]:list-decimal [&_ol]:ml-8 [&_ol]:my-6 [&_ol]:space-y-3 [&_ol]:leading-relaxed sm:[&_ol]:leading-relaxed lg:[&_ol]:leading-loose
 
-    [&_blockquote]:border-l-4
-    [&_blockquote]:border-primary/40
-    [&_blockquote]:pl-4
-    [&_blockquote]:italic
-    [&_blockquote]:text-base-content/80
+    /* Blockquotes */
+    [&_blockquote]:border-l-4 [&_blockquote]:border-primary/40
+    [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-base-content/80 [&_blockquote]:leading-relaxed sm:[&_blockquote]:leading-relaxed lg:[&_blockquote]:leading-loose
 
-    [&_pre]:bg-base-200 [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:shadow-sm
-[&_code]:font-geist [&_code]:text-sm [&_code]:text-base-content
-
-   
+    /* Code & pre */
+    [&_pre]:bg-base-200 [&_pre]:p-6 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:shadow
+    [&_code]:font-geist [&_code]:text-sm [&_code]:text-base-content [&_code]:leading-relaxed sm:[&_code]:leading-relaxed lg:[&_code]:leading-loose
   "
-  dangerouslySetInnerHTML={{ __html: blog.fullContent }}
-/>
+          dangerouslySetInnerHTML={{ __html: blog.fullContent }}
+        />
+
 
 
 
