@@ -52,18 +52,18 @@ const HeroSection: React.FC = () => {
 
 
 
-      <div className="border border-primary/30 bg-base-200 backdrop-blur-sm relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center w-full   rounded-lg p-2 gap-10 sm:gap-0 transition-shadow duration-300">
+      <div className="border border-primary/30 bg-base-200 backdrop-blur-sm relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center w-full   rounded-lg p-2 gap-1 transition-shadow duration-300">
         <BorderBeam size={100} duration={8} colorFrom="#22c55e" colorTo="#16a34a" />
 
         {/* LEFT IMAGE */}
-        <motion.div className="flex justify-center">
+        {/* <motion.div className="flex justify-center ">
           <motion.div
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 220 }}
             className="w-36 h-44 sm:w-44 sm:h-52 md:w-48 md:h-56 relative"
           >
-            <div className="w-full h-full overflow-hidden rounded-lg mb-4">
+            <div className="w-full h-full overflow-hidden rounded-lg   rounded-b-none">
               <Image
                 src="/assets/images/profile.png"
                 alt="Mehedi Hasan"
@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
               />
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center   bg-base-100 rounded-lg rounded-t-none">
               <div
                 className="bg-primary w-4/5 max-w-xs aspect-[3/1]"
                 style={{
@@ -92,7 +92,38 @@ const HeroSection: React.FC = () => {
               />
             </div>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
+        <motion.div className="flex justify-center">
+  <motion.div
+    whileHover={{ scale: 1.04 }}
+    whileTap={{ scale: 0.98 }}
+    transition={{ type: "spring", stiffness: 220 }}
+    className="w-36 sm:w-44 md:w-48   overflow-hidden shadow-lg"
+  >
+    {/* Profile Image */}
+    <div className="relative w-full aspect-square sm:aspect-[4/5] ">
+      <Image
+        src="/assets/images/profile.png"
+        alt="Mehedi Hasan"
+        fill
+        className="object-cover rounded-lg"
+        priority
+      />
+    </div>
+
+    {/* Signature Section */}
+    <div className="flex justify-center items-center  h-12 sm:h-16">
+      <div
+        className="w-4/5 max-w-xs h-full bg-primary"
+        style={{
+          mask: "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png') center / contain no-repeat",
+          WebkitMask: "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png') center / contain no-repeat",
+        }}
+      />
+    </div>
+  </motion.div>
+</motion.div>
+
 
 
         {/* Right Content */}
@@ -100,10 +131,10 @@ const HeroSection: React.FC = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-balance "
+          className="text-balance  p-2 "
         >
           {/* Greeting */}
-          <motion.span className="mt-4 text-xl text-base-content font-geist flex flex-wrap items-center ">
+          <motion.span className="text-xl text-base-content font-geist flex flex-wrap items-center ">
             <Typewriter words={["Hi, I'm Mehedi Hasan"]} loop={1} cursor typeSpeed={100} deleteSpeed={0} />
           </motion.span>
 
@@ -151,11 +182,11 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="mt-6 flex items-center gap-2"
+            className="mt-2 flex items-center gap-2"
           >
             <div className="overflow-hidden w-full">
               <Marquee direction="left" speed={40} loop={0} gradient={false} pauseOnHover autoFill>
-                <div className="flex items-center gap-4 w-max">
+                <div className="flex items-center gap-2 w-max">
                   {repeatedIcons.map((tech, idx) => {
                     const IconComponent = tech.icon;
                     return (
@@ -175,7 +206,7 @@ const HeroSection: React.FC = () => {
           </motion.div>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-0 mt-4">
+          <div className="flex flex-wrap gap-0 mt-2">
             <motion.a
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}

@@ -107,7 +107,7 @@ export default async function RootLayout({
 
           <Background />
 
-          <div className="px-2 sm:px-0">
+          <div className="px-2 lg:px-0">
             <Navbar blogs={allBlogsData} />
             <main>{children}</main>
             <Footer />
