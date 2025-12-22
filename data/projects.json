@@ -43,7 +43,7 @@
     "frontendRepo": "https://github.com/mehedi-hasan1102/Food-Garden-Client",
     "backendRepo": "https://github.com/mehedi-hasan1102/Food-Garden-Server",
     "images": [
-       "/assets/images/projects/food.png"
+      "/assets/images/projects/food.png"
     ],
     "videos": [
       "/assets/video/FoodGuardian.mp4"
@@ -74,6 +74,39 @@
     ],
     "challenges": "Implementing secure payment integration and real-time synchronization.",
     "futurePlans": "Add multi-player support and analytics dashboard.",
+    "type": "Full Stack"
+  },
+  {
+    "title": "Task Manager",
+    "description": "A production-ready, responsive Task Management application built with Next.js and TypeScript. The platform enables users to efficiently create, update, delete, and organize tasks with real-time UI updates, optimized state management, and robust client-side validation for a smooth user experience.",
+    "features": [
+      "Create, update, and delete tasks",
+      "Real-time UI synchronization with TanStack Query",
+      "Optimistic updates for instant feedback",
+      "Robust client-side validation using Zod",
+      "Responsive and accessible dashboard design",
+      "Clean and scalable REST API integration"
+    ],
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "Express.js",
+      "Zod",
+      "TanStack Query"
+    ],
+    "liveLink": "https://meheditodo.vercel.app",
+    "frontendRepo": "https://github.com/mehedi-hasan1102/task-manager-client",
+    "backendRepo": "https://github.com/mehedi-hasan1102/task-manager-server",
+    "images": [
+      "/assets/images/projects/task.png"
+    ],
+    "videos": [
+      "/assets/video/TaskManagerApp.mp4"
+    ],
+    "challenges": "Designing a clean and maintainable validation architecture using Zod while ensuring consistent form state handling and error feedback across the application.",
+    "futurePlans": "Introduce user authentication, personalized task views, and advanced filtering and search capabilities.",
     "type": "Full Stack"
   },
   {
