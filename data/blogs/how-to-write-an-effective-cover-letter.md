@@ -3,7 +3,7 @@ image: /assets/images/blogs/cover-letter.jpg
 date: Sep 30, 2025
 readTime: 2 min read
 title: How to Write an Effective Cover Letter (Step-by-Step Guide)
-category: Career
+category: Web Development
 description: A step-by-step guide to writing a compelling cover letter that gets noticed.
 ---
 
