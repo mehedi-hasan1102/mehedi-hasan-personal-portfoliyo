@@ -6,149 +6,150 @@ category: Web Development
 description: A complete, beginner-friendly guide to Node.js interview questions with detailed answers in Bengali and English. Ideal for freshers, interns, and junior web developers.
 image: /assets/images/blogs/node.jpg
 ---
+# 🟢 Node JS Interview Questions –  (English + Bengali)
 
-# Node JS Interview Questions & Answers
-
-### *(English + বাংলা)*
-
-A **beginner-friendly Node.js interview guide** covering the most common **Node JS interview questions**, explained clearly in **English and Bengali**.
 
 ---
 
-### 1. What is Node.js?
+## 1. What is Node.js?
 
-**English:**
-Node.js is a **JavaScript runtime environment** that allows JavaScript to run on the server side.
+**English Answer:**
 
-**বাংলা:**
-Node.js হলো একটি JavaScript runtime যা server-side এ JavaScript চালাতে দেয়।
+Node.js is a runtime environment that allows JavaScript to run on the server side. It is built on Google Chrome’s V8 engine and is mainly used to build fast, scalable network applications.
 
----
+**বাংলা উত্তর:**
 
-### 2. Node.js vs JavaScript
-
-**English:**
-
-* JavaScript runs in the browser
-* Node.js runs JavaScript on the server
-
-**বাংলা:**
-JavaScript browser এ চলে, Node.js server এ চলে।
+Node.js হলো একটি runtime environment যা server side–এ JavaScript চালাতে সাহায্য করে। এটি Chrome–এর V8 engine ব্যবহার করে এবং scalable application তৈরিতে ব্যবহৃত হয়।
 
 ---
 
-### 3. Is Node.js single-threaded or multi-threaded?
+## 2. Node.js vs JavaScript
 
-**English:**
-Node.js is **single-threaded** but uses an event-driven, non-blocking architecture.
+**English Answer:**
 
-**বাংলা:**
-Node.js single-threaded কিন্তু asynchronous।
+JavaScript is a programming language, while Node.js is a runtime environment where JavaScript can run outside the browser.
 
----
+**বাংলা উত্তর:**
 
-### 4. Is Node.js blocking or non-blocking?
-
-**English:**
-Node.js is **non-blocking** by default.
-
-**বাংলা:**
-Node.js non-blocking।
+JavaScript একটি language, আর Node.js হলো এমন একটি environment যেখানে browser ছাড়াই JavaScript চালানো যায়।
 
 ---
 
-### 5. What is NPM?
+## 3. Is Node.js single-threaded or multi-threaded?
 
-**English:**
-NPM (Node Package Manager) manages libraries and dependencies.
+**English Answer:**
 
-**বাংলা:**
-NPM দিয়ে package install ও manage করা হয়।
+Node.js is single-threaded but uses an event-driven, non-blocking architecture. Internally, it can use multiple threads through the libuv library.
 
----
+**বাংলা উত্তর:**
 
-### 6. SQL vs NoSQL
-
-**English:**
-
-* SQL – structured, table-based
-* NoSQL – unstructured, document-based
-
-**বাংলা:**
-SQL table ভিত্তিক, NoSQL document ভিত্তিক।
+Node.js মূলত single-threaded, তবে background–এ multiple thread ব্যবহার করতে পারে।
 
 ---
 
-### 7. What will you do if the server crashes?
+## 4. Is Node.js blocking or non-blocking?
 
-**English:**
+**English Answer:**
 
-* Restart server
-* Check logs
-* Fix bugs
-* Use monitoring tools
+Node.js is non-blocking. It uses asynchronous operations so that one task does not block the execution of another.
 
-**বাংলা:**
-Server restart ও log চেক করা হয়।
+**বাংলা উত্তর:**
+
+Node.js non-blocking, মানে একটি কাজ চলাকালীন অন্য কাজ বন্ধ থাকে না।
 
 ---
 
-### 8. How does an API work?
+## 5. What is NPM?
 
-**English:**
-API handles communication between client and server using requests and responses.
+**English Answer:**
 
-**বাংলা:**
-API client ও server এর মধ্যে যোগাযোগ করে।
+NPM (Node Package Manager) is a tool used to install, manage, and share Node.js packages.
 
----
+**বাংলা উত্তর:**
 
-### 9. What is CRUD?
-
-**English:**
-CRUD stands for Create, Read, Update, Delete.
-
-**বাংলা:**
-CRUD হলো data পরিচালনার চারটি কাজ।
+NPM হলো Node.js–এর package manager যা library install ও manage করতে ব্যবহৃত হয়।
 
 ---
 
-### 10. GET vs POST
+## 6. SQL vs NoSQL
 
-**English:**
+**English Answer:**
 
-* GET – retrieve data
-* POST – send data
+SQL databases are relational and use structured schemas. NoSQL databases are non-relational and store data in flexible formats like documents.
 
-**বাংলা:**
+**বাংলা উত্তর:**
+
+SQL হলো relational database, আর NoSQL হলো non-relational এবং flexible structure ব্যবহার করে।
+
+---
+
+## 7. What will you do if the server crashes?
+
+**English Answer:**
+
+Check logs, restart the server, identify the root cause, fix bugs, and implement monitoring tools like PM2.
+
+**বাংলা উত্তর:**
+
+Server crash হলে log check, restart, bug fix এবং monitoring tool ব্যবহার করতে হয়।
+
+---
+
+## 8. How does an API work?
+
+**English Answer:**
+
+An API acts as a bridge between client and server. The client sends a request, and the server responds with data.
+
+**বাংলা উত্তর:**
+
+API client ও server–এর মধ্যে যোগাযোগের মাধ্যম হিসেবে কাজ করে।
+
+---
+
+## 9. What is CRUD?
+
+**English Answer:**
+
+CRUD stands for Create, Read, Update, and Delete. These are basic database operations.
+
+**বাংলা উত্তর:**
+
+CRUD মানে Create, Read, Update, Delete — database–এর মৌলিক কাজ।
+
+---
+
+## 10. GET vs POST
+
+**English Answer:**
+
+GET is used to fetch data, POST is used to send data securely to the server.
+
+**বাংলা উত্তর:**
+
 GET data আনে, POST data পাঠায়।
 
 ---
 
-### 11. Difference between PUT and PATCH
+## 11. Difference between PUT and PATCH
 
-**English:**
+**English Answer:**
 
-* PUT – updates entire resource
-* PATCH – updates partial data
+PUT updates the entire resource, while PATCH updates only specific fields.
 
-**বাংলা:**
-PUT পুরো data, PATCH আংশিক data পরিবর্তন করে।
+**বাংলা উত্তর:**
 
----
-
-### 12. How will you secure an API?
-
-**English:**
-
-* Authentication (JWT)
-* Authorization
-* HTTPS
-* Input validation
-
-**বাংলা:**
-JWT, HTTPS ও validation দিয়ে API secure করা হয়।
+PUT পুরো data update করে, PATCH শুধু নির্দিষ্ট অংশ update করে।
 
 ---
 
-**Good luck for your Node.js interviews! 🟢🚀**
+## 12. How will you secure an API?
+
+**English Answer:**
+
+Using authentication (JWT/OAuth), HTTPS, validation, rate limiting, and proper authorization.
+
+**বাংলা উত্তর:**
+
+JWT, HTTPS, validation এবং authorization ব্যবহার করে API secure করা হয়।
+

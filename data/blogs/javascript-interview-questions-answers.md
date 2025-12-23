@@ -7,305 +7,330 @@ description: A clear and structured beginner-friendly explanation of JavaScript 
 image: /assets/images/blogs/js.jpg
 ---
 
-# Basic JavaScript Interview Questions & Answers
+# 📘 JavaScript Interview Questions – (English + Bengali)
 
-### *(English + বাংলা)*
-
-A **beginner-friendly JavaScript interview guide** covering the most common **basic JavaScript questions**, explained clearly in **English and Bengali**.
 
 ---
 
-### 1. What is JavaScript?
+## 1. What is JavaScript?
 
-**English:**
-JavaScript is a programming language used to make web pages interactive and dynamic.
+**English Answer:**
 
-**বাংলা:**
-JavaScript একটি programming language যা ওয়েবপেজকে interactive ও dynamic করে।
+JavaScript is a high-level, interpreted, dynamically typed programming language used to make web pages interactive. It runs in the browser and can also be used on the server using Node.js.
 
----
+**বাংলা উত্তর:**
 
-### 2. How does JavaScript work?
-
-**English:**
-JavaScript runs in the browser using a JavaScript engine (like V8) and executes code line by line.
-
-**বাংলা:**
-JavaScript ব্রাউজারের JavaScript engine ব্যবহার করে কাজ করে।
+JavaScript হলো একটি high-level, dynamically typed programming language যা web page interactive করতে ব্যবহৃত হয়। এটি browser–এ এবং Node.js ব্যবহার করে server–এও চলে।
 
 ---
 
-### 3. How is JavaScript code executed in the browser?
+## 2. How does JavaScript work?
 
-**English:**
+**English Answer:**
 
-* Browser loads HTML
-* JavaScript engine parses the code
-* Execution Context is created
-* Memory allocation (Hoisting)
-* Code execution
+JavaScript works using an execution engine (like V8). It executes code line by line using the call stack, memory heap, and event loop.
 
-**বাংলা:**
-HTML লোড হওয়ার পর JavaScript engine ধাপে ধাপে কোড execute করে।
+**বাংলা উত্তর:**
+
+JavaScript একটি engine ব্যবহার করে কাজ করে (যেমন V8)। এটি call stack, memory heap এবং event loop ব্যবহার করে কোড execute করে।
 
 ---
 
-### 4. Difference between == and ===
+## 3. How does JavaScript code execute in the browser?
 
-**English:**
+**English Answer:**
 
-* `==` compares only values
-* `===` compares values and data types
+The browser uses a JavaScript engine that parses code, creates execution contexts, and executes code using the call stack.
 
-**বাংলা:**
-`==` শুধু value চেক করে, `===` value ও type দুটোই চেক করে।
+**বাংলা উত্তর:**
 
----
-
-### 5. What is a callback function?
-
-**English:**
-A callback function is a function passed as an argument to another function.
-
-**বাংলা:**
-একটি function অন্য function-এর argument হিসেবে পাঠানো হলে সেটি callback function।
+Browser–এর JavaScript engine কোড parse করে, execution context তৈরি করে এবং call stack ব্যবহার করে execute করে।
 
 ---
 
-### 6. When will you return something from a function?
+## 4. Difference between == and === ?
 
-**English:**
-When you want to send a result back from a function using `return`.
+**English Answer:**
 
-**বাংলা:**
-ফাংশন থেকে কোনো মান ফেরত দিতে `return` ব্যবহার করা হয়।
+`==` checks value only (type coercion), while `===` checks both value and type.
 
----
+**বাংলা উত্তর:**
 
-### 7. bind(), call(), and apply()
-
-**English:**
-They are used to control the value of `this`.
-
-* call() – arguments separately
-* apply() – arguments as array
-* bind() – returns a new function
-
-**বাংলা:**
-এগুলো `this` এর মান নির্ধারণ করতে ব্যবহার হয়।
+`==` শুধু value compare করে, `===` value ও type দুটোই compare করে।
 
 ---
 
-### 8. What is a Closure?
+## 5. What is a callback function?
 
-**English:**
-A closure allows a function to access variables from its outer scope.
+**English Answer:**
 
-**বাংলা:**
-Closure মানে function তার বাইরের scope-এর variable access করতে পারে।
+A callback function is passed as an argument to another function and executed later.
 
----
+**বাংলা উত্তর:**
 
-### 9. What does the `this` keyword indicate?
-
-**English:**
-`this` refers to the object that calls the function.
-
-**বাংলা:**
-`this` বর্তমান object কে নির্দেশ করে।
+Callback function হলো এমন function যা অন্য function–এর argument হিসেবে পাঠানো হয়।
 
 ---
 
-### 10. What is Event Bubbling?
+## 6. When will you return something from a function?
 
-**English:**
+**English Answer:**
+
+A function returns a value when you need to send data back to the caller.
+
+**বাংলা উত্তর:**
+
+যখন function থেকে কোনো value দরকার হয় তখন return ব্যবহার করা হয়।
+
+---
+
+## 7. Tell me about bind, call and apply.
+
+**English Answer:**
+
+They are used to control the `this` keyword. `call` and `apply` invoke functions immediately, while `bind` returns a new function.
+
+**বাংলা উত্তর:**
+
+bind, call ও apply `this` keyword control করতে ব্যবহৃত হয়। bind নতুন function return করে।
+
+---
+
+## 8. What is a Closure in JavaScript?
+
+**English Answer:**
+
+A closure is created when a function remembers variables from its outer scope even after execution.
+
+**বাংলা উত্তর:**
+
+Closure তখন হয় যখন inner function outer function–এর variable মনে রাখে।
+
+---
+
+## 9. What does the `this` keyword indicate?
+
+**English Answer:**
+
+`this` refers to the object that is currently calling the function.
+
+**বাংলা উত্তর:**
+
+`this` বর্তমান calling object–কে নির্দেশ করে।
+
+---
+
+## 10. What is Event Bubbling?
+
+**English Answer:**
+
 Event bubbling means an event propagates from child to parent elements.
 
-**বাংলা:**
-Event child element থেকে parent element এ যায়।
+**বাংলা উত্তর:**
+
+Event bubbling মানে event child থেকে parent–এ যায়।
 
 ---
 
-### 11. What is the Event Loop?
+## 11. What is the Event Loop?
 
-**English:**
-The event loop handles asynchronous operations by managing the call stack and callback queue.
+**English Answer:**
 
-**বাংলা:**
-Event Loop asynchronous কাজগুলো পরিচালনা করে।
+The event loop manages asynchronous operations by pushing callbacks to the call stack.
+
+**বাংলা উত্তর:**
+
+Event loop asynchronous task handle করে।
 
 ---
 
-### 12. What is Hoisting?
+## 12. Explain Hoisting.
 
-**English:**
+**English Answer:**
+
 Hoisting moves variable and function declarations to the top of their scope.
 
-**বাংলা:**
-Hoisting মানে declaration আগে মেমোরিতে নেওয়া।
+**বাংলা উত্তর:**
+
+Hoisting–এ variable ও function declaration উপরে উঠে যায়।
 
 ---
 
-### 13. What is a recursive function?
+## 13. What is a recursive function?
 
-**English:**
-A function that calls itself.
+**English Answer:**
 
-**বাংলা:**
-যে function নিজেকে নিজে call করে।
+A function that calls itself until a condition is met.
 
----
+**বাংলা উত্তর:**
 
-### 14. Difference between undefined and null
-
-**English:**
-
-* undefined – variable declared but not assigned
-* null – intentional empty value
-
-**বাংলা:**
-undefined মানে মান নেই, null মানে ইচ্ছাকৃত খালি।
+Recursive function নিজেই নিজেকে call করে।
 
 ---
 
-### 15. Data types in JavaScript
+## 14. Difference between undefined and null.
 
-**English:**
-String, Number, Boolean, Undefined, Null, Object, Symbol, BigInt
+**English Answer:**
 
-**বাংলা:**
-JavaScript এ বিভিন্ন ধরনের data type রয়েছে।
+Undefined means value not assigned, null means intentionally empty.
 
----
+**বাংলা উত্তর:**
 
-### 16. What is DOM?
-
-**English:**
-DOM stands for Document Object Model. It represents HTML as objects.
-
-**বাংলা:**
-DOM HTML কে object আকারে উপস্থাপন করে।
+Undefined মানে value দেওয়া হয়নি, null মানে ইচ্ছাকৃতভাবে খালি।
 
 ---
 
-### 17. Is JavaScript static or dynamic?
+## 15. Data types in JavaScript?
 
-**English:**
+**English Answer:**
+
+Primitive: string, number, boolean, null, undefined, symbol, bigint
+Non-primitive: object
+
+**বাংলা উত্তর:**
+
+Primitive ও Non-primitive data type আছে।
+
+---
+
+## 16. What is DOM?
+
+**English Answer:**
+
+DOM represents HTML as a tree structure allowing JavaScript to manipulate it.
+
+**বাংলা উত্তর:**
+
+DOM HTML–কে tree structure–এ দেখায়।
+
+---
+
+## 17. Static or Dynamic language?
+
+**English Answer:**
+
 JavaScript is dynamically typed.
 
-**বাংলা:**
-JavaScript dynamic type language।
+**বাংলা উত্তর:**
+
+JavaScript dynamically typed language।
 
 ---
 
-### 18. What is a variable?
+## 18. What is a variable?
 
-**English:**
+**English Answer:**
+
 A variable stores data values.
 
-**বাংলা:**
-Variable ডেটা সংরক্ষণ করে।
+**বাংলা উত্তর:**
+
+Variable data store করে।
 
 ---
 
-### 19. Compiler vs Interpreter
+## 19. Difference between Compiler vs Interpreter ?
 
-**English:**
-Compiler translates entire code at once, interpreter runs line by line.
+**English Answer:**
 
-**বাংলা:**
-Compiler পুরো কোড একসাথে, Interpreter লাইনে লাইনে চালায়।
+Compiler converts whole code at once, interpreter executes line by line.
 
----
+**বাংলা উত্তর:**
 
-### 20. What is scope?
-
-**English:**
-Scope defines where variables can be accessed.
-
-* Global Scope
-* Function Scope
-* Block Scope
-
-**বাংলা:**
-Scope মানে variable কোথায় ব্যবহার করা যাবে।
+Compiler পুরো কোড একসাথে convert করে, interpreter line by line।
 
 ---
 
-### 21. find() vs filter()
+## 20. What is scope?
 
-**English:**
+**English Answer:**
 
-* find() returns first match
-* filter() returns all matches
+Scope defines variable accessibility. Types: global, function, block.
 
-**বাংলা:**
-find একটি, filter একাধিক মান দেয়।
+**বাংলা উত্তর:**
+
+Scope variable–এর access নিয়ন্ত্রণ করে।
 
 ---
 
-### 22. map() vs forEach()
+## 21. Difference between find() vs filter() ?
 
-**English:**
+**English Answer:**
 
-* map() returns a new array
-* forEach() does not return
+find returns one element, filter returns an array.
 
-**বাংলা:**
+**বাংলা উত্তর:**
+
+find একটাই element দেয়, filter array দেয়।
+
+---
+
+## 22. Difference between map() vs forEach() ?
+
+**English Answer:**
+
+map returns a new array, forEach does not.
+
+**বাংলা উত্তর:**
+
 map নতুন array দেয়, forEach দেয় না।
 
 ---
 
-### 23. What is a function?
+## 23. What is a function?
 
-**English:**
-A function is a block of reusable code.
+**English Answer:**
 
-**বাংলা:**
-Function হলো পুনরায় ব্যবহারযোগ্য কোড।
+A function is a reusable block of code.
+
+**বাংলা উত্তর:**
+
+Function reusable code block।
 
 ---
 
-### 24. Function declaration vs expression
+## 24.Difference between Function declaration vs expression?
 
-**English:**
+**English Answer:**
 
-* Declaration is hoisted
-* Expression is not hoisted
+Declaration is hoisted, expression is not.
 
-**বাংলা:**
+**বাংলা উত্তর:**
+
 Declaration hoisted হয়, expression হয় না।
 
 ---
 
-### 25. break and continue
+## 25. Difference between break vs continue?
 
-**English:**
+**English Answer:**
+
 break stops loop, continue skips iteration.
 
-**বাংলা:**
-break loop বন্ধ করে, continue এক ধাপ skip করে।
+**বাংলা উত্তর:**
+
+break loop বন্ধ করে, continue skip করে।
 
 ---
 
-### 26. What is a global variable?
+## 26. What is a global variable?
 
-**English:**
+**English Answer:**
+
 A variable accessible everywhere.
 
-**বাংলা:**
-Global variable সব জায়গায় ব্যবহার করা যায়।
+**বাংলা উত্তর:**
+
+Global variable সব জায়গা থেকে access করা যায়।
 
 ---
 
-### 27. How to handle asynchronous programs?
+## 27. How to handle asynchronous program?
 
-**English:**
+**English Answer:**
+
 Using callbacks, promises, and async/await.
 
-**বাংলা:**
-Callback, Promise ও async/await দিয়ে async কাজ করা হয়।
+**বাংলা উত্তর:**
 
----
-
-**Good luck for your JavaScript interviews! 🚀**
+Callback, Promise ও async/await ব্যবহার করে async program handle করা হয়।

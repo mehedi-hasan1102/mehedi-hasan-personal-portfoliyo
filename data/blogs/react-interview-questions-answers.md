@@ -6,290 +6,311 @@ category: Web Development
 description: A complete, beginner-friendly guide to React JS interview questions with detailed answers in Bengali and English. Ideal for freshers, interns, and junior web developers.
 image: /assets/images/blogs/react.jpeg
 ---
-
-# React JS Interview Questions & Answers
-
-### *(English + বাংলা)*
-
-A **beginner-to-intermediate React interview guide** covering the most common **React JS interview questions**, explained clearly in **English and Bengali**.
+# ⚛️ React JS Interview Questions –  (English + Bengali)
 
 ---
 
-### 1. What is ReactJS? Advantages & Disadvantages
+## 1. What is ReactJS? Advantages and disadvantages?
 
-**English:**
-ReactJS is a **JavaScript library** for building user interfaces, mainly single-page applications.
+**English Answer:**
 
-**Advantages:**
+ReactJS is a JavaScript library developed by Facebook for building user interfaces, especially single-page applications. It uses component-based architecture and virtual DOM.
 
-* Fast rendering with Virtual DOM
-* Reusable components
-* Strong community
+**Advantages:** reusable components, fast rendering, strong community.
+**Disadvantages:** learning curve, frequent updates, SEO issues without SSR.
 
-**Disadvantages:**
+**বাংলা উত্তর:**
 
-* Learning curve
-* SEO challenges without SSR
+ReactJS হলো Facebook তৈরি একটি JavaScript library যা UI তৈরিতে ব্যবহৃত হয়। এটি component-based এবং virtual DOM ব্যবহার করে।
 
-**বাংলা:**
-React একটি UI library যা component ভিত্তিক।
+**সুবিধা:** reusable component, fast performance।
+**অসুবিধা:** শেখা কঠিন, SEO সমস্যা হতে পারে।
 
 ---
 
-### 2. Why will you select ReactJS?
+## 2. Why will you select ReactJS?
 
-**English:**
-Because it is fast, component-based, scalable, and widely used in industry.
+**English Answer:**
 
-**বাংলা:**
-React দ্রুত, scalable এবং জনপ্রিয়।
+Because of reusable components, fast performance, flexibility, and large ecosystem.
 
----
+**বাংলা উত্তর:**
 
-### 3. What is Virtual DOM? Virtual vs Real DOM
-
-**English:**
-Virtual DOM is a lightweight copy of the Real DOM.
-
-* Virtual DOM is faster
-* Real DOM updates are slower
-
-**বাংলা:**
-Virtual DOM আসল DOM-এর কপি।
+Reusability, performance এবং ecosystem–এর জন্য ReactJS বেছে নেওয়া হয়।
 
 ---
 
-### 4. Differences between Props and State
+## 3. What is Virtual DOM? Difference between Virtual and Real DOM?
 
-**English:**
+**English Answer:**
 
-* Props are read-only
-* State is mutable
+Virtual DOM is a lightweight copy of Real DOM. React updates only the changed parts, improving performance.
 
-**বাংলা:**
-Props পরিবর্তন করা যায় না, State যায়।
+**বাংলা উত্তর:**
 
----
-
-### 5. Purpose of useState
-
-**English:**
-useState manages local component state.
-
-**বাংলা:**
-Component এর ডেটা সংরক্ষণ করে।
+Virtual DOM হলো Real DOM–এর lightweight copy। এতে performance ভালো হয়।
 
 ---
 
-### 6. What is Context API?
+## 4. Difference between Props and State?
 
-**English:**
-Context API shares data without props drilling.
+**English Answer:**
 
-**বাংলা:**
-Context API data share সহজ করে।
+Props are read-only and passed from parent. State is mutable and managed inside the component.
 
----
+**বাংলা উত্তর:**
 
-### 7. useEffect vs useState
-
-**English:**
-
-* useState manages data
-* useEffect handles side effects
-
-**বাংলা:**
-useState ডেটা, useEffect কাজ পরিচালনা করে।
+Props parent থেকে আসে এবং read-only। State component নিজে manage করে।
 
 ---
 
-### 8. What is JSX?
+## 5. Purpose of useState? When and why to use it?
 
-**English:**
-JSX allows writing HTML inside JavaScript.
+**English Answer:**
 
-**বাংলা:**
-JSX JavaScript এর ভেতরে HTML লেখে।
+useState is a hook used to manage local state in functional components.
 
----
+**বাংলা উত্তর:**
 
-### 9. React Component Lifecycle
-
-**English:**
-Mounting, Updating, Unmounting
-
-**বাংলা:**
-Component এর জন্ম, পরিবর্তন ও শেষ।
+useState hook component–এর state manage করতে ব্যবহৃত হয়।
 
 ---
 
-### 10. What is a Custom Hook?
+## 6. What is Context API? How does it work?
 
-**English:**
-Custom hooks reuse logic.
+**English Answer:**
 
-```js
-function useCounter() {}
-```
+Context API allows sharing data globally without props drilling.
 
-**বাংলা:**
-Custom hook logic পুনঃব্যবহার করে।
+**বাংলা উত্তর:**
+
+Context API props drilling ছাড়াই data share করতে সাহায্য করে।
 
 ---
 
-### 11. How to optimize React apps?
+## 7. Difference between useEffect and useState?
 
-**English:**
+**English Answer:**
 
-* memo
-* lazy loading
-* useCallback
+useState manages state, useEffect handles side effects.
 
-**বাংলা:**
-Optimization performance বাড়ায়।
+**বাংলা উত্তর:**
 
----
-
-### 12. Send data from child to parent
-
-**English:**
-Using callback functions.
-
-**বাংলা:**
-Callback দিয়ে data পাঠানো হয়।
+useState state manage করে, useEffect side effect handle করে।
 
 ---
 
-### 13. Best way to pass many props
+## 8. What is JSX? How does it work?
 
-**English:**
-Use object props or Context API.
+**English Answer:**
 
-**বাংলা:**
-Context API ভালো সমাধান।
+JSX allows writing HTML inside JavaScript and gets converted to React.createElement.
 
----
+**বাংলা উত্তর:**
 
-### 14. What is React Router DOM?
-
-**English:**
-Library for client-side routing.
-
-**বাংলা:**
-Route ব্যবস্থাপনার জন্য।
+JSX JavaScript–এর ভিতরে HTML লেখার সুবিধা দেয়।
 
 ---
 
-### 15. What is State?
+## 9. React Component lifecycle?
 
-**English:**
-State stores component data.
+**English Answer:**
 
-**বাংলা:**
-State component ডেটা রাখে।
+Lifecycle has mounting, updating, and unmounting phases.
 
----
+**বাংলা উত্তর:**
 
-### 16. What is Props Drilling?
-
-**English:**
-Passing props through multiple levels.
-
-**বাংলা:**
-অপ্রয়োজনীয়ভাবে props পাঠানো।
+Component lifecycle–এ mounting, updating এবং unmounting ধাপ থাকে।
 
 ---
 
-### 17. Dependency in useEffect
+## 10. Purpose of custom hooks? How to create one?
 
-**English:**
-Controls when useEffect runs.
+**English Answer:**
 
-**বাংলা:**
-Effect কখন চলবে নির্ধারণ করে।
+Custom hooks reuse logic across components by creating functions starting with `use`.
 
----
+**বাংলা উত্তর:**
 
-### 18. What is React.memo()?
-
-**English:**
-Prevents unnecessary re-renders.
-
-**বাংলা:**
-Performance বাড়ায়।
+Custom hook logic reuse করার জন্য ব্যবহার হয়।
 
 ---
 
-### 19. Controlled Components
+## 11. How would you optimize a React app?
 
-**English:**
-Form elements controlled by state.
+**English Answer:**
 
-**বাংলা:**
-State দিয়ে form control।
+Using memo, lazy loading, code splitting, and avoiding unnecessary re-renders.
 
----
+**বাংলা উত্তর:**
 
-### 20. Lifting State Up
-
-**English:**
-Move state to common parent.
-
-**বাংলা:**
-Parent এ state রাখা।
+memo, lazy loading ও code splitting ব্যবহার করে optimize করা হয়।
 
 ---
 
-### 21. Stateful vs Stateless Components
+## 12. Send data from child to parent?
 
-**English:**
+**English Answer:**
 
-* Stateful uses state
-* Stateless does not
+By passing a callback function from parent to child.
 
-**বাংলা:**
-একটিতে state আছে, একটিতে নেই।
+**বাংলা উত্তর:**
 
----
-
-### 22. Authentication vs Authorization
-
-**English:**
-AuthN checks identity, AuthZ checks permission.
-
-**বাংলা:**
-একটি পরিচয়, একটি অনুমতি।
+Parent থেকে child–এ callback পাঠিয়ে data পাঠানো হয়।
 
 ---
 
-### 23. What is Diff Algorithm?
+## 13. Best way to send 4+ props to child?
 
-**English:**
-Compares Virtual DOM changes efficiently.
+**English Answer:**
 
-**বাংলা:**
-DOM পরিবর্তন হিসাব করে।
+Using object props or Context API.
 
----
+**বাংলা উত্তর:**
 
-### 24. Why key is important in React?
-
-**English:**
-Helps identify elements uniquely.
-
-**বাংলা:**
-Element আলাদা করে।
+Object বা Context API ব্যবহার করা ভালো।
 
 ---
 
-### 25. What is JWT?
+## 14. What is React Router DOM?
 
-**English:**
-JSON Web Token is used for authentication.
+**English Answer:**
 
-**বাংলা:**
-JWT login verification এ ব্যবহৃত।
+A library for handling routing in React applications.
+
+**বাংলা উত্তর:**
+
+React Router DOM React–এ routing handle করে।
 
 ---
 
-**Good luck for your React interviews! ⚛️🚀**
+## 15. What is State? How does it work?
+
+**English Answer:**
+
+State holds component data and triggers re-render on change.
+
+**বাংলা উত্তর:**
+
+State component–এর data ধরে রাখে এবং change হলে re-render হয়।
+
+---
+
+## 16. What is props drilling?
+
+**English Answer:**
+
+Passing props through multiple component levels.
+
+**বাংলা উত্তর:**
+
+একাধিক level দিয়ে props পাঠানোকে props drilling বলে।
+
+---
+
+## 17. Why dependencies in useEffect?
+
+**English Answer:**
+
+To control when the effect runs.
+
+**বাংলা উত্তর:**
+
+Effect কখন চলবে তা নিয়ন্ত্রণ করতে dependency ব্যবহার হয়।
+
+---
+
+## 18. What is React.memo()? Why use it?
+
+**English Answer:**
+
+memo prevents unnecessary re-renders by memoizing components.
+
+**বাংলা উত্তর:**
+
+React.memo অপ্রয়োজনীয় re-render বন্ধ করে।
+
+---
+
+## 19. What are controlled components?
+
+**English Answer:**
+
+Form elements controlled by React state.
+
+**বাংলা উত্তর:**
+
+Form input React state দ্বারা নিয়ন্ত্রিত হলে controlled component বলে।
+
+---
+
+## 20. What is Lifting State Up?
+
+**English Answer:**
+
+Moving shared state to a common parent component.
+
+**বাংলা উত্তর:**
+
+Shared state parent component–এ নেওয়াকে lifting state up বলে।
+
+---
+
+## 21. Stateful vs Stateless components?
+
+**English Answer:**
+
+Stateful components manage state, stateless do not.
+
+**বাংলা উত্তর:**
+
+Stateful component–এ state থাকে, stateless–এ থাকে না।
+
+---
+
+## 22. Authentication vs Authorization?
+
+**English Answer:**
+
+Authentication verifies identity, authorization checks permissions.
+
+**বাংলা উত্তর:**
+
+Authentication পরিচয় যাচাই করে, authorization অনুমতি যাচাই করে।
+
+---
+
+## 23. What is the Diff Algorithm?
+
+**English Answer:**
+
+React compares Virtual DOM trees to update only changed elements.
+
+**বাংলা উত্তর:**
+
+Diff algorithm পরিবর্তিত অংশ update করে।
+
+---
+
+## 24. Significance of key in React?
+
+**English Answer:**
+
+Keys help React identify list items efficiently.
+
+**বাংলা উত্তর:**
+
+Key React–কে element চিহ্নিত করতে সাহায্য করে।
+
+---
+
+## 25. What is JWT?
+
+**English Answer:**
+
+JWT is a token used for secure authentication between client and server.
+
+**বাংলা উত্তর:**
+
+JWT authentication–এর জন্য ব্যবহৃত token।
+
