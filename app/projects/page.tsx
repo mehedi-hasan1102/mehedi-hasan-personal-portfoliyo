@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, } from "framer-motion";
-import { Eye, ArrowUpRight, Github, X } from "lucide-react";
+import { Eye, ArrowUpRight, Github } from "lucide-react";
 import projectsData from "../../data/projects.json";
 import ProjectModal from "@/components/projects/ProjectModal";
 import Image from 'next/image';
@@ -91,21 +91,19 @@ const AllProjectsPage: React.FC = () => {
           </div>
 <div className="h-[1px] bg-primary/40 mb-2"></div>
           {/* Projects Glist */}
-          <div className="space-y-2 ">
-            {filteredProjects.map((project, index) => (
-              <motion.div
-                key={index}
-                // whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className=" overflow-hidden  rounded-md p-4 transition"
-              >
+         <div className="space-y-2">
+  {filteredProjects.map((project, index) => (
+    <motion.div
+      key={index}
+      transition={{ type: "spring", stiffness: 200 }}
+      className="overflow-hidden rounded-md p-4 transition"
+    >
+      <div className="flex flex-col sm:flex-row gap-4">
 
-                <div className="grid gap-2 sm:gap-4 md:grid-cols-2 items-start">
-                  {/* Image */}
-                  
-<motion.div
+        {/* Media */}
+        {/* <motion.div
   whileHover={{ scale: 1.02 }}
-  className="overflow-hidden rounded-lg mb-2 relative w-full h-44 sm:h-56"
+  className="relative w-full sm:w-[300px] aspect-[16/9] overflow-hidden rounded-lg"
 >
   {project.videos && project.videos.length > 0 ? (
     <video
@@ -122,7 +120,34 @@ const AllProjectsPage: React.FC = () => {
       src={project.images[0]}
       alt={project.title}
       fill
-      sizes="(max-width: 768px) 100vw, 50vw"
+      sizes="(max-width: 768px) 100vw, 300px"
+      className="rounded-lg object-cover transition-transform duration-300"
+      priority={index < 2}
+    />
+  )}
+</motion.div> */}
+
+
+<motion.div
+  whileHover={{ scale: 1.02 }}
+  className="relative w-full sm:w-[250px] aspect-[16/9] overflow-hidden rounded-lg"
+>
+  {project.videos && project.videos.length > 0 ? (
+    <video
+      src={project.videos[0]}
+      className="w-full h-full object-cover rounded-lg"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    />
+  ) : (
+    <Image
+      src={project.images[0]}
+      alt={project.title}
+      fill
+      sizes="(max-width: 768px) 100vw, 250px"
       className="rounded-lg object-cover transition-transform duration-300"
       priority={index < 2}
     />
@@ -130,85 +155,87 @@ const AllProjectsPage: React.FC = () => {
 </motion.div>
 
 
-                  {/* Content */}
-                  <div className="flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-base font-medium text-primary mb-2 sm:mb-0">
-                        {project.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm md:text-base leading-relaxed text-base-content/80 mb-0 line-clamp-2">
-                        {project.description}
-                      </p>
 
-                      <div className="mb-0">
-                        <hr className="my-2 h-px border-0 bg-primary/30" />
-                        <div className="flex flex-wrap items-center gap-x-2">
-                          <span className="text-sm text-base-content/60">Technologies:</span>
-                          {project.techStack.map((tech, i) => (
-                            <motion.span
-                              key={i}
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              transition={{ delay: i * 0.05 }}
-                              className="text-xs sm:text-sm text-base-content/80"
-                            >
-                              {tech}{i < project.techStack.length - 1 ? "," : ""}
-                            </motion.span>
-                          ))}
-                        </div>
-                        <hr className="my-2 h-px border-0 bg-primary/30" />
-                      </div>
-                    </div>
+        {/* Content */}
+        <div className="flex flex-col justify-between flex-1">
+          <div>
+            <h3 className="text-base font-medium text-primary mb-2 sm:mb-0">
+              {project.title}
+            </h3>
+            <p className="text-xs sm:text-sm md:text-base leading-relaxed text-base-content/80 mb-0 line-clamp-2">
+              {project.description}
+            </p>
 
-                    {/* Links */}
-                    <div className="flex flex-wrap gap-0 text-sm">
-                      <motion.a
-                        whileHover={{ x: 3 }}
-                        href={project.liveLink}
-                        className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
-                      </motion.a>
-
-                      {project.frontendRepo && (
-                        <motion.a
-                          whileHover={{ x: 3 }}
-                          href={project.frontendRepo}
-                          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Frontend
-                        </motion.a>
-                      )}
-
-                      {project.backendRepo && (
-                        <motion.a
-                          whileHover={{ x: 3 }}
-                          href={project.backendRepo}
-                          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Backend
-                        </motion.a>
-                      )}
-
-                      <motion.button
-                        whileHover={{ x: 3 }}
-                        onClick={() => openModal(project)}
-                        className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
-                      >
-                        <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Details
-                      </motion.button>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            <div className="mb-0">
+              <hr className="my-2 h-px border-0 bg-primary/30" />
+              <div className="flex flex-wrap items-center gap-x-2">
+                <span className="text-sm text-base-content/60">Technologies:</span>
+                {project.techStack.map((tech, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: i * 0.05 }}
+                    className="text-xs sm:text-sm text-base-content/80"
+                  >
+                    {tech}{i < project.techStack.length - 1 ? "," : ""}
+                  </motion.span>
+                ))}
+              </div>
+              <hr className="my-2 h-px border-0 bg-primary/30" />
+            </div>
           </div>
+
+          {/* Links */}
+          <div className="flex flex-wrap gap-2 text-sm mt-2">
+            <motion.a
+              whileHover={{ x: 3 }}
+              href={project.liveLink}
+              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
+            </motion.a>
+
+            {project.frontendRepo && (
+              <motion.a
+                whileHover={{ x: 3 }}
+                href={project.frontendRepo}
+                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Frontend
+              </motion.a>
+            )}
+
+            {project.backendRepo && (
+              <motion.a
+                whileHover={{ x: 3 }}
+                href={project.backendRepo}
+                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Backend
+              </motion.a>
+            )}
+
+            <motion.button
+              whileHover={{ x: 3 }}
+              onClick={() => openModal(project)}
+              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+            >
+              <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Details
+            </motion.button>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
 
           <div className="mt-4 text-center">
             <p className="text-sm mb-0">
