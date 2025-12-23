@@ -31,18 +31,20 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
         </div>
 
         {/* Blog Cards */}
-
-
-        <div className="   gap-2 lg:gap-3  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+        <div className="   gap-2  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           {latestBlogs.map((blog) => (
             <Link
               key={blog.slug}
               href={`/blog/${encodeURIComponent(blog.slug)}`}
               className="
-        group block bg-base-100 rounded-lg overflow-hidden
-        shadow-sm transition-all duration-300
-        hover:shadow-md hover:-translate-x-1    hover:rotate-[0.6deg]
-      "
+    group block bg-base-100 rounded-lg overflow-hidden
+    shadow-sm transition-transform transition-shadow duration-500 ease-out
+    hover:shadow-2xl hover:-translate-y-2
+  "           style={{
+                perspective: '1000px',
+                transformStyle: 'preserve-3d',
+              }}
+
             >
               {/* Image */}
               <div className="relative w-full aspect-video overflow-hidden hidden md:block ">
