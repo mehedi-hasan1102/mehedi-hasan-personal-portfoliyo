@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Blog } from "../../lib/blogs"; // Assuming Blog type is exported here
 import Image from "next/image";
-import { ScrollProgress } from "../ui/scroll-progress";
+
 
 // Re-defining monthOrder or passing it as a prop
 const monthOrder: Record<string, number> = {
@@ -24,7 +24,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
   return (
 
 <>
-  <ScrollProgress />
+ 
 
 
  <motion.section

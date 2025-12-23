@@ -6,7 +6,7 @@ import { Eye, ArrowUpRight, Github } from "lucide-react";
 import projectsData from "../../data/projects.json";
 import ProjectModal from "@/components/projects/ProjectModal";
 import Image from 'next/image';
-import { ScrollProgress } from "@/components/ui/scroll-progress";
+
 
 
 
@@ -50,7 +50,7 @@ const AllProjectsPage: React.FC = () => {
 
   return (
     <>
-      <ScrollProgress />
+     
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
