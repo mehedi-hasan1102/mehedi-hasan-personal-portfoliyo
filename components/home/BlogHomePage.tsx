@@ -31,47 +31,58 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
         </div>
 
         {/* Blog Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 rounded-lg">
+
+
+        <div className="   gap-2 lg:gap-4  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
           {latestBlogs.map((blog) => (
             <Link
-              key={blog.slug} // Use slug as key
+              key={blog.slug}
               href={`/blog/${encodeURIComponent(blog.slug)}`}
-              className="relative group bg-base-100 rounded-2xl p-2 transition shadow-sm overflow-hidden block"
+              className="
+        group block bg-base-100 rounded-lg overflow-hidden
+        shadow-sm transition-all duration-300
+        hover:shadow-md hover:-translate-x-1    hover:rotate-[0.6deg]
+      "
             >
-              <div className="relative rounded-lg mb-3 overflow-hidden  w-full aspect-video hidden md:block  group">
-
+              {/* Image */}
+              <div className="relative w-full aspect-video overflow-hidden hidden md:block ">
                 <Image
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
                   quality={100}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105 "
                 />
 
-
-
-
-
-                <span className="absolute bottom-2 m-1 left-2 px-2 sm:px-3 py-0 text-xs sm:text-sm   rounded-lg bg-base-100 ">
+                {/* Category */}
+                <span className="absolute bottom-2 left-2 px-2 sm:px-3 text-xs sm:text-sm rounded-lg bg-base-100">
                   {blog.category}
                 </span>
 
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/20 transition">
-                  <span className="bg-primary text-primary-content p-3 rounded-lg shadow-lg flex items-center gap-1">
+                {/* Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition">
+                  <span className="opacity-0 group-hover:opacity-100 transition bg-primary text-primary-content p-3 rounded-lg shadow-lg">
                     <ArrowUpRight size={16} />
                   </span>
                 </div>
               </div>
 
-              <p className="text-xs text-base-content/50 mb-1">
-                {blog.date} • {blog.readTime}
-              </p>
-              <h3 className=" font-medium mb-2 text-primary/90">{blog.title}</h3>
+              {/* Content */}
+              <div className="p-2">
+                <p className="text-xs text-base-content/50 mb-1">
+                  {blog.date} • {blog.readTime}
+                </p>
+
+                <h3 className="font-medium text-primary/90 leading-snug">
+                  {blog.title}
+                </h3>
+              </div>
             </Link>
           ))}
         </div>
 
-        <div className="mt-2 mb-2 text-center">
+
+        <div className="mt-2 mb-2 text-center ">
           <p className="text-sm" >
             Read{" "}
             <Link

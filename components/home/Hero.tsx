@@ -98,15 +98,16 @@ const HeroSection: React.FC = () => {
     whileHover={{ scale: 1.04 }}
     whileTap={{ scale: 0.98 }}
     transition={{ type: "spring", stiffness: 220 }}
-    className="w-36 sm:w-44 md:w-48   overflow-hidden shadow-lg bg-base-100 rounded-lg"
+    className="w-36 sm:w-44 md:w-48   overflow-hidden shadow-lg "
   >
     {/* Profile Image */}
     <div className="relative w-full aspect-square sm:aspect-[5/5] ">
       <Image
         src="/assets/images/profile.png"
+      
         alt="Mehedi Hasan"
         fill
-        className="object-cover "
+        className="object-cover rounded-lg "
         priority
       />
     </div>

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { GitHubCalendar } from "react-github-calendar"; // ✅ Named import
+import { GitHubCalendar } from "react-github-calendar"; 
 
 const GitHubActivitySection: React.FC = () => {
   const username = "mehedi-hasan1102";
