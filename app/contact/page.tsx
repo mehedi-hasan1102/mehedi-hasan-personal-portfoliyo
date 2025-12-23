@@ -165,7 +165,8 @@ const ContactMe: React.FC = () => {
           </h2>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-4 ">
+       
+          <div className="flex flex-col md:flex-row gap-4">
           {/* Contact Form */}
           <motion.div
             initial="hidden"

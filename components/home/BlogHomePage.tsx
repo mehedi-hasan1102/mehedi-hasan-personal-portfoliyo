@@ -33,7 +33,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
         {/* Blog Cards */}
 
 
-        <div className="   gap-2 lg:gap-3  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        <div className="   gap-2 lg:gap-3  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           {latestBlogs.map((blog) => (
             <Link
               key={blog.slug}
