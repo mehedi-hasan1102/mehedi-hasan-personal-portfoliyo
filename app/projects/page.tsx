@@ -95,9 +95,9 @@ const AllProjectsPage: React.FC = () => {
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -5 }}
+                // whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className=" overflow-hidden bg-base-100  rounded-md p-4 transition"
+                className=" overflow-hidden  rounded-md p-4 transition"
               >
 
                 <div className="grid gap-2 sm:gap-4 md:grid-cols-2 items-start">
@@ -169,7 +169,7 @@ const AllProjectsPage: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live Demo
+                        <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
                       </motion.a>
 
                       {project.frontendRepo && (
@@ -201,7 +201,7 @@ const AllProjectsPage: React.FC = () => {
                         onClick={() => openModal(project)}
                         className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                       >
-                        <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> View Details
+                        <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Details
                       </motion.button>
                     </div>
                   </div>

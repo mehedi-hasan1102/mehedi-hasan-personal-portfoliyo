@@ -121,7 +121,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                   >
                     <ArrowUpRight size={16} />
-                    Live Demo
+                    Live
                   </motion.a>
 
                   {selectedProject.frontendRepo && (

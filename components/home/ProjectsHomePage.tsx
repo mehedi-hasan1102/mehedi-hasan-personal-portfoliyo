@@ -140,31 +140,28 @@ const ProjectsHomePage: React.FC = () => {
                   
                   }
                 </motion.div> */}
-<motion.div
-  whileHover={{ scale: 1.02 }}
-  className="overflow-hidden rounded-lg mb-2 relative h-44 w-full"
->
-  {project.videos && project.videos.length > 0 ? (
-    <video
-      src={project.videos[0]}
-      className="w-full h-full object-cover rounded-lg"
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-    />
-  ) : (
-    <Image
-      src={project.images[0]}
-      alt={project.title}
-      fill // allows the image to cover the parent
-      style={{ objectFit: "cover" }} // same as object-cover
-      className="rounded-lg transition-transform duration-300 group-hover:scale-105"
-      priority
-    />
-  )}
-</motion.div>
+<motion.div className="overflow-hidden rounded-lg relative w-full h-32 sm:h-36 mb-2">
+                  {project.videos && project.videos.length > 0 ? (
+                    <video
+                      src={project.videos[0]}
+                      className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-105 shadow-sm"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    />
+                  ) : (
+                    <Image
+                      src={project.images[0]}
+                      alt={project.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      className="rounded-lg transition-transform duration-500 group-hover:scale-105 shadow-sm"
+                      priority
+                    />
+                  )}
+                </motion.div>
 
 
 
@@ -190,7 +187,7 @@ const ProjectsHomePage: React.FC = () => {
 
 
          {/* Tech Stack */}
-       <div className="absolute top-38 left-4 flex gap-2 ">
+       <div className="absolute top-30 left-4 flex gap-2">
   {project.techStack.slice(0, 1).map((tech, i) => (
     <span
       key={i}
@@ -212,7 +209,7 @@ const ProjectsHomePage: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live Demo
+                    <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
                   </motion.a>
 
                   <motion.button
@@ -220,7 +217,7 @@ const ProjectsHomePage: React.FC = () => {
                     onClick={() => openModal(project)}
                     className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                   >
-                    <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> View Details
+                    <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />  Details
                   </motion.button>
                 </div>
               </motion.div>

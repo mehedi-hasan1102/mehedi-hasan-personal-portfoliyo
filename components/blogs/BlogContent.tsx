@@ -62,8 +62,8 @@ export function BlogContent({ years, structured }: BlogContentProps) {
                       .map((blog: Blog) => (
                         <motion.div
                           key={blog.slug}
-                          whileHover={{ y: -3 }}
-                          className="flex gap-2 sm:gap-4 bg-base-100 p-2  rounded-lg shadow hover:shadow-lg transition-all"
+                          // whileHover={{ y: -3 }}
+                          className="flex gap-2 sm:gap-4  p-2  rounded-lg shadow hover:shadow-lg transition-all"
                         >
                          
 
