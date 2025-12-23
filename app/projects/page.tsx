@@ -89,9 +89,9 @@ const AllProjectsPage: React.FC = () => {
               </button>
             ))}
           </div>
-
+<div className="h-[1px] bg-primary/40 mb-2"></div>
           {/* Projects Glist */}
-          <div className="space-y-2">
+          <div className="space-y-2 ">
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={index}

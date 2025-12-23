@@ -45,7 +45,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
       ) : (
         years.map((year) => (
           <div key={year} className="mb-12 p-2">
-            <h2 className="text-2xl mb-2">
+            <h2 className="text-2xl mb-2 ">
               {year} <span className="text-primary">• {Object.values(structured[year]).flat().length}</span>
             </h2>
             <div className="h-[1px] bg-primary/40 mb-2"></div>
