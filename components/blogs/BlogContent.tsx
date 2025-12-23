@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Blog } from "../../lib/blogs"; // Assuming Blog type is exported here
 import Image from "next/image";
+import { ScrollProgress } from "../ui/scroll-progress";
 
 // Re-defining monthOrder or passing it as a prop
 const monthOrder: Record<string, number> = {
@@ -21,11 +22,17 @@ interface BlogContentProps {
 
 export function BlogContent({ years, structured }: BlogContentProps) {
   return (
-    <motion.section
+
+<>
+  <ScrollProgress />
+
+
+ <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="w-full   mx-auto font-geist  rounded-lg  backdrop-blur-sm  transition-shadow  py-2"
     >
+        
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +51,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
         <p className="text-center justify-center items-center text-base-content/60 mt-6">No blogs found.</p>
       ) : (
         years.map((year) => (
-          <div key={year} className="mb-12 p-2">
+          <div key={year} className=" p-2">
             <h2 className="text-2xl mb-2 ">
               {year} <span className="text-primary">• {Object.values(structured[year]).flat().length}</span>
             </h2>
@@ -101,5 +108,12 @@ export function BlogContent({ years, structured }: BlogContentProps) {
         ))
       )}
     </motion.section>
+
+
+
+</>
+
+
+   
   );
 }

@@ -6,6 +6,7 @@ import { Eye, ArrowUpRight, Github } from "lucide-react";
 import projectsData from "../../data/projects.json";
 import ProjectModal from "@/components/projects/ProjectModal";
 import Image from 'next/image';
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 
 
 
@@ -49,6 +50,7 @@ const AllProjectsPage: React.FC = () => {
 
   return (
     <>
+      <ScrollProgress />
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -58,6 +60,7 @@ const AllProjectsPage: React.FC = () => {
 
 
         <div className=" relative overflow-hidden rounded-lg p-2 backdrop-blur-sm transition-shadow duration-300">
+        
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -66,6 +69,7 @@ const AllProjectsPage: React.FC = () => {
             viewport={{ once: true }}
             className="mb-0 text-center mx-auto "
           >
+            
             {/* <p className="text-sm text-primary mb-0">• Portfolio</p> */}
             <h2 className="text-xl m-2">
               Projects <span className="text-base-content/60">Collection</span>
