@@ -48,7 +48,8 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  quality={100}
+                  // quality={100}
+                  quality={75}
                   className="object-cover transition-transform duration-500  "
                 />
 
