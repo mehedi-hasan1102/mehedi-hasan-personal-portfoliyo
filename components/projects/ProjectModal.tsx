@@ -53,7 +53,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               className="absolute top-2 right-4 z-30 rounded-lg p-2 sm:p-1 text-red-500 hover:bg-primary/20 transition-all"
               aria-label="Close modal"
             >
-              <X size={16} />
+              <X size={14} />
             </button>
 
             {/* Scrollable Content */}
@@ -112,15 +112,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   {selectedProject.title}
                 </h2>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-4">
                   <motion.a
                     whileHover={{ x: 3 }}
                     href={selectedProject.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                   >
-                    <ArrowUpRight size={16} />
+                    <ArrowUpRight size={14} />
                     Live
                   </motion.a>
 
@@ -130,9 +130,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={selectedProject.frontendRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                      className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                     >
-                      <Github size={16} />
+                      <Github size={14} />
                       Frontend
                     </motion.a>
                   )}
@@ -143,9 +143,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={selectedProject.backendRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                      className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                     >
-                      <Github size={16} />
+                      <Github size={14} />
                       Backend
                     </motion.a>
                   )}
