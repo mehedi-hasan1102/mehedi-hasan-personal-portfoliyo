@@ -83,7 +83,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               </div> */}
 
               {/* Media Banner */}
-<div className="w-full h-56 md:h-72 overflow-hidden flex-shrink-0 relative">
+<div className="w-full h-56 md:h-72 overflow-hidden flex-shrink-0 relative rounded-lg">
   {selectedProject.videos?.length ? (
     <video
       src={selectedProject.videos[0]}
