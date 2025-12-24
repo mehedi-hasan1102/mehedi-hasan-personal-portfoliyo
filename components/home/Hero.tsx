@@ -42,90 +42,45 @@ const HeroSection: React.FC = () => {
 
   return (
     <motion.section
-      id="about"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="font-geist w-full max-w-3xl mx-auto flex items-center justify-center pt-1"
     >
 
-
-
-
       <div className="border border-primary/30 bg-base-200 backdrop-blur-sm relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center w-full   rounded-lg p-2 gap-1 transition-shadow duration-300">
         <BorderBeam size={100} duration={8} colorFrom="#22c55e" colorTo="#16a34a" />
-
-        {/* LEFT IMAGE */}
-        {/* <motion.div className="flex justify-center ">
+        <motion.div className="flex justify-center">
           <motion.div
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 220 }}
-            className="w-36 h-44 sm:w-44 sm:h-52 md:w-48 md:h-56 relative"
+            className="w-36 sm:w-44 md:w-48   overflow-hidden "
           >
-            <div className="w-full h-full overflow-hidden rounded-lg   rounded-b-none">
+            {/* Profile Image */}
+            <div className="relative w-full aspect-square sm:aspect-[5/5] ">
               <Image
                 src="/assets/images/profile.png"
+
                 alt="Mehedi Hasan"
-                width={500}
-                height={500}
+                fill
+                className="object-cover rounded-lg "
                 priority
-                className="w-full h-full object-cover bg-base-100"
               />
             </div>
 
-            <div className="flex justify-center   bg-base-100 rounded-lg rounded-t-none">
+            {/* Signature Section */}
+            <div className="flex justify-center items-center  h-12 sm:h-16">
               <div
-                className="bg-primary w-4/5 max-w-xs aspect-[3/1]"
+                className="w-4/5 max-w-xs h-full bg-primary"
                 style={{
-                  maskImage:
-                    "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png')",
-                  WebkitMaskImage:
-                    "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png')",
-                  maskRepeat: "no-repeat",
-                  WebkitMaskRepeat: "no-repeat",
-                  maskPosition: "center",
-                  WebkitMaskPosition: "center",
-                  maskSize: "contain",
-                  WebkitMaskSize: "contain",
+                  mask: "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png') center / contain no-repeat",
+                  WebkitMask: "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png') center / contain no-repeat",
                 }}
               />
             </div>
           </motion.div>
-        </motion.div> */}
-        <motion.div className="flex justify-center">
-  <motion.div
-    whileHover={{ scale: 1.04 }}
-    whileTap={{ scale: 0.98 }}
-    transition={{ type: "spring", stiffness: 220 }}
-    className="w-36 sm:w-44 md:w-48   overflow-hidden "
-  >
-    {/* Profile Image */}
-    <div className="relative w-full aspect-square sm:aspect-[5/5] ">
-      <Image
-        src="/assets/images/profile.png"
-      
-        alt="Mehedi Hasan"
-        fill
-        className="object-cover rounded-lg "
-        priority
-      />
-    </div>
-
-    {/* Signature Section */}
-    <div className="flex justify-center items-center  h-12 sm:h-16">
-      <div
-        className="w-4/5 max-w-xs h-full bg-primary"
-        style={{
-          mask: "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png') center / contain no-repeat",
-          WebkitMask: "url('https://i.ibb.co/pjK7xwK3/mehedi-hasan-signeture.png') center / contain no-repeat",
-        }}
-      />
-    </div>
-  </motion.div>
-</motion.div>
-
-
+        </motion.div>
 
         {/* Right Content */}
         <motion.div
@@ -175,9 +130,6 @@ const HeroSection: React.FC = () => {
             , focusing on clean architecture, smooth UX, and high-performance solutions. I use
           </motion.p>
 
-
-
-
           {/* Tech Icons Marquee */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -207,27 +159,26 @@ const HeroSection: React.FC = () => {
           </motion.div>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-0 mt-2">
+          <div className="flex flex-wrap gap-4 mt-2">
             <motion.a
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  // transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
-  whileHover={{ scale: 1.05, rotate: -0.5 }}
-  whileTap={{ scale: 0.97, rotate: 0.5 }}
-  href="/Resume_of_Mehedi_Hasan.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group inline-flex items-center gap-2 text-primary underline-offset-4 decoration-dashed hover:underline rounded-lg p-2 font-geist text-sm transition-all duration-300"
->
-  <Download size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />
-  [View Resume]
-</motion.a>
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              // transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
+              whileHover={{ scale: 1.05, rotate: -0.5 }}
+              whileTap={{ scale: 0.97, rotate: 0.5 }}
+              href="/Resume_of_Mehedi_Hasan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-primary underline-offset-4 decoration-dashed hover:underline rounded-lg font-geist text-sm transition-all duration-300"
+            >
+              <Download size={14} className="transition-transform duration-300 group-hover:-translate-x-1" />
+              [View Resume]
+            </motion.a>
 
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              // transition={{ delay: 0.7, duration: 0.7, ease: "easeOut" }}
               whileHover={{ scale: 1.05, rotate: -0.5 }}
               whileTap={{ scale: 0.97, rotate: 0.5 }}
             >
@@ -238,7 +189,7 @@ const HeroSection: React.FC = () => {
                 className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
               >
                 [Hire Me]
-                <Mail size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                <Mail size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
               </ScrollLink>
             </motion.div>
           </div>

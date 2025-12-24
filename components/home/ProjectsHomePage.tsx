@@ -167,10 +167,10 @@ const ProjectsHomePage: React.FC = () => {
 
 
                 {/* Project Info */}
-                <h3 className="font-medium text-primary mb-2">{project.title}</h3>
+                <h3 className="font-medium text-primary ">{project.title}</h3>
                 <p className="text-sm text-base-content/80 leading-relaxed mb-2">
-                  {project.description.length > 50
-                    ? `${project.description.slice(0, 50)}...`
+                  {project.description.length > 75
+                    ? `${project.description.slice(0, 75)}...`
                     : project.description}
                 </p>
 
@@ -188,11 +188,11 @@ const ProjectsHomePage: React.FC = () => {
 
 
          {/* Tech Stack */}
-       <div className="absolute top-28 lg:top-30 left-4 flex gap-2">
+       <div className="absolute top-28 lg:top-32 left-4 flex gap-2">
   {project.techStack.slice(0, 1).map((tech, i) => (
     <span
       key={i}
-      className="px-3 py-0 text-xs sm:text-sm rounded-full bg-base-100 shadow whitespace-nowrap border border-primary/30"
+      className="px-2 py-0 text-xs sm:text-xs rounded-full bg-base-100 shadow whitespace-nowrap border border-primary/30"
     >
       {tech}
     </span>
@@ -202,23 +202,23 @@ const ProjectsHomePage: React.FC = () => {
 
 
                 {/* Action Buttons */}
-                <div className="flex flex-row items-center justify-between gap-4 text-sm whitespace-nowrap">
+                <div className="flex flex-row items-center justify-between  text-sm whitespace-nowrap">
                   <motion.a
                     whileHover={{ x: 3 }}
                     href={project.liveLink}
-                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
+                    <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
                   </motion.a>
 
                   <motion.button
                     whileHover={{ x: 3 }}
                     onClick={() => openModal(project)}
-                    className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                   >
-                    <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />  Details
+                    <Eye size={14} className="transition-transform duration-300 group-hover:-translate-x-1" />  Details
                   </motion.button>
                 </div>
               </motion.div>
@@ -241,9 +241,9 @@ const ProjectsHomePage: React.FC = () => {
           <div className="mt-4 text-center">
             <a
               href="/projects"
-              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+              className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
             >
-              See all projects <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300" size={16} />
+              All Projects <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300" size={14} />
             </a>
           </div>
 
