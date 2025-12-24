@@ -69,9 +69,9 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
         <div className="mt-3 text-center">
           <Link
                href="/blog"
-              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
              >
-              All Posts <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
+              All Posts <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1" size={14} />
              </Link>
         </div>
       </div>

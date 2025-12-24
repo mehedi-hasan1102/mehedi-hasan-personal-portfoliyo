@@ -191,26 +191,26 @@ const AllProjectsPage: React.FC = () => {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap gap-2 text-sm mt-0">
+          <div className="flex flex-wrap gap-4 text-sm mt-0">
             <motion.a
               whileHover={{ x: 3 }}
               href={project.liveLink}
-              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+              className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
+              <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
             </motion.a>
 
             {project.frontendRepo && (
               <motion.a
                 whileHover={{ x: 3 }}
                 href={project.frontendRepo}
-                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Frontend
+                <Github size={14} className="transition-transform duration-300 group-hover:-translate-x-1" /> Frontend
               </motion.a>
             )}
 
@@ -218,20 +218,20 @@ const AllProjectsPage: React.FC = () => {
               <motion.a
                 whileHover={{ x: 3 }}
                 href={project.backendRepo}
-                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1 " /> Backend
+                <Github size={14} className="transition-transform duration-300 group-hover:-translate-x-1 " /> Backend
               </motion.a>
             )}
 
             <motion.button
               whileHover={{ x: 3 }}
               onClick={() => openModal(project)}
-              className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+              className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
             >
-              <Eye size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Details
+              <Eye size={14} className="transition-transform duration-300 group-hover:-translate-x-1" /> Details
             </motion.button>
           </div>
         </div>
@@ -248,8 +248,8 @@ const AllProjectsPage: React.FC = () => {
                 href="https://github.com/mehedi-hasan1102" // <-- your GitHub link
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
-              >GitHub <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={16} />
+                className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+              >GitHub <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={14} />
               </a>
             </p>
           </div>

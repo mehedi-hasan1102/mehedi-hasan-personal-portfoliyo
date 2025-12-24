@@ -169,7 +169,7 @@ const HeroSection: React.FC = () => {
               href="/Resume_of_Mehedi_Hasan.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 text-primary underline-offset-4 decoration-dashed hover:underline rounded-lg font-geist text-sm transition-all duration-300"
+              className="group inline-flex items-center gap-1 text-primary underline-offset-4 decoration-dashed hover:underline rounded-lg font-geist text-sm transition-all duration-300"
             >
               <Download size={14} className="transition-transform duration-300 group-hover:-translate-x-1" />
               [View Resume]
@@ -186,7 +186,7 @@ const HeroSection: React.FC = () => {
                 to="hire me"
                 smooth
                 duration={500}
-                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
               >
                 [Hire Me]
                 <Mail size={14} className="transition-transform duration-300 group-hover:translate-x-1" />

@@ -206,7 +206,7 @@ const ProjectsHomePage: React.FC = () => {
                   <motion.a
                     whileHover={{ x: 3 }}
                     href={project.liveLink}
-                    className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -216,7 +216,7 @@ const ProjectsHomePage: React.FC = () => {
                   <motion.button
                     whileHover={{ x: 3 }}
                     onClick={() => openModal(project)}
-                    className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
                   >
                     <Eye size={14} className="transition-transform duration-300 group-hover:-translate-x-1" />  Details
                   </motion.button>
@@ -241,7 +241,7 @@ const ProjectsHomePage: React.FC = () => {
           <div className="mt-4 text-center">
             <a
               href="/projects"
-              className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+              className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
             >
               All Projects <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300" size={14} />
             </a>

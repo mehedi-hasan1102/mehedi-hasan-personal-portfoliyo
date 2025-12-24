@@ -110,10 +110,10 @@ const ContactMe: React.FC = () => {
         <motion.div
           onClick={() => copyToClipboard(CONTACT_EMAIL)}
           whileHover={{ x: 3 }}
-          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+          className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
         >
           {CONTACT_EMAIL}
-          <Copy size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+          <Copy size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
         </motion.div>
       ),
     },
@@ -131,10 +131,10 @@ const ContactMe: React.FC = () => {
           href={CALENDLY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+          className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
         >
           Schedule on Calendly
-          <ArrowUpRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+          <ArrowUpRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
         </motion.a>
       ),
     },
@@ -198,9 +198,9 @@ const ContactMe: React.FC = () => {
               >
                 <motion.span
                   whileHover={{ scale: 1.05 }}
-                  className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                  className="underline-offset-4 decoration-dashed hover:underline p-1 rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                 >
-                  Send Message <ArrowUpRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  Send Message <ArrowUpRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </motion.span>
               </motion.button>
             </form>
