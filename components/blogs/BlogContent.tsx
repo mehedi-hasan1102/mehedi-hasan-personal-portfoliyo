@@ -73,8 +73,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
                           className="flex gap-2 sm:gap-4  p-2  rounded-lg shadow hover:shadow-lg transition-all"
                         >
                          
-
-<div className="w-28 h-20 sm:w-32 sm:h-32 relative">
+<div className="hidden sm:block w-28 h-20 sm:w-32 sm:h-32 relative">
   <Image
     src={blog.image}
     alt={blog.title}

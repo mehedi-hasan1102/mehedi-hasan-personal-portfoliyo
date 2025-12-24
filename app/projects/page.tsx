@@ -100,7 +100,7 @@ const AllProjectsPage: React.FC = () => {
     <motion.div
       key={index}
       transition={{ type: "spring", stiffness: 200 }}
-      className="overflow-hidden rounded-md p-4 transition"
+      className="overflow-hidden rounded-md p-2 transition"
     >
       <div className="flex flex-col sm:flex-row gap-4">
 
@@ -134,7 +134,7 @@ const AllProjectsPage: React.FC = () => {
 
 <motion.div
   whileHover={{ scale: 1.02 }}
-  className="relative w-full sm:w-[250px] aspect-[16/9] overflow-hidden rounded-lg"
+  className="relative w-full sm:w-[250px] aspect-[16/9] overflow-hidden rounded-lg hidden sm:block"
 >
   {project.videos && project.videos.length > 0 ? (
     <video
@@ -222,7 +222,7 @@ const AllProjectsPage: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1" /> Backend
+                <Github size={16} className="transition-transform duration-300 group-hover:-translate-x-1 " /> Backend
               </motion.a>
             )}
 
