@@ -187,7 +187,7 @@ const ProjectsHomePage: React.FC = () => {
 
 
          {/* Tech Stack */}
-       <div className="absolute top-30 left-4 flex gap-2">
+       <div className="absolute top-28 lg:top-30 left-4 flex gap-2">
   {project.techStack.slice(0, 1).map((tech, i) => (
     <span
       key={i}
