@@ -95,7 +95,8 @@ const ProjectsHomePage: React.FC = () => {
                 key={index}
                 // whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="relative bg-base-100 rounded-lg p-2  transition shadow hover:shadow-lg overflow-hidden"
+                className="relative bg-base-100 rounded-lg p-2   overflow-hidden shadow-sm transition-transform  duration-500 ease-out
+    hover:shadow-2xl hover:-translate-y-1"
               >
                 <BorderBeam size={30} duration={8} colorFrom="#22c55e" colorTo="#16a34a" />
 
