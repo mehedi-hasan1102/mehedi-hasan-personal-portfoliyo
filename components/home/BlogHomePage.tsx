@@ -38,13 +38,9 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
               href={`/blog/${encodeURIComponent(blog.slug)}`}
               className="
     group block bg-base-100 rounded-lg overflow-hidden
-    shadow-sm transition-transform transition-shadow duration-500 ease-out
-    hover:shadow-2xl hover:-translate-y-2
-  "           style={{
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-              }}
-
+    shadow-sm transition-transform  duration-500 ease-out
+    hover:shadow-2xl hover:-translate-y-1
+  "           
             >
               {/* Image */}
               <div className="relative w-full aspect-video overflow-hidden hidden md:block ">
@@ -53,7 +49,7 @@ const BlogHomePage: React.FC<BlogHomePageProps> = ({ latestBlogs }) => {
                   alt={blog.title}
                   fill
                   quality={100}
-                  className="object-cover transition-transform duration-500 group-hover:scale-105 "
+                  className="object-cover transition-transform duration-500  "
                 />
 
                 {/* Category */}

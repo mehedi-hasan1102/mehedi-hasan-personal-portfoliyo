@@ -93,7 +93,7 @@ const ProjectsHomePage: React.FC = () => {
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -5 }}
+                // whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 200 }}
                 className="relative bg-base-100 rounded-lg p-2  transition shadow hover:shadow-lg overflow-hidden"
               >
