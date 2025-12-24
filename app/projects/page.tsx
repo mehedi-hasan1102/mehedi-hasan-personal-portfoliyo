@@ -191,7 +191,7 @@ const AllProjectsPage: React.FC = () => {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap gap-2 text-sm mt-2">
+          <div className="flex flex-wrap gap-0 text-sm mt-0">
             <motion.a
               whileHover={{ x: 3 }}
               href={project.liveLink}
