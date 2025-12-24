@@ -141,6 +141,7 @@ const ContactHomePage: React.FC = () => {
 
   return (
     <motion.section
+      id="hire-me"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -194,7 +195,7 @@ const ContactHomePage: React.FC = () => {
               >
                 <motion.span
                   whileHover={{ scale: 1.05 }}
-                  className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                  className="underline-offset-4 decoration-dashed hover:underline pb-2 rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                 >
                   Send Message <ArrowUpRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </motion.span>

@@ -76,7 +76,7 @@ const ResumeSections: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="text-base-content font-geist max-w-3xl mx-auto pt-1"
     >
-      <div className="grid md:grid-cols-2 gap-2">
+      <div className="grid md:grid-cols-2 gap-1">
 
         {/* ================= Experience ================= */}
         <motion.div

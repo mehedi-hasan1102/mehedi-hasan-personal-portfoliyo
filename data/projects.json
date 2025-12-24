@@ -10,7 +10,7 @@
     "techStack": [
       "React",
       "MongoDB",
-      "Express",
+      "Firebase",
       "Node.js"
     ],
     "liveLink": "https://plant-care-tracker-bd.web.app",
@@ -37,7 +37,8 @@
     "techStack": [
       "React ",
       "Tailwind CSS",
-      "Firebase"
+      "Firebase",
+      "Express.js"
     ],
     "liveLink": "https://food-garden-bd.web.app",
     "frontendRepo": "https://github.com/mehedi-hasan1102/Food-Garden-Client",
@@ -62,9 +63,9 @@
     ],
     "techStack": [
       "Next.js ",
-      "Framer Motion",
-      "React Icons",
-      "Tailwind CSS"
+      "TypeScript",
+      "MongoDB",
+      "Node.js"
     ],
     "liveLink": "https://duranta-online.vercel.app/",
     "frontendRepo": "https://github.com/mehedi-hasan1102/Duranta-Online-Client",

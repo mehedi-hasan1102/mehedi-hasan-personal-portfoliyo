@@ -183,10 +183,10 @@ const HeroSection: React.FC = () => {
               whileTap={{ scale: 0.97, rotate: 0.5 }}
             >
               <ScrollLink
-                to="hire me"
+                to="hire-me"
                 smooth
                 duration={500}
-                className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+                className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
               >
                 [Hire Me]
                 <Mail size={14} className="transition-transform duration-300 group-hover:translate-x-1" />

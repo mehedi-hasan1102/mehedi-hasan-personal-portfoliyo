@@ -65,7 +65,7 @@ const SkillsSection: React.FC = () => {
       <div className="relative overflow-hidden  rounded-lg p-4 bg-base-200 border border-primary/30 backdrop-blur-sm  transition-shadow duration-300">
 
         {/* Orbital Animation */}
-        <div className="absolute -top-8 -right-8 hidden md:block overflow-visible">
+        <div className="absolute -top-7 -right-7 hidden md:block overflow-visible">
           <OrbitalAnimation />
         </div>
 
