@@ -1,52 +1,10 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { GitHubCalendar } from 'react-github-calendar';
-
-const USERNAME = 'mehedi-hasan1102';
-const WEEKS_PER_YEAR = 53;
-const MIN_BLOCK_SIZE = 6;
-const MAX_BLOCK_SIZE = 14;
+import { Github } from "lucide-react";
 
 const GitHubActivitySection: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
-  const [blockSize, setBlockSize] = useState<number>(MAX_BLOCK_SIZE);
-  const [blockMargin, setBlockMargin] = useState<number>(2);
-  const [fontSize, setFontSize] = useState<number>(16);
-
-  /**
-   * Dynamically calculate GitHub calendar block size
-   * to avoid horizontal scrolling on any screen size.
-   */
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const resizeObserver = new ResizeObserver(([entry]) => {
-      const width = entry.contentRect.width;
-
-      // Each week column needs margin space
-      const totalMargin = WEEKS_PER_YEAR * blockMargin * 2;
-
-      const calculatedSize = Math.floor(
-        (width - totalMargin) / WEEKS_PER_YEAR
-      );
-
-      const finalBlockSize = Math.min(
-        Math.max(calculatedSize, MIN_BLOCK_SIZE),
-        MAX_BLOCK_SIZE
-      );
-
-      setBlockSize(finalBlockSize);
-      setFontSize(width < 400 ? 10 : width < 600 ? 12 : 16);
-    });
-
-    resizeObserver.observe(containerRef.current);
-
-    return () => resizeObserver.disconnect();
-  }, [blockMargin]);
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -70,23 +28,29 @@ const GitHubActivitySection: React.FC = () => {
           </h2>
         </motion.div>
 
-        {/* Calendar */}
-        <motion.div
-          ref={containerRef}
-          className="flex justify-center w-full"
-          initial={{ scale: 0.96, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.15 }}
-          viewport={{ once: true }}
-        >
-          <GitHubCalendar
-            username={USERNAME}
-            colorScheme="dark"
-            blockSize={blockSize}
-            blockMargin={blockMargin}
-            fontSize={fontSize}
+        {/* Calendar Image */}
+        <div className="bg-base-200 rounded-lg overflow-hidden ">
+          <img
+            src="https://ghchart.rshah.org/mehedi-hasan1102"
+            alt="Mehedi Hasan's GitHub Contribution Graph"
+            className="w-full h-auto"
+            loading="lazy"
           />
-        </motion.div>
+
+      
+        </div>
+          {/* Footer Link */}
+ <div className="mt-4 text-center">
+  <a
+    href="/projects"
+    className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-transform duration-300 hover:translate-x-1"
+  >
+    Follow on GitHub
+    <Github size={14} className="ml-1 transition-transform duration-300" />
+  </a>
+</div>
+
+
       </div>
     </motion.section>
   );
