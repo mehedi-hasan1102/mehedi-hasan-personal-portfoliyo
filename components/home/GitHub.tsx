@@ -42,7 +42,9 @@ const GitHubActivitySection: React.FC = () => {
           {/* Footer Link */}
  <div className="mt-4 text-center">
   <a
-    href="/projects"
+    href="https://github.com/mehedi-hasan1102"
+  target="_blank"
+  rel="noopener noreferrer"
     className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-transform duration-300 hover:translate-x-1"
   >
     Follow on GitHub
