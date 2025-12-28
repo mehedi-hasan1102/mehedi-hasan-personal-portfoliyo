@@ -92,15 +92,15 @@ const ResumeSections: React.FC = () => {
           </h3>
 
           <SimpleBar className="max-h-[300px] pr-2">
-            <ul className="space-y-6 list-none p-0 m-0">
+            <ul className="space-y-2 list-none p-0 mb-4">
               {aboutData.experience.map((item, idx) => (
                 <motion.li
                   key={idx}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="pl-4 border-l-2 border-primary/50 hover:border-primary transition-colors mb-4"
+                  className=" transition-colors bg-base-100 p-2 rounded-lg"
                 >
-                  <p className="text-primary font-medium">{item.title}</p>
+                  <p className="text-primary font-medium bg">{item.title}</p>
 
 
                   {item.organization && (
@@ -149,19 +149,19 @@ const ResumeSections: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
         >
-          <h3 className="flex items-center gap-3 text-xl mb-6">
+          <h3 className="flex items-center gap-3 text-xl mb-4">
             <GraduationCap className="w-5 h-5 text-primary" />
             Education
           </h3>
 
           <SimpleBar className="max-h-[300px] pr-2">
-            <ul className="space-y-6 list-none p-0 mb-6">
+            <ul className="space-y-2 list-none p-0 mb-4">
               {aboutData.education.map((edu, idx) => (
                 <motion.li
                   key={idx}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="pl-4 border-l-2 border-primary/50 hover:border-primary transition-colors"
+                  className="transition-colors bg-base-100 p-2 rounded-lg"
                 >
                   <p className="text-primary font-medium">
                     {edu.institution}

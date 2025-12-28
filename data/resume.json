@@ -87,32 +87,32 @@
   ],
   "experience": [
   {
-    "title": "Self-taught Developer",
-    "organization": "Independent Learning",
+    "title": "Junior Web Developer (Self-Taught)",
+    "organization": "Independent Projects",
     "time": "2024 - Present",
-    "description": "Learning through self-study and building projects with React and Node.js."
+    "description": "Building full-stack web applications using React, Next.js, Node.js, MongoDB, and RESTful APIs, with a focus on clean code and performance.",
+    "profileLink": null
   },
   {
     "title": "Volunteer",
     "organization": "Quantum Foundation",
     "time": "2018 - Present",
-    "description": "Motivating and supporting people through community programs.",
+    "description": "Supporting community development initiatives through educational and social programs.",
     "profileLink": "https://profilev6.quantummethod.org.bd/member/1800609/8ad48dd917a14eca416544"
   },
   {
     "title": "Blood Donor",
     "organization": "Quantum Voluntary Blood Donation Program",
     "time": "2015 - Present",
-    "description": "Regular blood donor contributing to community health.",
+    "description": "Regular voluntary blood donor contributing to public health and emergency medical support.",
     "profileLink": "https://blood.quantummethod.org.bd/en/donor-profile/OPML68437"
   },
   {
     "title": "Volunteer",
     "organization": "Anjuman Mufidul Islam",
     "time": "2018 - 2020",
-    "description": "As a volunteer at Anjuman Mufidul Islam, I supported orphans and underprivileged communities through welfare services and humanitarian aid.",
+    "description": "Provided humanitarian support to orphaned and underprivileged communities.",
     "profileLink": null
   }
 ]
-
 }

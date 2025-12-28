@@ -48,7 +48,7 @@ const techIconsRow2: TechIcon[] = [
 const SkillsSection: React.FC = () => {
  const skillItems: string[] = [
    "Frontend: HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Tailwind CSS",
-    "Backend: Node.js, Express.js, MongoDB, JWT Authentication, Firebase Authentication",
+    "Backend: Node.js, Express.js, MongoDB, JWT Authentication, Firebase Authentication,Mongoose",
     "Tools: Git, GitHub, Vercel, Figma, Linux",
     "Soft Skills: Team Collaboration, Adaptability, Fast Learner"
 ];
@@ -135,7 +135,7 @@ const SkillsSection: React.FC = () => {
               <motion.li
                 key={index}
                 whileHover={{ x: 5 }}
-                className="pl-4 text-base-content/60 border-l-2 border-primary/50 hover:border-primary transition-colors duration-300"
+                className="pl-4 text-base-content/60 border-l-2 border-primary/50 hover:border-primary transition-colors duration-300 "
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <span className="text-base-content">{item.split(":")[0]}:</span>
