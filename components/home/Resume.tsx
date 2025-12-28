@@ -101,14 +101,16 @@ const ResumeSections: React.FC = () => {
                   className="pl-4 border-l-2 border-primary/50 hover:border-primary transition-colors mb-4"
                 >
                   <p className="text-primary font-medium">{item.title}</p>
-                  <p className="text-base-content/70 mt-1">{item.time}</p>
+
 
                   {item.organization && (
-                    <p className="text-base-content/60 text-sm mt-1">
+                    <p className="text-base-content/70 mt-1">
                       {item.organization}
+                      {item.time && ` | ${item.time}`}
                     </p>
-                  )}
 
+                  )}
+                  
                   {item.description && (
                     <p className="text-base-content/60 text-sm mt-2 leading-relaxed">
                       {item.description}
