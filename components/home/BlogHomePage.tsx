@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, FileText } from "lucide-react";
 import { BlogMetaData } from "@/lib/blogs";
 
 interface BlogHomePageProps {
@@ -97,8 +97,8 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
               hover:underline underline-offset-4 decoration-dashed
             "
           >
-            All Posts
-            <ArrowUpRight
+            Read All Posts
+            <FileText
               size={14}
               className="transition-transform duration-300 group-hover:translate-x-1"
             />

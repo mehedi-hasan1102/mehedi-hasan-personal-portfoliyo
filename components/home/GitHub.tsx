@@ -40,17 +40,20 @@ const GitHubActivitySection: React.FC = () => {
       
         </div>
           {/* Footer Link */}
- <div className="mt-4 text-center">
+ <div className="mt-3 text-center">
   <a
     href="https://github.com/mehedi-hasan1102"
   target="_blank"
   rel="noopener noreferrer"
-    className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-transform duration-300 hover:translate-x-1"
-  >
+    className="group inline-flex items-center gap-1
+              text-primary text-sm font-geist
+              transition-all duration-300
+              hover:underline underline-offset-4 decoration-dashed">
     Follow on GitHub
-    <Github size={14} className="ml-1 transition-transform duration-300" />
+    <Github size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
   </a>
 </div>
+
 
 
       </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, } from "framer-motion";
-import { Eye, ArrowUpRight, Github } from "lucide-react";
+import { Eye, ArrowUpRight, Github} from "lucide-react";
 import projectsData from "../../data/projects.json";
 import ProjectModal from "@/components/projects/ProjectModal";
 import Image from 'next/image';
@@ -241,6 +241,9 @@ const AllProjectsPage: React.FC = () => {
 </div>
 
 
+          {/* Footer Link */}
+
+
           <div className="mt-4 text-center">
             <p className="text-sm mb-0">
               Other projects can be explored on{" "}
@@ -249,7 +252,7 @@ const AllProjectsPage: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
-              >GitHub <ArrowUpRight className="group-hover:translate-x-1 transition-transform duration-300 " size={14} />
+              >GitHub <Github className="group-hover:translate-x-1 transition-transform duration-300 " size={14} />
               </a>
             </p>
           </div>
