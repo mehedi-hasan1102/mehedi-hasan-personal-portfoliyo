@@ -84,7 +84,7 @@ const ResumeSections: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
+          className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-3"
         >
           <h3 className="flex items-center gap-3 text-xl mb-4">
             <Briefcase className="w-5 h-5 text-primary" />
@@ -147,9 +147,9 @@ const ResumeSections: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
+          className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-3"
         >
-          <h3 className="flex items-center gap-3 text-xl mb-4">
+          <h3 className="flex items-center gap-3 text-xl mb-4 ">
             <GraduationCap className="w-5 h-5 text-primary" />
             Education
           </h3>
