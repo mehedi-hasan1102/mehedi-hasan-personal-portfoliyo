@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
       />
 
       {/* Media */}
-      <div className="overflow-hidden rounded-lg relative w-full h-32 sm:h-36 mb-2">
+      <div className="overflow-hidden rounded-lg relative w-full h-32 sm:h-36 mb-2 hidden sm:block">
         {project.videos?.length ? (
           <video
   src={project.videos[0]}
@@ -79,7 +79,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
 
       {/* Tech Stack */}
       <div className="flex gap-1 mb-2">
-        {project.techStack.slice(0, 4).map((tech, i) => (
+        {project.techStack.slice(0, 3).map((tech, i) => (
           <span
             key={i}
             className="px-2 py-0 text-xs sm:text-xs rounded-full bg-base-100 shadow whitespace-nowrap border border-primary/30"
