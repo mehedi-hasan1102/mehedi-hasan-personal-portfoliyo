@@ -15,7 +15,7 @@ interface ExperienceItem {
   time?: string;
   organization?: string;
   description?: string;
-  profileLink?: string;
+   profileLink?: string | null;
 }
 
 interface EducationItem {
