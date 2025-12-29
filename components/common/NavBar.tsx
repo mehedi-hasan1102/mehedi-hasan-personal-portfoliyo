@@ -72,12 +72,12 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                     : ""}
                 `}
               >
-                About
+                Home
               </Link>
             </li>
 
 
-            {/* <li>
+            <li>
               <Link
                 href="/about"
                 className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
@@ -88,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
               >
                 About
               </Link>
-            </li> */}
+            </li>
 
 
             <li>
@@ -210,8 +210,8 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 {/* Drawer Links */}
                 <ul className="flex-1 flex flex-col gap-2 mt-4">
                   {[
-                    { name: "About", route: "/" },
-                    // { name: "About", route: "/about" },
+                    { name: "Home", route: "/" },
+                    { name: "About", route: "/about" },
                      { name: "Blog", route: "/blog" },
                     { name: "Projects", route: "/projects" },
                    
