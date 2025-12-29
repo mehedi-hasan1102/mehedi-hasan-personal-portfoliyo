@@ -100,7 +100,7 @@ const AllProjectsPage: React.FC = () => {
     <motion.div
       key={index}
       transition={{ type: "spring", stiffness: 200 }}
-      className="overflow-hidden rounded-md py-2 transition"
+      className="overflow-hidden rounded-md py-2 sm:py-6 transition"
     >
       <div className="flex flex-col sm:flex-row gap-4">
 

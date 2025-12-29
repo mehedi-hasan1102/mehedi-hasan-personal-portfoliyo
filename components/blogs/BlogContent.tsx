@@ -70,7 +70,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
                         <motion.div
                           key={blog.slug}
                           // whileHover={{ y: -3 }}
-                          className="flex gap-2 sm:gap-4   rounded-lg  transition-all py-2"
+                          className="flex gap-2 sm:gap-4   rounded-lg  transition-all py-2 sm:py-6"
                         >
                          
 <div className="hidden sm:block sm:block w-32 h-24  relative">
