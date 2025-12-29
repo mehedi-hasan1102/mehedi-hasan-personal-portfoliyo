@@ -1,93 +1,121 @@
-
 'use client';
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import { BlogMetaData } from "@/lib/blogs";
+import { motion } from "framer-motion";
 
 interface BlogHomePageProps {
   latestBlogs: BlogMetaData[];
 }
 
+/* Motion variants */
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 12 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 22,
+    },
+  },
+};
+
 export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
   return (
-    <section className="text-base-content font-geist max-w-3xl mx-auto pt-1 px-0">
-      {/*  backdrop-blur  */}
-      <div className="rounded-lg p-2 shadow-lg backdrop-blur-sm">
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="text-base-content font-geist max-w-3xl mx-auto pt-1"
+    >
+      <div className="rounded-lg p-2 border border-primary/30 bg-base-200 backdrop-blur-sm">
         {/* Header */}
-        <div className="mb-4 text-center">
-          <p className="text-sm text-primary mb-0">• Articles</p>
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="mb-4 text-center"
+        >
+          <p className="text-sm text-primary mb-0">• Blog</p>
           <h2 className="text-xl">
             Recent <span className="text-base-content/60">Updates</span>
           </h2>
-        </div>
+        </motion.div>
 
-        {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+        {/* Blog List */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col"
+        >
           {latestBlogs.map((blog) => (
-            <Link
+            <motion.div
               key={blog.slug}
-              href={`/blog/${encodeURIComponent(blog.slug)}`}
-              className="
-                group block bg-base-100 rounded-lg overflow-hidden
-                shadow-sm transition-transform transition-shadow duration-300
-                transform-gpu will-change-transform
-                hover:shadow-xl hover:-translate-y-1
-              "
+              variants={itemVariants}
+              whileHover={{ x: 4 }}
             >
-              {/* Image (md+) */}
-              <div className="hidden md:block relative w-full aspect-video overflow-hidden">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  fill
-                  priority
-                  loading="eager"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  quality={70}
-                  className="
-                    object-cover transition-transform duration-500
-                    transform-gpu will-change-transform
-                    group-hover:scale-105
-                  "
-                />
-
-                {/* Category */}
-                <span className="absolute bottom-2 left-2 px-2 text-xs rounded-lg bg-base-100">
-                  {blog.category}
-                </span>
-
-                {/* Hover Overlay */}
-                <div
-                  className="
-                    absolute inset-0 bg-black/20 opacity-0
-                    group-hover:opacity-100
-                    transition-opacity duration-300
-                    flex items-center justify-center
-                  "
-                >
-                  <span className="bg-primary text-primary-content p-2 rounded-lg">
-                    <ArrowUpRight size={16} />
-                  </span>
+              <Link
+                href={`/blog/${encodeURIComponent(blog.slug)}`}
+                className="
+                  group flex items-center gap-3
+                  py-3 px-2 mb-2
+                  rounded-lg
+                  border-b border-base-content/10
+                  bg-base-100
+                  transition-colors duration-300
+                 
+                "
+              >
+                {/* Image */}
+                <div className="relative w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-base-200">
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    fill
+                    sizes="48px"
+                    quality={100}
+                    priority
+                    className="object-cover"
+                  />
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-2">
-                <p className="text-xs text-base-content/50 mb-1">
-                  {blog.date} • {blog.readTime}
-                </p>
-                <h3 className="font-medium leading-snug text-primary/90">
-                  {blog.title}
-                </h3>
-              </div>
-            </Link>
+                {/* Text */}
+                <div className="flex flex-col gap-1 flex-1 min-w-0">
+                  <h3 className="font-medium leading-snug text-primary/90 break-words underline-offset-4 decoration-dashed group-hover:underline">
+                    {blog.title}
+                  </h3>
+
+                  <p className="text-xs text-base-content/50">
+                    {blog.date} • {blog.readTime} • {blog.category}
+                  </p>
+                </div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Footer Link */}
-        <div className="mt-3 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mt-3 text-center"
+        >
           <Link
             href="/blog"
             className="
@@ -97,14 +125,14 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
               hover:underline underline-offset-4 decoration-dashed
             "
           >
-            Read All Posts
+            See All Blogs
             <FileText
               size={14}
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
           </Link>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

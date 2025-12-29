@@ -24,10 +24,11 @@ export default async function Home() {
       <ScrollProgress />
       <HeroSection />
       <ResumeSections />
+      <BlogHomePage latestBlogs={latestBlogs} />
       <ProjectsHomePage />
       <GitHubActivitySection />
       <SkillsSection />
-      <BlogHomePage latestBlogs={latestBlogs} />
+      
       <ContactHomePage />    
       <WhatsAppButton />
       <ScrollToTopButton />
