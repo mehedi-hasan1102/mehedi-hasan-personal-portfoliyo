@@ -150,14 +150,14 @@ const ContactHomePage: React.FC = () => {
     >
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className=" rounded-lg p-2 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300">
+      <div className="border border-primary/30 bg-base-200 rounded-lg p-3 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300">
         {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={fadeIn}
           viewport={{ once: true }}
-          className="mb-4"
+          className="mb-4 text-center mx-auto"
         >
           <p className="text-sm text-primary mb-0">• Contact</p>
           <h2 className="text-xl font-geist text-base-content">
