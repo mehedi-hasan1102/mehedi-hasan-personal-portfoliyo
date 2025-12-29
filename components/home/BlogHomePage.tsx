@@ -27,12 +27,12 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
       stiffness: 260,
       damping: 22,
     },
   },
 };
+
 
 export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
   return (
