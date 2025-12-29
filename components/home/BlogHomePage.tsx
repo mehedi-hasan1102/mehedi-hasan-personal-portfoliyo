@@ -10,14 +10,16 @@ interface BlogHomePageProps {
   latestBlogs: BlogMetaData[];
 }
 
-/* ---------------- Animations ---------------- */
+/* ---------------- Light Animation (Entry Only) ---------------- */
 
 const fadeIn: Variants = {
-  hidden: { opacity: 0, y: 12 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
   },
 };
 
@@ -26,14 +28,13 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.3 }}
       className="text-base-content font-geist max-w-3xl mx-auto pt-1"
     >
       <motion.div
         variants={fadeIn}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        animate="visible"
         className="rounded-lg p-2 border border-primary/30 bg-base-200 backdrop-blur-sm"
       >
         {/* Header */}
@@ -47,11 +48,13 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
         {/* Blog List */}
         <div className="flex flex-col">
           {latestBlogs.map((blog) => (
-            <motion.div
+            <div
               key={blog.slug}
-              whileHover={{ x: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="mb-2"
+              className="
+                mb-2
+                transition-transform duration-200 ease-out
+                hover:translate-x-1
+              "
             >
               <Link
                 href={`/blog/${encodeURIComponent(blog.slug)}`}
@@ -61,7 +64,8 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
                   rounded-lg
                   border-b border-base-content/10
                   bg-base-100
-                  transition-colors
+                  transition-colors duration-200
+                  
                 "
               >
                 {/* Image */}
@@ -70,15 +74,20 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
                     src={blog.image}
                     alt={blog.title}
                     fill
-                    // sizes="48px"
-                    quality={75}
+                    sizes="64px"
+                    quality={60}
                     className="object-cover"
                   />
                 </div>
 
                 {/* Text */}
                 <div className="flex flex-col gap-1 flex-1 min-w-0">
-                  <h3 className="font-medium leading-snug text-primary/90 break-words underline-offset-4 decoration-dashed group-hover:underline">
+                  <h3 className="
+                    font-medium leading-snug
+                    text-primary/90 break-words
+                    underline-offset-4 decoration-dashed
+                    group-hover:underline
+                  ">
                     {blog.title}
                   </h3>
 
@@ -87,7 +96,7 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
                   </p>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -105,7 +114,7 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
             See All Blogs
             <FileText
               size={14}
-              className="transition-transform group-hover:translate-x-1"
+              className="transition-transform duration-200 group-hover:translate-x-1"
             />
           </Link>
         </div>
