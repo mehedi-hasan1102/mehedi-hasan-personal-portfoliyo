@@ -18,7 +18,7 @@ export default async function Home() {
   const allBlogsData = await getSortedBlogsData();
   const latestBlogs = allBlogsData
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 2);
+    .slice(0, 3);
   return (
     <div className="min-h-screen font-geist relative ">
       <ScrollProgress />
