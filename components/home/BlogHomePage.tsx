@@ -31,8 +31,13 @@ const itemVariants = {
       damping: 22,
     },
   },
+  hover: {
+    x: 4,
+    transition: {
+      duration: 0.12,
+    },
+  },
 };
-
 
 export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
   return (
@@ -47,7 +52,7 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.35 }}
           className="mb-4 text-center"
         >
           <p className="text-sm text-primary mb-0">• Blog</p>
@@ -57,17 +62,12 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
         </motion.div>
 
         {/* Blog List */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col"
-        >
+        <motion.div variants={containerVariants} className="flex flex-col">
           {latestBlogs.map((blog) => (
             <motion.div
               key={blog.slug}
               variants={itemVariants}
-              whileHover={{ x: 4 }}
+              whileHover="hover"
             >
               <Link
                 href={`/blog/${encodeURIComponent(blog.slug)}`}
@@ -77,8 +77,8 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
                   rounded-lg
                   border-b border-base-content/10
                   bg-base-100
-                  transition-colors duration-300
-                 
+                  transition-colors duration-200
+                  
                 "
               >
                 {/* Image */}
