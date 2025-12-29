@@ -3,7 +3,7 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Facebook } from "lucide-react";
-import { FaDev, FaDiscord, FaHackerrank, FaMedium, FaBehance,FaTelegramPlane , } from "react-icons/fa";
+import { FaDev, FaDiscord, FaHackerrank, FaMedium, FaBehance, FaTelegramPlane, } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 // import { SiBluesky } from "react-icons/si";
@@ -40,9 +40,9 @@ const Footer = () => {
   const navLinks: NavLink[] = [
     { label: "About", href: "/" },
 
-  { label: "Blog", href: "/blog" },
-    { label: "Projects", href: "/projects" },
     { label: "Blog", href: "/blog" },
+    { label: "Projects", href: "/projects" },
+
     { label: "Contact", href: "/contact" },
   ];
 
