@@ -94,13 +94,13 @@ const AllProjectsPage: React.FC = () => {
             ))}
           </div>
 <div className="h-[1px] bg-primary/40 mb-2"></div>
-          {/* Projects Glist */}
+          {/* Projects list */}
          <div className="space-y-2">
   {filteredProjects.map((project, index) => (
     <motion.div
       key={index}
       transition={{ type: "spring", stiffness: 200 }}
-      className="overflow-hidden rounded-md p-2 transition"
+      className="overflow-hidden rounded-md py-2 transition"
     >
       <div className="flex flex-col sm:flex-row gap-4">
 
