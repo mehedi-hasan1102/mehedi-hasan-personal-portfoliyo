@@ -40,7 +40,7 @@ const Footer = () => {
   const navLinks: NavLink[] = [
     { label: "About", href: "/" },
 
-
+  { label: "Blog", href: "/blog" },
     { label: "Projects", href: "/projects" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
