@@ -4,92 +4,74 @@ import Link from "next/link";
 import Image from "next/image";
 import { FileText } from "lucide-react";
 import { BlogMetaData } from "@/lib/blogs";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface BlogHomePageProps {
   latestBlogs: BlogMetaData[];
 }
 
-/* Motion variants */
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-    },
-  },
-};
+/* ---------------- Animations ---------------- */
 
-const itemVariants = {
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      stiffness: 260,
-      damping: 22,
-    },
-  },
-  hover: {
-    x: 4,
-    transition: {
-      duration: 0.12,
-    },
+    transition: { duration: 0.5 },
   },
 };
 
 export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
   return (
     <motion.section
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
       className="text-base-content font-geist max-w-3xl mx-auto pt-1"
     >
-      <div className="rounded-lg p-2 border border-primary/30 bg-base-200 backdrop-blur-sm">
+      <motion.div
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="rounded-lg p-2 border border-primary/30 bg-base-200 backdrop-blur-sm"
+      >
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35 }}
-          className="mb-4 text-center"
-        >
+        <div className="mb-4 text-center">
           <p className="text-sm text-primary mb-0">• Blog</p>
           <h2 className="text-xl">
             Recent <span className="text-base-content/60">Updates</span>
           </h2>
-        </motion.div>
+        </div>
 
         {/* Blog List */}
-        <motion.div variants={containerVariants} className="flex flex-col">
+        <div className="flex flex-col">
           {latestBlogs.map((blog) => (
             <motion.div
               key={blog.slug}
-              variants={itemVariants}
-              whileHover="hover"
+              whileHover={{ x: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="mb-2"
             >
               <Link
                 href={`/blog/${encodeURIComponent(blog.slug)}`}
                 className="
                   group flex items-center gap-3
-                  py-3 px-2 mb-2
+                  py-3 px-2
                   rounded-lg
                   border-b border-base-content/10
                   bg-base-100
-                  transition-colors duration-200
-                  
+                  transition-colors
                 "
               >
                 {/* Image */}
-                <div className="relative w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-base-200">
+                <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden bg-base-200">
                   <Image
                     src={blog.image}
                     alt={blog.title}
                     fill
-                    sizes="48px"
-                    quality={100}
-                    priority
+                    // sizes="48px"
+                    quality={75}
                     className="object-cover"
                   />
                 </div>
@@ -107,32 +89,27 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
               </Link>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Footer Link */}
-        <motion.div
-          initial={{ opacity: 0, y: 6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mt-3 text-center"
-        >
+        {/* Footer */}
+        <div className="mt-3 text-center">
           <Link
             href="/blog"
             className="
               group inline-flex items-center gap-1
               text-primary text-sm font-geist
-              transition-all duration-300
+              transition-all
               hover:underline underline-offset-4 decoration-dashed
             "
           >
             See All Blogs
             <FileText
               size={14}
-              className="transition-transform duration-300 group-hover:translate-x-1"
+              className="transition-transform group-hover:translate-x-1"
             />
           </Link>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </motion.section>
   );
 }
