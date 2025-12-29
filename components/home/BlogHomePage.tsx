@@ -176,7 +176,7 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
     className="group flex flex-row gap-4 py-3 px-2 rounded-lg border-b border-base-content/10 bg-base-100 transition-colors duration-200"
   >
     {/* Image */}
-    <div className="hidden sm:block w-24 h-24 relative flex-shrink-0">
+    <div className="hidden sm:block w-32 h-24 relative flex-shrink-0">
       <Image
         src={blog.image}
         alt={blog.title}
@@ -194,7 +194,7 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
         {blog.date} • {blog.readTime} • {blog.category}
       </p>
       <p className="text-base-content/80 text-sm mt-2">
-                              {blog.description.slice(0, 70)}...
+                              {blog.description.slice(0, 65)}...
                             </p>
     </div>
   </Link>

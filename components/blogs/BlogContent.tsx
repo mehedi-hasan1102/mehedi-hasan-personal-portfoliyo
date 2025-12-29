@@ -73,7 +73,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
                           className="flex gap-2 sm:gap-4   rounded-lg  transition-all"
                         >
                          
-<div className="hidden sm:block w-28 h-20 sm:w-32 sm:h-32 relative">
+<div className="hidden sm:block w-28 h-20 sm:w-48 sm:h-32 relative">
   <Image
     src={blog.image}
     alt={blog.title}
@@ -95,7 +95,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
                               {blog.date} • {blog.readTime}
                             </p>
                             <p className="text-base-content/80 text-sm mt-2">
-                              {blog.description.slice(0, 120)}...
+                              {blog.description.slice(0, 110)}...
                             </p>
                           </div>
                         </motion.div>
