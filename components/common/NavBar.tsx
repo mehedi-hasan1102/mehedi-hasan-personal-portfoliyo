@@ -67,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 className={`
                   cursor-pointer px-2 py-2 rounded-lg transition text-sm
                   hover:text-primary 
-                  ${isActive("/") 
+                  ${isActive("/")
                     ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
                     : ""}
                 `}
@@ -77,7 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
             </li>
 
 
-{/* <li>
+            {/* <li>
               <Link
                 href="/about"
                 className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
@@ -93,6 +93,19 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
 
             <li>
               <Link
+                href="/blog"
+                className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
+                  ${isActive("/blog")
+                    ? " underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
+                    : ""}
+                `}
+              >
+                Blog
+              </Link>
+            </li>
+
+            <li>
+              <Link
                 href="/projects"
                 className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
                   ${isActive("/projects")
@@ -104,18 +117,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
               </Link>
             </li>
 
-            <li>
-              <Link
-                href="/blog"
-                className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
-                  ${isActive("/blog")
-                    ? " underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
-                    : ""}
-                `}
-              >
-                Blog
-              </Link>
-            </li>
+
 
             <li>
               <Link
@@ -210,8 +212,9 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                   {[
                     { name: "About", route: "/" },
                     // { name: "About", route: "/about" },
+                     { name: "Blog", route: "/blog" },
                     { name: "Projects", route: "/projects" },
-                    { name: "Blog", route: "/blog" },
+                   
                     { name: "Contact", route: "/contact" },
                   ].map((item) => (
                     <li key={item.route}>
