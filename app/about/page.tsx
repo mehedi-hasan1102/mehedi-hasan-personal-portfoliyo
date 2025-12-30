@@ -6,6 +6,7 @@ import Image from "next/image";
 import ResumeSections from '../../components/home/Resume';
 import GitHubActivitySection from "@/components/home/GitHub";
 import SkillsSection from "@/components/home/Skills";
+import { FiLinkedin } from "react-icons/fi";
 
 const AboutPage: React.FC = () => {
   return (
@@ -67,19 +68,20 @@ const AboutPage: React.FC = () => {
         </div>
 
         {/* Footer */}
-        <div className="mt-6 text-center mb-6">
-          <p className="text-sm mb-0">
-            You can find more about me on{" "}
-            <a
-              href="https://www.linkedin.com/in/mehedi-hasan1102/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline-offset-4 decoration-dashed hover:underline rounded-lg text-primary font-geist text-sm transition-all duration-300"
-            >
-              LinkedIn
-            </a>
-          </p>
-        </div>
+       <div className="mt-6 text-center mb-6">
+  <p className="text-sm mb-0 flex items-center justify-center gap-2">
+    You can find more about me on
+    <a
+      href="https://www.linkedin.com/in/mehedi-hasan1102/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+    >
+      LinkedIn
+      <FiLinkedin size={14} className="transition-transform duration-300 group-hover:translate-x-1" /> 
+    </a>
+  </p>
+</div>
          {/* Resume, GitHub Activity & Skills */}
       <ResumeSections />
       <GitHubActivitySection />
