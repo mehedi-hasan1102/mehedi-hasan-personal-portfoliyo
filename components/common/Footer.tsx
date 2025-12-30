@@ -38,7 +38,9 @@ const Footer = () => {
   ];
 
   const navLinks: NavLink[] = [
-    { label: "About", href: "/" },
+
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
 
     { label: "Blog", href: "/blog" },
     { label: "Projects", href: "/projects" },

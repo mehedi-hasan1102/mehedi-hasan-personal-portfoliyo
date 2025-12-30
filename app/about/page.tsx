@@ -3,10 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ResumeSections from '../../components/home/Resume';
-import GitHubActivitySection from "@/components/home/GitHub";
-import SkillsSection from "@/components/home/Skills";
+
+
 import { FiLinkedin } from "react-icons/fi";
+import GitHubAboutSection from "@/components/about/GitHub-about";
+import ResumeAboutSections from "@/components/about/Resume-about";
+import SkillsAboutSection from "@/components/about/Skills-about";
 
 const AboutPage: React.FC = () => {
   return (
@@ -16,7 +18,7 @@ const AboutPage: React.FC = () => {
       className="text-base-content font-geist mx-auto pt-1 max-w-3xl min-h-screen space-y-6"
     >
       {/* About Container */}
-      <div className=" bg-base-200 relative overflow-hidden rounded-lg p-1 backdrop-blur-sm transition-shadow duration-300">
+      <div className=" relative overflow-hidden rounded-lg p-1 backdrop-blur-sm transition-shadow duration-300">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -83,9 +85,9 @@ const AboutPage: React.FC = () => {
   </p>
 </div>
          {/* Resume, GitHub Activity & Skills */}
-      <ResumeSections />
-      <GitHubActivitySection />
-      <SkillsSection />
+      <ResumeAboutSections />
+      <GitHubAboutSection />
+      <SkillsAboutSection />
       </div>
 
      
