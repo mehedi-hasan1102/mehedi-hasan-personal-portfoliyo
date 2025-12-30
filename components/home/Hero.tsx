@@ -127,11 +127,13 @@ const HeroSection: React.FC = () => {
             <span className="bg-primary/20 text-primary font-medium px-1 rounded">
               Node.js
             </span>
-            , focusing on clean architecture, smooth UX, and high-performance solutions. I use
+            , focusing on clean architecture, smooth UX, and high-performance solutions.
+            
+             {/* I use */}
           </motion.p>
 
           {/* Tech Icons Marquee */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -156,7 +158,7 @@ const HeroSection: React.FC = () => {
               </Marquee>
             </div>
             <span className="text-xs sm:text-sm font-geist text-base-content/60 inline">...and more !</span>
-          </motion.div>
+          </motion.div> */}
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 mt-2">
