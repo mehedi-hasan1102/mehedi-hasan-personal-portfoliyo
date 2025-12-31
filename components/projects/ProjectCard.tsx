@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
         relative bg-base-100 rounded-lg p-4 overflow-hidden
         shadow-sm transition-transform transition-shadow duration-300
         transform-gpu will-change-transform
-        hover:shadow-xl hover:-translate-y-1 space-y-2
+        hover:shadow-xl hover:-translate-y-1 
       "
     >
       {/* Border Beam */}
@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
       />
 
       {/* Media */}
-      <div className="overflow-hidden rounded-lg relative w-full h-32 sm:h-36 mb-2 hidden sm:block">
+      <div className="overflow-hidden rounded-lg relative w-full h-32 sm:h-36 mb-2 hidden sm:block ">
         {project.videos?.length ? (
           <video
   src={project.videos[0]}
@@ -70,8 +70,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
       </div>
 
       {/* Info */}
+    <div className='space-y-2'>
+
+  
       <h3 className="font-medium text-primary">{project.title}</h3>
-      <p className="text-sm text-base-content/80 leading-relaxed mb-2">
+      <p className="text-sm text-base-content/80 leading-relaxed">
         {project.description.length > 64
           ? `${project.description.slice(0, 64)}...`
           : project.description}
@@ -107,6 +110,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
           <Eye size={14} /> Details
         </button>
       </div>
+
+    </div>
     </div>
   );
 };
