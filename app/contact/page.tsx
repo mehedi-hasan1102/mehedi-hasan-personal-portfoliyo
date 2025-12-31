@@ -153,20 +153,17 @@ const ContactMe: React.FC = () => {
     >
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="min-h-screen rounded-lg p-2 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300">
+      <div className="min-h-screen rounded-lg p-4 bg-base-200 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300">
         {/* Header */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeIn}
-          viewport={{ once: true }}
-          className="mb-4 text-center"
-        >
-          {/* <p className="text-sm text-primary mb-0">• Get in Touch</p> */}
-          <h2 className="text-xl m-2  font-geist text-base-content">
-            Let’s <span className="text-base-content/60">Connect </span>
-          </h2>
-        </motion.div>
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="my-4 text-start "
+                >
+                  <h2 className="text-3xl ">Contact</h2>
+                </motion.div>
 
        
           <div className="flex flex-col md:flex-row gap-4">

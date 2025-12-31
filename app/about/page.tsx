@@ -15,10 +15,10 @@ const AboutPage: React.FC = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="text-base-content font-geist mx-auto pt-1 max-w-3xl min-h-screen space-y-6"
+      className="text-base-content font-geist mx-auto pt-1 max-w-3xl min-h-screen space-y-6 "
     >
       {/* About Container */}
-      <div className=" relative overflow-hidden rounded-lg p-4 backdrop-blur-sm transition-shadow duration-300">
+      <div className=" relative overflow-hidden rounded-lg p-4 bg-base-200 backdrop-blur-sm transition-shadow duration-300">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}

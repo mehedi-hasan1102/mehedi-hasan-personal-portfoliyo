@@ -17,7 +17,7 @@ export default function BlogPost({ blog }: Props) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative overflow-hidden rounded-lg p-2 backdrop-blur-sm transition-shadow duration-300  font-geist"
+        className="relative overflow-hidden rounded-lg p-4 bg-base-200 backdrop-blur-sm transition-shadow duration-300  font-geist"
       >
         {/* Title */}
         <h1 className="text-3xl   mb-2  text-primary leading-tight">

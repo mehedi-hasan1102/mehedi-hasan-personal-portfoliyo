@@ -59,22 +59,18 @@ const AllProjectsPage: React.FC = () => {
 
 
 
-        <div className=" relative overflow-hidden rounded-lg p-2 backdrop-blur-sm transition-shadow duration-300">
+        <div className=" relative overflow-hidden rounded-lg p-4 backdrop-blur-sm bg-base-200 transition-shadow duration-300">
         
           {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            viewport={{ once: true }}
-            className="mb-0 text-center mx-auto "
-          >
-            
-            {/* <p className="text-sm text-primary mb-0">• Portfolio</p> */}
-            <h2 className="text-xl m-2">
-              Projects <span className="text-base-content/60">Collection</span>
-            </h2>
-          </motion.div>
+        <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="my-4 text-start "
+                >
+                  <h2 className="text-3xl ">Projects</h2>
+                </motion.div>
 
           {/* Filter Buttons */}
           <div className="flex justify-center  gap-2 mb-2 flex-wrap">

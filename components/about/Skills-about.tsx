@@ -21,7 +21,7 @@ const SkillsAboutSection: React.FC = () => {
       className="text-base-content font-geist max-w-3xl mx-auto"
     >
       <motion.div
-        className="relative overflow-hidden rounded-lg  backdrop-blur-sm space-y-6 shadow-md"
+        className="relative overflow-hidden rounded-lg  backdrop-blur-sm space-y-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -35,7 +35,7 @@ const SkillsAboutSection: React.FC = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {skillItems.map(({ category, skills }, idx) => (
             <motion.div
               key={idx}

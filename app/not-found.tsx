@@ -54,7 +54,6 @@ const NotFound = () => {
 
   return (
     <section className="font-geist mx-auto px-0   max-w-3xl relative  overflow-hidden flex justify-center pt-0">
-
       {/* Particles */}
       <div className="absolute inset-0 pointer-events-none">
         {particles}
@@ -64,7 +63,7 @@ const NotFound = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 min-h-screen rounded-lg  sm:p-2   shadow-xl backdrop-blur-sm w-full mt-1"
+        className="relative z-10 min-h-screen rounded-lg  p-4 bg-base-200  shadow-xl backdrop-blur-sm w-full mt-1"
       >
 
 <motion.div
@@ -72,16 +71,10 @@ const NotFound = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="mb-2 text-center "
+          className="my-4 text-start "
         >
-          {/* <p className="text-sm text-primary mb-0"> • Oops</p> */}
-          <h2 className="text-xl">
-            Oops 
-            
-             <span className="text-base-content/60"> Error !</span>
-          </h2>
+          <h2 className="text-3xl ">Oops Error !</h2>
         </motion.div>
-
         
       
         {/* Icon */}
@@ -97,29 +90,33 @@ const NotFound = () => {
           404
         </h1>
 
-        <h2 className="font-medium  text-base-content text-center mb-2">
-          The page you’re looking for doesn’t exist or has been moved.
-Let’s get you back to something useful.
-</h2>
  
 
 
     
 
         {/* Button */}
-        <div className="flex justify-center">
+        <div className="flex justify-center py-8">
+
+
+       
+        
           <Link
             href="/"
             
           >
+            <span>  The page you’re looking for doesn’t exist or has been moved.
+Let’s get you back to something useful.
+</span>
             <span className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300">
-              <Home size={16} className="group-hover:-translate-x-1 transition-transform duration-300 " />
-              [ Go Home ]
+             
+               Go Home 
+               <Home size={16} className="group-hover:translate-x-1 transition-transform duration-300 " />
             </span>
           </Link>
         </div>
 
-        <p className="text-center text-sm text-base-content/50 mt-4">
+        <p className="text-start text-sm text-base-content/50 mt-4">
           You can explore my projects, skills, or contact section from the homepage.
         </p>
       </motion.div>

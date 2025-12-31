@@ -30,29 +30,25 @@ export function BlogContent({ years, structured }: BlogContentProps) {
  <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full   mx-auto font-geist  rounded-lg  backdrop-blur-sm  transition-shadow  py-2"
+      className="w-full bg-base-200  mx-auto font-geist  rounded-lg  backdrop-blur-sm  transition-shadow  p-4"
     >
         
       <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        viewport={{ once: true }}
-        className="mb-0 text-center mx-auto  "
-      >
-        {/* <p className="text-sm text-primary mb-0">• All Blog Posts</p> */}
-        <h2 className="text-xl m-2">
-          Tips &{" "}
-          <span className="text-base-content/60"> Stories</span>
-        </h2>
-      </motion.div>
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                viewport={{ once: true }}
+                className="my-4 text-start "
+              >
+                <h2 className="text-3xl ">Blog</h2>
+              </motion.div>
 
       {years.length === 0 ? (
         <p className="text-center justify-center items-center text-base-content/60 mt-6">No blogs found.</p>
       ) : (
         years.map((year) => (
-          <div key={year} className=" p-2">
-            <h2 className="text-2xl mb-2 ">
+          <div key={year} className=" p-0">
+            <h2 className="text-xl mb-2 mt-2">
               {year} <span className="text-primary">• {Object.values(structured[year]).flat().length}</span>
             </h2>
             <div className="h-[1px] bg-primary/40 mb-2"></div>
