@@ -24,7 +24,7 @@ const GitHubAboutSection: React.FC = () => {
         >
           {/* <p className="text-sm text-primary mb-0">• Contributions</p> */}
           <h2 className="text-xl text-start">
-            My GitHub <span className="text-base-content/60">Activity</span>
+            GitHub Activity
           </h2>
         </motion.div>
 

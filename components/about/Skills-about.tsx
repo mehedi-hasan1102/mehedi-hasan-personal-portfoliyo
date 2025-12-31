@@ -30,7 +30,7 @@ const SkillsAboutSection: React.FC = () => {
         {/* Header */}
         <div className="text-start">
           <h2 className="text-xl">
-            Expertise <span className="text-base-content/60">Areas</span>
+            Expertise Areas
           </h2>
         </div>
 

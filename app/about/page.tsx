@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
           viewport={{ once: true }}
           className="my-4 text-start "
         >
-          <h2 className="text-3xl ">About Me</h2>
+          <h2 className="text-3xl ">About</h2>
         </motion.div>
 
         {/* Profile + Content */}
