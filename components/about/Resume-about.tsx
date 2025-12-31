@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, ArrowUpRight } from "lucide-react";
+import {  ArrowUpRight } from "lucide-react";
 import aboutDataJson from "@/data/resume.json";
 
 /* ---------------- Types ---------------- */
@@ -51,27 +51,27 @@ const ResumeAboutSections: React.FC = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="text-base-content font-geist max-w-3xl mx-auto pt-6 px-4 space-y-8"
+      className="text-base-content font-geist max-w-3xl mx-auto pt-6 px-0 space-y-8"
     >
       {/* ================= Experience ================= */}
       <motion.div
-        className="relative overflow-hidden rounded-lg p-0 backdrop-blur-sm "
+        className="relative  rounded-lg p-0 backdrop-blur-sm "
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         <h3 className="flex items-center gap-3 text-xl mb-4">
-          <Briefcase className="w-5 h-5 text-primary" /> Experience
+          Experience
         </h3>
 
         <ul className="space-y-4">
           {aboutData.experience.map((item, idx) => (
             <motion.li
               key={idx}
-              whileHover={{ x: 5 }}
+              // whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-base-100 p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className=" p-4 rounded-lg  transition-shadow"
             >
               <p className="text-primary font-medium">{item.title}</p>
               {item.organization && (
@@ -106,23 +106,23 @@ const ResumeAboutSections: React.FC = () => {
 
       {/* ================= Education ================= */}
       <motion.div
-        className="relative overflow-hidden rounded-lg p-0 backdrop-blur-sm "
+        className="relative  rounded-lg p-0 backdrop-blur-sm "
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h3 className="flex items-center gap-3 text-xl mb-4">
-          <GraduationCap className="w-5 h-5 text-primary" /> Education
+           Education
         </h3>
 
         <ul className="space-y-4">
           {aboutData.education.map((edu, idx) => (
             <motion.li
               key={idx}
-              whileHover={{ x: 5 }}
+              // whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-base-100 p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className=" p-4 rounded-lg "
             >
               <p className="text-primary font-medium">{edu.institution}</p>
               <p className="text-base-content/70 mt-1">

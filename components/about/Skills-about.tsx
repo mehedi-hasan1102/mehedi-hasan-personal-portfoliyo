@@ -21,27 +21,27 @@ const SkillsAboutSection: React.FC = () => {
       className="text-base-content font-geist max-w-3xl mx-auto"
     >
       <motion.div
-        className="relative overflow-hidden rounded-lg p-2 backdrop-blur-sm space-y-6 shadow-md"
+        className="relative overflow-hidden rounded-lg  backdrop-blur-sm space-y-6 shadow-md"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         {/* Header */}
-        <div className="text-center">
+        <div className="text-start">
           <h2 className="text-xl">
             Expertise <span className="text-base-content/60">Areas</span>
           </h2>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
           {skillItems.map(({ category, skills }, idx) => (
             <motion.div
               key={idx}
               whileHover={{ y: -3 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-base-100 p-4 rounded-lg shadow-sm hover:shadow-md border border-base-200 transition-all"
+              className="bg-base-100 p-4 rounded-lg shadow-sm hover:shadow-md  transition-all"
             >
               <p className="font-medium text-primary mb-2">
                 {category}

@@ -13,23 +13,23 @@ const GitHubAboutSection: React.FC = () => {
       viewport={{ once: true }}
       className="text-base-content font-geist max-w-3xl mx-auto pt-1"
     >
-      <div className="rounded-lg p-2  backdrop-blur-sm">
+      <div className="rounded-lg  backdrop-blur-sm">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="mb-4 text-center"
+          className="my-4 text-center"
         >
           {/* <p className="text-sm text-primary mb-0">• Contributions</p> */}
-          <h2 className="text-xl">
-            GitHub <span className="text-base-content/60">Activity</span>
+          <h2 className="text-xl text-start">
+            My GitHub <span className="text-base-content/60">Activity</span>
           </h2>
         </motion.div>
 
         {/* Calendar Image */}
-        <div className=" rounded-lg overflow-hidden ">
+        <div className=" rounded-lg overflow-hidden p-4 ">
           <img
             src="https://ghchart.rshah.org/mehedi-hasan1102"
             alt="Mehedi Hasan's GitHub Contribution Graph"
@@ -40,19 +40,28 @@ const GitHubAboutSection: React.FC = () => {
       
         </div>
           {/* Footer Link */}
- <div className="mt-3 text-center">
+ <div className="my-4 flex  gap-2 text-sm">
+  <p className="text-center">
+    I build what excites me and release it all as open source.
+  </p>
+
   <a
     href="https://github.com/mehedi-hasan1102"
-  target="_blank"
-  rel="noopener noreferrer"
+    target="_blank"
+    rel="noopener noreferrer"
     className="group inline-flex items-center gap-1
-              text-primary text-sm font-geist
-              transition-all duration-300
-              hover:underline underline-offset-4 decoration-dashed">
+               text-primary font-geist
+               transition-all duration-300
+               hover:underline underline-offset-4 decoration-dashed"
+  >
     Follow on GitHub
-    <Github size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+    <Github
+      size={14}
+      className="transition-transform duration-300 group-hover:translate-x-1"
+    />
   </a>
 </div>
+
 
 
 
