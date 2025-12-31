@@ -172,13 +172,13 @@ const ResumeSections: React.FC = () => {
         </motion.div>
 
           <SimpleBar className="max-h-[300px] pr-2">
-            <ul className="space-y-4 list-none p-0 mb-0">
+            <ul className="space-y-4 list-none  mb-0">
               {aboutData.education.map((edu, idx) => (
                 <motion.li
                   key={idx}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="transition-colors bg-base-100 p-2 rounded-lg"
+                  className="transition-colors bg-base-100 p-4 rounded-lg"
                 >
                   <p className="text-primary font-medium">
                     {edu.institution}
