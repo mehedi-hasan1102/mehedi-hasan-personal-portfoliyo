@@ -44,25 +44,35 @@ const WhatIDoSection: React.FC = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="max-w-3xl mx-auto p-2 bg-base-200 border border-primary/30 rounded-lg mt-1"
+      className="max-w-3xl mx-auto p-4 bg-base-200 border border-primary/30 rounded-lg mt-1 "
       id="what-i-do"
     >
       {/* Heading */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        viewport={{ once: true }}
-        className="mb-4 text-center"
-      >
-        <p className="text-sm text-primary mb-0">• What I Do</p>
-        <h2 className="text-xl">
-          Adding <span className="text-base-content/60">Value</span>
-        </h2>
-      </motion.div>
+      
+
+
+
+
+
+ <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          viewport={{ once: true }}
+          className=" text-start m-4"
+        >
+          <p className="text-sm text-base-content mb-0">• What I Do</p>
+          <h2 className="text-2xl">
+            Adding  <span className="text-base-content/60"> Value</span>
+          </h2>
+        </motion.div>
+
+
+
+
 
       {/* Items */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {whatIDo.map((item, index) => {
           const IconComponent = item.icon;
           return (
@@ -71,9 +81,9 @@ const WhatIDoSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="flex items-start gap-4 p-4 bg-base-100 rounded-lg shadow-sm border border-base-300 hover:shadow-md transition-all"
+              className="flex items-start gap-4 p-4 bg-base-100 rounded-lg shadow-sm duration-200 ease-out hover:translate-x-1 hover:shadow-md transition-all"
             >
-              <IconComponent size={32} className="text-primary mt-1" />
+              <IconComponent size={32} className="text-primary mt-1 " />
               <p className="text-base text-base-content/80">{item.text}</p>
             </motion.div>
           );

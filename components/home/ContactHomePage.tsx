@@ -150,22 +150,22 @@ const ContactHomePage: React.FC = () => {
     >
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="border border-primary/30 bg-base-200 rounded-lg p-3 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300">
+      <div className="border border-primary/30 bg-base-200 rounded-lg p-4 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300">
         {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={fadeIn}
           viewport={{ once: true }}
-          className="mb-4 text-center mx-auto"
+          className="m-4 text-start "
         >
-          <p className="text-sm text-primary mb-0">• Contact</p>
-          <h2 className="text-xl font-geist text-base-content">
+          <p className="text-sm text-base-content mb-0">• Contact</p>
+          <h2 className="text-2xl font-geist text-base-content">
             Let’s <span className="text-base-content/60">Connect</span>
           </h2>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col md:flex-row gap-4 ">
 
           {/* Contact Form */}
           <motion.div
@@ -191,7 +191,7 @@ const ContactHomePage: React.FC = () => {
               <motion.button 
                 type="submit"
                 whileTap={{ scale: 0.98 }}
-                className="max-w-40 mt-0 rounded-lg flex items-center gap-0 text-primary font-geist text-sm px-0 py-0 transition-all"
+                className="max-w-40 my-4 rounded-lg flex items-center gap-0 text-primary font-geist text-sm px-0 py-0 transition-all"
               >
                 <motion.span
                   whileHover={{ scale: 1.05 }}
@@ -210,16 +210,16 @@ const ContactHomePage: React.FC = () => {
             variants={fadeIn}
             transition={{ delay: 0.2 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="w-full lg:w-1/2 flex flex-col gap-6"
+            className="w-full lg:w-1/2 flex flex-col gap-6 "
           >
             {contactItems.map((item, idx) => (
               <motion.div
                 whileHover={{ x: 5 }}
                 key={idx}
-                className="flex  items-start gap-0 pl-0 border-l-2 border-primary/50 hover:border-primary transition-colors duration-300"
+                className="flex  items-start gap-0 pl-0 border-l-2 border-primary/50 hover:border-primary transition-colors duration-300 "
               >
-                <div className="p-3 rounded-md text-primary">{item.icon}</div>
-                <div className="min-w-0">
+                <div className="p-4 rounded-md text-primary">{item.icon}</div>
+                <div className="min-w-0 space-y-2">
                   <p className="text-sm opacity-70">{item.label}</p>
                   <div className="font-geist break-words">{item.value}</div>
                 </div>

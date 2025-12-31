@@ -20,16 +20,16 @@ const GitHubActivitySection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="mb-4 text-center"
+          className="m-4 text-start"
         >
-          <p className="text-sm text-primary mb-0">• Contributions</p>
-          <h2 className="text-xl">
+          <p className="text-sm text-base-content mb-0">• Contributions</p>
+          <h2 className="text-2xl">
             GitHub <span className="text-base-content/60">Activity</span>
           </h2>
         </motion.div>
 
         {/* Calendar Image */}
-        <div className="bg-base-200 rounded-lg overflow-hidden ">
+        <div className="bg-base-200 rounded-lg overflow-hidden px-4">
           <img
             src="https://ghchart.rshah.org/mehedi-hasan1102"
             alt="Mehedi Hasan's GitHub Contribution Graph"
@@ -40,7 +40,7 @@ const GitHubActivitySection: React.FC = () => {
       
         </div>
           {/* Footer Link */}
- <div className="mt-3 text-center">
+ <div className="m-4 text-center">
   <a
     href="https://github.com/mehedi-hasan1102"
   target="_blank"
@@ -49,7 +49,7 @@ const GitHubActivitySection: React.FC = () => {
               text-primary text-sm font-geist
               transition-all duration-300
               hover:underline underline-offset-4 decoration-dashed">
-    Follow on GitHub
+    Follow me on GitHub
     <Github size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
   </a>
 </div>

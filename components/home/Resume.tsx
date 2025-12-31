@@ -84,23 +84,31 @@ const ResumeSections: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-3"
+          className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
         >
-          <h3 className="flex items-center gap-3 text-xl mb-4">
-            <Briefcase className="w-5 h-5 text-primary" />
-            Experience
-          </h3>
+          <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          viewport={{ once: true }}
+          className=" text-start m-4"
+        >
+          <p className="text-sm text-base-content mb-0">• Experience</p>
+          <h2 className="text-2xl">
+            Career <span className="text-base-content/60"> Highlights</span>
+          </h2>
+        </motion.div>
 
-          <SimpleBar className="max-h-[300px] pr-2">
-            <ul className="space-y-2 list-none p-0 mb-4">
+          <SimpleBar className="max-h-[300px] pr-2 ">
+            <ul className="space-y-4 list-none p-0 ">
               {aboutData.experience.map((item, idx) => (
                 <motion.li
                   key={idx}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className=" transition-colors bg-base-100 p-2 rounded-lg"
+                  className=" transition-colors bg-base-100 p-4 rounded-lg"
                 >
-                  <p className="text-primary font-medium bg">{item.title}</p>
+                  <p className="text-primary font-medium ">{item.title}</p>
 
 
                   {item.organization && (
@@ -147,15 +155,24 @@ const ResumeSections: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-3"
+          className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
         >
-          <h3 className="flex items-center gap-3 text-xl mb-4 ">
-            <GraduationCap className="w-5 h-5 text-primary" />
-            Education
-          </h3>
+
+          <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          viewport={{ once: true }}
+          className=" text-start m-4"
+        >
+          <p className="text-sm text-base-content mb-0">• Education</p>
+          <h2 className="text-2xl">
+            Academic <span className="text-base-content/60"> Background</span>
+          </h2>
+        </motion.div>
 
           <SimpleBar className="max-h-[300px] pr-2">
-            <ul className="space-y-2 list-none p-0 mb-4">
+            <ul className="space-y-4 list-none p-0 mb-0">
               {aboutData.education.map((edu, idx) => (
                 <motion.li
                   key={idx}

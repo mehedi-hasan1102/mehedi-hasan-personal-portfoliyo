@@ -2,44 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Download, Mail } from "lucide-react";
-import Marquee from "react-fast-marquee";
 import Image from "next/image";
-import {
-  SiReact,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiTailwindcss,
-  SiFirebase,
-  SiJavascript,
-  SiTypescript,
-  SiNextdotjs,
-} from "react-icons/si";
 import { Typewriter } from "react-simple-typewriter";
 import { Link as ScrollLink } from "react-scroll";
 import { BorderBeam } from "@/components/ui/border-beam";
 
-interface TechIcon {
-  icon: React.ComponentType<{ size?: number }>;
-  label: string;
-  color?: string;
-}
-
-const techIcons: TechIcon[] = [
-  { icon: SiReact, label: "React" },
-  { icon: SiNextdotjs, label: "Next.js" },
-  { icon: SiNodedotjs, label: "Node.js" },
-  { icon: SiExpress, label: "Express.js" },
-  { icon: SiMongodb, label: "MongoDB", },
-  { icon: SiTailwindcss, label: "Tailwind CSS", },
-  { icon: SiFirebase, label: "Firebase" },
-  { icon: SiJavascript, label: "JavaScript" },
-  { icon: SiTypescript, label: "TypeScript" },
-];
-
 const HeroSection: React.FC = () => {
-  const repeatedIcons = Array(5).fill(techIcons).flat();
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -47,30 +15,28 @@ const HeroSection: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="font-geist w-full max-w-3xl mx-auto flex items-center justify-center pt-1"
     >
-
-      <div className="border border-primary/30 bg-base-200 backdrop-blur-sm relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center w-full   rounded-lg p-2 gap-1 transition-shadow duration-300">
+      <div className="border border-primary/30 bg-base-200 backdrop-blur-sm relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center w-full rounded-lg p-4 gap-0 transition-shadow duration-300">
         <BorderBeam size={100} duration={8} colorFrom="#22c55e" colorTo="#16a34a" />
-        <motion.div className="flex justify-center">
+
+        {/* Left: Profile Image & Signature */}
+        <motion.div className="flex justify-center ">
           <motion.div
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 220 }}
-            className="w-36 sm:w-44 md:w-48   overflow-hidden "
+            className="w-36 sm:w-44 md:w-48 overflow-hidden"
           >
-            {/* Profile Image */}
-            <div className="relative w-full aspect-square sm:aspect-[5/5] ">
+            <div className="relative w-full aspect-square sm:aspect-[5/5]">
               <Image
                 src="/assets/images/profile.png"
-
                 alt="Mehedi Hasan"
                 fill
-                className="object-cover rounded-lg "
+                className="object-cover rounded-lg"
                 priority
               />
             </div>
 
-            {/* Signature Section */}
-            <div className="flex justify-center items-center  h-12 sm:h-16">
+            <div className="flex justify-center items-center h-12 sm:h-16">
               <div
                 className="w-4/5 max-w-xs h-full bg-primary"
                 style={{
@@ -82,33 +48,29 @@ const HeroSection: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right Content */}
+        {/* Right: Greeting, Title, Description, Buttons */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-balance  p-2 "
+          className="text-balance p-2 "
         >
-          {/* Greeting */}
-          <motion.span className="text-xl text-base-content font-geist flex flex-wrap items-center ">
+          <motion.span className="text-2xl text-base-content font-geist flex flex-wrap items-center">
             <Typewriter words={["Hi, I'm Mehedi Hasan"]} loop={1} cursor typeSpeed={100} deleteSpeed={0} />
           </motion.span>
 
-          {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="text-3xl sm:text-3xl md:text-3xl leading-tight mt-4 break-words"
-          > A
-            {" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+          >
+            A <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               Full-Stack
             </span>{" "} Developer
             <span className="animate-blink">_</span>
           </motion.h1>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -116,56 +78,15 @@ const HeroSection: React.FC = () => {
             className="mt-4 text-sm sm:text-base font-geist text-base-content/60 break-words"
           >
             I build full-stack web apps using{" "}
-            <span className="bg-primary/20 text-primary font-medium px-1 rounded">
-              Next.js & React
-            </span>
-            ,{" "}
-            <span className="bg-primary/20 text-primary font-medium px-1 rounded">
-              TypeScript
-            </span>{" "}
-            and{" "}
-            <span className="bg-primary/20 text-primary font-medium px-1 rounded">
-              Node.js
-            </span>
-            , focusing on clean architecture, smooth UX, and high-performance solutions.
-            
-             {/* I use */}
+            <span className="bg-primary/20 text-primary font-medium px-1 rounded">Next.js & React</span>,{" "}
+            <span className="bg-primary/20 text-primary font-medium px-1 rounded">TypeScript</span>, and{" "}
+            <span className="bg-primary/20 text-primary font-medium px-1 rounded">Node.js</span>, focusing on clean architecture, smooth UX, and high-performance solutions.
           </motion.p>
 
-          {/* Tech Icons Marquee */}
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="mt-2 flex items-center gap-2"
-          >
-            <div className="overflow-hidden w-full">
-              <Marquee direction="left" speed={40} loop={0} gradient={false} pauseOnHover autoFill>
-                <div className="flex items-center gap-2 w-max">
-                  {repeatedIcons.map((tech, idx) => {
-                    const IconComponent = tech.icon;
-                    return (
-                      <div
-                        key={idx}
-                        className="bg-base-100 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-base-300 rounded-md p-2 hover:border-primary transition duration-300"
-                        title={tech.label}
-                      >
-                        <IconComponent style={{ color: tech.color || "currentColor", width: 24, height: 24 }} />
-                      </div>
-                    );
-                  })}
-                </div>
-              </Marquee>
-            </div>
-            <span className="text-xs sm:text-sm font-geist text-base-content/60 inline">...and more !</span>
-          </motion.div> */}
-
-          {/* Buttons */}
           <div className="flex flex-wrap gap-4 mt-2">
             <motion.a
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              // transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
               whileHover={{ scale: 1.05, rotate: -0.5 }}
               whileTap={{ scale: 0.97, rotate: 0.5 }}
               href="/Resume_of_Mehedi_Hasan.pdf"
@@ -177,7 +98,6 @@ const HeroSection: React.FC = () => {
               [View Resume]
             </motion.a>
 
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -188,17 +108,15 @@ const HeroSection: React.FC = () => {
                 to="hire-me"
                 smooth
                 duration={500}
-                className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+                className="underline-offset-4 decoration-dashed hover:underline rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
               >
                 [Hire Me]
                 <Mail size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
               </ScrollLink>
             </motion.div>
           </div>
-
         </motion.div>
       </div>
-
     </motion.section>
   );
 };

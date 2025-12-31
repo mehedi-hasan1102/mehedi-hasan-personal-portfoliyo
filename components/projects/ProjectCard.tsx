@@ -28,15 +28,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
   return (
     <div
       className="
-        relative bg-base-100 rounded-lg p-2 overflow-hidden
+        relative bg-base-100 rounded-lg p-4 overflow-hidden
         shadow-sm transition-transform transition-shadow duration-300
         transform-gpu will-change-transform
-        hover:shadow-xl hover:-translate-y-1
+        hover:shadow-xl hover:-translate-y-1 space-y-2
       "
     >
       {/* Border Beam */}
       <BorderBeam
-        size={30}
+        size={32}
         duration={8}
         colorFrom="#22c55e"
         colorTo="#16a34a"
@@ -72,8 +72,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
       {/* Info */}
       <h3 className="font-medium text-primary">{project.title}</h3>
       <p className="text-sm text-base-content/80 leading-relaxed mb-2">
-        {project.description.length > 75
-          ? `${project.description.slice(0, 75)}...`
+        {project.description.length > 64
+          ? `${project.description.slice(0, 64)}...`
           : project.description}
       </p>
 
