@@ -164,7 +164,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 whileHover={{ scale: 1.05 }}
                 className="p-2 rounded-full hover:bg-base-200/30"
               >
-                <Menu size={16} />
+                <Menu size={18} />
               </motion.button>
             )}
           </div>
@@ -203,7 +203,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                     aria-label="Close menu"
                     className="p-1 rounded-lg hover:scale-120 bg-base-200 text-red-500 shadow-md hover:bg-primary/20 hover:text-red-500 transition-all duration-200"
                   >
-                    <X size={16} />
+                    <X size={18} />
                   </button>
                 </div>
 
@@ -241,7 +241,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                         rel="noopener noreferrer"
                         className="p-2 rounded-full hover:text-primary hover:bg-base-300/30 transition"
                       >
-                        <Icon size={16} />
+                        <Icon size={18} />
                       </a>
                     );
                   })}
