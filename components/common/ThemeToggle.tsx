@@ -30,10 +30,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className }) => {
   return (
     <button
       onClick={toggleTheme}
-      className={`p-2 rounded-lg hover:text-primary hover:bg-primary/20 transition ${className || ""}`}
+      className={`p-2 rounded-lg hover:text-primary hover:rotate-12  transition ${className || ""}`}
       aria-label="Toggle Theme"
     >
-      {mounted ? (theme === "abyss" ? <Sun size={16} /> : <Moon size={16} />) : (
+      {mounted ? (theme === "abyss" ? <Sun size={18} /> : <Moon size={18} />) : (
         <div style={{ width: 16, height: 16 }} />
       )}
     </button>

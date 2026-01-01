@@ -143,9 +143,9 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg hover:text-primary hover:bg-primary/20 transition"
+                  className="p-2 rounded-lg hover:text-primary hover:rotate-12 transition"
                 >
-                  <Icon size={16} />
+                  <Icon size={18} />
                 </motion.a>
               );
             })}

@@ -16,9 +16,9 @@ const SearchToggle: React.FC<SearchToggleProps> = ({ blogs }) => {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="p-2 rounded-lg hover:bg-primary/20 transition"
+        className="p-2 rounded-lg hover:hover:rotate-12 hover:text-primary transition"
       >
-        <Search size={16} />
+        <Search size={18} />
       </button>
 
       {open && <SearchBar onClose={() => setOpen(false)} blogs={blogs} />}

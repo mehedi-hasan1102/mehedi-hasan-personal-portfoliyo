@@ -92,9 +92,9 @@ const Footer = () => {
                   aria-label={link.label}
                   whileHover={{ y: -2, scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="hover:text-primary transition"
+                  className="hover:text-primary transition hover:rotate-12 "
                 >
-                  <Icon size={16} />
+                  <Icon size={20} />
                 </motion.a>
               );
             })}
