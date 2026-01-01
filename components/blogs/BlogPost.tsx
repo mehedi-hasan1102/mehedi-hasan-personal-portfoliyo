@@ -20,7 +20,7 @@ export default function BlogPost({ blog }: Props) {
         className="relative overflow-hidden rounded-lg p-4 bg-base-200 backdrop-blur-sm transition-shadow duration-300  font-geist"
       >
         {/* Title */}
-        <h1 className="text-3xl   mb-2  text-primary leading-tight">
+        <h1 className="text-3xl   my-4  text-primary leading-tight">
           {blog.title}
         </h1>
 
@@ -80,7 +80,7 @@ export default function BlogPost({ blog }: Props) {
     [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-base-content/80 [&_blockquote]:leading-relaxed sm:[&_blockquote]:leading-relaxed lg:[&_blockquote]:leading-loose
 
     /* Code & pre */
-    [&_pre]:bg-base-200 [&_pre]:p-6 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:shadow
+    [&_pre]:bg-base-100 [&_pre]:p-6 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:shadow
     [&_code]:font-geist [&_code]:text-sm [&_code]:text-base-content [&_code]:leading-relaxed sm:[&_code]:leading-relaxed lg:[&_code]:leading-loose
   "
           dangerouslySetInnerHTML={{ __html: blog.fullContent }}
