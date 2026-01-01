@@ -51,21 +51,23 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
           className="backdrop-blur-sm flex items-center justify-between border border-primary/30 bg-base-200 text-base-content px-4 md:px-6 py-3 rounded-lg shadow-lg transition-shadow duration-300"
         >
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2 cursor-pointer">
+          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center  ">
             <span className="text-primary text-xl sm:text-2xl">&lt;/&gt;</span>
             <span className="text-sm sm:text-lg">
-              Mehedi <span className="text-base-content/60">Hasan</span>
+              Mehedi 
+              <span className="text-base-content/60"> Hasan</span>
             </span>
+           
           </motion.div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-0 flex-1 justify-center flex-wrap text-sm">
+          <ul className="hidden md:flex items-center gap-x-3 text-xs sm:text-sm tracking-wide  flex-1 justify-center flex-wrap  ">
 
             <li>
               <Link
                 href="/"
                 className={`
-                  cursor-pointer px-2 py-2 rounded-lg transition text-sm
+                  cursor-pointer  rounded-lg transition 
                   hover:text-primary 
                   ${isActive("/")
                     ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
@@ -80,7 +82,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
             <li>
               <Link
                 href="/about"
-                className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
+                className={`cursor-pointer rounded-lg hover:text-primary  transition 
                   ${isActive("/about")
                     ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
                     : ""}
@@ -94,7 +96,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
             <li>
               <Link
                 href="/blog"
-                className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
+                className={`cursor-pointer  rounded-lg hover:text-primary  transition 
                   ${isActive("/blog")
                     ? " underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
                     : ""}
@@ -107,7 +109,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
             <li>
               <Link
                 href="/projects"
-                className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
+                className={`cursor-pointer  rounded-lg hover:text-primary  transition 
                   ${isActive("/projects")
                     ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
                     : ""}
@@ -122,7 +124,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
             <li>
               <Link
                 href="/contact"
-                className={`cursor-pointer px-2 py-2 rounded-lg hover:text-primary  transition text-sm
+                className={`cursor-pointer  rounded-lg hover:text-primary  transition 
                   ${isActive("/contact")
                     ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
                     : ""}
