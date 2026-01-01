@@ -7,7 +7,7 @@ import { FaDev, FaDiscord, FaHackerrank, FaMedium, FaBehance, FaTelegramPlane, }
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 // import { SiBluesky } from "react-icons/si";
-
+import Logo from "@/components/common/Logo";
 
 
 
@@ -72,12 +72,9 @@ const Footer = () => {
           transition={{ delay: 0.1 }}
           className="flex flex-col items-center text-center gap-2 mb-4"
         >
-          <div className="flex items-center gap-1 text-lg font-medium">
-            <span className="text-primary text-sm sm:text-lg">&lt;/&gt;</span>
-            <span> Mehedi</span>
-            <span className="text-base-content/60">Hasan</span>
-          </div>
+         {/* Logo  */}
 
+ <Logo />
 
           {/* Social Icons */}
           <div className="mt-2 grid grid-cols-5 sm:grid-cols-5 md:grid-cols-10 gap-4 justify-items-center text-base-content/80">
