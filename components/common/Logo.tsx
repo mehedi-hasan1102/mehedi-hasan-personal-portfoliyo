@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import clsx from "clsx";
+import { Birthstone } from "next/font/google";
+import { Code2 } from "lucide-react";
+
+const birthstone = Birthstone({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 interface LogoProps {
   href?: string;
@@ -23,14 +30,14 @@ export default function Logo({
         className="flex items-center gap-2 cursor-pointer select-none"
       >
         {showIcon && (
-          <span className="text-primary text-xl sm:text-2xl font-bold">
-            &lt;/&gt;
-          </span>
+          <Code2 size={22} className="text-primary" />
         )}
 
-        <span className="text-sm sm:text-lg font-semibold leading-none">
+        <span
+          className={`${birthstone.className} text-lg sm:text-2xl leading-none text-primary`}
+        >
           Mehedi
-          <span className="text-base-content/60 font-normal"> Hasan</span>
+          <span className="text-base-content/60"> Hasan</span>
         </span>
       </motion.div>
     </Link>
