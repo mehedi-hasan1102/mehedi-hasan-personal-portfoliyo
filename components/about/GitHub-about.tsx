@@ -39,30 +39,33 @@ const GitHubAboutSection: React.FC = () => {
 
       
         </div>
-          {/* Footer Link */}
- <div className="my-4 flex  gap-2 text-sm">
-  <p className="text-center">
-    I build what excites me and release it all as open source.
-  </p>
 
-  <a
-    href="https://github.com/mehedi-hasan1102"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group inline-flex items-center gap-1
-               text-primary font-geist
-               transition-all duration-300
-               hover:underline underline-offset-4 decoration-dashed"
+
+{/* Footer */}
+<div className="my-4  text-start">
+ <p
+    className="
+      text-sm sm:text-base text-base-content/80 leading-relaxed
+    "
   >
-    Follow on GitHub
-    <Github
-      size={14}
-      className="transition-transform duration-300 group-hover:translate-x-1"
-    />
-  </a>
+    <span>I build what excites me, all open source. Follow me on </span>
+
+    <a
+      href="https://www.linkedin.com/in/mehedi-hasan1102/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+          
+         font-medium text-primary
+        hover:underline underline-offset-4 decoration-dashed
+         transition-all duration-300
+      "
+    >
+      Github
+    </a> 
+    <span>.</span>
+  </p>
 </div>
-
-
 
 
       </div>

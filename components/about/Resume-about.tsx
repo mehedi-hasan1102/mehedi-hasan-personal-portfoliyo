@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import {  ArrowUpRight } from "lucide-react";
 import aboutDataJson from "@/data/resume.json";
 
+
 /* ---------------- Types ---------------- */
 interface ExperienceItem {
   title: string;
