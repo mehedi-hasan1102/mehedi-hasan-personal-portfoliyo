@@ -51,7 +51,7 @@ const GitHubAboutSection: React.FC = () => {
     <span>I build what excites me, all open source. Follow me on </span>
 
     <a
-      href="https://www.linkedin.com/in/mehedi-hasan1102/"
+      href="https://github.com/mehedi-hasan1102"
       target="_blank"
       rel="noopener noreferrer"
       className="
