@@ -188,12 +188,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
               >
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between px-5 py-4 border-b border-primary/30">
-                  <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2 cursor-pointer">
-                    <span className="text-primary text-xl sm:text-2xl">&lt;/&gt;</span>
-                    <span className="text-sm sm:text-lg">
-                      Mehedi <span className="text-base-content/60">Hasan</span>
-                    </span>
-                  </motion.div>
+                  <Logo/>
 
                   <button
                     onClick={() => setMenuOpen(false)}
