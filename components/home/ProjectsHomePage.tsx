@@ -23,7 +23,7 @@ const ProjectsHomePage: React.FC = () => {
   };
 
   // Always show first 4 projects
-  const displayedProjects = projects.slice(0, 4);
+  const displayedProjects = projects.slice(0, 6);
 
   return (
     <>
