@@ -6,6 +6,7 @@ import projectsData from '@/data/projects.json';
 import ProjectCard, { Project } from '@/components/projects/ProjectCard';
 import ProjectModal from '@/components/projects/ProjectModal';
 import { ChevronDown, } from 'lucide-react';
+import Link from 'next/link';
 
 const ProjectsHomePage: React.FC = () => {
   const projects: Project[] = projectsData as Project[];
@@ -67,18 +68,22 @@ const ProjectsHomePage: React.FC = () => {
 
 
           {/* Footer Link */}
-          <div className="m-4
-           text-center">
-            <a
-              href="/projects"
-              className="group inline-flex items-center gap-1
-              text-primary text-sm font-geist
-              transition-all duration-300
-              hover:underline underline-offset-4 decoration-dashed"
-            >
-              See More <ChevronDown size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
-          </div>
+         
+<div className="m-4 text-center">
+  <Link
+    href="/projects"
+    className="group inline-flex items-center gap-1
+      text-primary text-sm font-geist
+      transition-all duration-300
+      hover:underline underline-offset-4 decoration-dashed"
+  >
+    See More
+    <ChevronDown
+      size={14}
+      className="transition-transform duration-300 group-hover:translate-x-1"
+    />
+  </Link>
+</div>
         </div>
       </motion.section>
 
