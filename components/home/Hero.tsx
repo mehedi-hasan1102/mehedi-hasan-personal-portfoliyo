@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-balance p-2 "
         >
-          <motion.span className="text-2xl text-base-content font-geist flex flex-wrap items-center">
+          <motion.span className="text-xl text-base-content font-geist flex flex-wrap items-center">
             <Typewriter words={["Hi, I'm Mehedi Hasan"]} loop={1} cursor typeSpeed={100} deleteSpeed={0} />
           </motion.span>
 
