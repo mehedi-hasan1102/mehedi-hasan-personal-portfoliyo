@@ -111,7 +111,7 @@ const ResumeSections: React.FC = () => {
                     </p>
 
                     {item.profileLink && (
-                      <ArrowUpRight size={16} className="text-primary" />
+                      <ArrowUpRight size={16} className="group-hover:text-primary" />
                     )}
                   </div>
 
