@@ -72,7 +72,7 @@ const ResumeAboutSections: React.FC = () => {
               key={idx}
               // whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className=" p-4 rounded-lg  transition-shadow"
+              className=" p-4 rounded-lg  transition-shadow hover:bg-base-100"
             >
               <p className="text-primary font-medium">{item.title}</p>
               {item.organization && (
@@ -123,7 +123,7 @@ const ResumeAboutSections: React.FC = () => {
               key={idx}
               // whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className=" p-4 rounded-lg "
+              className=" p-4 rounded-lg hover:bg-base-100"
             >
               <p className="text-primary font-medium">{edu.institution}</p>
               <p className="text-base-content/70 mt-1">

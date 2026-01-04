@@ -96,9 +96,9 @@ const AllProjectsPage: React.FC = () => {
     <motion.div
       key={index}
       transition={{ type: "spring", stiffness: 200 }}
-      className="overflow-hidden rounded-md py-2 sm:py-6 transition"
+      className="overflow-hidden rounded-md py-2 sm:py-6 transition hover:bg-base-100 px-4 "
     >
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-row gap-4 ">
 
         {/* Media */}
         {/* <motion.div
@@ -167,22 +167,27 @@ const AllProjectsPage: React.FC = () => {
             </p>
 
             <div className="mb-0">
-              <hr className="my-2 h-px border-0 bg-primary/30" />
-              <div className="flex flex-wrap items-center gap-x-2">
-                <span className="text-sm text-base-content/60">Technologies:</span>
-                {project.techStack.map((tech, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: i * 0.05 }}
-                    className="text-xs sm:text-sm text-base-content/80"
-                  >
-                    {tech}{i < project.techStack.length - 1 ? "," : ""}
-                  </motion.span>
-                ))}
-              </div>
-              <hr className="my-2 h-px border-0 bg-primary/30" />
+             
+            
+              <div className="flex flex-wrap items-center gap-2 my-4">
+ 
+
+  {project.techStack.map((tech, i) => (
+    <motion.span
+      key={i}
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: i * 0.05, duration: 0.3 }}
+      className="
+        px-2 py-0 text-xs sm:text-xs rounded-full bg-base-100 shadow whitespace-nowrap border border-primary/30
+      "
+    >
+      {tech}
+    </motion.span>
+  ))}
+</div>
+
+             
             </div>
           </div>
 
