@@ -146,7 +146,7 @@ const ResumeSections: React.FC = () => {
             </ul>
           </SimpleBar>
 
-          <ProgressiveBlur height="10%" position="bottom" />
+          <ProgressiveBlur height="8%" position="bottom" />
         </motion.div>
 
         {/* ================= Education ================= */}
@@ -209,7 +209,7 @@ const ResumeSections: React.FC = () => {
             </ul>
           </SimpleBar>
 
-          <ProgressiveBlur height="10%" position="bottom" />
+          <ProgressiveBlur height="8%" position="bottom" />
         </motion.div>
 
       </div>
