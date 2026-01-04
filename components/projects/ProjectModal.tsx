@@ -108,7 +108,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
               {/* Title + Actions */}
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <h2 className="text-2xl md:text-3xl text-primary">
+                <h2 className="text-2xl md:text-3xl ">
                   {selectedProject.title}
                 </h2>
 
@@ -118,7 +118,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     href={selectedProject.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                   >
                     <ArrowUpRight size={14} />
                     Live
@@ -130,7 +130,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={selectedProject.frontendRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                      className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                     >
                       <Github size={14} />
                       Frontend
@@ -143,7 +143,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={selectedProject.backendRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                      className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                     >
                       <Github size={14} />
                       Backend
@@ -161,7 +161,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Key Features */}
                 <div className="bg-base-300/40 border border-primary/20 rounded-xl p-5 space-y-3">
-                  <h3 className="text-sm text-primary">Key Features</h3>
+                  <h3 className="text-md text-base-content">Key Features</h3>
                   <ul className="space-y-2 text-sm text-base-content/80 list-disc list-inside">
                     {selectedProject.features?.length ? (
                       selectedProject.features.map((feature, index) => (
@@ -175,7 +175,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
                 {/* Technologies */}
                 <div className="bg-base-300/40 border border-primary/20 rounded-xl p-5 space-y-3">
-                  <h3 className="text-sm text-primary">Technologies Used</h3>
+                  <h3 className="text-md text-base-content">Technologies Used</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.techStack.map((tech, i) => (
                       <span
@@ -192,7 +192,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               {/* Optional Sections */}
               {selectedProject.challenges && (
                 <div>
-                  <span className="text-sm text-primary">Challenges</span>
+                  <span className="text-md text-base-content">Challenges</span>
                   <p className="text-sm text-base-content/80 mt-1">
                     {selectedProject.challenges}
                   </p>
@@ -201,7 +201,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
               {selectedProject.futurePlans && (
                 <div>
-                  <span className="text-sm text-primary">Future Plans</span>
+                  <span className="text-md text-base-content">Future Plans</span>
                   <p className="text-sm text-base-content/80 mt-1">
                     {selectedProject.futurePlans}
                   </p>
