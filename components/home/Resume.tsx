@@ -2,10 +2,9 @@
 
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { GraduationCap, Briefcase, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import SimpleBar from "simplebar-react";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
-
 import aboutDataJson from "@/data/resume.json";
 
 /* ---------------- Types ---------------- */
@@ -15,7 +14,7 @@ interface ExperienceItem {
   time?: string;
   organization?: string;
   description?: string;
-   profileLink?: string | null;
+  profileLink?: string | null;
 }
 
 interface EducationItem {
@@ -76,7 +75,7 @@ const ResumeSections: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="text-base-content font-geist max-w-3xl mx-auto pt-1"
     >
-      <div className="grid md:grid-cols-2 gap-1">
+      <div className="grid md:grid-cols-2 gap-4">
 
         {/* ================= Experience ================= */}
         <motion.div
@@ -87,61 +86,54 @@ const ResumeSections: React.FC = () => {
           className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
         >
           <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          viewport={{ once: true }}
-          className=" text-start m-4"
-        >
-          <p className="text-sm text-base-content mb-0">• Experience</p>
-          <h2 className="text-2xl">
-            Career <span className="text-base-content/60"> Highlights</span>
-          </h2>
-        </motion.div>
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-start m-4"
+          >
+            <p className="text-sm text-base-content mb-0">• Experience</p>
+            <h2 className="text-2xl">
+              Career <span className="text-base-content/60">Highlights</span>
+            </h2>
+          </motion.div>
 
-          <SimpleBar className="max-h-[300px] pr-2 ">
-            <ul className="space-y-4 list-none p-0 ">
+          <SimpleBar className="max-h-[300px] pr-2">
+            <ul className="space-y-4 list-none p-0">
               {aboutData.experience.map((item, idx) => (
-                <motion.li
+                <motion.a
                   key={idx}
+                  href={item.profileLink || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className=" transition-colors bg-base-100 p-4 rounded-lg"
+                  className="group block bg-base-100 p-4 rounded-lg transition-colors "
                 >
-                  <p className=" font-medium ">{item.title}</p>
-
+                  <p className="font-medium transition-colors group-hover:text-primary">
+                    {item.title}
+                  </p>
 
                   {item.organization && (
-                    <p className="text-base-content/70 mt-1">
+                    <p className="text-base-content/70 mt-1 transition-colors">
                       {item.organization}
                       {item.time && ` | ${item.time}`}
                     </p>
-
                   )}
-                  
+
                   {item.description && (
-                    <p className="text-base-content/60 text-sm mt-2 leading-relaxed">
+                    <p className="text-base-content/60 text-sm mt-2 leading-relaxed transition-colors group-hover:text-base-content">
                       {item.description}
                     </p>
                   )}
 
                   {item.profileLink && (
-                    <a
-                      href={item.profileLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex mt-1"
-                    >
-                      <span className="group inline-flex items-center gap-1  text-sm hover:text-primary underline-offset-4 decoration-dashed hover:underline transition">
-                        View Profile
-                        <ArrowUpRight
-                          size={14}
-                          className="transition-transform group-hover:translate-x-1"
-                        />
-                      </span>
-                    </a>
+                    <span className="inline-flex items-center gap-1 text-sm mt-2 group-hover:text-primary group-hover:underline underline-offset-4 decoration-dashed transition">
+                      View Profile
+                      <ArrowUpRight className="transition-transform group-hover:translate-x-1" size={14} />
+                    </span>
                   )}
-                </motion.li>
+                </motion.a>
               ))}
             </ul>
           </SimpleBar>
@@ -157,61 +149,52 @@ const ResumeSections: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
         >
-
           <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          viewport={{ once: true }}
-          className=" text-start m-4"
-        >
-          <p className="text-sm text-base-content mb-0">• Education</p>
-          <h2 className="text-2xl">
-            Academic <span className="text-base-content/60"> Background</span>
-          </h2>
-        </motion.div>
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-start m-4"
+          >
+            <p className="text-sm text-base-content mb-0">• Education</p>
+            <h2 className="text-2xl">
+              Academic <span className="text-base-content/60">Background</span>
+            </h2>
+          </motion.div>
 
           <SimpleBar className="max-h-[300px] pr-2">
-            <ul className="space-y-4 list-none  mb-0">
+            <ul className="space-y-4 list-none mb-0">
               {aboutData.education.map((edu, idx) => (
-                <motion.li
+                <motion.a
                   key={idx}
+                  href={edu.credentialLink || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="transition-colors bg-base-100 p-4 rounded-lg"
+                  className="group block bg-base-100 p-4 rounded-lg transition-colors "
                 >
-                  <p className=" font-medium">
+                  <p className="font-medium transition-colors group-hover:text-primary">
                     {edu.institution}
                   </p>
-                  <p className="text-base-content/70 mt-1">
+                  <p className="text-base-content/70 mt-1 transition-colors">
                     {edu.degree}
                     {edu.details && ` | ${edu.details}`}
                   </p>
 
                   {edu.credentialLink && (
-                    <a
-                      href={edu.credentialLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex mt-1"
-                    >
-                      <span className="group inline-flex items-center gap-1 text-sm hover:text-primary underline-offset-4 decoration-dashed hover:underline transition">
-                        View Credential
-                        <ArrowUpRight
-                          size={14}
-                          className="transition-transform group-hover:translate-x-1"
-                        />
-                      </span>
-                    </a>
+                    <span className="inline-flex items-center gap-1 text-sm mt-2 group-hover:text-primary group-hover:underline underline-offset-4 decoration-dashed transition">
+                      View Credential
+                      <ArrowUpRight className="transition-transform group-hover:translate-x-1" size={14} />
+                    </span>
                   )}
-                </motion.li>
+                </motion.a>
               ))}
             </ul>
           </SimpleBar>
 
           <ProgressiveBlur height="12%" position="bottom" />
         </motion.div>
-
       </div>
     </motion.section>
   );

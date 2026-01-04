@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
   return (
     <div
       className="
-        relative bg-base-100 rounded-lg p-4 overflow-hidden
+        relative group  bg-base-100 rounded-lg p-4 overflow-hidden
         shadow-sm transition-transform transition-shadow duration-300
         transform-gpu will-change-transform
         hover:shadow-xl hover:-translate-y-1 
@@ -73,7 +73,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
     <div className='space-y-2'>
 
   
-      <h3 className="font-medium ">{project.title}</h3>
+      <h3 className="font-medium group-hover:text-primary">{project.title}</h3>
       <p className="text-sm text-base-content/80 leading-relaxed">
         {project.description.length > 64
           ? `${project.description.slice(0, 64)}...`
