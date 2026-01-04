@@ -2,9 +2,10 @@
 
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { GraduationCap, Briefcase, ArrowUpRight } from "lucide-react";
 import SimpleBar from "simplebar-react";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+
 import aboutDataJson from "@/data/resume.json";
 
 /* ---------------- Types ---------------- */
@@ -14,7 +15,7 @@ interface ExperienceItem {
   time?: string;
   organization?: string;
   description?: string;
-  profileLink?: string | null;
+   profileLink?: string | null;
 }
 
 interface EducationItem {
@@ -75,7 +76,7 @@ const ResumeSections: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="text-base-content font-geist max-w-3xl mx-auto pt-1"
     >
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-1">
 
         {/* ================= Experience ================= */}
         <motion.div
@@ -85,54 +86,67 @@ const ResumeSections: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
         >
-          <div className="text-start m-4">
-            <p className="text-sm">• Experience</p>
-            <h2 className="text-2xl">
-              Career <span className="text-base-content/60">Highlights</span>
-            </h2>
-          </div>
+          <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          viewport={{ once: true }}
+          className=" text-start m-4"
+        >
+          <p className="text-sm text-base-content mb-0">• Experience</p>
+          <h2 className="text-2xl">
+            Career <span className="text-base-content/60"> Highlights</span>
+          </h2>
+        </motion.div>
 
-          <SimpleBar className="max-h-[300px] pr-2">
-            <ul className="space-y-4">
+          <SimpleBar className="max-h-[300px] pr-2 ">
+            <ul className="space-y-4 list-none p-0 ">
               {aboutData.experience.map((item, idx) => (
-                <motion.a
+                <motion.li
                   key={idx}
-                  href={item.profileLink || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="group block bg-base-100 p-4 rounded-lg"
+                  className=" transition-colors bg-base-100 p-4 rounded-lg"
                 >
-                  {/* Title + Icon */}
-                  <div className="flex items-center justify-between gap-2">
-                    <p className="font-medium transition-colors group-hover:text-primary">
-                      {item.title}
-                    </p>
+                  <p className=" font-medium ">{item.title}</p>
 
-                    {item.profileLink && (
-                      <ArrowUpRight size={16} className="group-hover:text-primary" />
-                    )}
-                  </div>
 
                   {item.organization && (
                     <p className="text-base-content/70 mt-1">
                       {item.organization}
                       {item.time && ` | ${item.time}`}
                     </p>
-                  )}
 
+                  )}
+                  
                   {item.description && (
                     <p className="text-base-content/60 text-sm mt-2 leading-relaxed">
                       {item.description}
                     </p>
                   )}
-                </motion.a>
+
+                  {item.profileLink && (
+                    <a
+                      href={item.profileLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex mt-1"
+                    >
+                      <span className="group inline-flex items-center gap-1  text-sm hover:text-primary underline-offset-4 decoration-dashed hover:underline transition">
+                        View Profile
+                        <ArrowUpRight
+                          size={14}
+                          className="transition-transform group-hover:translate-x-1"
+                        />
+                      </span>
+                    </a>
+                  )}
+                </motion.li>
               ))}
             </ul>
           </SimpleBar>
 
-          <ProgressiveBlur height="10%" position="bottom" />
+          <ProgressiveBlur height="12%" position="bottom" />
         </motion.div>
 
         {/* ================= Education ================= */}
@@ -143,47 +157,61 @@ const ResumeSections: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative overflow-hidden border border-primary/30 bg-base-200 rounded-lg p-4"
         >
-          <div className="text-start m-4">
-            <p className="text-sm">• Education</p>
-            <h2 className="text-2xl">
-              Academic <span className="text-base-content/60">Background</span>
-            </h2>
-          </div>
+
+          <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          viewport={{ once: true }}
+          className=" text-start m-4"
+        >
+          <p className="text-sm text-base-content mb-0">• Education</p>
+          <h2 className="text-2xl">
+            Academic <span className="text-base-content/60"> Background</span>
+          </h2>
+        </motion.div>
 
           <SimpleBar className="max-h-[300px] pr-2">
-            <ul className="space-y-4">
+            <ul className="space-y-4 list-none  mb-0">
               {aboutData.education.map((edu, idx) => (
-                <motion.a
+                <motion.li
                   key={idx}
-                  href={edu.credentialLink || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="group block bg-base-100 p-4 rounded-lg"
+                  className="transition-colors bg-base-100 p-4 rounded-lg"
                 >
-                  {/* Institution + Icon */}
-                  <div className="flex items-center justify-between gap-2">
-                    <p className="font-medium transition-colors group-hover:text-primary">
-                      {edu.institution}
-                    </p>
-
-                    {edu.credentialLink && (
-                      <ArrowUpRight size={16} className="group-hover:text-primary" />
-                    )}
-                  </div>
-
+                  <p className=" font-medium">
+                    {edu.institution}
+                  </p>
                   <p className="text-base-content/70 mt-1">
                     {edu.degree}
                     {edu.details && ` | ${edu.details}`}
                   </p>
-                </motion.a>
+
+                  {edu.credentialLink && (
+                    <a
+                      href={edu.credentialLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex mt-1"
+                    >
+                      <span className="group inline-flex items-center gap-1 text-sm hover:text-primary underline-offset-4 decoration-dashed hover:underline transition">
+                        View Credential
+                        <ArrowUpRight
+                          size={14}
+                          className="transition-transform group-hover:translate-x-1"
+                        />
+                      </span>
+                    </a>
+                  )}
+                </motion.li>
               ))}
             </ul>
           </SimpleBar>
 
-          <ProgressiveBlur height="10%" position="bottom" />
+          <ProgressiveBlur height="12%" position="bottom" />
         </motion.div>
+
       </div>
     </motion.section>
   );
