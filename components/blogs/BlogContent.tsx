@@ -63,14 +63,17 @@ export function BlogContent({ years, structured }: BlogContentProps) {
                     {structured[year][month]
                       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) // latest post first
                       .map((blog: Blog) => (
-                        <motion.div
+<motion.div
   key={blog.slug}
   className="
     group flex gap-2 sm:gap-4 rounded-lg
     px-4 py-2 sm:py-6
     transition-all
     hover:bg-base-100
+    cursor-pointer
   "
+  whileHover={{ scale: 1.02 }}
+  onClick={() => window.location.href = `/blog/${blog.slug}`} // Make whole card clickable
 >
   {/* Thumbnail */}
   <div className="hidden sm:block w-32 h-24 relative overflow-hidden rounded-lg">
@@ -88,44 +91,29 @@ export function BlogContent({ years, structured }: BlogContentProps) {
 
   {/* Content */}
   <div className="flex-1">
-    <Link href={`/blog/${blog.slug}`} className="block">
-      <h3
-        className="
-          font-medium
-          text-base-content
-          transition-colors
-          underline-offset-4 decoration-dashed
-          group-hover:text-primary
-          group-hover:underline
-        "
-      >
-        {blog.title}
-      </h3>
-    </Link>
-
-    <p
+    <h3
       className="
-        mt-1 flex items-center gap-2 text-sm
-        text-base-content/60
+        font-medium
+        text-base-content
         transition-colors
-        
+        underline-offset-4 decoration-dashed
+        group-hover:text-primary
+        group-hover:underline
       "
     >
+      {blog.title}
+    </h3>
+
+    <p className="mt-1 flex items-center gap-2 text-sm text-base-content/60 transition-colors">
       {blog.date} • {blog.readTime}
     </p>
 
-    <p
-      className="
-        mt-2 text-sm
-        text-base-content/80
-        transition-colors
-        
-      "
-    >
+    <p className="mt-2 text-sm text-base-content/80 transition-colors">
       {blog.description.slice(0, 60)}...
     </p>
   </div>
 </motion.div>
+
 
                       ))}
                   </div>

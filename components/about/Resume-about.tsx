@@ -77,7 +77,7 @@ const ResumeAboutSections: React.FC = () => {
     hover:bg-base-100
   "
 >
-  <p className="font-medium transition-colors group-hover:text-primary">
+  <p className="font-medium transition-colors ">
     {item.title}
   </p>
 
@@ -103,9 +103,9 @@ const ResumeAboutSections: React.FC = () => {
         inline-flex mt-2 items-center gap-1 text-sm
         text-base-content/70
         transition-all
-        group-hover:text-primary
+        hover:text-primary
         underline-offset-4 decoration-dashed
-        group-hover:underline
+        hover:underline
       "
     >
       View Profile
@@ -140,7 +140,7 @@ const ResumeAboutSections: React.FC = () => {
   transition={{ type: "spring", stiffness: 300 }}
   className="group p-4 rounded-lg hover:bg-base-100 transition-colors"
 >
-  <p className="font-medium transition-colors group-hover:text-primary">
+  <p className="font-medium transition-colors ">
     {edu.institution}
   </p>
 
@@ -158,9 +158,9 @@ const ResumeAboutSections: React.FC = () => {
         inline-flex mt-2 items-center gap-1 text-sm
         text-base-content/70
         transition-all
-        group-hover:text-primary
+        hover:text-primary
         underline-offset-4 decoration-dashed
-        group-hover:underline
+        hover:underline
       "
     >
       View Credential

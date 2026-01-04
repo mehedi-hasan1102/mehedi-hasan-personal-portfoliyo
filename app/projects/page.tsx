@@ -143,7 +143,7 @@ const AllProjectsPage: React.FC = () => {
             text-base font-medium
             text-base-content
             transition-colors
-            group-hover:text-primary
+            
           "
         >
           {project.title}
