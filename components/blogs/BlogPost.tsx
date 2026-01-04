@@ -66,10 +66,12 @@ export default function BlogPost({ blog }: Props) {
 
  
 /* Links */
-[&_a]:text-primary [&_a]:font-medium
-[&_a]:no-underline
+ [&_a]:font-bold
+
 [&_a]:transition-colors [&_a]:duration-200
 [&_a:hover]:underline [&_a:hover]:decoration-dotted [&_a:hover]:underline-offset-4 [&_a:hover]:text-primary
+[&_a]:after:content-['⤴'] 
+[&_a]:after:ml-1 
 
     /* Lists */
     [&_ul]:list-disc [&_ul]:ml-8 [&_ul]:my-6 [&_ul]:space-y-3 [&_ul]:leading-relaxed sm:[&_ul]:leading-relaxed lg:[&_ul]:leading-loose
