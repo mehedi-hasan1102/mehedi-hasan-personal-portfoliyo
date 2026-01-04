@@ -69,38 +69,54 @@ const ResumeAboutSections: React.FC = () => {
         <ul className="space-y-4">
           {aboutData.experience.map((item, idx) => (
             <motion.li
-              key={idx}
-              // whileHover={{ x: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className=" p-4 rounded-lg  transition-shadow hover:bg-base-100"
-            >
-              <p className="text-primary font-medium">{item.title}</p>
-              {item.organization && (
-                <p className="text-base-content/70 mt-1">
-                  {item.organization}
-                  {item.time && ` | ${item.time}`}
-                </p>
-              )}
-              {item.description && (
-                <p className="text-base-content/60 text-sm mt-2 leading-relaxed">
-                  {item.description}
-                </p>
-              )}
-              {item.profileLink && (
-                <a
-                  href={item.profileLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex mt-2 items-center gap-1 text-sm text-primary underline-offset-4 decoration-dashed hover:underline transition"
-                >
-                  View Profile
-                  <ArrowUpRight
-                    size={14}
-                    className="transition-transform group-hover:translate-x-1"
-                  />
-                </a>
-              )}
-            </motion.li>
+  key={idx}
+  transition={{ type: "spring", stiffness: 300 }}
+  className="
+    group p-4 rounded-lg
+    transition-colors transition-shadow
+    hover:bg-base-100
+  "
+>
+  <p className="font-medium transition-colors group-hover:text-primary">
+    {item.title}
+  </p>
+
+  {item.organization && (
+    <p className="mt-1 text-base-content/70 transition-colors ">
+      {item.organization}
+      {item.time && ` | ${item.time}`}
+    </p>
+  )}
+
+  {item.description && (
+    <p className="mt-2 text-sm leading-relaxed text-base-content/60 transition-colors ">
+      {item.description}
+    </p>
+  )}
+
+  {item.profileLink && (
+    <a
+      href={item.profileLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        inline-flex mt-2 items-center gap-1 text-sm
+        text-base-content/70
+        transition-all
+        group-hover:text-primary
+        underline-offset-4 decoration-dashed
+        group-hover:underline
+      "
+    >
+      View Profile
+      <ArrowUpRight
+        size={14}
+        className="transition-transform group-hover:translate-x-1"
+      />
+    </a>
+  )}
+</motion.li>
+
           ))}
         </ul>
       </motion.div>
@@ -120,31 +136,42 @@ const ResumeAboutSections: React.FC = () => {
         <ul className="space-y-4">
           {aboutData.education.map((edu, idx) => (
             <motion.li
-              key={idx}
-              // whileHover={{ x: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className=" p-4 rounded-lg hover:bg-base-100"
-            >
-              <p className="text-primary font-medium">{edu.institution}</p>
-              <p className="text-base-content/70 mt-1">
-                {edu.degree}
-                {edu.details && ` | ${edu.details}`}
-              </p>
-              {edu.credentialLink && (
-                <a
-                  href={edu.credentialLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex mt-2 items-center gap-1 text-sm text-primary underline-offset-4 decoration-dashed hover:underline transition"
-                >
-                  View Credential
-                  <ArrowUpRight
-                    size={14}
-                    className="transition-transform group-hover:translate-x-1"
-                  />
-                </a>
-              )}
-            </motion.li>
+  key={idx}
+  transition={{ type: "spring", stiffness: 300 }}
+  className="group p-4 rounded-lg hover:bg-base-100 transition-colors"
+>
+  <p className="font-medium transition-colors group-hover:text-primary">
+    {edu.institution}
+  </p>
+
+  <p className="mt-1 text-base-content/70 transition-colors ">
+    {edu.degree}
+    {edu.details && ` | ${edu.details}`}
+  </p>
+
+  {edu.credentialLink && (
+    <a
+      href={edu.credentialLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        inline-flex mt-2 items-center gap-1 text-sm
+        text-base-content/70
+        transition-all
+        group-hover:text-primary
+        underline-offset-4 decoration-dashed
+        group-hover:underline
+      "
+    >
+      View Credential
+      <ArrowUpRight
+        size={14}
+        className="transition-transform group-hover:translate-x-1"
+      />
+    </a>
+  )}
+</motion.li>
+
           ))}
         </ul>
       </motion.div>

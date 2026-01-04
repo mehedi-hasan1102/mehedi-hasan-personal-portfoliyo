@@ -73,7 +73,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
     <div className='space-y-2'>
 
   
-      <h3 className="font-medium text-primary">{project.title}</h3>
+      <h3 className="font-medium ">{project.title}</h3>
       <p className="text-sm text-base-content/80 leading-relaxed">
         {project.description.length > 64
           ? `${project.description.slice(0, 64)}...`
@@ -98,14 +98,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
           href={project.liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 text-primary text-sm transition-transform duration-300 hover:translate-x-1"
+          className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary text-sm transition-transform duration-300 hover:translate-x-1"
         >
           <ArrowUpRight size={14} /> Live
         </a>
         <button
           onClick={() => onOpenModal(project)}
           aria-label={`View details for ${project.title}`}
-          className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 text-primary text-sm transition-transform duration-300 hover:translate-x-1"
+          className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary text-sm transition-transform duration-300 hover:translate-x-1"
         >
           <Eye size={14} /> Details
         </button>

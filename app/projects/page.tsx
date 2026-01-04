@@ -94,150 +94,129 @@ const AllProjectsPage: React.FC = () => {
          <div className="space-y-2">
   {filteredProjects.map((project, index) => (
     <motion.div
-      key={index}
-      transition={{ type: "spring", stiffness: 200 }}
-      className="overflow-hidden rounded-md py-2 sm:py-6 transition hover:bg-base-100 px-4 "
-    >
-      <div className="flex flex-col sm:flex-row gap-4 ">
-
-        {/* Media */}
-        {/* <motion.div
-  whileHover={{ scale: 1.02 }}
-  className="relative w-full sm:w-[300px] aspect-[16/9] overflow-hidden rounded-lg"
+  key={index}
+  transition={{ type: "spring", stiffness: 200 }}
+  className="
+    group overflow-hidden rounded-md
+    px-4 py-2 sm:py-6
+    transition-colors
+    hover:bg-base-100
+  "
 >
-  {project.videos && project.videos.length > 0 ? (
-    <video
-      src={project.videos[0]}
-      className="w-full h-full object-cover rounded-lg"
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-    />
-  ) : (
-    <Image
-      src={project.images[0]}
-      alt={project.title}
-      fill
-      sizes="(max-width: 768px) 100vw, 300px"
-      className="rounded-lg object-cover transition-transform duration-300"
-      priority={index < 2}
-    />
-  )}
-</motion.div> */}
+  <div className="flex flex-col sm:flex-row gap-4">
+    {/* Media */}
+    <div className="relative w-full sm:w-[250px] aspect-[16/9] overflow-hidden rounded-lg hidden sm:block">
+      {project.videos?.length ? (
+        <video
+          src={project.videos[0]}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="
+            w-full h-full object-cover rounded-lg
+            transition-transform duration-300
+            group-hover:scale-105
+          "
+        />
+      ) : (
+        <Image
+          src={project.images[0]}
+          alt={project.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 250px"
+          priority={index < 2}
+          className="
+            object-cover rounded-lg
+            transition-transform duration-300
+            group-hover:scale-105
+          "
+        />
+      )}
+    </div>
 
+    {/* Content */}
+    <div className="flex flex-col justify-between flex-1">
+      <div>
+        <h3
+          className="
+            text-base font-medium
+            text-base-content
+            transition-colors
+            group-hover:text-primary
+          "
+        >
+          {project.title}
+        </h3>
 
-<motion.div
-  whileHover={{ scale: 1.02 }}
-  className="relative w-full sm:w-[250px] aspect-[16/9] overflow-hidden rounded-lg hidden sm:block"
->
-  {project.videos && project.videos.length > 0 ? (
-    <video
-      src={project.videos[0]}
-      className="w-full h-full object-cover rounded-lg"
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-    />
-  ) : (
-    <Image
-      src={project.images[0]}
-      alt={project.title}
-      fill
-      sizes="(max-width: 768px) 100vw, 250px"
-      className="rounded-lg object-cover transition-transform duration-300"
-      priority={index < 2}
-    />
-  )}
-</motion.div>
-
-
-
-        {/* Content */}
-        <div className="flex flex-col justify-between flex-1">
-          <div>
-            <h3 className="text-base font-medium text-primary mb-2 sm:mb-0">
-              {project.title}
-            </h3>
-            <p className="text-xs sm:text-sm md:text-base leading-relaxed text-base-content/80 mb-0 line-clamp-2">
-              {project.description}
-            </p>
-
-            <div className="mb-0">
-             
+        <p
+          className="
+            mt-1 text-sm leading-relaxed
+            text-base-content/80
+            transition-colors
             
-              <div className="flex flex-wrap items-center gap-2 my-4">
- 
+            line-clamp-2
+          "
+        >
+          {project.description}
+        </p>
 
-  {project.techStack.map((tech, i) => (
-    <motion.span
-      key={i}
-      initial={{ opacity: 0, y: 6 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: i * 0.05, duration: 0.3 }}
-      className="
-        px-2 py-0 text-xs sm:text-xs rounded-full bg-base-100 shadow whitespace-nowrap border border-primary/30
-      "
-    >
-      {tech}
-    </motion.span>
-  ))}
-</div>
-
-             
-            </div>
-          </div>
-
-          {/* Links */}
-          <div className="flex flex-wrap gap-4 text-sm mt-0">
-            <motion.a
-              whileHover={{ x: 3 }}
-              href={project.liveLink}
-              className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
+        <div className="flex flex-wrap gap-2 my-4">
+          {project.techStack.map((tech, i) => (
+            <span
+              key={i}
+              className="px-2 text-xs rounded-full bg-base-100 border border-primary/30"
             >
-              <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:-translate-x-1" /> Live
-            </motion.a>
-
-            {project.frontendRepo && (
-              <motion.a
-                whileHover={{ x: 3 }}
-                href={project.frontendRepo}
-                className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github size={14} className="transition-transform duration-300 group-hover:-translate-x-1" /> Frontend
-              </motion.a>
-            )}
-
-            {project.backendRepo && (
-              <motion.a
-                whileHover={{ x: 3 }}
-                href={project.backendRepo}
-                className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github size={14} className="transition-transform duration-300 group-hover:-translate-x-1 " /> Backend
-              </motion.a>
-            )}
-
-            <motion.button
-              whileHover={{ x: 3 }}
-              onClick={() => openModal(project)}
-              className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
-            >
-              <Eye size={14} className="transition-transform duration-300 group-hover:-translate-x-1" /> Details
-            </motion.button>
-          </div>
+              {tech}
+            </span>
+          ))}
         </div>
       </div>
-    </motion.div>
+
+      {/* Links (NO group-hover here) */}
+      <div className="flex flex-wrap gap-4 text-sm">
+        <a
+          href={project.liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 hover:text-primary underline-offset-4 decoration-dashed hover:underline"
+        >
+          <ArrowUpRight size={14} /> Live
+        </a>
+
+        {project.frontendRepo && (
+          <a
+            href={project.frontendRepo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 hover:text-primary underline-offset-4 decoration-dashed hover:underline"
+          >
+            <Github size={14} /> Frontend
+          </a>
+        )}
+
+        {project.backendRepo && (
+          <a
+            href={project.backendRepo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 hover:text-primary underline-offset-4 decoration-dashed hover:underline"
+          >
+            <Github size={14} /> Backend
+          </a>
+        )}
+
+        <button
+          onClick={() => openModal(project)}
+          className="inline-flex items-center gap-1 hover:text-primary underline-offset-4 decoration-dashed hover:underline"
+        >
+          <Eye size={14} /> Details
+        </button>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
   ))}
 </div>
 

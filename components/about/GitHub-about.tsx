@@ -56,14 +56,14 @@ const GitHubAboutSection: React.FC = () => {
       rel="noopener noreferrer"
       className="
           
-         font-medium text-primary
+         font-medium hover:text-primary
         hover:underline underline-offset-4 decoration-dashed
          transition-all duration-300
       "
     >
-      Github
+      Github ⤴
     </a> 
-    <span>.</span>
+   
   </p>
 </div>
 

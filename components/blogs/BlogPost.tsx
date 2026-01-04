@@ -20,7 +20,7 @@ export default function BlogPost({ blog }: Props) {
         className="relative overflow-hidden rounded-lg p-4 bg-base-200 backdrop-blur-sm transition-shadow duration-300  font-geist"
       >
         {/* Title */}
-        <h1 className="text-3xl   my-4  text-primary leading-tight">
+        <h1 className="text-3xl   my-4  leading-tight">
           {blog.title}
         </h1>
 

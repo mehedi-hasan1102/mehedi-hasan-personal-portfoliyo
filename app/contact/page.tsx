@@ -110,7 +110,7 @@ const ContactMe: React.FC = () => {
         <motion.div
           onClick={() => copyToClipboard(CONTACT_EMAIL)}
           whileHover={{ x: 3 }}
-          className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
+          className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-2 hover:text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
         >
           {CONTACT_EMAIL}
           <Copy size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -131,7 +131,7 @@ const ContactMe: React.FC = () => {
           href={CALENDLY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+          className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
         >
           Schedule on Calendly
           <ArrowUpRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -191,11 +191,11 @@ const ContactMe: React.FC = () => {
               <motion.button 
                 type="submit"
                 whileTap={{ scale: 0.98 }}
-                className="max-w-40 mt-0 rounded-lg flex items-center gap-0 text-primary font-geist text-sm px-0 py-0 transition-all"
+                className="max-w-40 mt-0 rounded-lg flex items-center gap-0 hover:text-primary font-geist text-sm px-0 py-0 transition-all"
               >
                 <motion.span
                   whileHover={{ scale: 1.05 }}
-                  className="underline-offset-4 decoration-dashed hover:underline p-1 rounded-lg group inline-flex items-center gap-1 text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                  className="underline-offset-4 decoration-dashed hover:underline p-1 rounded-lg group inline-flex items-center gap-1  font-geist text-sm cursor-pointer transition-all duration-300"
                 >
                   Send Message <ArrowUpRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </motion.span>
@@ -218,7 +218,7 @@ const ContactMe: React.FC = () => {
                 key={idx}
                 className="flex items-start gap-0 pl-0 border-l-2 border-primary/50 hover:border-primary transition-colors duration-300"
               >
-                <div className="p-3 rounded-md text-primary">{item.icon}</div>
+                <div className="p-3 rounded-md ">{item.icon}</div>
                 <div className="min-w-0">
                   <p className="text-sm opacity-70">{item.label}</p>
                   <div className="font-geist break-words">{item.value}</div>

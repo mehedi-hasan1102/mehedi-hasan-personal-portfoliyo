@@ -43,7 +43,7 @@ const SkillsAboutSection: React.FC = () => {
               transition={{ type: "spring", stiffness: 300 }}
               className="bg-base-100 p-4 rounded-lg shadow-sm hover:shadow-md  transition-all"
             >
-              <p className="font-medium text-primary mb-2">
+              <p className="font-medium  mb-2">
                 {category}
               </p>
 

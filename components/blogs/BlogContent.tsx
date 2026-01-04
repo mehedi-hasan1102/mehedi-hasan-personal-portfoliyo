@@ -64,37 +64,69 @@ export function BlogContent({ years, structured }: BlogContentProps) {
                       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) // latest post first
                       .map((blog: Blog) => (
                         <motion.div
-                          key={blog.slug}
-                          // whileHover={{ y: -3 }}
-                          className="flex gap-2 sm:gap-4   rounded-lg  transition-all py-2 sm:py-6 hover:bg-base-100 px-4"
-                        >
-                         
-<div className="hidden sm:block sm:block w-32 h-24  relative ">
-  <Image
-    src={blog.image}
-    alt={blog.title}
-    fill
-    className="rounded-lg object-cover"
-  />
-</div>
+  key={blog.slug}
+  className="
+    group flex gap-2 sm:gap-4 rounded-lg
+    px-4 py-2 sm:py-6
+    transition-all
+    hover:bg-base-100
+  "
+>
+  {/* Thumbnail */}
+  <div className="hidden sm:block w-32 h-24 relative overflow-hidden rounded-lg">
+    <Image
+      src={blog.image}
+      alt={blog.title}
+      fill
+      className="
+        object-cover
+        transition-transform duration-300
+        group-hover:scale-105
+      "
+    />
+  </div>
 
- 
+  {/* Content */}
+  <div className="flex-1">
+    <Link href={`/blog/${blog.slug}`} className="block">
+      <h3
+        className="
+          font-medium
+          text-base-content
+          transition-colors
+          underline-offset-4 decoration-dashed
+          group-hover:text-primary
+          group-hover:underline
+        "
+      >
+        {blog.title}
+      </h3>
+    </Link>
 
-                          <div className="flex-1">
-                            <Link href={`/blog/${blog.slug}`}>
-                              <h3 className="text-primary font-medium underline-offset-4 decoration-dashed hover:underline">
-                                {blog.title}
-                              </h3>
-                            </Link>
+    <p
+      className="
+        mt-1 flex items-center gap-2 text-sm
+        text-base-content/60
+        transition-colors
+        
+      "
+    >
+      {blog.date} • {blog.readTime}
+    </p>
 
-                            <p className="text-sm text-base-content/60 flex items-center gap-2 mt-1">
-                              {blog.date} • {blog.readTime}
-                            </p>
-                            <p className="text-base-content/80 text-sm mt-2">
-                              {blog.description.slice(0, 60)}...
-                            </p>
-                          </div>
-                        </motion.div>
+    <p
+      className="
+        mt-2 text-sm
+        text-base-content/80
+        transition-colors
+        
+      "
+    >
+      {blog.description.slice(0, 60)}...
+    </p>
+  </div>
+</motion.div>
+
                       ))}
                   </div>
                 </div>

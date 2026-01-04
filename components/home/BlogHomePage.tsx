@@ -76,7 +76,7 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
 
     {/* Text */}
     <div className="flex flex-col justify-between">
-      <h3 className="font-medium leading-snug text-primary/90 break-words underline-offset-4 decoration-dashed group-hover:underline">
+      <h3 className="font-medium leading-snug hover:text-primary break-words underline-offset-4 decoration-dashed group-hover:underline">
         {blog.title}
       </h3>
       <p className="text-xs text-base-content/50 py-2">
@@ -99,7 +99,7 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
             href="/blog"
             className="
               group inline-flex items-center gap-1
-              text-primary text-sm
+              hover:text-primary text-sm
               transition-all
               hover:underline underline-offset-4 decoration-dashed
             "

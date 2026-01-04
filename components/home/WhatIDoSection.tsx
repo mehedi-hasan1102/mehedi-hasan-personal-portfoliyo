@@ -83,7 +83,7 @@ const WhatIDoSection: React.FC = () => {
               transition={{ delay: index * 0.1 }}
               className="flex items-start gap-4 p-4 bg-base-100 rounded-lg shadow-sm duration-200 ease-out hover:translate-x-1 hover:shadow-md transition-all"
             >
-              <IconComponent size={32} className="text-primary mt-1 " />
+              <IconComponent size={32} className=" mt-1 " />
               <p className="text-base text-base-content/80">{item.text}</p>
             </motion.div>
           );

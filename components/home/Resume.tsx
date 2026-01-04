@@ -108,7 +108,7 @@ const ResumeSections: React.FC = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                   className=" transition-colors bg-base-100 p-4 rounded-lg"
                 >
-                  <p className="text-primary font-medium ">{item.title}</p>
+                  <p className=" font-medium ">{item.title}</p>
 
 
                   {item.organization && (
@@ -132,7 +132,7 @@ const ResumeSections: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex mt-1"
                     >
-                      <span className="group inline-flex items-center gap-1  text-sm text-primary underline-offset-4 decoration-dashed hover:underline transition">
+                      <span className="group inline-flex items-center gap-1  text-sm hover:text-primary underline-offset-4 decoration-dashed hover:underline transition">
                         View Profile
                         <ArrowUpRight
                           size={14}
@@ -180,7 +180,7 @@ const ResumeSections: React.FC = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                   className="transition-colors bg-base-100 p-4 rounded-lg"
                 >
-                  <p className="text-primary font-medium">
+                  <p className=" font-medium">
                     {edu.institution}
                   </p>
                   <p className="text-base-content/70 mt-1">
@@ -195,7 +195,7 @@ const ResumeSections: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex mt-1"
                     >
-                      <span className="group inline-flex items-center gap-1 text-sm text-primary underline-offset-4 decoration-dashed hover:underline transition">
+                      <span className="group inline-flex items-center gap-1 text-sm hover:text-primary underline-offset-4 decoration-dashed hover:underline transition">
                         View Credential
                         <ArrowUpRight
                           size={14}
