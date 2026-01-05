@@ -194,7 +194,7 @@ const ContactHomePage: React.FC = () => {
                 className="max-w-40 my-4 rounded-lg flex items-center gap-0 hover:text-primary font-geist text-sm px-0 py-0 transition-all"
               >
                 <motion.span
-                  whileHover={{ scale: 1.05 }}
+                  // whileHover={{ scale: 1.05 }}
                   className="underline-offset-4 decoration-dashed hover:underline pb-2 rounded-lg group inline-flex items-center gap-1  font-geist text-sm cursor-pointer transition-all duration-300"
                 >
                   Send Message <ArrowUpRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
