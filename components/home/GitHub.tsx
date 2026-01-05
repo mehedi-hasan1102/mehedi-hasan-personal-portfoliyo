@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github } from "lucide-react";
+import Link from 'next/link';
 
 const GitHubActivitySection: React.FC = () => {
   return (
@@ -39,21 +40,31 @@ const GitHubActivitySection: React.FC = () => {
 
       
         </div>
-          {/* Footer Link */}
- <div className="m-4 text-center">
-  <a
-    href="https://github.com/mehedi-hasan1102"
-  target="_blank"
-  rel="noopener noreferrer"
-    className="group inline-flex items-center gap-1
-              hover:text-primary text-sm font-geist
-              transition-all duration-300
-              hover:underline underline-offset-4 decoration-dashed">
-    Follow me on GitHub
-    <Github size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-  </a>
-</div>
+       
+<div className="my-4 px-4  text-center">
+ <p
+    className="
+      text-sm   leading-relaxed
+    "
+  >
+    <span>Explore </span>
 
+    <Link
+      href="https://github.com/mehedi-hasan1102"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+          
+         font-medium hover:text-primary
+        hover:underline underline-offset-4 decoration-dashed
+         transition-all duration-300
+      "
+    >
+      Github ⤴
+    </Link> 
+   
+  </p>
+</div>
 
 
       </div>

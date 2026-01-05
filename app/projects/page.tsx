@@ -6,6 +6,7 @@ import { Eye, ArrowUpRight, Github} from "lucide-react";
 import projectsData from "../../data/projects.json";
 import ProjectModal from "@/components/projects/ProjectModal";
 import Image from 'next/image';
+import Link from "next/link";
 
 
 
@@ -222,20 +223,32 @@ const AllProjectsPage: React.FC = () => {
 
 
           {/* Footer Link */}
+<div className="my-4  text-start">
+ <p
+    className="
+      text-sm sm:text-base text-base-content/80 leading-relaxed
+    "
+  >
+    <span>This page highlights selected work. View the full project list on </span>
 
+    <Link
+      href="https://github.com/mehedi-hasan1102"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+          
+         font-medium hover:text-primary
+        hover:underline underline-offset-4 decoration-dashed
+         transition-all duration-300
+      "
+    >
+      Github ⤴
+    </Link> 
+   
+  </p>
+</div>
 
-          <div className="mt-4 text-center">
-            <p className="text-sm mb-0">
-              Other projects can be explored on{" "}
-              <a
-                href="https://github.com/mehedi-hasan1102" // <-- your GitHub link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 text-primary  font-geist text-sm cursor-pointer transition-all duration-300"
-              >GitHub <Github className="group-hover:translate-x-1 transition-transform duration-300 " size={14} />
-              </a>
-            </p>
-          </div>
+         
         </div>
       </motion.section>
 

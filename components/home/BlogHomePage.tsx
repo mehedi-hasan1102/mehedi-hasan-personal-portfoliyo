@@ -111,6 +111,9 @@ export default function BlogHomePage({ latestBlogs }: BlogHomePageProps) {
             />
           </Link>
         </div>
+
+
+
       </motion.div>
     </section>
   );

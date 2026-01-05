@@ -42,13 +42,13 @@ const GitHubAboutSection: React.FC = () => {
 
 
 {/* Footer */}
-<div className="my-4  text-start">
+<div className="my-4 px-4 text-start">
  <p
     className="
       text-sm sm:text-base text-base-content/80 leading-relaxed
     "
   >
-    <span>I build what excites me, all open source. Follow me on </span>
+    <span>My coding journey, day by day, in open-source. Check out my </span>
 
     <a
       href="https://github.com/mehedi-hasan1102"
