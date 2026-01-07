@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
+import Image from "next/image";
 
 // ENV VARIABLES
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
@@ -152,7 +153,16 @@ const ContactMe: React.FC = () => {
       className=" text-base-content font-geist max-w-3xl mx-auto pt-1   "
     >
       <Toaster position="top-right" reverseOrder={false} />
-
+<div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 z-10 hidden md:block">
+        <Image
+          src="/globe-outline-dark-2.svg"
+          alt="Globe Background"
+          width={600}
+          height={600}
+          className="opacity-80"
+          priority
+        />
+      </div>
       <div className="min-h-screen rounded-lg p-4 bg-base-200 backdrop-blur-sm hover:shadow-primary/10 transition-shadow duration-300">
         {/* Header */}
         <motion.div
