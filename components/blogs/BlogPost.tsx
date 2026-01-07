@@ -1,5 +1,8 @@
 
+
 "use client";
+
+import { useEffect } from "react";
 import { Blog } from "../../lib/blogs";
 import { motion } from "framer-motion";
 import { ScrollProgress } from "../ui/scroll-progress";
@@ -10,6 +13,46 @@ interface Props {
 }
 
 export default function BlogPost({ blog }: Props) {
+
+  useEffect(() => {
+    document.querySelectorAll("pre").forEach((pre) => {
+      if (pre.querySelector(".copy-btn")) return;
+
+      const button = document.createElement("button");
+      button.textContent = "Copy";
+      button.className = "copy-btn";
+
+      Object.assign(button.style, {
+        position: "absolute",
+        top: "8px",
+        right: "8px",
+        padding: "4px 8px",
+        fontSize: "12px",
+        fontWeight: "600",
+        borderRadius: "6px",
+        background: "var(--p)",
+        color: "var(--b1)",
+        cursor: "pointer",
+        opacity: "0",
+        transition: "opacity 0.2s",
+        
+      });
+
+      pre.style.position = "relative";
+      pre.addEventListener("mouseenter", () => (button.style.opacity = "1"));
+      pre.addEventListener("mouseleave", () => (button.style.opacity = "0"));
+
+      button.onclick = async () => {
+        const code = pre.querySelector("code")?.innerText || "";
+        await navigator.clipboard.writeText(code);
+        button.textContent = "Copied!";
+        setTimeout(() => (button.textContent = "Copy"), 2000);
+      };
+
+      pre.appendChild(button);
+    });
+  }, [blog.fullContent]);
+
   return (
     <div className="pt-1 max-w-3xl mx-auto ">
       <ScrollProgress />
@@ -17,10 +60,10 @@ export default function BlogPost({ blog }: Props) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative overflow-hidden rounded-lg p-4 bg-base-200 backdrop-blur-sm transition-shadow duration-300  font-geist"
+        className="relative overflow-hidden rounded-lg p-4 bg-base-200 backdrop-blur-sm transition-shadow duration-300 font-geist"
       >
         {/* Title */}
-        <h1 className="text-3xl   my-4  leading-tight">
+        <h1 className="text-3xl my-4 leading-tight">
           {blog.title}
         </h1>
 
@@ -42,17 +85,12 @@ export default function BlogPost({ blog }: Props) {
           </div>
         )}
 
-
         {/* Full Content */}
-
-
-
-
 
         <div
           className="
-    prose prose-sm sm:prose-base lg:prose-lg
-    max-w-none
+     prose prose-sm sm:prose-base lg:prose-lg
+     max-w-none
     text-base-content
 
     /* Paragraphs */
@@ -87,6 +125,8 @@ export default function BlogPost({ blog }: Props) {
   "
           dangerouslySetInnerHTML={{ __html: blog.fullContent }}
         />
+
+
 
 
 
