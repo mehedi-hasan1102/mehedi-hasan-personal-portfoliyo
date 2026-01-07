@@ -19,7 +19,7 @@ export default function BlogPost({ blog }: Props) {
       if (pre.querySelector(".copy-btn")) return;
 
       const button = document.createElement("button");
-      button.textContent = "Copy";
+      button.textContent = "⧉ Copy";
       button.className = "copy-btn";
 
       Object.assign(button.style, {
@@ -45,8 +45,8 @@ export default function BlogPost({ blog }: Props) {
       button.onclick = async () => {
         const code = pre.querySelector("code")?.innerText || "";
         await navigator.clipboard.writeText(code);
-        button.textContent = "Copied!";
-        setTimeout(() => (button.textContent = "Copy"), 2000);
+        button.textContent = "✓ Copied";
+        setTimeout(() => (button.textContent = "⧉ Copy"), 2000);
       };
 
       pre.appendChild(button);
