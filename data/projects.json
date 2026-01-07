@@ -155,6 +155,9 @@
     "images": [
       "/assets/images/projects/events.png"
     ],
+    "videos": [
+      "/assets/video/Home _ Event Explorer.mp4"
+    ],
     "challenges": "Managing real-time booking availability and user authentication.",
     "futurePlans": "Add event rating system and push notifications.",
     "type": "Frontend"
