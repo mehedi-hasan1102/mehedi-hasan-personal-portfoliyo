@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState, useMemo, JSX } from "react";
 import { motion, Variants } from "framer-motion";
 import { Zap, Home } from "lucide-react";
+import Image from "next/image";
 
 const NotFound = () => {
   const containerVariants: Variants = {
@@ -83,12 +84,24 @@ const NotFound = () => {
         </motion.div>
 
         {/* 404 text */}
-        <h1 className="text-7xl sm:text-8xl 
+        {/* <h1 className="text-7xl sm:text-8xl 
           bg-clip-text text-transparent 
           bg-gradient-to-r from-primary to-secondary 
           text-center mb-2">
           404
-        </h1>
+        </h1> */}
+        {/* 404 Image */}
+<div className="flex justify-center mb-4">
+  <Image
+    src="/404.png"   // তোমার image path
+    alt="404 Not Found"
+    width={420}
+    height={420}
+    className="w-[260px] sm:w-[340px] md:w-[420px] h-auto"
+    priority
+  />
+</div>
+
 
  
 
