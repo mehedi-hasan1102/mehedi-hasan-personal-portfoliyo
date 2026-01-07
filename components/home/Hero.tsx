@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
           >
             A <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               Full-Stack
-            </span>{" "} Developer
+            </span>{" "}Web Developer
             <span className="animate-blink">_</span>
           </motion.h1>
 

@@ -55,7 +55,7 @@ const AboutPage: React.FC = () => {
             className="flex flex-col justify-center max-w-2xl space-y-4"
           >
             <p className="text-sm sm:text-base text-base-content/80 leading-relaxed">
-              I’m Mehedi Hasan, a Full-Stack Developer focused on building fast, scalable web
+              I’m Mehedi Hasan, a Full-Stack Web Developer focused on building fast, scalable web
               applications using the MERN stack, Next.js, React, and Tailwind CSS.
             </p>
 
