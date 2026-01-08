@@ -43,15 +43,15 @@ const socialLinks: SocialLink[] = [
   { icon: FaThreads, href: "https://www.threads.com/@mehedi.hasan1102", label: "Threads" },
   { icon: FaXTwitter, href: "https://x.com/mehedihasan1102", label: "Twitter/X" },
   { icon: SiBluesky, href: "https://bsky.app/profile/mehedihasan1102.bsky.social", label: "Bluesky" },
-    { icon: SiQuora, href: "https://www.quora.com/profile/Mehedi-Hasan-19347-1", label: "Quora" },
+  { icon: SiQuora, href: "https://www.quora.com/profile/Mehedi-Hasan-19347-1", label: "Quora" },
   { icon: FaYoutube, href: "https://www.youtube.com/@MehediHasan11023", label: "YouTube" },
-
 
   // Messaging / Contact
   { icon: FaWhatsapp, href: "https://wa.me/8801747874773", label: "WhatsApp" },
   { icon: FaTelegramPlane, href: "https://t.me/+8801747874773", label: "Telegram" },
   { icon: FaDiscord, href: "https://discord.gg/QMmdb8nusc", label: "Discord" },
 ];
+
 
 /* ---------------- Links Page ---------------- */
 const LinksPage: React.FC = () => {
@@ -82,6 +82,7 @@ const LinksPage: React.FC = () => {
               key={idx}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              className=" rounded-lg "
             >
               <a
                 href={link.href}
