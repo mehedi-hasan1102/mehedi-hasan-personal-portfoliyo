@@ -96,7 +96,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
         font-medium
         text-base-content
         transition-colors
-        underline-offset-4 decoration-dashed
+        underline-offset-6 decoration-dashed
         group-hover:text-primary
         group-hover:underline
       "

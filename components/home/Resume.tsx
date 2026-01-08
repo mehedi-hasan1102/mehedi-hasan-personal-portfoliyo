@@ -132,7 +132,7 @@ const ResumeSections: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex mt-1"
                     >
-                      <span className="group inline-flex items-center gap-1  text-sm hover:text-primary underline-offset-4 decoration-dashed hover:underline transition">
+                      <span className="group inline-flex items-center gap-1  text-sm hover:text-primary underline-offset-6 decoration-dashed hover:underline transition">
                         View Profile
                         <ArrowUpRight
                           size={14}
@@ -195,7 +195,7 @@ const ResumeSections: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex mt-1"
                     >
-                      <span className="group inline-flex items-center gap-1 text-sm hover:text-primary underline-offset-4 decoration-dashed hover:underline transition">
+                      <span className="group inline-flex items-center gap-1 text-sm hover:text-primary underline-offset-6 decoration-dashed hover:underline transition">
                         View Credential
                         <ArrowUpRight
                           size={14}

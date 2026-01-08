@@ -82,7 +82,7 @@ const AllProjectsPage: React.FC = () => {
                 className={` p-2 cursor-pointer px-2 py-2 rounded-lg transition text-sm
                   hover:text-primary 
                   group inline-flex items-center gap-2 font-geist   duration-300
-                  ${filter === type ? " scale-105 underline underline-offset-4 decoration-wavy decoration-2 decoration-primary" : "text-base-content"}
+                  ${filter === type ? " scale-105 underline underline-offset-6 decoration-wavy decoration-2 decoration-primary" : "text-base-content"}
                   hover:scale-105
                 `}
               >
@@ -180,7 +180,7 @@ const AllProjectsPage: React.FC = () => {
           href={project.liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 hover:text-primary underline-offset-4 decoration-dashed hover:underline"
+          className="inline-flex items-center gap-1 hover:text-primary underline-offset-6 decoration-dashed hover:underline"
         >
           <ArrowUpRight size={14} /> Live
         </a>
@@ -190,7 +190,7 @@ const AllProjectsPage: React.FC = () => {
             href={project.frontendRepo}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 hover:text-primary underline-offset-4 decoration-dashed hover:underline"
+            className="inline-flex items-center gap-1 hover:text-primary underline-offset-6 decoration-dashed hover:underline"
           >
             <Github size={14} /> Frontend
           </a>
@@ -201,7 +201,7 @@ const AllProjectsPage: React.FC = () => {
             href={project.backendRepo}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 hover:text-primary underline-offset-4 decoration-dashed hover:underline"
+            className="inline-flex items-center gap-1 hover:text-primary underline-offset-6 decoration-dashed hover:underline"
           >
             <Github size={14} /> Backend
           </a>
@@ -209,7 +209,7 @@ const AllProjectsPage: React.FC = () => {
 
         <button
           onClick={() => openModal(project)}
-          className="inline-flex items-center gap-1 hover:text-primary underline-offset-4 decoration-dashed hover:underline"
+          className="inline-flex items-center gap-1 hover:text-primary underline-offset-6 decoration-dashed hover:underline"
         >
           <Eye size={14} /> Details
         </button>
@@ -238,7 +238,7 @@ const AllProjectsPage: React.FC = () => {
       className="
           
          font-medium hover:text-primary
-        hover:underline underline-offset-4 decoration-dashed
+        hover:underline underline-offset-6 decoration-dashed
          transition-all duration-300
       "
     >

@@ -104,7 +104,7 @@ const ResumeAboutSections: React.FC = () => {
         text-base-content/70
         transition-all
         hover:text-primary
-        underline-offset-4 decoration-dashed
+        underline-offset-6 decoration-dashed
         hover:underline
       "
     >
@@ -159,7 +159,7 @@ const ResumeAboutSections: React.FC = () => {
         text-base-content/70
         transition-all
         hover:text-primary
-        underline-offset-4 decoration-dashed
+        underline-offset-6 decoration-dashed
         hover:underline
       "
     >

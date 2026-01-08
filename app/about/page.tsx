@@ -78,7 +78,7 @@ const AboutPage: React.FC = () => {
                 className="
           
          font-medium hover:text-primary
-        hover:underline underline-offset-4 decoration-dashed
+        hover:underline underline-offset-6 decoration-dashed
          transition-all duration-300
       "
               >

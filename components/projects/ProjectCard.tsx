@@ -98,14 +98,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }) => {
           href={project.liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary text-sm transition-transform duration-300 hover:translate-x-1"
+          className="underline-offset-6 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary text-sm transition-transform duration-300 hover:translate-x-1"
         >
           <ArrowUpRight size={14} /> Live
         </a>
         <button
           onClick={() => onOpenModal(project)}
           aria-label={`View details for ${project.title}`}
-          className="underline-offset-4 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary text-sm transition-transform duration-300 hover:translate-x-1"
+          className="underline-offset-6 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary text-sm transition-transform duration-300 hover:translate-x-1"
         >
           <Eye size={14} /> Details
         </button>

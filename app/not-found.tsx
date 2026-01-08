@@ -121,7 +121,7 @@ const NotFound = () => {
             <span>  The page you’re looking for doesn’t exist or has been moved.
 Let’s get you back to something useful.
 </span>
-            <span className="underline-offset-4 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300">
+            <span className="underline-offset-6 decoration-dashed hover:underline p-2 rounded-lg group inline-flex items-center gap-2 text-primary  font-geist text-sm cursor-pointer transition-all duration-300">
              
                Go Home 
                <Home size={16} className="group-hover:translate-x-1 transition-transform duration-300 " />

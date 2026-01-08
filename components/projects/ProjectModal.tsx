@@ -118,7 +118,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     href={selectedProject.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                    className="underline-offset-6 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                   >
                     <ArrowUpRight size={14} />
                     Live
@@ -130,7 +130,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={selectedProject.frontendRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                      className="underline-offset-6 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                     >
                       <Github size={14} />
                       Frontend
@@ -143,7 +143,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={selectedProject.backendRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline-offset-4 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
+                      className="underline-offset-6 decoration-dashed hover:underline  rounded-lg group inline-flex items-center gap-1 hover:text-primary font-geist text-sm cursor-pointer transition-all duration-300"
                     >
                       <Github size={14} />
                       Backend

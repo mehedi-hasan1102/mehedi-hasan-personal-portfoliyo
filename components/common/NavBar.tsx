@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                   cursor-pointer  rounded-lg transition 
                   hover:text-primary 
                   ${isActive("/")
-                    ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
+                    ? "underline underline-offset-6 decoration-wavy decoration-2 decoration-primary"
                     : ""}
                 `}
               >
@@ -79,7 +79,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 href="/about"
                 className={`cursor-pointer rounded-lg hover:text-primary  transition 
                   ${isActive("/about")
-                    ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
+                    ? "underline underline-offset-6 decoration-wavy decoration-2 decoration-primary"
                     : ""}
                 `}
               >
@@ -93,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 href="/blog"
                 className={`cursor-pointer  rounded-lg hover:text-primary  transition 
                   ${isActive("/blog")
-                    ? " underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
+                    ? " underline underline-offset-6 decoration-wavy decoration-2 decoration-primary"
                     : ""}
                 `}
               >
@@ -106,7 +106,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 href="/projects"
                 className={`cursor-pointer  rounded-lg hover:text-primary  transition 
                   ${isActive("/projects")
-                    ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
+                    ? "underline underline-offset-6 decoration-wavy decoration-2 decoration-primary"
                     : ""}
                 `}
               >
@@ -121,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 href="/contact"
                 className={`cursor-pointer  rounded-lg hover:text-primary  transition 
                   ${isActive("/contact")
-                    ? "underline underline-offset-4 decoration-wavy decoration-2 decoration-primary"
+                    ? "underline underline-offset-6 decoration-wavy decoration-2 decoration-primary"
                     : ""}
                 `}
               >

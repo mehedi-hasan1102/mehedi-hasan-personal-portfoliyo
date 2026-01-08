@@ -75,7 +75,7 @@ const ProjectsHomePage: React.FC = () => {
     className="group inline-flex items-center gap-1
       hover:text-primary text-sm font-geist
       transition-all duration-300
-      hover:underline underline-offset-4 decoration-dashed"
+      hover:underline underline-offset-6 decoration-dashed"
   >
     See More
     <ChevronDown
