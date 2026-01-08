@@ -79,7 +79,7 @@ export default function BlogPost({ blog }: Props) {
               src={blog.image}
               alt={blog.title}
               fill
-              className="object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+              className="object-cover  rounded-xl transition-transform duration-500 hover:scale-105"
               quality={100}
             />
           </div>
@@ -107,7 +107,7 @@ export default function BlogPost({ blog }: Props) {
  [&_a]:font-bold
 
 [&_a]:transition-colors [&_a]:duration-200
-[&_a:hover]:underline [&_a:hover]:decoration-dotted [&_a:hover]:underline-offset-4 [&_a:hover]:text-primary
+[&_a]:underline [&_a]:underline-offset-6 [&_a]:decoration-dashed [&_a:hover]:decoration-dashed [&_a:hover]:underline-offset-6 [&_a:hover]:text-primary
 [&_a]:after:content-['⤴'] 
 [&_a]:after:ml-1 
 
