@@ -106,7 +106,7 @@ const socialLinks: SocialLink[] = [
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
-          className="flex flex-wrap justify-center gap-x-4 gap-y-3 text-xs sm:text-sm tracking-wide text-base-content/70"
+          className="flex flex-wrap justify-center gap-x-4 gap-y-3 text-xs sm:text-sm tracking-wide text-base-content/70 px-12"
         >
           {navLinks.map((link) => (
             <Link
@@ -121,7 +121,7 @@ const socialLinks: SocialLink[] = [
 
         {/* Copyright */}
         <p className="text-center text-xs text-base-content/50 mt-4">
-          &copy; {new Date().getFullYear()} Mehedi Hasan. All rights reserved.
+          &copy; {new Date().getFullYear()} Mehedi Hasan
         </p>
       </div>
     </motion.footer>
