@@ -2,8 +2,8 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Facebook } from "lucide-react";
-import { FaDev, FaDiscord, FaHackerrank, FaMedium, FaBehance, FaTelegramPlane, } from "react-icons/fa";
+import { Github, Linkedin, } from "lucide-react";
+import {  FaDev, FaEnvelope, FaMedium, } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 // import { SiBluesky } from "react-icons/si";
@@ -23,19 +23,13 @@ interface NavLink {
 }
 
 const Footer = () => {
-  const socialLinks: SocialLink[] = [
-    { icon: Github, href: "https://github.com/mehedi-hasan1102", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/mehedi-hasan1102/", label: "LinkedIn" },
-    { icon: FaDev, href: "https://dev.to/mehedihasan1102", label: "Dev.to" },
-    { icon: FaBehance, href: "https://www.behance.net/mehedihasan1102", label: "Behance" },
-    { icon: FaMedium, href: "https://medium.com/@mehedihasan1102", label: "Medium" },
-    { icon: FaXTwitter, href: "https://x.com/mehedihasan1102", label: "Twitter/X" },
-    // { icon: SiBluesky, href: "https://bsky.app/profile/mehedihasan1102.bsky.social", label: "Bluesky", },
-    { icon: FaTelegramPlane, href: "https://t.me/+8801747874773", label: "Telegram" },
-    { icon: FaDiscord, href: "https://discord.gg/QMmdb8nusc", label: "Discord" },
-    { icon: FaHackerrank, href: "https://www.hackerrank.com/profile/mehedi_hasan1102", label: "HackerRank" },
-    { icon: Facebook, href: "https://facebook.com/mehedi.hasan1102", label: "Facebook" },
-  ];
+const socialLinks: SocialLink[] = [
+  { icon: Github, href: "https://github.com/mehedi-hasan1102", label: "GitHub" },       // must-have
+  { icon: Linkedin, href: "https://www.linkedin.com/in/mehedi-hasan1102/", label: "LinkedIn" }, // must-have
+  { icon: FaEnvelope, href: "mailto:mehedi.hasan11023@gmail.com", label: "Email" },     // must-have
+  { icon: FaXTwitter, href: "https://x.com/mehedihasan1102", label: "X/Twitter" },     // recommended for tech presence
+];
+
 
   const navLinks: NavLink[] = [
 
@@ -46,6 +40,7 @@ const Footer = () => {
     { label: "Projects", href: "/projects" },
 
     { label: "Contact", href: "/contact" },
+    { label: "Links", href: "/links" },
   ];
 
   return (
@@ -77,25 +72,32 @@ const Footer = () => {
  <Logo />
 
           {/* Social Icons */}
-          <div className="mt-2 grid grid-cols-5 sm:grid-cols-5 md:grid-cols-10 gap-4 justify-items-center text-base-content/80">
-            {socialLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                  whileHover={{ y: -2, scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="hover:text-primary transition hover:rotate-12 "
-                >
-                  <Icon size={20} />
-                </motion.a>
-              );
-            })}
-          </div>
+   <motion.div
+  initial={{ opacity: 0, y: 10 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.15 }}
+  className="mt-2 flex flex-wrap justify-center gap-4 text-base-content/80"
+>
+  {socialLinks.map((link) => {
+    const Icon = link.icon;
+    return (
+      <motion.a
+        key={link.label}
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={link.label}
+        whileHover={{ y: -2, scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="hover:text-primary transition-transform hover:rotate-12"
+      >
+        <Icon size={18} />
+      </motion.a>
+    );
+  })}
+</motion.div>
+
+
 
         </motion.div>
 
