@@ -108,8 +108,7 @@ export default function BlogPost({ blog }: Props) {
 
 [&_a]:transition-colors [&_a]:duration-200
 [&_a]:underline [&_a]:underline-offset-6 [&_a]:decoration-dashed [&_a:hover]:decoration-dashed [&_a:hover]:underline-offset-6 [&_a:hover]:text-primary
-[&_a]:after:content-['⤴'] 
-[&_a]:after:ml-1 
+
 
     /* Lists */
     [&_ul]:list-disc [&_ul]:ml-8 [&_ul]:my-6 [&_ul]:space-y-3 [&_ul]:leading-relaxed sm:[&_ul]:leading-relaxed lg:[&_ul]:leading-loose
