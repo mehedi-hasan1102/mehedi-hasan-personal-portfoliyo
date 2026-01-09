@@ -145,7 +145,7 @@ export default function DashboardPage() {
  <img
             src="https://ghchart.rshah.org/mehedi-hasan1102"
             alt="Mehedi Hasan's GitHub Contribution Graph"
-            className="w-full h-auto my-6"
+            className="w-full h-auto my-6 bg-base-100 p-4 rounded-lg"
             loading="lazy"
           />
 </div>
