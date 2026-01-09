@@ -41,6 +41,9 @@ const socialLinks: SocialLink[] = [
 
     { label: "Contact", href: "/contact" },
     { label: "Links", href: "/links" },
+
+    { label: "Dashboard", href: "/dashboard" },
+    
   ];
 
   return (
