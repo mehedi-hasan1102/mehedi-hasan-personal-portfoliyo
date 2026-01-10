@@ -189,7 +189,7 @@ export default function DashboardPage() {
      
         {languagesData.length > 0 && (
   <div className="my-6 w-full rounded-lg">
-    <h3 className="text-xl mb-4 text-start">Most Used Languages</h3>
+    <h3 className="text-xl mb-4 text-start">Language Usage</h3>
 
     {/* Pie Chart */}
     <div className="w-full h-80 bg-">
