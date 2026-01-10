@@ -168,7 +168,7 @@ export default function DashboardPage() {
         </div>
 
         {/* GitHub Insights Image */}
-        <div className="mb-4">
+        <div className="my-6">
           
            
    <img src={`https://ghinsights.vercel.app/api/insight?username=${USERNAME}&theme=ocean&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=false`} alt="GitHub Insights" />
@@ -180,7 +180,7 @@ export default function DashboardPage() {
           <img
             src={`https://ghchart.rshah.org/${USERNAME}`}
             alt="GitHub Contribution Graph"
-            className="w-full h-auto my-6  p-4 rounded-lg"
+            className="w-full h-auto my-6  px-4 rounded-lg"
             loading="lazy"
           />
         </div>
@@ -188,8 +188,8 @@ export default function DashboardPage() {
         {/* Language PieChart */}
      
         {languagesData.length > 0 && (
-  <div className="my-6 w-full rounded-lg">
-    <h3 className="text-xl mb-4 text-start">Language Usage</h3>
+  <div className="pb-6 w-full rounded-lg">
+    <h3 className="text-xl my-3 text-start">Language Usage</h3>
 
     {/* Pie Chart */}
     <div className="w-full h-80 bg-">
@@ -218,7 +218,7 @@ export default function DashboardPage() {
     </div>
 
     {/* Languages Names Below Chart - Centered */}
-    <div className="flex flex-wrap justify-center gap-2 mt-4">
+    <div className="flex flex-wrap justify-center gap-2 ">
       {languagesData.map((lang, index) => (
         <div
           key={index}
@@ -236,7 +236,7 @@ export default function DashboardPage() {
         {/* Latest Repos */}
 
         <div className="mb-6">
-  <h3 className="text-xl mb-3">Latest Repositories</h3>
+  <h3 className="text-xl my-3">Latest Repositories</h3>
 
   {repos.length === 0 ? (
     <div className="bg-base-100 p-4 rounded-lg text-sm text-base-content/70">
@@ -278,7 +278,7 @@ export default function DashboardPage() {
 
         {/* Recent Commits */}
         <div>
-          <h3 className="text-xl mb-3">Recent Commits</h3>
+          <h3 className="text-xl my-3">Recent Commits</h3>
 
           {commits.length === 0 ? (
             <div className="bg-base-100 p-4 rounded-lg text-sm text-base-content/70">
