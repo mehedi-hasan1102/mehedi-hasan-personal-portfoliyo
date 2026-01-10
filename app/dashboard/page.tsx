@@ -169,10 +169,9 @@ export default function DashboardPage() {
 
         {/* GitHub Insights Image */}
         <div className="mb-4">
-          <img
-            src={`https://yourinsights.vercel.app/api/insight?username=${USERNAME}&theme=neo_green&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=true`}
-            alt="GitHub Insights"
-          />
+          
+           
+   <img src={`https://ghinsights.vercel.app/api/insight?username=${USERNAME}&theme=ocean&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=false`} alt="GitHub Insights" />
         </div>
 
         {/* Contribution Graph */}
@@ -190,7 +189,7 @@ export default function DashboardPage() {
      
         {languagesData.length > 0 && (
   <div className="my-6 w-full rounded-lg">
-    <h3 className="text-xl mb-4 text-start">Languages Used</h3>
+    <h3 className="text-xl mb-4 text-start">Most Used Languages</h3>
 
     {/* Pie Chart */}
     <div className="w-full h-80 bg-">
