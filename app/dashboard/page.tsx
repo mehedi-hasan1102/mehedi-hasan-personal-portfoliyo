@@ -235,38 +235,47 @@ export default function DashboardPage() {
 
 
         {/* Latest Repos */}
-        <div className="mb-6  ">
-          <h3 className="text-xl mb-3">Latest Repositories</h3>
-          <ul className="space-y-3">
-            {repos.map((repo) => (
-              <a
-                key={repo.name}
-                href={repo.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block p-4 rounded-lg hover:bg-base-100 transition-colors duration-200"
-              >
-                <div className="flex justify-between items-center">
-                  <span>{repo.name}</span>
-                  <motion.span
-                    className="opacity-0 group-hover:opacity-100"
-                    transition={{ duration: 0.2 }}
-                  >
-                    <ArrowUpRight size={16} />
-                  </motion.span>
-                </div>
-                <p className="text-sm text-base-content/80 mt-1 line-clamp-2 break-words">
-                  {repo.description || "No description"}
-                </p>
-                <div className="text-xs mt-2 flex gap-4">
-                  <span>⭐ {repo.stargazers_count}</span>
-                  <span>🍴 {repo.forks_count}</span>
-                  {repo.language && <span>🧠 {repo.language}</span>}
-                </div>
-              </a>
-            ))}
-          </ul>
-        </div>
+
+        <div className="mb-6">
+  <h3 className="text-xl mb-3">Latest Repositories</h3>
+
+  {repos.length === 0 ? (
+    <div className="bg-base-100 p-4 rounded-lg text-sm text-base-content/70">
+      No repositories found.
+    </div>
+  ) : (
+    <ul className="space-y-3">
+      {repos.map((repo) => (
+        <a
+          key={repo.name}
+          href={repo.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block p-4 rounded-lg hover:bg-base-100 transition-colors duration-200"
+        >
+          <div className="flex justify-between items-center">
+            <span>{repo.name}</span>
+            <motion.span
+              className="opacity-0 group-hover:opacity-100"
+              transition={{ duration: 0.2 }}
+            >
+              <ArrowUpRight size={16} />
+            </motion.span>
+          </div>
+          <p className="text-sm text-base-content/80 mt-1 line-clamp-2 break-words">
+            {repo.description || "No description"}
+          </p>
+          <div className="text-xs mt-2 flex gap-4 flex-wrap">
+            <span>⭐ {repo.stargazers_count}</span>
+            <span>🍴 {repo.forks_count}</span>
+            {repo.language && <span>🧠 {repo.language}</span>}
+          </div>
+        </a>
+      ))}
+    </ul>
+  )}
+</div>
+
 
         {/* Recent Commits */}
         <div>
