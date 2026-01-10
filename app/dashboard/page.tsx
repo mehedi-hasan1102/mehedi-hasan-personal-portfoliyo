@@ -241,7 +241,7 @@ export default function DashboardPage() {
 
   {repos.length === 0 ? (
     <div className="bg-base-100 p-4 rounded-lg text-sm text-base-content/70">
-      No repositories found.
+      Repositories are Loading !
     </div>
   ) : (
     <ul className="space-y-3">
@@ -283,7 +283,7 @@ export default function DashboardPage() {
 
           {commits.length === 0 ? (
             <div className="bg-base-100 p-4 rounded-lg text-sm text-base-content/70">
-              No recent commits found.
+              Commits are Loading !
             </div>
           ) : (
             <ul className="space-y-3">
