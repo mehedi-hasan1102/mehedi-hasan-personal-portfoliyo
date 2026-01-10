@@ -185,33 +185,57 @@ export default function DashboardPage() {
           </ul>
         </div>
 
+       
         {/* Recent Commits */}
-        <div>
-          <h3 className="text-xl  mb-3">Recent Commits</h3>
-          <ul className="space-y-3">
-            {commits.map((commit, idx) => (
-              <a
-                key={idx}
-                href={commit.url}
-                target="_blank"
-                className="group block p-4 rounded-lg hover:bg-base-100 transition-colors duration-200"
+<div>
+  <h3 className="text-xl mb-3">Recent Commits</h3>
+
+  {commits.length === 0 ? (
+    <div className="bg-base-100 p-4 rounded-lg text-sm text-base-content/70">
+      No recent commits found.
+    </div>
+  ) : (
+    <ul className="space-y-3">
+      {commits.map((commit, idx) => (
+        <a
+          key={idx}
+          href={commit.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block p-4 rounded-lg hover:bg-base-100 transition-colors duration-200"
+        >
+          <div className="flex justify-between items-start gap-3">
+            {/* Commit Message */}
+            <div className="flex-1 min-w-0">
+              <p
+                title={commit.message}
+                className="text-sm font-medium line-clamp-2 break-words"
               >
-                <div className="flex justify-between items-center ">
-                  <span>[{commit.repo}] {commit.message.split("\n")[0]}</span>
-                  <motion.span
-                    className="opacity-0 group-hover:opacity-100"
-                    transition={{ duration: 0.2 }}
-                  >
-                    <ArrowUpRight size={16} />
-                  </motion.span>
-                </div>
-                <p className="text-xs text-base-content/70 mt-1">
-                  {new Date(commit.date).toLocaleString()}
-                </p>
-              </a>
-            ))}
-          </ul>
-        </div>
+                <span className="text-base-content/70">
+                  [{commit.repo}]
+                </span>{" "}
+                {commit.message.split("\n")[0]}
+              </p>
+
+              <p className="text-xs text-base-content/60 mt-1">
+                {new Date(commit.date).toLocaleString()}
+              </p>
+            </div>
+
+            {/* Arrow Icon */}
+            <motion.span
+              className="mt-1 opacity-0 group-hover:opacity-100 transition-opacity"
+              aria-hidden
+            >
+              <ArrowUpRight size={16} />
+            </motion.span>
+          </div>
+        </a>
+      ))}
+    </ul>
+  )}
+</div>
+
       </div>
 
     </motion.section>
