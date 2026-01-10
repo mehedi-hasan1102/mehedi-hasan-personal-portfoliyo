@@ -32,6 +32,7 @@ interface Commit {
 interface LanguageData {
   name: string;
   value: number;
+  [key: string]: string | number;
 }
 
 export default function DashboardPage() {
