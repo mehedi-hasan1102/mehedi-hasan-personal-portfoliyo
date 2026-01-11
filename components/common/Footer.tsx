@@ -124,6 +124,8 @@ const Footer = () => {
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <Logo />
+         
+
 
           <div className="flex gap-4 text-base-content/70">
             {socialLinks.map((link) => {
@@ -135,7 +137,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="hover:text-primary transition"
+                  className="hover:text-primary transition  hover:rotate-12 "
                 >
                   <Icon size={18} />
                 </a>
