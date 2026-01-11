@@ -50,7 +50,7 @@ const Footer = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mx-auto max-w-3xl backdrop-blur-xl  mt-1 rounded-t-xl px-4 pt-0 pb-6 text-sm text-base-content"
+      className="mx-auto max-w-3xl backdrop-blur-xl  mt-1 rounded-t-xl px-0 pt-0 pb-6 text-sm text-base-content"
     >
       {/* Divider */}
       
@@ -71,7 +71,7 @@ const Footer = () => {
 {/* <div className="mb-12 h-px w-full bg-base-content/10" /> */}
 
       {/* ---------------- MOBILE (Peerlist style) ---------------- */}
-      <div className="space-y-12 md:hidden">
+      <div className="space-y-12 md:hidden px-4">
         {/* Main Pages */}
         <div>
           <p className="mb-4 text-xs uppercase tracking-widest text-base-content/40">
@@ -131,7 +131,7 @@ const Footer = () => {
       </div>
 
       {/* ---------------- DESKTOP (3 columns) ---------------- */}
-      <div className="hidden md:grid grid-cols-3 gap-12">
+      <div className="hidden md:grid grid-cols-3 gap-12 px-4">
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <Logo />
