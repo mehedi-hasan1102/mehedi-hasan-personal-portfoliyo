@@ -30,7 +30,7 @@ const socialLinks: SocialLink[] = [
 
   // Professional / Portfolio
   { icon: Linkedin, href: "https://www.linkedin.com/in/mehedi-hasan1102/", label: "LinkedIn" },
-  { icon: FiGlobe, href: "https://mehedi-h.vercel.app", label: "Portfolio" },
+  { icon: FiGlobe, href: "https://mehedi-h.vercel.app", label: "Portfolio Website" },
   { icon: FiFileText, href: "https://m-hasan.vercel.app/Resume_of_Mehedi_Hasan.pdf", label: "Resume" },
   { icon: FiMail, href: "mailto:mehedi.hasan11023@gmail.com", label: "Email" },
 
