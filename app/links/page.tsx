@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 // React-icons imports
 import { FiGlobe, FiMail, FiFileText } from "react-icons/fi";
 import { Github, Linkedin, Facebook, Instagram } from "lucide-react";
-import { FaDev, FaDiscord, FaHackerrank, FaMedium,FaDribbble, FaBehance, FaTelegramPlane, FaWhatsapp, FaPinterest, FaCodepen, FaFigma, FaYoutube } from "react-icons/fa";
+import { FaDev, FaDiscord, FaHackerrank, FaMedium,FaDribbble, FaBehance, FaTelegramPlane, FaWhatsapp, FaPinterest, FaCodepen, FaFigma, FaYoutube, FaStackOverflow  } from "react-icons/fa";
 import { FaThreads, FaXTwitter } from "react-icons/fa6";
 import { SiBluesky, SiQuora } from "react-icons/si";
 
@@ -22,6 +22,8 @@ const socialLinks: SocialLink[] = [
   // Developer / Code
   { icon: Github, href: "https://github.com/mehedi-hasan1102", label: "GitHub" },
   { icon: FaDev, href: "https://dev.to/mehedihasan1102", label: "Dev.to" },
+  {
+    icon: FaStackOverflow, href: "https://stackoverflow.com/users/31918992/mehedi-hasan", label: "Stack Overflow",},
   { icon: FaHackerrank, href: "https://www.hackerrank.com/profile/mehedi_hasan1102", label: "HackerRank" },
   { icon: FaCodepen, href: "https://codepen.io/mehedihasan1102", label: "CodePen" },
 
