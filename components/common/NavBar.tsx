@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="backdrop-blur-sm flex items-center justify-between border border-primary/30 bg-base-200 text-base-content px-4 md:px-6 py-3 rounded-lg shadow-lg transition-shadow duration-300"
+          className="backdrop-blur-sm flex items-center justify-between border border-primary/30 bg-base-200 text-base-content px-4  py-3 rounded-lg shadow-lg transition-shadow duration-300"
         >
           {/* Logo */}
           

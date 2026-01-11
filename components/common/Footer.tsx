@@ -50,16 +50,25 @@ const Footer = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mx-auto max-w-3xl backdrop-blur-xl  mt-1 rounded-t-xl px-6 pt-10 pb-4 text-sm text-base-content"
+      className="mx-auto max-w-3xl backdrop-blur-xl  mt-1 rounded-t-xl px-4 pt-2 pb-4 text-sm text-base-content"
     >
       {/* Divider */}
       
-       <motion.div
+       {/* <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: "100%" }}
           transition={{ duration: 0.5 }}
-          className="h-px bg-primary/30  mb-6"
-        />
+          className="h-px bg-primary/30  mb-10"
+        /> */}
+        
+ <motion.div
+ initial={{ width: 0 }}
+          whileInView={{ width: "100%" }}
+          transition={{ duration: 0.5 }}
+ className="mb-10 h-px w-full bg-base-content/10" />
+
+
+{/* <div className="mb-12 h-px w-full bg-base-content/10" /> */}
 
       {/* ---------------- MOBILE (Peerlist style) ---------------- */}
       <div className="space-y-12 md:hidden">
@@ -92,7 +101,8 @@ const Footer = () => {
         </div>
 
         {/* Brand */}
-        <div className="border-t border-base-content/10 pt-6">
+        <div className="border-t border-base-content/10 pt-6 ">
+        
           <Logo />
 
           <div className="mt-4 flex gap-4 text-base-content/70">
