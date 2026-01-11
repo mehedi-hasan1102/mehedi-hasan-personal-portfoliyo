@@ -156,7 +156,7 @@ const Footer = () => {
             })}
           </div>
 
-          <p className="text-xs text-base-content/40 mt-14">
+          <p className="text-xs text-base-content/40 ">
             © {new Date().getFullYear()} Mehedi Hasan
           </p>
         </div>

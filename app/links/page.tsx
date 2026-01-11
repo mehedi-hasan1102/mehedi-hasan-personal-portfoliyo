@@ -9,7 +9,9 @@ import { FiGlobe, FiMail, FiFileText } from "react-icons/fi";
 import { Github, Linkedin, Facebook, Instagram } from "lucide-react";
 import { FaDev, FaDiscord, FaHackerrank, FaMedium,FaDribbble, FaBehance, FaTelegramPlane, FaWhatsapp, FaPinterest, FaCodepen, FaFigma, FaYoutube, FaStackOverflow  } from "react-icons/fa";
 import { FaThreads, FaXTwitter, FaHashnode  } from "react-icons/fa6";
-import { SiBluesky, SiQuora } from "react-icons/si";
+import { SiBluesky, SiQuora,SiPeerlist } from "react-icons/si";
+
+
 
 /* ---------------- Social Links Data ---------------- */
 interface SocialLink {
@@ -30,6 +32,8 @@ const socialLinks: SocialLink[] = [
 
   // Professional / Portfolio
   { icon: Linkedin, href: "https://www.linkedin.com/in/mehedi-hasan1102/", label: "LinkedIn" },
+  {
+  icon: SiPeerlist, href: "https://peerlist.io/mehedihasan",label: "Peerlist",},
   { icon: FiGlobe, href: "https://mehedi-h.vercel.app", label: "Portfolio Website" },
   { icon: FiFileText, href: "https://m-hasan.vercel.app/Resume_of_Mehedi_Hasan.pdf", label: "Resume" },
   { icon: FiMail, href: "mailto:mehedi.hasan11023@gmail.com", label: "Email" },
