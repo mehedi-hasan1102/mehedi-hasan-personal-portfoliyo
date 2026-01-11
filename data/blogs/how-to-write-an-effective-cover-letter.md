@@ -79,11 +79,31 @@ Proofread carefully to ensure there are no factual or grammatical errors.
 
 Here are three prompts you can use with ChatGPT to quickly generate a professional cover letter:
 
-`"Write a conversational cover letter for a [position] role at [company] using my resume below as a reference."`
 
-`"Draft a persuasive cover letter in 150 words or less highlighting my qualifications and enthusiasm for the [position] at [company] using my resume achievements below."`
 
-`"Compose a professional cover letter demonstrating how my abilities align with the requirements for the [position] at [company]. Use the information below as a guide."`
+📝 Prompt:1
+```
+Write a conversational cover letter for a [position] role at 
+[company] using my resume below as a reference.
+```
+
+
+
+
+
+📝 Prompt:2
+```
+Draft a persuasive cover letter in 150 words or less highlighting my 
+qualifications and enthusiasm for the [position] at [company] using my
+resume achievements below.
+```
+
+📝 Prompt:3
+```
+Compose a professional cover letter demonstrating how my
+abilities align with the requirements for the [position] 
+at [company]. Use the information below as a guide.
+```
 
 Simply provide your resume and the job description as references.
 
