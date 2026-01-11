@@ -50,7 +50,7 @@ const Footer = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mx-auto max-w-3xl backdrop-blur-xl  mt-1 rounded-t-xl px-4 pt-2 pb-4 text-sm text-base-content"
+      className="mx-auto max-w-3xl backdrop-blur-xl  mt-1 rounded-t-xl px-4 pt-2 pb-6 text-sm text-base-content"
     >
       {/* Divider */}
       
