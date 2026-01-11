@@ -50,22 +50,22 @@ const Footer = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mx-auto max-w-3xl backdrop-blur-xl  mt-1 rounded-t-xl px-4 pt-2 pb-4 text-sm text-base-content"
+      className="mx-auto max-w-3xl backdrop-blur-xl  mt-1 rounded-t-xl px-4 pt-0 pb-4 text-sm text-base-content"
     >
       {/* Divider */}
       
-       {/* <motion.div
+       <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: "100%" }}
           transition={{ duration: 0.5 }}
-          className="h-px bg-primary/30  mb-10"
-        /> */}
+          className="h-px bg-primary/30 w-full mb-10"
+        />
         
- <motion.div
+ {/* <motion.div
  initial={{ width: 0 }}
           whileInView={{ width: "100%" }}
           transition={{ duration: 0.5 }}
- className="mb-10 h-px w-full bg-base-content/10" />
+ className="mb-10 h-px w-full bg-base-content/10" /> */}
 
 
 {/* <div className="mb-12 h-px w-full bg-base-content/10" /> */}
@@ -101,7 +101,8 @@ const Footer = () => {
         </div>
 
         {/* Brand */}
-        <div className="border-t border-base-content/10 pt-6 ">
+        {/* <div className="border-t border-base-content/10 pt-6 "> */}
+         <div className="border-t border-base-content/10 pt-6 ">
         
           <Logo />
 
