@@ -57,12 +57,12 @@ const GitHubAboutSection: React.FC = () => {
       className="
           
          font-medium hover:text-primary
-        hover:underline underline-offset-6 decoration-dashed
+        underline underline-offset-6 decoration-dashed
          transition-all duration-300
       "
     >
-      Github ⤴
-    </a> 
+      Github
+    </a>. 
    
   </p>
 </div>

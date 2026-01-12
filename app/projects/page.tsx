@@ -238,12 +238,12 @@ const AllProjectsPage: React.FC = () => {
       className="
           
          font-medium hover:text-primary
-        hover:underline underline-offset-6 decoration-dashed
+        underline underline-offset-6 decoration-dashed
          transition-all duration-300
       "
     >
-      Github ⤴
-    </Link> 
+      Github
+    </Link>. 
    
   </p>
 </div>

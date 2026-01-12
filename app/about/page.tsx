@@ -78,10 +78,10 @@ const AboutPage: React.FC = () => {
             href="https://www.linkedin.com/in/mehedi-hasan1102/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium hover:text-primary hover:underline underline-offset-6 decoration-dashed transition-colors"
+            className="font-medium hover:text-primary underline underline-offset-6 decoration-dashed transition-colors"
           >
-            LinkedIn ⤴
-          </a>
+            LinkedIn
+          </a>.
         </p>
       </motion.div>
     </div>

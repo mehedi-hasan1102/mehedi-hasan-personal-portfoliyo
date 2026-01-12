@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github } from "lucide-react";
+import { ArrowUpRight} from 'lucide-react';
+
+
 import Link from 'next/link';
+
 
 const GitHubActivitySection: React.FC = () => {
   return (
@@ -42,7 +45,7 @@ const GitHubActivitySection: React.FC = () => {
         </div>
        
 <div className="my-4 px-4  text-center">
- <p
+ {/* <p
     className="
       text-sm   leading-relaxed
     "
@@ -63,7 +66,26 @@ const GitHubActivitySection: React.FC = () => {
       Github ⤴
     </Link> 
    
-  </p>
+  </p> */}
+  <Link
+  href="https://github.com/mehedi-hasan1102"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    group inline-flex items-center gap-1
+    text-sm
+    transition-all
+    hover:text-primary
+    hover:underline underline-offset-6 decoration-dashed
+  "
+>
+  View GitHub
+  <ArrowUpRight  
+    size={14}
+    className="transition-transform duration-200 group-hover:translate-x-1"
+  />
+</Link>
+
 </div>
 
 
