@@ -36,7 +36,7 @@ const SkillsAboutSection: React.FC = () => {
       className="max-w-3xl mx-auto px-6 py-20 font-geist flex flex-col items-center overflow-hidden relative"
     >
       <div className="relative mb-20 group">
-        <motion.div
+        {/* <motion.div
           initial={{ y: -20 }}
           whileInView={{ y: 0 }}
           className="relative z-10 border-[1.5px] border-base-content px-10 py-4 bg-base-100 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.02)]"
@@ -44,9 +44,44 @@ const SkillsAboutSection: React.FC = () => {
           <h2 className="text-xl md:text-base font-black tracking-[0.3em] uppercase text-base-content">
             Expertise Stack
           </h2>
-        </motion.div>
+        </motion.div> */}
+        <motion.div
+  initial={{ y: -12 }}
+  whileInView={{ y: 0 }}
+  className="
+    relative z-10
+    border-[1px] border-base-content
+    px-4 py-2
+    sm:px-6 sm:py-3
+    md:px-8 md:py-3
+    bg-base-100
+    shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)]
+    sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.05)]
+    md:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.05)]
+    dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.02)]
+    sm:dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.02)]
+    md:dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.02)]
+  "
+>
+  <h2
+    className="
+      text-sm
+      sm:text-base
+      md:text-lg
+      font-black
+      tracking-[0.2em]
+      sm:tracking-[0.25em]
+      md:tracking-[0.25em]
+      uppercase
+      text-base-content
+    "
+  >
+    Expertise Stack
+  </h2>
+</motion.div>
 
-        <div className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[500px] h-20 pointer-events-none" aria-hidden="true">
+
+        <div className=" absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[500px] h-20 pointer-events-none" aria-hidden="true">
           <svg className="w-full h-full" viewBox="0 0 500 80" fill="none">
             <motion.path d="M250 0 V80" className="stroke-primary/80" strokeWidth="1" variants={lineVariants} initial="hidden" whileInView="visible" />
             <motion.path d="M250 0 V40 H80 V80" className="stroke-base-content/60" strokeWidth="1" variants={lineVariants} initial="hidden" whileInView="visible" />
