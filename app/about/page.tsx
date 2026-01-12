@@ -105,11 +105,14 @@ const AboutPage: React.FC = () => {
 
 
 
+{/* Skills first */}
+<SkillsAboutSection />
 
-        {/* Resume, GitHub Activity & Skills */}
-        <ResumeAboutSections />
-        <GitHubAboutSection />
-        <SkillsAboutSection />
+{/* Resume / Experience */}
+<ResumeAboutSections />
+
+{/* GitHub Activity / Open Source */}
+<GitHubAboutSection />
       </div>
 
 
