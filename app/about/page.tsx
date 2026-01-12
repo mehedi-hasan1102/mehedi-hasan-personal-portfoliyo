@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
         {/* Profile + Content */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
           {/* Left: Profile Image (portrait style) */}
-          <motion.div
+          {/* <motion.div
             whileHover={{ scale: 1.02 }}
             className="relative w-full md:w-64 h-80 overflow-hidden rounded-xl flex-shrink-0"
           >
@@ -44,7 +44,20 @@ const AboutPage: React.FC = () => {
               className="object-cover"
               priority
             />
-          </motion.div>
+          </motion.div> */}
+          <motion.div
+  whileHover={{ scale: 1.03 }}
+  className="relative w-48 h-64 md:w-56 md:h-72 overflow-hidden rounded-2xl shadow-lg flex-shrink-0 transition-transform duration-300"
+>
+  <Image
+    src="/assets/images/about.png"
+    alt="Mehedi Hasan"
+    fill
+    className="object-cover"
+    priority
+  />
+</motion.div>
+
 
           {/* Right: Content */}
           <motion.div
