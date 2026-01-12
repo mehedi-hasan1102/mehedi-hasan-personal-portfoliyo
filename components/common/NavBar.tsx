@@ -194,7 +194,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-       className="fixed top-0 left-0 h-full w-full max-w-[75%] bg-base-200 text-base-content z-100 shadow-2xl flex flex-col justify-between px-6 py-4 rounded-r-lg border-r border-r-primary/30"
+       className="fixed top-0 left-0 h-full w-full max-w-[75%] bg-base-200 text-base-content z-100 shadow-2xl flex flex-col justify-between px-6 py-4 rounded-r-lg border-r border-t border-b border-primary/30"
 
               >
                 {/* Drawer Header */}
