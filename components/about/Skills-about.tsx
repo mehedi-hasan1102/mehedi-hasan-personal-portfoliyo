@@ -35,7 +35,7 @@ const SkillsAboutSection: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 font-geist flex flex-col items-center overflow-hidden relative"
+      className=" px-4 py-0 md:py-16 font-geist flex flex-col items-center overflow-hidden relative text-base-content font-geist max-w-3xl mx-auto pt-6  space-y-8"
     >
       {/* Section Title */}
       <div className="relative mb-6 sm:mb-20 group w-full flex justify-center">
