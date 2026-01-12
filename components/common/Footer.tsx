@@ -71,8 +71,12 @@ const Footer = () => {
 {/* <div className="mb-12 h-px w-full bg-base-content/10" /> */}
 
       {/* ---------------- MOBILE (Peerlist style) ---------------- */}
-      <div className="space-y-12 md:hidden px-4">
-        {/* Main Pages */}
+      <div className="space-y-12 md:hidden px-4 ">
+
+
+        <div className="flex  justify-between">
+          
+           {/* Main Pages */}
         <div>
           <p className="mb-4 text-xs uppercase tracking-widest text-base-content/40">
             Main Pages
@@ -98,7 +102,8 @@ const Footer = () => {
               </Link>
             ))}
           </div>
-        </div>
+        </div></div>
+        
 
         {/* Brand */}
         {/* <div className="border-t border-base-content/10 pt-6 "> */}
