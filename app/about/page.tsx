@@ -63,17 +63,15 @@ const AboutPage: React.FC = () => {
         className="flex flex-col justify-center space-y-3"
       >
         <p className="text-sm sm:text-base text-base-content/80 leading-relaxed">
-          I’m Mehedi Hasan, a Full-Stack Web Developer focused on building fast, scalable web
-          applications using the MERN stack, Next.js, React, and Tailwind CSS.
+          I’m Mehedi Hasan, a Full-Stack Web Developer specializing in building fast, scalable web applications using the MERN stack, Next.js, React, and Tailwind CSS.
         </p>
 
         <p className="text-sm sm:text-base text-base-content/80 leading-relaxed">
-          I enjoy exploring modern web technologies, contributing to open source, and creating
-          user-friendly solutions that deliver real impact.
+        I build scalable, user-focused web applications and contribute to open-source projects. I enjoy exploring modern web technologies and delivering practical solutions that make a real impact.
         </p>
 
         <p className="text-sm sm:text-base text-base-content/80 leading-relaxed">
-          You can find more about me on{" "}
+         Connect with me on {" "}
           <a
             href="https://www.linkedin.com/in/mehedi-hasan1102/"
             target="_blank"
@@ -81,7 +79,7 @@ const AboutPage: React.FC = () => {
             className="font-medium hover:text-primary underline underline-offset-6 decoration-dashed transition-colors"
           >
             LinkedIn
-          </a>.
+          </a> to explore my projects and professional journey.
         </p>
       </motion.div>
     </div>
