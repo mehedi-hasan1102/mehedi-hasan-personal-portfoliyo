@@ -37,16 +37,18 @@ const Footer = () => {
   const mainPages: NavLink[] = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
+   
     { label: "Projects", href: "/projects" },
+     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ];
 
   const morePages: NavLink[] = [
     
     { label: "Links", href: "/links" },
-    { label: "Dashboard", href: "/dashboard" },
+   
     { label: "Resume", href: "/Resume_of_Mehedi_Hasan.pdf" },
+     { label: "Dashboard", href: "/dashboard" },
     {
   label: "Book a Meeting",
   href: CALENDLY_URL,

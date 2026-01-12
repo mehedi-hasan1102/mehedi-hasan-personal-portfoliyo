@@ -87,6 +87,19 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
               </Link>
             </li>
 
+ <li>
+              <Link
+                href="/projects"
+                className={`cursor-pointer  rounded-lg hover:text-primary  transition 
+                  ${isActive("/projects")
+                    ? "underline underline-offset-6 decoration-wavy decoration-2 decoration-primary"
+                    : ""}
+                `}
+              >
+                Projects
+              </Link>
+            </li>
+
 
             <li>
               <Link
@@ -101,18 +114,7 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
               </Link>
             </li>
 
-            <li>
-              <Link
-                href="/projects"
-                className={`cursor-pointer  rounded-lg hover:text-primary  transition 
-                  ${isActive("/projects")
-                    ? "underline underline-offset-6 decoration-wavy decoration-2 decoration-primary"
-                    : ""}
-                `}
-              >
-                Projects
-              </Link>
-            </li>
+           
 
 
 
@@ -171,20 +173,29 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
         <AnimatePresence>
           {menuOpen && (
             <>
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.5 }}
                 exit={{ opacity: 0 }}
                 className="fixed inset-0 bg-black z-20 md:hidden"
                 onClick={() => setMenuOpen(false)}
-              />
+              /> */}
+              <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  className="fixed inset-0 z-20 md:hidden bg-black/20 backdrop-blur-sm"
+  onClick={() => setMenuOpen(false)}
+/>
+
 
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="fixed top-0 left-0 h-full w-full bg-base-200 text-base-content z-100 shadow-2xl flex flex-col justify-between px-6 py-4"
+       className="fixed top-0 left-0 h-full w-full max-w-[75%] bg-base-200 text-base-content z-100 shadow-2xl flex flex-col justify-between px-6 py-4 rounded-r-lg border-r border-r-primary/30"
+
               >
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between px-5 py-4 border-b border-primary/30">
@@ -200,13 +211,13 @@ const Navbar: React.FC<NavbarProps> = ({ blogs }) => {
                 </div>
 
                 {/* Drawer Links */}
-                <ul className="flex-1 flex flex-col gap-2 mt-4">
+                <ul className="flex-1 flex flex-col gap-2 mt-4 ">
                   {[
                     { name: "Home", route: "/" },
                     { name: "About", route: "/about" },
-                     { name: "Blog", route: "/blog" },
-                    { name: "Projects", route: "/projects" },
                    
+                    { name: "Projects", route: "/projects" },
+                     { name: "Blog", route: "/blog" },
                     { name: "Contact", route: "/contact" },
                   ].map((item) => (
                     <li key={item.route}>
