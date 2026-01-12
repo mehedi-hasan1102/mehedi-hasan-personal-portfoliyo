@@ -7,8 +7,6 @@ import { Typewriter } from "react-simple-typewriter";
 import { Link as ScrollLink } from "react-scroll";
 import { BorderBeam } from "@/components/ui/border-beam";
 
-
-
 const HeroSection: React.FC = () => {
   return (
     <motion.section
