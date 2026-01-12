@@ -48,9 +48,9 @@ const SkillsAboutSection: React.FC = () => {
 
         <div className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[500px] h-20 pointer-events-none" aria-hidden="true">
           <svg className="w-full h-full" viewBox="0 0 500 80" fill="none">
-            <motion.path d="M250 0 V80" className="stroke-primary/30" strokeWidth="1" variants={lineVariants} initial="hidden" whileInView="visible" />
-            <motion.path d="M250 0 V40 H80 V80" className="stroke-base-content/10" strokeWidth="1" variants={lineVariants} initial="hidden" whileInView="visible" />
-            <motion.path d="M250 0 V40 H420 V80" className="stroke-base-content/10" strokeWidth="1" variants={lineVariants} initial="hidden" whileInView="visible" />
+            <motion.path d="M250 0 V80" className="stroke-primary/80" strokeWidth="1" variants={lineVariants} initial="hidden" whileInView="visible" />
+            <motion.path d="M250 0 V40 H80 V80" className="stroke-base-content/60" strokeWidth="1" variants={lineVariants} initial="hidden" whileInView="visible" />
+            <motion.path d="M250 0 V40 H420 V80" className="stroke-base-content/60" strokeWidth="1" variants={lineVariants} initial="hidden" whileInView="visible" />
           </svg>
         </div>
       </div>
