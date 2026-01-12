@@ -20,7 +20,11 @@ interface NavLink {
   href: string;
 }
 
+
+const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL!;
+
 /* ---------------- Component ---------------- */
+
 
 const Footer = () => {
   const socialLinks: SocialLink[] = [
@@ -42,6 +46,12 @@ const Footer = () => {
     
     { label: "Links", href: "/links" },
     { label: "Dashboard", href: "/dashboard" },
+    { label: "Resume", href: "/Resume_of_Mehedi_Hasan.pdf" },
+    {
+  label: "Book a Meeting",
+  href: CALENDLY_URL,
+}
+
   ];
 
   return (
@@ -168,8 +178,11 @@ const Footer = () => {
 
         {/* Main Pages */}
         <div className="flex flex-col gap-3 text-base-content/70">
+        <p className="mb-4 text-xs uppercase tracking-widest text-base-content/40">
+            Main Pages
+          </p>
           {mainPages.map((link) => (
-            <Link key={link.label} href={link.href} className="hover:text-primary transition">
+            <Link key={link.label} href={link.href} className="hover:text-primary transition underline-offset-6 decoration-dashed hover:underline">
               {link.label}
             </Link>
           ))}
@@ -177,8 +190,11 @@ const Footer = () => {
 
         {/* More */}
         <div className="flex flex-col gap-3 text-base-content/70">
+        <p className="mb-4 text-xs uppercase tracking-widest text-base-content/40 ">
+            More
+          </p>
           {morePages.map((link) => (
-            <Link key={link.label} href={link.href} className="hover:text-primary transition">
+            <Link key={link.label} href={link.href} className="hover:text-primary transition underline-offset-6 decoration-dashed hover:underline">
               {link.label}
             </Link>
           ))}
