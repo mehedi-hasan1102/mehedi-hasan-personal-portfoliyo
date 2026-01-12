@@ -43,7 +43,7 @@ const Footer = () => {
     { label: "Contact", href: "/contact" },
   ];
 
-  const morePages: NavLink[] = [
+  const ResourcesPages: NavLink[] = [
     
     { label: "Links", href: "/links" },
    
@@ -102,13 +102,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* More */}
+        {/* Resources */}
         <div>
           <p className="mb-4 text-xs uppercase tracking-widest text-base-content/40">
-            More
+            Resources
           </p>
           <div className="flex flex-col gap-3 text-base-content/70">
-            {morePages.map((link) => (
+            {ResourcesPages.map((link) => (
               <Link key={link.label} href={link.href} className="hover:text-primary transition">
                 {link.label}
               </Link>
@@ -190,12 +190,12 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* More */}
+        {/* Resources */}
         <div className="flex flex-col gap-3 text-base-content/70">
         <p className="mb-4 text-xs uppercase tracking-widest text-base-content/40 ">
-            More
+            Resources
           </p>
-          {morePages.map((link) => (
+          {ResourcesPages.map((link) => (
             <Link key={link.label} href={link.href} className="hover:text-primary transition underline-offset-6 decoration-dashed hover:underline">
               {link.label}
             </Link>
