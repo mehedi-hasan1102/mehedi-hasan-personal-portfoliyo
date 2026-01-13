@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
     </motion.div>
 
     {/* Profile + Content */}
-    <div className="flex flex-col md:flex-row gap-6 md:gap-8 px-0 md:px-4 ">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-8 px-0  ">
       {/* Image */}
       <motion.div
         whileHover={{ scale: 1.03 }}
