@@ -126,3 +126,31 @@ body {
 #smooth-content {
   will-change: transform;
 }
+
+
+/* =====================================================
+   Custom Cursor – Global UX Rules
+===================================================== */
+
+/* Default: keep system cursor */
+html {
+  cursor: auto;
+}
+
+/* When custom cursor is active */
+html.custom-cursor-active * {
+  cursor: none !important;
+}
+
+/* Allow pointer cursor on links & buttons */
+html.custom-cursor-active a,
+html.custom-cursor-active button,
+html.custom-cursor-active [data-show-cursor="pointer"] {
+  cursor: pointer !important;
+}
+
+/* Keep text cursor for form inputs */
+html.custom-cursor-active input,
+html.custom-cursor-active textarea {
+  cursor: text !important;
+}

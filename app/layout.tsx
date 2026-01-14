@@ -7,9 +7,12 @@ import Footer from "@/components/common/Footer";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
 import ScrollToTopButton from "@/components/common/ScrollButton";
 import Navbar from "@/components/common/NavBar";
-// import SplashScreen from '@/components/ui/SplashScreen';
+import Splash from '@/components/ui/Splash';
 import { getSortedBlogsData } from "@/lib/blogs";
 import ScrollSmootherProvider from '@/app/providers/ScrollSmootherProvider';
+import CustomCursor from "@/components/common/CustomCursor";
+import { Toaster } from "react-hot-toast";
+
 
 
 export const metadata = {
@@ -103,14 +106,37 @@ export default async function RootLayout({
       </head>
      <body suppressHydrationWarning>
   <ClientThemeProvider>
-     {/* <SplashScreen /> */}
+     <Splash />
     <Background />
+<CustomCursor />
+
+
+
+
+{/* 🔔 GLOBAL TOASTER (RIGHT PLACE) */}
+    <Toaster
+      position="top-right"
+      reverseOrder={false}
+      toastOptions={{
+        duration: 4000,
+        style: {
+          background: "transparent",
+          boxShadow: "none",
+        },
+      }}
+    />
+
 
     {/* GSAP ScrollSmoother – ONLY ONCE */}
     <ScrollSmootherProvider>
       <div className="px-2 lg:px-0">
         <Navbar blogs={allBlogsData} />
-        <main>{children}</main>
+        <main>{children}
+
+
+          
+        </main>
+        
         <Footer />
       </div>
     </ScrollSmootherProvider>

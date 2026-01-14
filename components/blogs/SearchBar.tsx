@@ -54,7 +54,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onClose, blogs }) => {
   }, [query, blogs]);
 
   return createPortal(
-    <div className="fixed inset-0 z-[99999] bg-black/50 backdrop-blur-sm flex justify-center items-start pt-24 p-4">
+    <div className="fixed inset-0 z-[50] bg-black/50 backdrop-blur-sm flex justify-center items-start pt-24 p-4">
       <div ref={searchBarRef} className="bg-base-200 rounded-xl w-full max-w-lg p-6 shadow-lg border border-primary/30">
         {/* Search Input */}
         <div className="flex justify-between items-center mb-4">
