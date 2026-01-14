@@ -38,7 +38,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="font-geist fixed inset-0 backdrop-blur-sm z-[9999]
+          className="font-geist fixed inset-0 backdrop-blur-sm z-[99]
                      p-4 flex items-center justify-center"
         >
           <motion.div

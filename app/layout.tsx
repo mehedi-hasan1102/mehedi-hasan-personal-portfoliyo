@@ -9,9 +9,10 @@ import ScrollToTopButton from "@/components/common/ScrollButton";
 import Navbar from "@/components/common/NavBar";
 import Splash from '@/components/ui/Splash';
 import { getSortedBlogsData } from "@/lib/blogs";
-import ScrollSmootherProvider from '@/app/providers/ScrollSmootherProvider';
+// import ScrollSmootherProvider from '@/app/providers/ScrollSmootherProvider';
 import CustomCursor from "@/components/common/CustomCursor";
 import { Toaster } from "react-hot-toast";
+
 
 
 
@@ -127,8 +128,9 @@ export default async function RootLayout({
     />
 
 
+
     {/* GSAP ScrollSmoother – ONLY ONCE */}
-    <ScrollSmootherProvider>
+    {/* <ScrollSmootherProvider> */}
       <div className="px-2 lg:px-0">
         <Navbar blogs={allBlogsData} />
         <main>{children}
@@ -139,10 +141,12 @@ export default async function RootLayout({
         
         <Footer />
       </div>
-    </ScrollSmootherProvider>
+    {/* </ScrollSmootherProvider> */}
 
     <ScrollToTopButton />
     <WhatsAppButton />
+
+    
   </ClientThemeProvider>
 </body>
 
