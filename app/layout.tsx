@@ -9,6 +9,7 @@ import ScrollToTopButton from "@/components/common/ScrollButton";
 import Navbar from "@/components/common/NavBar";
 // import SplashScreen from '@/components/ui/SplashScreen';
 import { getSortedBlogsData } from "@/lib/blogs";
+import ScrollSmootherProvider from '@/app/providers/ScrollSmootherProvider';
 
 
 export const metadata = {
@@ -100,23 +101,25 @@ export default async function RootLayout({
         {/* Canonical URL */}
         <link rel="canonical" href="https://m-hasan.vercel.app" />
       </head>
-      <body suppressHydrationWarning>
-        <ClientThemeProvider>
-          {/* Splash mounted once */}
-          {/* <SplashScreen /> */}
+     <body suppressHydrationWarning>
+  <ClientThemeProvider>
+     {/* <SplashScreen /> */}
+    <Background />
 
-          <Background />
+    {/* GSAP ScrollSmoother – ONLY ONCE */}
+    <ScrollSmootherProvider>
+      <div className="px-2 lg:px-0">
+        <Navbar blogs={allBlogsData} />
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </ScrollSmootherProvider>
 
-          <div className="px-2 lg:px-0">
-            <Navbar blogs={allBlogsData} />
-            <main>{children}</main>
-            <Footer />
-          </div>
+    <ScrollToTopButton />
+    <WhatsAppButton />
+  </ClientThemeProvider>
+</body>
 
-          <ScrollToTopButton />
-          <WhatsAppButton />
-        </ClientThemeProvider>
-      </body>
     </html>
   );
 }

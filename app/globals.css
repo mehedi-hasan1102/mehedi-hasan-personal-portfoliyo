@@ -107,3 +107,22 @@ body {
 .simplebar-scrollbar:hover:before {
   background-color: #16a34a !important;
 }
+
+
+
+/* gsap */
+html,
+body {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+#smooth-wrapper {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+#smooth-content {
+  will-change: transform;
+}
