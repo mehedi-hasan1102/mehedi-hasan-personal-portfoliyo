@@ -7,8 +7,8 @@ import BlogHomePage from '@/components/home/BlogHomePage';
 import GitHubActivitySection from '@/components/home/GitHub';
 import SkillsSection from '@/components/home/Skills';
 import ContactHomePage from '@/components/home/ContactHomePage';
-import WhatsAppButton from '@/components/common/WhatsAppButton';
-import ScrollToTopButton from '@/components/common/ScrollButton';
+// import WhatsAppButton from '@/components/common/WhatsAppButton';
+// import ScrollToTopButton from '@/components/common/ScrollButton';
 import { getSortedBlogsData } from '@/lib/blogs';
 import WhatIDoSection from '@/components/home/WhatIDoSection';
 
@@ -49,8 +49,8 @@ export default async function Home() {
   <ContactHomePage />
 
   {/* UX Enhancements */}
-  <WhatsAppButton />
-  <ScrollToTopButton />
+  {/* <WhatsAppButton />
+  <ScrollToTopButton /> */}
       
     </div>
   );
