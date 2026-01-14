@@ -150,10 +150,10 @@ const ContactMe: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className=" text-base-content font-geist max-w-3xl mx-auto pt-1   "
+      className="relative text-base-content font-geist max-w-3xl mx-auto pt-1   "
     >
       <Toaster position="top-right" reverseOrder={false} />
-<div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 z-10 hidden md:block">
+<div className="pointer-events-none absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:block">
         <Image
           src="/globe-outline-dark-2.svg"
           alt="Globe Background"
