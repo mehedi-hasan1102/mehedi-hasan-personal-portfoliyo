@@ -72,7 +72,7 @@ export function BlogContent({ years, structured }: BlogContentProps) {
     hover:bg-base-100
     cursor-pointer
   "
-  whileHover={{ scale: 1.02 }}
+  // whileHover={{ scale: 1.02 }}
   onClick={() => window.location.href = `/blog/${blog.slug}`} // Make whole card clickable
 >
   {/* Thumbnail */}
