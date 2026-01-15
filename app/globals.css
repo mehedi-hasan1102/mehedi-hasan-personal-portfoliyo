@@ -42,8 +42,22 @@ body {
 
 
 
+/* =====================================================
+   Full website smooth scroll
+===================================================== */
+html {
+  scroll-behavior: smooth; /* full-page smooth scroll */
+}
 
-/* NEW */
+/* Optional: body height & overflow */
+body {
+  min-height: 100vh;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+
+
+
 /* ===== Modal Scrollbar (Image-accurate, SimpleBar-matching) ===== */
 .modal-scrollbar {
   scrollbar-width: thin;                 /* Firefox */
