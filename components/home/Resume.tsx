@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { GraduationCap, Briefcase, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import SimpleBar from "simplebar-react";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
