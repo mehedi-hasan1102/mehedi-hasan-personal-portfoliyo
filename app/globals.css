@@ -1,32 +1,45 @@
+/* =====================================================
+   IMPORTS
+===================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap');
 @import "tailwindcss";
+
+/* DaisyUI plugin with only selected themes */
 @plugin "daisyui" {
-  themes: lemonade,abyss;  /* Change to only lemonade and abyss */
+  themes: lemonade, abyss;  /* Only use lemonade and abyss themes */
 }
 
-
-
-
-
+/* =====================================================
+   BASE STYLES
+===================================================== */
 body {
   font-family: 'Geist Mono', monospace;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  min-height: 100vh;       /* ensure full page height */
+  overflow-x: hidden;      /* prevent horizontal scroll */
 }
 
-/* hero animation  */
+html {
+  scroll-behavior: smooth; /* full-page smooth scroll */
+}
 
+/* =====================================================
+   HERO ANIMATIONS
+===================================================== */
+
+/* Blink animation (for cursors, highlights, etc.) */
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
 }
-
 .animate-blink {
   display: inline-block;
   animation: blink 1s step-start infinite;
 }
 
+/* Slow spin animation (e.g., for logos or icons) */
 @keyframes spin-slow {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -35,100 +48,74 @@ body {
   animation: spin-slow 12s linear infinite;
 }
 
+/* Disable group-hover scale for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .group-hover\:scale-105 {
     transform: none !important;
   }
 }
 
-/* hide bg  */
+/* =====================================================
+   RESPONSIVE STYLES
+===================================================== */
 
+/* Hide background elements on small screens */
 @media (max-width: 768px) {
   .bg-canvas {
     display: none !important;
   }
 }
 
-
 /* =====================================================
-   Full website smooth scroll
+   MODAL / SCROLLBAR STYLING
 ===================================================== */
-html {
-  scroll-behavior: smooth; /* full-page smooth scroll */
-}
 
-/* Optional: body height & overflow */
-body {
-  min-height: 100vh;
-  overflow-x: hidden; /* prevent horizontal scroll */
-}
-
-
-
-
-/* ===== Modal Scrollbar (Image-accurate, SimpleBar-matching) ===== */
+/* Modal scrollbar: Firefox */
 .modal-scrollbar {
-  scrollbar-width: thin;                 /* Firefox */
-  scrollbar-color: #22c55e #1f2933;     /* thumb | track (Firefox) */
+  scrollbar-width: thin;                 /* thin scrollbar */
+  scrollbar-color: #22c55e #1f2933;     /* thumb | track */
 }
 
-/* Chrome / Edge / Safari */
+/* Modal scrollbar: Chrome / Edge / Safari */
 .modal-scrollbar::-webkit-scrollbar {
   width: 10px;
 }
 
 .modal-scrollbar::-webkit-scrollbar-track {
-  background: rgba(31, 41, 51, 0.9);     /* SimpleBar-এর track-এর মতো */
+  background: rgba(31, 41, 51, 0.9);     /* track background */
   border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .modal-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #22c55e;            /* SimpleBar default thumb color */
+  background-color: #22c55e;            /* thumb color */
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
 }
 
 .modal-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #16a34a;            /* SimpleBar hover color */
+  background-color: #16a34a;            /* thumb hover color */
 }
 
+/* =====================================================
+   SIMPLEBAR SCROLLBAR CUSTOMIZATION
+===================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* SIMPLEBAR */
-
-/* globals.css */
 .simplebar-track {
-  background: transparent !important; /* make sure it overrides */
+  background: transparent !important; /* ensure override */
 }
 
 .simplebar-scrollbar:before {
-  background-color: #22c55e !important; /* your custom color */
+  background-color: #22c55e !important; /* custom thumb color */
   border-radius: 10px !important;
 }
 
 .simplebar-scrollbar:hover:before {
-  background-color: #16a34a !important;
+  background-color: #16a34a !important; /* hover color */
 }
+
+
+
 
 
 
@@ -140,24 +127,24 @@ body {
 ===================================================== */
 
 /* Default: keep system cursor */
-html {
+/* html {
   cursor: auto;
-}
+} */
 
 /* When custom cursor is active */
-html.custom-cursor-active * {
+/* html.custom-cursor-active * {
   cursor: none !important;
-}
+} */
 
 /* Allow pointer cursor on links & buttons */
-html.custom-cursor-active a,
+/* html.custom-cursor-active a,
 html.custom-cursor-active button,
 html.custom-cursor-active [data-show-cursor="pointer"] {
   cursor: pointer !important;
-}
+} */
 
 /* Keep text cursor for form inputs */
-html.custom-cursor-active input,
+/* html.custom-cursor-active input,
 html.custom-cursor-active textarea {
   cursor: text !important;
-}
+} */

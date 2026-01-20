@@ -1,6 +1,13 @@
+// ================================================
+// GLOBAL IMPORTS
+// ================================================
 import "./globals.css";
 import 'simplebar/dist/simplebar.min.css';
 import { ReactNode } from "react";
+
+// ================================================
+// COMPONENT IMPORTS
+// ================================================
 import Background from "@/components/ui/Background";
 import { ClientThemeProvider } from "@/components/common/ClientThemeProvider";
 import Footer from "@/components/common/Footer";
@@ -8,42 +15,40 @@ import WhatsAppButton from "@/components/common/WhatsAppButton";
 import ScrollToTopButton from "@/components/common/ScrollButton";
 import Navbar from "@/components/common/NavBar";
 import Splash from '@/components/ui/Splash';
+// import CustomCursor from "@/components/common/CustomCursor";
 import { getSortedBlogsData } from "@/lib/blogs";
-// import ScrollSmootherProvider from '@/app/providers/ScrollSmootherProvider';
-import CustomCursor from "@/components/common/CustomCursor";
 import { Toaster } from "react-hot-toast";
 import AvailabilityBadge from "@/components/common/AvailabilityBadge";
 
-
-
-
+// ================================================
+// METADATA (SEO / SOCIAL SHARING)
+// ================================================
 export const metadata = {
   title: "Mehedi Hasan | Full-Stack Developer & Web Engineer",
   description:
     "Portfolio of Mehedi Hasan – Full-Stack Developer specializing in Next.js, React, TypeScript, and modern web applications.",
- keywords: [
-  "Mehedi Hasan",
-  "Full-Stack Developer",
-  "Frontend Developer",
-  "Backend Developer",
-  "MERN Developer",
-  "Web Developer",
-  "Next.js Developer",
-  "React Developer",
-  "JavaScript Developer",
-  "TypeScript Developer",
-  "Node.js Developer",
-  "Express.js Developer",
-  "MongoDB Developer",
-  "Portfolio",
-  "Web Engineer",
-  "Software Engineer",
-  "ReactJS Portfolio",
-  "Next.js Portfolio",
-  "Full-Stack Web Developer",
-  "Web Application Developer"
-],
-
+  keywords: [
+    "Mehedi Hasan",
+    "Full-Stack Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "MERN Developer",
+    "Web Developer",
+    "Next.js Developer",
+    "React Developer",
+    "JavaScript Developer",
+    "TypeScript Developer",
+    "Node.js Developer",
+    "Express.js Developer",
+    "MongoDB Developer",
+    "Portfolio",
+    "Web Engineer",
+    "Software Engineer",
+    "ReactJS Portfolio",
+    "Next.js Portfolio",
+    "Full-Stack Web Developer",
+    "Web Application Developer"
+  ],
   authors: [{ name: "Mehedi Hasan" }],
   openGraph: {
     title: "Mehedi Hasan | Full-Stack Developer",
@@ -72,11 +77,15 @@ export const metadata = {
   icons: { icon: "./favicon.ico" },
 };
 
+// ================================================
+// ROOT LAYOUT (SERVER COMPONENT)
+// ================================================
 export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
+  // 🔹 Fetch sorted blogs data
   const allBlogsData = await getSortedBlogsData();
 
   return (
@@ -106,52 +115,60 @@ export default async function RootLayout({
         {/* Canonical URL */}
         <link rel="canonical" href="https://m-hasan.vercel.app" />
       </head>
-     <body suppressHydrationWarning>
-  <ClientThemeProvider>
-     <Splash />
-    <Background />
-<CustomCursor />
 
-
-
-
-{/* 🔔 GLOBAL TOASTER (RIGHT PLACE) */}
-    <Toaster
-      position="top-right"
-      reverseOrder={false}
-      toastOptions={{
-        duration: 4000,
-        style: {
-          background: "transparent",
-          boxShadow: "none",
-        },
-      }}
-    />
-
-
-
-    {/* GSAP ScrollSmoother – ONLY ONCE */}
-    {/* <ScrollSmootherProvider> */}
-      <div className="px-2 lg:px-0">
-        <Navbar blogs={allBlogsData} />
-        <main>{children}
-
-
+      <body suppressHydrationWarning>
+        {/* ================================================
+            CLIENT THEME PROVIDER
+        ================================================ */}
+        <ClientThemeProvider>
           
-        </main>
-        
-        <Footer />
-      </div>
-    {/* </ScrollSmootherProvider> */}
+          {/* 🔹 Splash Screen */}
+          <Splash />
 
-    <ScrollToTopButton />
-    <WhatsAppButton />
-<AvailabilityBadge status="Full-time" />
-    
-  </ClientThemeProvider>
-</body>
+          {/* 🔹 Background Canvas / Animation */}
+          <Background />
 
+          {/* 🔹 Optional Custom Cursor */}
+          {/* <CustomCursor /> */}
+
+          {/* ================================================
+              GLOBAL TOASTER
+          ================================================ */}
+          <Toaster
+            position="top-right"
+            reverseOrder={false}
+            toastOptions={{
+              duration: 4000,
+              style: {
+                background: "transparent",
+                boxShadow: "none",
+              },
+            }}
+          />
+
+          {/* ================================================
+              PAGE LAYOUT WRAPPER
+          ================================================ */}
+          <div className="px-2 lg:px-0">
+            {/* 🔹 Navbar */}
+            <Navbar blogs={allBlogsData} />
+
+            {/* 🔹 Main Content */}
+            <main>{children}</main>
+
+            {/* 🔹 Footer */}
+            <Footer />
+          </div>
+
+          {/* ================================================
+              CLIENT WIDGETS
+          ================================================ */}
+          <ScrollToTopButton />
+          <WhatsAppButton />
+          <AvailabilityBadge status="Full-time" />
+
+        </ClientThemeProvider>
+      </body>
     </html>
   );
 }
-
