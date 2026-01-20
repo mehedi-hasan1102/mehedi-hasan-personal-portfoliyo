@@ -15,6 +15,7 @@ body {
   line-height: 24px;
 }
 
+/* hero animation  */
 
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
@@ -40,6 +41,13 @@ body {
   }
 }
 
+/* hide bg  */
+
+@media (max-width: 768px) {
+  .bg-canvas {
+    display: none !important;
+  }
+}
 
 
 /* =====================================================
