@@ -12,7 +12,6 @@ interface Project {
   title: string;
   description: string;
   images: string[];
-  videos?: string[];
   techStack: string[];
   type: "Frontend" | "Backend" | "Full Stack" | "All";
   liveLink: string;
@@ -29,7 +28,6 @@ const AllProjectsPage: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [filter, setFilter] = useState<FilterType>("All");
 
-  // Memoize projects data (static)
   const projects = useMemo(() => projectsData as Project[], []);
 
   const openModal = useCallback((project: Project) => {
@@ -42,7 +40,6 @@ const AllProjectsPage: React.FC = () => {
     setSelectedProject(null);
   }, []);
 
-  // Filtered Projects
   const filteredProjects = useMemo(() => {
     return projects.filter(
       (project) => filter === "All" || project.type === filter
@@ -57,7 +54,6 @@ const AllProjectsPage: React.FC = () => {
         className="text-base-content font-geist mx-auto pt-1 max-w-3xl"
       >
         <div className="relative overflow-hidden rounded-lg p-4 backdrop-blur-sm bg-base-200 transition-shadow duration-300">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -66,9 +62,9 @@ const AllProjectsPage: React.FC = () => {
             className="my-4 text-start"
           >
             <h2 className="text-3xl">Projects</h2>
+             <h3 className="mt-4 text-sm sm:text-base text-base-content/80 leading-relaxed"> I’ve developed commercial projects as well as hobby projects. All projects are included (along with course related projects) here.</h3>
           </motion.div>
 
-          {/* Filter Buttons */}
           <div className="flex justify-center gap-2 mb-2 flex-wrap">
             {["All", "Frontend", "Backend", "Full Stack"].map((type) => (
               <button
@@ -88,9 +84,8 @@ const AllProjectsPage: React.FC = () => {
 
           <div className="h-[1px] bg-primary/40 mb-2"></div>
 
-          {/* Projects list */}
           <div className="space-y-2">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
                 transition={{ type: "spring", stiffness: 200 }}
@@ -102,40 +97,24 @@ const AllProjectsPage: React.FC = () => {
                 "
               >
                 <div className="flex flex-col sm:flex-row gap-4">
-                  {/* Media */}
+                  {/* Image */}
                   <div className="relative w-full sm:w-[250px] aspect-[16/9] overflow-hidden rounded-lg hidden sm:block">
-                    {project.videos?.length ? (
-                      <video
-                        src={project.videos[0]}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="metadata"
-                        className="
-                          w-full h-full object-cover rounded-lg
-                          transition-transform duration-300
-                          group-hover:scale-105
-                        "
-                      />
-                    ) : (
-                      <Image
-                        src={project.images[0]}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 250px"
-                        priority={project.title === filteredProjects[0]?.title || project.title === filteredProjects[1]?.title}
-                        loading="lazy"
-                        className="
-                          object-cover rounded-lg
-                          transition-transform duration-300
-                          group-hover:scale-105
-                        "
-                      />
-                    )}
+                    <Image
+                      src={project.images[0]}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 250px"
+                      priority={index === 0} // only first project image preloads
+                      loading={index === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="
+                        object-cover rounded-lg
+                        transition-transform duration-300
+                        group-hover:scale-105
+                      "
+                    />
                   </div>
 
-                  {/* Content */}
                   <div className="flex flex-col justify-between flex-1">
                     <div>
                       <h3 className="text-base font-medium text-base-content">
@@ -158,7 +137,6 @@ const AllProjectsPage: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Links */}
                     <div className="flex flex-wrap gap-4 text-sm">
                       <a
                         href={project.liveLink}
@@ -204,7 +182,6 @@ const AllProjectsPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Footer Link */}
           <div className="my-4 text-start">
             <p className="text-sm sm:text-base text-base-content/80 leading-relaxed">
               <span>This page highlights selected work. View the full project list on </span>
@@ -221,7 +198,6 @@ const AllProjectsPage: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Project Modal */}
       <ProjectModal
         showModal={showModal}
         selectedProject={selectedProject}

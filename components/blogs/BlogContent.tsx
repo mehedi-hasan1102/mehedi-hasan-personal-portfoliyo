@@ -58,9 +58,10 @@ export function BlogContent({ years, structured }: BlogContentProps) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
         viewport={{ once: true }}
-        className="my-4 text-start"
+        className="my-4 text-start "
       >
         <h2 className="text-3xl">Blog</h2>
+        <h3 className="mt-4 text-sm sm:text-base text-base-content/80 leading-relaxed"> I've been programming for almost 2 years now. Throughout this year, I've worked with various technologies. I'm here to share just that. </h3>
       </motion.div>
 
       {sortedData.length === 0 ? (

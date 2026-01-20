@@ -70,6 +70,9 @@
     "liveLink": "https://duranta-online.vercel.app/",
     "frontendRepo": "https://github.com/mehedi-hasan1102/Duranta-Online-Client",
     "backendRepo": "https://github.com/mehedi-hasan1102/Duranta-Online-Server",
+    "images": [
+      "/assets/images/projects/duranta.png"
+    ],
     "videos": [
       "/assets/video/duranta-online.mp4"
     ],
