@@ -144,6 +144,9 @@ const Footer = () => {
           <p className="mt-4 text-xs text-base-content/40">
             © {new Date().getFullYear()} Mehedi Hasan
           </p>
+{/* this div use for available badge  */}
+
+          <div className="mb-12"></div>
         </div>
       </div>
 

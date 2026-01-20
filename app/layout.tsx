@@ -12,6 +12,7 @@ import { getSortedBlogsData } from "@/lib/blogs";
 // import ScrollSmootherProvider from '@/app/providers/ScrollSmootherProvider';
 import CustomCursor from "@/components/common/CustomCursor";
 import { Toaster } from "react-hot-toast";
+import AvailabilityBadge from "@/components/common/AvailabilityBadge";
 
 
 
@@ -145,7 +146,7 @@ export default async function RootLayout({
 
     <ScrollToTopButton />
     <WhatsAppButton />
-
+<AvailabilityBadge status="Full-time" />
     
   </ClientThemeProvider>
 </body>
