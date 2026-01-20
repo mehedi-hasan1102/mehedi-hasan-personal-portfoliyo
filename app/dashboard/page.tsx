@@ -167,14 +167,8 @@ export default function DashboardPage() {
           ))}
         </div>
 
-        {/* GitHub Insights Image */}
-        <div className="my-6">
-          
-           
-   <img src={`https://ghinsights.vercel.app/api/insight?username=${USERNAME}&theme=ocean&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=false`} alt="GitHub Insights" />
-        </div>
 
-        {/* Contribution Graph */}
+ {/* Contribution Graph */}
         <div>
           <h3 className="text-xl my-3">Consistency & Open-Source Activity</h3>
           <img
@@ -184,6 +178,7 @@ export default function DashboardPage() {
             loading="lazy"
           />
         </div>
+
 
         {/* Language PieChart */}
      
@@ -231,6 +226,20 @@ export default function DashboardPage() {
     </div>
   </div>
 )}
+
+
+        {/* GitHub Insights Image */}
+        <div className="my-6">
+          <h3 className="text-xl my-3 text-start">Current GitHub Stats
+</h3>
+  <img src={`https://ghinsights.vercel.app/api/insight?username=${USERNAME}&theme=ocean&graph=false&languages=false&streak=true&stats=false&header=false&summary=false&profile=false`} alt="GitHub Insights" />
+
+           
+   
+        </div>
+
+       
+
 
 
         {/* Latest Repos */}
