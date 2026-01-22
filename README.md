@@ -70,7 +70,7 @@ pnpm run dev
 **🌐 Live Demo**
 
 Hosted on Vercel
-Live Link: https://m-hasan.vercel.app
+Live Link: https://mehedi-h.vercel.app
 
 
 
